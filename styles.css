@@ -1,0 +1,151 @@
+/*
+#4C5B5C
+#FF715B
+#F9CB40
+#BCED09
+#2F52E0
+*/
+
+/* fonts */
+
+/* ui */
+@font-face {
+  font-family: gothic;
+  src: url(fonts/Chomsky.woff);
+}
+
+@font-face {
+  font-family: APL386;
+  src: url(fonts/APL386.ttf);
+}
+
+@font-face {
+  font-family: Carmen;
+  src: url(fonts/Carmen.ttf);
+}
+
+pre > code {
+    font-family: "APL386", monospace;
+    font-size: 11px;
+}
+/* basic */
+
+.rus {
+  font-family: Carmen;
+  font-size: 28px;
+}
+
+.eng {
+  font-family: gothic;
+  font-size: 24px;
+}
+
+body {
+  font-family: gothic;
+  font-size: 24px;
+  background-color: #fbf3dc
+}
+
+.p {
+  background-color: #5C7B6B;
+  border-radius: 7px;
+  padding: 7px;
+}
+
+.initiatory {
+  font-family: gothic;
+  font-size: 32px;
+  padding: 0px 2px;
+  border-radius: 3px;
+}
+
+.margined {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.h1 {
+  color: #A491D3;
+  display: flex;
+  justify-content: center;
+}
+
+.h2 {
+  color: #818AA3;
+  display: flex;
+  justify-content: center;
+}
+
+.h3 {
+  color: #707D5F;
+}
+
+.h4 {
+  color: #F5F2B8;
+}
+
+.h5 {
+  color: #F9DAD0;
+}
+
+body a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+li:before {
+  content: "+";
+  padding-right: 5px;
+}
+
+/* topnav buiness */
+
+.topnav {
+  font-family: gothic;
+  background-color: #4C5B5C;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.topnav a, .dropdown, dropdown-options {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 27.5px 16px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.home {
+  background-color: #ad1a23;
+  color: white;
+  font-size: 50px;
+  padding: 14px 16px;
+}
+
+.horizontal-line::before {
+  content: "";
+  display: block;
+  border-top: 1px solid #ccc;
+}
+
+.horizontal-line {
+  font-size: 20px;
+  text-align: center;
+}
