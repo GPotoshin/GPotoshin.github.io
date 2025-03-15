@@ -29,6 +29,11 @@
   src: url(fonts/BodoniModa-VariableFont_opsz,wght.ttf);
 }
 
+@font-face {
+  font-familuy: Lib;
+  src: url(fonts/LinLibertine_R.otf);
+}
+
 pre > code {
     font-family: "APL386", monospace;
     font-size: 11px;
@@ -36,18 +41,13 @@ pre > code {
 /* basic */
 
 .rus {
-  font-family: Carmen;
-  font-size: 28px;
-}
-
-.eng {
-  font-family: Bodoni;
+  font-family: Lib;
   font-size: 18px;
 }
 
 body {
-  font-family: Gothic;
-  font-size: 24px;
+  font-family: Bodoni;
+  font-size: 16px;
   background-color: #fbf3dc
 }
 
@@ -78,6 +78,7 @@ body {
 
 .h2 {
   font-family: Gothic;
+  font-size: 32px;
   color: #818AA3;
   display: flex;
   justify-content: center;
@@ -85,6 +86,7 @@ body {
 
 .h3 {
   font-family: Gothic;
+  font-size: 24px;
   color: #707D5F;
 }
 
@@ -94,6 +96,27 @@ body {
 
 .h5 {
   color: #F9DAD0;
+}
+
+.rh1 {
+  font-family: Carmen;
+  color: #A491D3;
+  display: flex;
+  justify-content: center;
+}
+
+.rh2 {
+  font-family: Carmen;
+  font-size: 32px;
+  color: #818AA3;
+  display: flex;
+  justify-content: center;
+}
+
+.rh3 {
+  font-family: Carmen;
+  font-size: 24px;
+  color: #707D5F;
 }
 
 body a {
@@ -157,5 +180,6 @@ li:before {
 
 .horizontal-line {
   font-size: 20px;
+  font-family: Gothic;
   text-align: center;
 }
