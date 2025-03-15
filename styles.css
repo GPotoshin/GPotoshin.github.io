@@ -10,7 +10,7 @@
 
 /* ui */
 @font-face {
-  font-family: gothic;
+  font-family: Gothic;
   src: url(fonts/Chomsky.woff);
 }
 
@@ -22,6 +22,11 @@
 @font-face {
   font-family: Carmen;
   src: url(fonts/Carmen.ttf);
+}
+
+@font-face {
+  font-family: Bodoni;
+  src: url(fonts/BodoniModa-VariableFont_opsz,wght.ttf);
 }
 
 pre > code {
@@ -36,12 +41,12 @@ pre > code {
 }
 
 .eng {
-  font-family: gothic;
-  font-size: 24px;
+  font-family: Bodoni;
+  font-size: 18px;
 }
 
 body {
-  font-family: gothic;
+  font-family: Gothic;
   font-size: 24px;
   background-color: #fbf3dc
 }
@@ -53,7 +58,7 @@ body {
 }
 
 .initiatory {
-  font-family: gothic;
+  font-family: Gothic;
   font-size: 32px;
   padding: 0px 2px;
   border-radius: 3px;
@@ -65,18 +70,21 @@ body {
 }
 
 .h1 {
+  font-family: Gothic;
   color: #A491D3;
   display: flex;
   justify-content: center;
 }
 
 .h2 {
+  font-family: Gothic;
   color: #818AA3;
   display: flex;
   justify-content: center;
 }
 
 .h3 {
+  font-family: Gothic;
   color: #707D5F;
 }
 
@@ -105,14 +113,14 @@ li {
 }
 
 li:before {
-  content: "+";
+  content: "→";
   padding-right: 5px;
 }
 
 /* topnav buiness */
 
 .topnav {
-  font-family: gothic;
+  font-family: Gothic;
   background-color: #4C5B5C;
   overflow: hidden;
   border-radius: 3px;
@@ -138,6 +146,8 @@ li:before {
   font-size: 50px;
   padding: 14px 16px;
 }
+
+/* bottom */
 
 .horizontal-line::before {
   content: "";
