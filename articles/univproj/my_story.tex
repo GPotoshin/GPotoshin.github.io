@@ -1,0 +1,383 @@
+\documentclass{article}
+\usepackage[a4paper,left=3cm,right=3cm,top=1cm,bottom=2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage[english]{babel}
+
+\usepackage{tikz-cd}
+\usepackage{array}
+\usepackage{graphicx}
+\newcommand\mapsfrom{\mathrel{\reflectbox{\ensuremath{\mapsto}}}}
+\setlength{\parindent}{0mm}
+
+\usepackage{fontspec}
+\setmainfont{Linux Libertine O}
+\usepackage{unicode-math}
+\setmathfont{Cambria Math}
+
+\begin{document}
+\title{
+\textit{\small{Georgii Potoshin, 2025}}\\
+\vspace{0.3ex}
+\textit{\huge{Geometry and measure}}\vspace{1ex}
+}
+\date{\vspace{-5ex}}
+\maketitle
+
+
+\date{\vspace{-10ex}}
+
+\maketitle
+
+\section{Introduction}
+Here I will write some observations about geometric measure theory. Every fact
+written here is a necessary theorem for achieving each sub goal. I aim to
+calculate the dimension of generalized Cantor sets and to explore some key
+theorems.
+
+\subsection{Acknowledged results from measure theory}
+
+% @Checked: 17 mar until Steiner symmetrisation
+\subsection{Hausdorff measure}
+The Hausdorff measure generalises the notion of measure for lower dimensional
+objects in higher-dimensional space. The idea is essentially similar to the
+construction of Lebesgue's measure except that we take a lower limit instead of
+an infinum. We define a cover of $E$ by sets of diameter less then $\delta$ as
+a $\delta$-cover of $E$. And we conceder only countable covers. We note that
+\[\mathcal{H}_\delta^s(E)=\inf_{C}\sum_{I\in C}\omega_s\left(\frac{\text{diam}(I)}{2}\right)^s\]
+where $s\in\mathbb{R}_{\geq 0}$ is a dimension, $\omega_s\in\mathbb{R}$ is a
+coefficient, preferably continuous or smooth as a function of $s$, and $C$ is a
+$\delta$-cover of $E$. We may assume that
+\[\omega_s = \frac{\pi^{s/2}}{\Gamma(1+s/2)}\]
+We define the Hausdorff measure as a limit of the previous value. It exists
+because $\mathcal{H}_\delta^s(E)$ is increasing function of $\delta$. We note
+\[\mathcal{H}^s(E)=\lim_{\delta\rightarrow0^+}\mathcal{H}^s_\delta(E)\]
+
+I shall introduce the notion of $s$-variation of a cover $S$ as
+\[\text{Var}^s(S)=\sum_{I\in S}\omega_s\left(\frac{\text{diam}(I)}{2}\right)^s\]
+
+\textbf{Proposition: For a natural $n\geq 0$, $\omega_n$ is a volume of a unit
+$n$-dimensional ball.}
+\vspace{1ex}
+
+In this case, we can justify our intuition for the good definition of lower
+dimensional sets with the following theorem.
+\vspace{1ex}
+
+\textbf{Isodiametric Inequality: A set of a fixed diameter cannot have a
+bigger volume then a ball of the same diameter.}
+\vspace{1ex}
+
+Intuitively, we might want to assert that any set can always be embed in a ball
+of the same diameter. This holds true in one dimension, but it already fails for
+triangles in two dimensions. The trick we shall employ is \emph{Steiner
+symmetrisation}.
+
+
+\subsection{Properties of Hausdorff measure}
+
+\subsection{Hausdorff dimension}
+
+To a set $S$ we can associate a number $s=\text{inf}\{a\geq 0\,|\,\mathcal{H}^a
+(S)=0\}$. It's called its Hausdorff dimension.
+
+\textbf{Proposition:}
+
+\textbf{Proposition: Hausdorff measure is a Borel measure for regular topology.}
+\vspace{1ex}
+
+\textbf{Proposition: for a Lipschitz function $f:\mathbb{R}^n\rightarrow
+\mathbb{R}^m$ we have the following inequality
+\[ \mathcal{H}^s(f[E])\leq\text{Lip}(f)^s\mathcal{H}^s(E) \]
+for every $s>0$ and $E\subseteq\mathbb{R}^n$. And $\text{dim}(E)<\text{dim}(f[E])$.
+}
+\subsection{Hausdorff measure and length, areas and volumes}
+
+\textbf{Proposition: length of a curve does not depend on $\mathcal C^0$
+injective parametrisation.}
+\vspace{1ex}
+Let $\gamma, \gamma':[0,1]\rightarrow \rightarrow \Gamma$ be 2 injective
+continuous functions. Let $0=t_0<t_1<\ldots<t_n=0$ be points of the interval 
+$[0,1]$. Then we have $t_i'=\gamma^{-1}(\gamma(t_i))$.
+
+\textbf{Proposition: Hausdorff measure of dimension $m\in N$ coincide on
+$m$-dimensional affine subspaces with their Lebesgue measure.}
+\vspace{1ex}
+
+Let $\gamma:[0,1]\rightarrow\mathbb{R}^n$ be a continuous injective mapping.
+Than it defines a curve $\Gamma=\text{Im}(\gamma)$. We can define a length of
+a curve as a supremum of variation
+\[\text{len}(\Gamma)=\text{sup}\{\sum_{i=0}^{n-1}|\gamma(t_{i+1})-\gamma(t_i)|\,
+|\,0=t_0<t_1<\ldots<t_n=1,n\in\mathbb{N}\}\]
+It's important to say that length is independent of $\gamma$ because...
+
+\textbf{Proposition: Hausdorff measure of dimension $1$ of a continuous curve is
+its length.}
+
+
+\section{Dimension of cantor sets}
+Here we calculate the dimension of generalized set. Let $n\in\mathbb{N}$ and
+$m\in\mathbb{N}^*$ so that $2m<n$. Then we can define $C_k$ ($k\in\mathbb{N}$)
+define recursively by agreeing that $C_0=\{[0,1]\}$ and we obtain $C_{k+1}$ from $C_k$
+by cutting out the open middle part from each segment of $C_k$ and living side parts
+of length $m/n$ of original interval. We will note $C=\lim C_k=\bigcap C_k$.
+\[\text{image}\]
+Obviously $C_k$ is a $(m/n)^k$-cover of $C$, so
+\[ \mathcal{H}_{(m/n)^k}^s \leq \sum_{I\in C_k}\omega_s(\frac{\text{diam}(I)}{2})^s
+=\omega_s2^k((m/n)^k)/2)^s=\omega_s/2^s(2(m/n)^s)^k \]
+And if $s>\text{log}_{n/m}(2)$ we have right side approaching 0 as $k$ tends to
+infinity. That means that $\text{dim}(C)\leq\text{log}_{n/m}(2)$.
+
+
+Now we need to prove the inequality in the other direction. Let $s=\text{log}_
+{n/m}(2)$. And let $S$ be a $(m/n)^k$-cover of $C$. In fact by the construction
+$C$ is an intersection of compacts on a real line, so is compact. And by one of
+the previous propositions we can conceder only open covers. Then by compactness 
+we can leave only a finite number of sets in $S$ and this way we reduce its 
+Hausdorff variance and we can extend the resting elements to closed intervals
+of the same diameter. This does not change the variance. The new cover is noted
+by $S'$. Now in every interval of $S'$ we can find 2 maximal intervals from some
+$C_i$ and $C_j$, so the they are disjoint. If we can't do that, then there are no points
+of $C$ in this interval and we can throw away that set also. So now we have 2 
+maximal intervals $J$ and $J'$ in $I$. They are ordered. Between them we
+have an interval $K$ and as they are maximal $I\setminus J\setminus K\setminus J'$ does not contain
+any points from $C$ and we can through those parts away from the covering.
+By the construction
+\[|J|,|J'|\leq \frac{m}{n}\cdot \frac{n}{n-2m}|K|=\frac{m}{n-2m}|K|\]
+Now we have $1/2(|J|+|J'|) \leq \frac{m}{n-2m}|K|$
+\[|I|^s=(|J|+|J'|+|K|)^s\geq((1+\frac{n-2m}{2m}))(|J|+|J'|))^s=(\frac{n}{m}1/2(|J|+|J'|))^s=2(1/2(|J|+|J'|))^s\geq|J|^s+|J'|^s\]
+Where the last step is done by concavity of function $x\mapsto x^s$.
+That means that we can reduce this any cover to a $C_k$ cover which has a
+smaller $s$-variation. That means that for dimension $s=\text{log}_{n/m}(2)$
+the $\mathcal{H}^s(C)$ is finite as the $s$-variation of $C_k$ is always $
+\omega_s/2^s$.
+
+\vspace{2ex}
+
+\textbf{Proposition:} There is a subset of $[0,1]$ with а Hausdorff dimension
+$1$, but Lebesgue measure 0.
+
+\vspace{1ex}
+
+To show that we shall use Cantor's sets. Let $C_{m/n}$ be a set discussed in a
+previous paragraph. Then $S=\bigcap C_{m/(2m+1)}$ is a set of dimension $1$. As
+for every $0\leq s<1$ there is such $m$, that $\text{log}_{n/m}(2)=\text{log}_{
+(2m+1)/m}(2)>s$, as $\text{log}_{(2m+1)/m}(2)\rightarrow 1$. And thus $\mathcal
+{H}^s(S)>\mathcal{H}^s(C_{m/(2m+1)})=\infty$.
+
+\section{Weak* topology and compactness}
+As to a positive measure we can associate an integral, we need to utilise some
+results from functional analysis.
+\vspace{1ex}
+
+For topological spaces $Y_i$ and set of functions $f_i:X\rightarrow Y_i$. We can
+define the smallest, coarsest topology on $Y$ that makes those functions continuous.
+By the definition such topology is defined by $\tau(\{f_i\})=\bigcap\{\tau\,|\,
+\tau\text{ is a topology of }X\text{ and }f_i\text{ are continuous}\}$. As an
+example a topology of product is exactly $\tau(\{\pi_i\})$, where $\pi_i$ are
+canonical projections.
+\vspace{1ex}
+
+\textbf{Proposition:} Let $\tau$ be a topology on $X$. Then $\tau=\tau(\{f_i\})$ iff
+every function $g:W\rightarrow X$ such that $f_i\circ g$ are continuous is
+continuous.
+\vspace{1ex}
+
+If $\tau=\tau(\{f_i\})$ and $g:W\rightarrow X$ is such function that $f_i\circ
+g$ are continuous. It's sufficient to check that for all elements of prebase
+of $\tau(\{f_i\})$ the inverse image is open, but the prebase consists of
+elements of the form $f_i^{-1}[U]$ and its inverse image is $(f_i\circ g)^{-1}[U]$
+which is open by hypotheses.
+\vspace{1ex}
+
+If $\tau$ is a such topology, that for every function $g:W\rightarrow X$ it's
+continuous iff $f_i\circ g$ are continuous. The in particular we have $\text{id}:
+(X, \tau)\rightarrow(X,\tau)$ continuous and that means that $f_i = f_i\circ
+\text{id}$ are continuous and we have $\tau(\{f_i\})\subseteq\tau$. On the other
+hand we have $\text{id}':(X,\tau(\{f_i\}))\rightarrow(X,\tau)$ continuous
+because $f_i = f_i\circ\text{id}':(X,\tau(\{f_i\}))\rightarrow Y_i$ are continuous
+by the definition of coarsest topology. Thus we have $\text{id}'$ continuous
+and that means that $\tau\subseteq\tau(\{f_i\})$. And finally $\tau=\tau(\{f_i\})$.
+
+\vspace{1ex}
+
+\textbf{Theorem (Tihonoff):} Product of compact spaces is compact.
+\vspace{1ex}
+
+\textbf{General structure:} Let $I$ be a set of indices and $E_i$ for $i\in I$
+be a topological space with a topology $\tau_i$. The prebase of the product
+topology on  $\prod_{i\in I} E_i$ is $\{\pi_i^{-1}[U]\,|\,i\in I,U\in\tau_i\}$.
+a set of products of open subspaces of one spaces on others. All the finite
+intersections form a base of product topology. Its elements are products of
+open sets where almost all factors are $E_i$.
+\vspace{1ex}
+
+\textbf{Maximal covers:} Let's note that a set of covers that does not contain
+finite sub-covers for a partially ordered set with the relation of inclusion.
+For every chain we have its union which does not contain a finite sub-cover,
+which otherwise would have been in some element of chain. Thus each chain has an
+upper bound. By the Zorn's lemma we find a maximal element $M$.
+\vspace{1ex}
+
+Let $X$ be a topological space and $M\subseteq\tau$ a maximal cover that does
+not contain a finite sub-cover. \textbf{Then if $V\in M^c$, we have $U_1,\ldots,
+U_n\in M$ such that $V\cup U_1\cup\ldots\cup U_n=X$.} Because otherwise we
+could have added $V$ to $M$ and M would not be maximum. \textbf{If
+$U,V\in M^c$ then $U\overline V\in M^c$.} In other words $M^c$ is a multiplicative
+system, which is similar to the statement that $\mathfrak{p}^c$ is a multiplicative
+for a prime ideal $\mathfrak{p}$. This is true due to the fact that we have
+$U_1,\ldots,U_k\in M$ and $V_1,\ldots,V_l\in M$ such that $U\cup U_1\cup\ldots
+\cup U_n = X = V\cup V_1\cup\ldots\cup V_l$ and thus $(U\cap V)\cup U_1\cup\ldots
+\cup U_k\cup V_1\cup\ldots\cup V_l=X$, which implies that $U\cap V\in X$.
+\vspace{1ex}
+
+\textbf{Alexander's lemma about prebase: Let $B$ be a prebase of a topological
+space $X$. Then if in every cover of $X$ by elements of $B$ exists a finite
+subcover, then the space $X$ is compact.} If $X$ is not compact, then we have
+a $M$ maximal cover that does not contain a finite sub-cover. Then to every
+$x\in X$ we can associate its neighborhood $V_x\in M$. Then we find some
+element of a basis $U_x=U_{1,x}\cup\ldots\cup U_{n_x,x}\subseteq V_x$ where
+$U_{i,x}\in B$ are elements of prebase. Thus by maximality $U_x\in M$ as
+$U_x\subseteq V_x$. But as $U_x=U_{1,x}\cup\ldots\cup U_{n_x,x}$ and as $M^c$
+is a multiplicative system, for some $i$ we have $U_{i,x}\in M$. It means that
+in $M$ we have a sub-cover of $X$ by elements of a prebase $B$. And by hypotheses
+we can chose a finite sub-cover which gives a contradiction.
+\vspace{1ex}
+
+\textbf{Tihonoff theorem's proof:} Let $\mathcal{S}=(U_i)_{i\in I}$ be a cover of a
+product $E=\prod_{j\in J} E_j$ of compact space by elements of canonical prebase.
+Let's suppose that it does not contain a finite sub-cover. For every $j\in J$
+we shall pose $S_j=\{\pi_j^{-1}[V_{i,j}]=U_i\,|\,V_{i,j}\in\tau_j,i\in I_j\}$.
+Then $(V_{i,j})_{i\in I}$ cannot be a cover of $E_j$, because otherwise we can
+extract a finite sub-cover of $E_j$ and hence of $E$. So we can chose $x_j\in
+E_j$ such that $x_j\notin\bigcup_{i\in I_j}V_{i,j}$. Let $x=(x_j)_{j\in J}$ and
+it does not lie in every set of $\mathcal{S}$, thus it's not a cover and we get
+a contradiction.
+
+\subsection{Topologies on spaces $E$ and $E^*$}
+In this section $E$ is a Banach space and $E^*$ is it's dual space of continuous
+1-forms on $E$. Then on the space $E$ apart from it's metric topology we have
+the weak topology $\sigma(E, E^*)=\tau(\{f\}_{f\in E^*})$. As $f\in E^*$ are
+continuous for the regular topology, the topology $\sigma(E, E^*)$ is finer
+then the regular topology, which we call strong.
+\vspace{1ex}
+
+On the space $E^*$ we also have strong topology with the norm for linear
+operators. And we have a weak* topology $\sigma(E^*, E)=\tau(\{v\}_{v\in E})$.
+
+\vspace{1ex}
+\textbf{Proposition:} Weak* topology is a trace topology from the space
+$\mathbb{R}^E$ with a topology of product.
+
+\vspace{1ex}
+\textbf{Proof:} Let $\tau$ be a topology induced on $E^*$ from $R^E$. It is
+sufficient to prove that every function $\phi:A\rightarrow E^*$ is continious
+iff $\phi\circ v$ is continious for every $v \in E$.
+
+$\Rightarrow:$ We know that $\phi\circ\pi_v$ is continous, where $\pi_v$ is a
+projection on $v$-coordinat.
+
+
+\vspace{1ex}
+\textbf{Theorem (Banach-Alaoglu):} The closed unit ball $B=\{f\in E^*\,|\,\lvert
+f\lvert\leq 1\}$ is compact in the weak* topology $\sigma(E^*, E)$.
+
+\vspace{1ex}
+\textbf{Proof:} 
+
+\section{Measures and convergence}
+
+Let $\mu$ be a Radon measure
+
+\section{Analysis results}
+
+For a ball $B=B(x, r)$ of center $x$ and radius $r$ we shall note $B^\epsilon
+=B(x, (1+\epsilon)r)$ for every $\epsilon>0$.
+
+\vspace{1ex}
+\textbf{Vitali's covering theorem:}
+Let $\epsilon > 0$ and $\mathcal{F}$ be any collection of any collection of
+nondegenearted closed balls in $\mathbb{R}^n$ with
+\[ \sup\{\text{diam}\,B\,|\, B\in\mathcal{F}\} \]
+Then for every $\epsilon>1/2$ there exist a countable family $\mathcal{G}$ of
+disjoint balls in $\mathcal{F}$ such that
+\[\bigcup_{B\in\mathcal{F}}B\subseteq\bigcup_{B\in\mathcal{G}}B^\epsilon\]
+
+\vspace{1ex}
+\textbf{Proof:}
+Set $D=\sup\{\text{diam}\,B\,|\,B\in \mathcal{F}\}$. Set
+\[\mathcal{F}_j=\left\{B\in\mathcal{F}\,|\,\frac{D}{(2/\epsilon)^j}<\text{diam}\,B<\frac{D}{(2/\epsilon)^{j-1}}\right\},\quad j=1,2,\ldots\]
+We define $\mathcal{G}_j\subseteq\mathcal{F}_j$ as follows
+\begin{itemize}
+    \item Let $\mathcal{G}_1$ be any maximal disjoint collection of balls in
+        $\mathcal{F}_1$.
+
+    \item Assuming $\mathcal{G}_1,\ldots,\mathcal{G}_{k-1}$ have been selected,
+        we chose $\mathcal{G}_k$ to be any maximal disjoint subcollection of
+        \[ \{B\in\mathcal{F}_k\,|\,B\cap B'=\varnothing\text{ for all }B'\in\bigcup_{j=1}^{k-1}\mathcal{G}_j\}\]
+\end{itemize}
+They exist by Zorn's Lemma. Finally, define $\mathcal{G}=\bigcup_{j\in\mathbb{N}^*}\mathcal{G}_j$
+a collection of disjoint balls and $\mathcal{G}\subseteq\mathcal{F}$.
+
+\vspace{1ex}
+Prooving that for each ball $B\in\mathcal{F}$, there exists a ball $B'\in\mathcal{G}$
+such that $B\cap B'\neq\varnothing$ and $B\subseteq B^\epsilon$. Fix
+$B\in\mathcal{F}$, there exists and index $j$ such that $B\in\mathcal{F}_j$ and
+by maximality of $\mathcal{G}_k$ there exists a ball $B'\in\bigcup_{k=1}^j
+\mathcal{G}_k$ with $B\cap B'\neq\varnothing$. But $\text{diam}\,B'\geq\frac{D}{(2/\epsilon)^j}$
+and $\text{diam}\,B\leq\frac{D}{(2/\epsilon)^{j-1}}$; so that $\text{diam}\,B\leq 2/\epsilon\text{diam}\,
+B'$. Thus $B\subseteq B'^\epsilon$.
+
+\par
+\vspace{1ex}
+\textbf{Whitney covering theorem:}
+Let $C\subseteq \mathbb{R}^n$ be a closed set and $f:C\rightarrow\mathbb R$,
+$d:C\rightarrow\mathbb{R}^{n*}$ be continuous functions. We shall use notions
+\[
+\begin{aligned}
+    &R(y,x)=\frac{f(y)-f(x)-d(x)(y-x)}{|x-y|},\quad\forall x,y\in C, x\neq y \\
+    &\rho_k(\delta)=\sup\{|R(x,y)|\, |\, 0<|x-y|\leq\delta, x, y\in K\}
+\end{aligned}
+\]
+if we suppose that for every compact $K\subseteq C$
+\begin{equation}
+\rho_K(\delta)\rightarrow 0\text{ as }\delta\rightarrow 0
+\end{equation}
+
+Then there exists a fuction $\overline f\in\mathcal{C}^1(\mathbb{R}^n,\mathbb{R})$
+and $D\overline f|_C=d$.
+
+\vspace{1ex}
+\textbf{Proof:} Let $U=C^c$ be an open set. Let $r(x)=\min(1,\text{dist}(x,C)$.
+By Vitali's covering theorem 
+
+
+\section{Countably n-rectifiable sets}
+
+
+\section{Grassmannian}
+
+In this section we introduce the topological space $G(m,n)$.
+\vspace{1ex}
+
+Similarly to projective spaces $P\mathbb{R}^n$ we can generalise this notion to
+smaller subspaces than hyperplanes. The set of $m$ dimensional subspaces of a
+vector space $\mathbb{R}^n$ is called grassmannian and noted by $G(m,n)$. It
+has a topology identified from a topology of orthogonal projection on
+$m$-dimensional subspaces.
+
+\section{Varifold}
+
+An $m$-dimensional varifold $V$ is a Radon measure over $\mathbb{R}^n\times
+G(n,m)$ endowed with a product topology. We say $\|V\|$ is a measure in
+$\mathbb{R}^n$ which is reciprocally projection of a varifold $V$ by $\pi_1^{-1}$.
+
+\textbf{Proposition: For varifolds we concider weak* topology. Then we have a
+convergence criteria that $V_i\rightarrow V$ if and only if
+\[\int fdV_i\rightarrow\int fdV\]
+for every continuous function $f:\mathbb{R}^n\times G(m,n)\rightarrow R$ with a
+compact support.}
+\vspace{1ex}
+
+\end{document}
