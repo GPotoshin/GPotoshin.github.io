@@ -365,20 +365,18 @@ Then there exists a fuction $\overline f\in\mathcal{C}^1(\mathbb{R}^n,\mathbb{R}
 and $D\overline f|_C=d$.
 
 \vspace{1ex}
-\textbf{Proof:} Let $U=C^c$ be an open set. Let $r(x)=\frac{1}{8}\min(1,\text{dist}(x,C))$.
+\textbf{Proof:} Let $U=C^c$ be an open set. Let $r(x)=\frac{1}{4}\min(1,\text{dist}(x,C))$.
 By Vitali's covering theorem there exist a countable set
 $\{x_j\}_{j\in\mathbb{N}}$ and a countable set of disjoint closed balls $\{B_j=B(x_j, r(x_j))\}_
 {j\in\mathbb{N}}$ such that $\bigcup_{j\in\mathbb{N}}\prescript{2}{}B_j=U$. We
-need one $\frac{1}{2}$ in the definition of $r(x)$ to make sure that $\prescript{2}{}
-B_j\subseteq U$. Then for every $x\in U$ we shall define $S_x=\{x_j\,|\,B(x,4r(x))
-\cap B(x_j,4r(x))\neq\varnothing\}$. We want to make the radius again twice as
-big to constrain on subset big enough? And we still want to have $B(x,4r(x))\subseteq U$
-for a reason .... which is the reason we have chosen to multiply by another $1/2$.
+need $\frac{1}{2}$ in the definition of $r(x)$ to make sure that $\prescript{2}{}
+B_j\subseteq U$. Then for every $x\in U$ we shall define $S_x=\{x_j\,|\,B(x,2r(x))
+\cap B(x_j,2r(x))\neq\varnothing\}$. 
 
 \vspace{1ex}
-Here we chech that $S_x$ is bounded for each dimention.
-Let $x_j\in S_x$ then $|r(x)-r(x_j)| \leq 1/8|x-x_j|$ because $|r(x)-r(x_j)|=
-1/8|\min(1,\text{dist}(x,C))-\min(1,\text{dist}(x_j,C))|$ and without loss of
+Now we chech that $S_x$ is bounded for each dimention.
+Let $x_j\in S_x$ then $|r(x)-r(x_j)| \leq 1/4|x-x_j|$ because $|r(x)-r(x_j)|=
+1/4|\min(1,\text{dist}(x,C))-\min(1,\text{dist}(x_j,C))|$ and without loss of
 generality we can consider 3 cases:
 \begin{enumerate}
     \item $\text{dist}(x,C),\text{dist}(x_j,C)>1$ then $|\min(1,\text{dist}(x,C))
@@ -392,7 +390,7 @@ generality we can consider 3 cases:
         \leq|x_j-x|$.
 \end{enumerate}
 
-So we have $|r(x)-r(x_j)| \leq 1/8|x-x_j|\leq1/8|4r(x)-4r(x_j)|=1/2|r(x)+r(x_j)$
+So we have $|r(x)-r(x_j)| \leq 1/4|x-x_j|\leq1/4|2r(x)-2r(x_j)|=1/2|r(x)+r(x_j)$
 as $x_j\in S_x$. And hence
 \[
 \begin{aligned}
