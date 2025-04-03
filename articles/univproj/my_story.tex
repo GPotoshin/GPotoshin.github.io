@@ -8,6 +8,7 @@
 \usepackage{tikz-cd}
 \usepackage{array}
 \usepackage{graphicx}
+\usepackage{mathtools}
 \newcommand\mapsfrom{\mathrel{\reflectbox{\ensuremath{\mapsto}}}}
 \setlength{\parindent}{0mm}
 
@@ -57,64 +58,44 @@ because $\mathcal{H}_\delta^s(E)$ is increasing function of $\delta$. We note
 I shall introduce the notion of $s$-variation of a cover $S$ as
 \[\text{Var}^s(S)=\sum_{I\in S}\omega_s\left(\frac{\text{diam}(I)}{2}\right)^s\]
 
-\textbf{Proposition: For a natural $n\geq 0$, $\omega_n$ is a volume of a unit
-$n$-dimensional ball.}
+\textbf{Proposition:} For a natural $n\geq 0$, $\omega_n$ is a volume of a unit
+$n$-dimensional ball.
 \vspace{1ex}
-
-In this case, we can justify our intuition for the good definition of lower
-dimensional sets with the following theorem.
-\vspace{1ex}
-
-\textbf{Isodiametric Inequality: A set of a fixed diameter cannot have a
-bigger volume then a ball of the same diameter.}
-\vspace{1ex}
-
-Intuitively, we might want to assert that any set can always be embed in a ball
-of the same diameter. This holds true in one dimension, but it already fails for
-triangles in two dimensions. The trick we shall employ is \emph{Steiner
-symmetrisation}.
-
 
 \subsection{Properties of Hausdorff measure}
 
+\textbf{Proposition:} Hausdorff measure is a Borel measure for regular topology.
+
+\vspace{1ex}
+\textbf{Proposition:} In the definition of Hausdorff measure we can consider
+only closed or open sets.
+
+\vspace{1ex}
+\textbf{Proposition:} Hausdorff measure of dimension $m\in N$ coincide on
+$m$-dimensional affine subspaces with their Lebesgue measure.
+
+\vspace{1ex}
+\textbf{Proposition:} For a Lipschitz function $f:\mathbb{R}^n\rightarrow
+\mathbb{R}^m$ we have the following inequality
+\[ \mathcal{H}^s(f[E])\leq\text{Lip}(f)^s\mathcal{H}^s(E) \]
+for every $s>0$ and $E\subseteq\mathbb{R}^n$. And $\text{dim}(E)<\text{dim}(f[E])$.
+
+\vspace{1ex}
+\textbf{Proposition:} The $n$-dimetional Hausdorff measure traced to a
+$n$-dimentional $\mathcal{C}^1$-submanifold of $R^m$ induces the area measure
+on this submanifold and coincides with the integral measure via parametrisation
+on it.
+
+\vspace{1ex}
+\textbf{Remark:} Proofs to those proposition can be found in the book "Geometric
+measure theory" be Francesco Maggi.
 \subsection{Hausdorff dimension}
 
 To a set $S$ we can associate a number $s=\text{inf}\{a\geq 0\,|\,\mathcal{H}^a
 (S)=0\}$. It's called its Hausdorff dimension.
 
+\vspace{1ex}
 \textbf{Proposition:}
-
-\textbf{Proposition: Hausdorff measure is a Borel measure for regular topology.}
-\vspace{1ex}
-
-\textbf{Proposition: for a Lipschitz function $f:\mathbb{R}^n\rightarrow
-\mathbb{R}^m$ we have the following inequality
-\[ \mathcal{H}^s(f[E])\leq\text{Lip}(f)^s\mathcal{H}^s(E) \]
-for every $s>0$ and $E\subseteq\mathbb{R}^n$. And $\text{dim}(E)<\text{dim}(f[E])$.
-}
-\subsection{Hausdorff measure and length, areas and volumes}
-
-\textbf{Proposition: length of a curve does not depend on $\mathcal C^0$
-injective parametrisation.}
-\vspace{1ex}
-Let $\gamma, \gamma':[0,1]\rightarrow \rightarrow \Gamma$ be 2 injective
-continuous functions. Let $0=t_0<t_1<\ldots<t_n=0$ be points of the interval 
-$[0,1]$. Then we have $t_i'=\gamma^{-1}(\gamma(t_i))$.
-
-\textbf{Proposition: Hausdorff measure of dimension $m\in N$ coincide on
-$m$-dimensional affine subspaces with their Lebesgue measure.}
-\vspace{1ex}
-
-Let $\gamma:[0,1]\rightarrow\mathbb{R}^n$ be a continuous injective mapping.
-Than it defines a curve $\Gamma=\text{Im}(\gamma)$. We can define a length of
-a curve as a supremum of variation
-\[\text{len}(\Gamma)=\text{sup}\{\sum_{i=0}^{n-1}|\gamma(t_{i+1})-\gamma(t_i)|\,
-|\,0=t_0<t_1<\ldots<t_n=1,n\in\mathbb{N}\}\]
-It's important to say that length is independent of $\gamma$ because...
-
-\textbf{Proposition: Hausdorff measure of dimension $1$ of a continuous curve is
-its length.}
-
 
 \section{Dimension of cantor sets}
 Here we calculate the dimension of generalized set. Let $n\in\mathbb{N}$ and
@@ -153,13 +134,16 @@ smaller $s$-variation. That means that for dimension $s=\text{log}_{n/m}(2)$
 the $\mathcal{H}^s(C)$ is finite as the $s$-variation of $C_k$ is always $
 \omega_s/2^s$.
 
-\vspace{2ex}
+\vspace{1ex}
+\textbf{Remark:} This is a variation on the proof given in the book "The geometry
+of fractal sets" by K. J. Flaconer, generelised to the case of arbitrary $m$ and
+$n$. In this book the proof is done for the case $m=1$, $n=3$.
 
+\vspace{1ex}
 \textbf{Proposition:} There is a subset of $[0,1]$ with а Hausdorff dimension
 $1$, but Lebesgue measure 0.
 
 \vspace{1ex}
-
 To show that we shall use Cantor's sets. Let $C_{m/n}$ be a set discussed in a
 previous paragraph. Then $S=\bigcap C_{m/(2m+1)}$ is a set of dimension $1$. As
 for every $0\leq s<1$ there is such $m$, that $\text{log}_{n/m}(2)=\text{log}_{
@@ -184,6 +168,9 @@ every function $g:W\rightarrow X$ such that $f_i\circ g$ are continuous is
 continuous.
 \vspace{1ex}
 
+\textbf{Remark:} This is a well known property of caorsest topology, but I
+checked that it's also an alternative characterisation of such topology.
+
 If $\tau=\tau(\{f_i\})$ and $g:W\rightarrow X$ is such function that $f_i\circ
 g$ are continuous. It's sufficient to check that for all elements of prebase
 of $\tau(\{f_i\})$ the inverse image is open, but the prebase consists of
@@ -202,7 +189,7 @@ and that means that $\tau\subseteq\tau(\{f_i\})$. And finally $\tau=\tau(\{f_i\}
 
 \vspace{1ex}
 
-\textbf{Theorem (Tihonoff):} Product of compact spaces is compact.
+\textbf{Theorem (Tichonoff):} Product of compact spaces is compact.
 \vspace{1ex}
 
 \textbf{General structure:} Let $I$ be a set of indices and $E_i$ for $i\in I$
@@ -245,7 +232,7 @@ in $M$ we have a sub-cover of $X$ by elements of a prebase $B$. And by hypothese
 we can chose a finite sub-cover which gives a contradiction.
 \vspace{1ex}
 
-\textbf{Tihonoff theorem's proof:} Let $\mathcal{S}=(U_i)_{i\in I}$ be a cover of a
+\textbf{Tichonoff theorem's proof:} Let $\mathcal{S}=(U_i)_{i\in I}$ be a cover of a
 product $E=\prod_{j\in J} E_j$ of compact space by elements of canonical prebase.
 Let's suppose that it does not contain a finite sub-cover. For every $j\in J$
 we shall pose $S_j=\{\pi_j^{-1}[V_{i,j}]=U_i\,|\,V_{i,j}\in\tau_j,i\in I_j\}$.
@@ -255,8 +242,12 @@ E_j$ such that $x_j\notin\bigcup_{i\in I_j}V_{i,j}$. Let $x=(x_j)_{j\in J}$ and
 it does not lie in every set of $\mathcal{S}$, thus it's not a cover and we get
 a contradiction.
 
+\vspace{1ex}
+\textbf{Remark:} This is the most non trivial part of the proof of Banach-Alaglaua
+theorem and as I had this proof noted I've decided to also put it here.
+
 \subsection{Topologies on spaces $E$ and $E^*$}
-In this section $E$ is a Banach space and $E^*$ is it's dual space of continuous
+In this section $E$ is a normed vector space and $E^*$ is it's dual space of continuous
 1-forms on $E$. Then on the space $E$ apart from it's metric topology we have
 the weak topology $\sigma(E, E^*)=\tau(\{f\}_{f\in E^*})$. As $f\in E^*$ are
 continuous for the regular topology, the topology $\sigma(E, E^*)$ is finer
@@ -271,20 +262,40 @@ operators. And we have a weak* topology $\sigma(E^*, E)=\tau(\{v\}_{v\in E})$.
 $\mathbb{R}^E$ with a topology of product.
 
 \vspace{1ex}
-\textbf{Proof:} Let $\tau$ be a topology induced on $E^*$ from $R^E$. It is
-sufficient to prove that every function $\phi:A\rightarrow E^*$ is continious
-iff $\phi\circ v$ is continious for every $v \in E$.
-
-$\Rightarrow:$ We know that $\phi\circ\pi_v$ is continous, where $\pi_v$ is a
-projection on $v$-coordinat.
-
+\textbf{Proof:} Let $\tau(\{\pi_v\}_{v\in E})$ be the trace topology. Then it
+is easy to see that $\pi_v=v$ as both function are evoluations at $v$ and thus
+$\tau(\{\pi_v\}_{v\in E})=\tau(\{v\}_{v\in E})=\sigma(E^*, E)$ is a weak*
+topology.
 
 \vspace{1ex}
-\textbf{Theorem (Banach-Alaoglu):} The closed unit ball $B=\{f\in E^*\,|\,\lvert
-f\lvert\leq 1\}$ is compact in the weak* topology $\sigma(E^*, E)$.
+\textbf{Remark:} In the book "Functional Analysis" by Haim Brezis the part
+above is done by setting an hommemorpism and the verification of its bicontinuity.
+As you have seen there is actually nothing to prove as it's just 2 notions of
+the same thing projection and dual-space.
 
 \vspace{1ex}
-\textbf{Proof:} 
+\textbf{Theorem (Banach-Alaoglu):} The closed unit ball $B=\{f\in E^*\,|\,|
+f|\leq 1\}$ is compact in the weak* topology $\sigma(E^*, E)$.
+
+\vspace{1ex}
+\textbf{Proof:}
+\[ B=\left\{f\in\mathbb{R}^E\,|\,
+\begin{cases}
+    |f(x)|<|x|,\;\forall x\in E\\
+    f(\lambda x)=\lambda f(x),\;\forall\lambda\in\mathbb{R}, x\in E\\
+    f(x+y)=f(x)+f(y)\;\forall x,y\in E
+\end{cases}
+\right\} \] 
+
+Hence it is intesection of following sets $B=K\cap\bigcap_{x,y\in E} A_{x,y}
+\cap\bigcap_{x\in E, \lambda\in\mathbb{R}}B_{\lambda,x}$, where $K=\{f\in\mathbb
+{R}^E\,|\,|f(x)|\leq|x|\}=\prod_{x\in E}[-|x|, |x|]$ is compact by Tichonoff
+theorem, where for $x,y\in E$ we define $A_{x,y}=\{f\in\mathbb{R}^E\,|\,f(x+y)-
+f(x)-f(y)=0\}$ is colsed since evoluations and addition are continious and
+thus $f\mapsto f(x+y)-f(x)-f(y)$ is continous and $A_{x,y}$. For a similar
+reason $B_{\lambda, x}=\{f\in\mathbb{R}^E\,|\,f(\lambda x)-\lambda f(x)=0\}$ is
+closed which proves that $B$ is compact.
+
 
 \section{Measures and convergence}
 
@@ -292,22 +303,22 @@ Let $\mu$ be a Radon measure
 
 \section{Analysis results}
 
-For a ball $B=B(x, r)$ of center $x$ and radius $r$ we shall note $B^\epsilon
+For a ball $B=B(x, r)$ of center $x$ and radius $r$ we shall note $\prescript{\epsilon}{}B
 =B(x, (1+\epsilon)r)$ for every $\epsilon>0$.
 
 \vspace{1ex}
 \textbf{Vitali's covering theorem:}
 Let $\epsilon > 0$ and $\mathcal{F}$ be any collection of any collection of
 nondegenearted closed balls in $\mathbb{R}^n$ with
-\[ \sup\{\text{diam}\,B\,|\, B\in\mathcal{F}\} \]
-Then for every $\epsilon>1/2$ there exist a countable family $\mathcal{G}$ of
+\[ \sup\{\text{diam}\,B\,|\, B\in\mathcal{F}\}<\infty \]
+Then for every $\epsilon>1$ there exist a countable family $\mathcal{G}$ of
 disjoint balls in $\mathcal{F}$ such that
 \[\bigcup_{B\in\mathcal{F}}B\subseteq\bigcup_{B\in\mathcal{G}}B^\epsilon\]
 
 \vspace{1ex}
 \textbf{Proof:}
 Set $D=\sup\{\text{diam}\,B\,|\,B\in \mathcal{F}\}$. Set
-\[\mathcal{F}_j=\left\{B\in\mathcal{F}\,|\,\frac{D}{(2/\epsilon)^j}<\text{diam}\,B<\frac{D}{(2/\epsilon)^{j-1}}\right\},\quad j=1,2,\ldots\]
+\[\mathcal{F}_j=\left\{B\in\mathcal{F}\,|\,\frac{D}{\epsilon^j}<\text{diam}\,B\leq\frac{D}{\epsilon^{j-1}}\right\},\quad j=1,2,\ldots\]
 We define $\mathcal{G}_j\subseteq\mathcal{F}_j$ as follows
 \begin{itemize}
     \item Let $\mathcal{G}_1$ be any maximal disjoint collection of balls in
@@ -322,14 +333,19 @@ a collection of disjoint balls and $\mathcal{G}\subseteq\mathcal{F}$.
 
 \vspace{1ex}
 Prooving that for each ball $B\in\mathcal{F}$, there exists a ball $B'\in\mathcal{G}$
-such that $B\cap B'\neq\varnothing$ and $B\subseteq B^\epsilon$. Fix
+such that $B\cap B'\neq\varnothing$ and $B\subseteq\prescript{\epsilon}{}B'$. Fix
 $B\in\mathcal{F}$, there exists and index $j$ such that $B\in\mathcal{F}_j$ and
 by maximality of $\mathcal{G}_k$ there exists a ball $B'\in\bigcup_{k=1}^j
-\mathcal{G}_k$ with $B\cap B'\neq\varnothing$. But $\text{diam}\,B'\geq\frac{D}{(2/\epsilon)^j}$
-and $\text{diam}\,B\leq\frac{D}{(2/\epsilon)^{j-1}}$; so that $\text{diam}\,B\leq 2/\epsilon\text{diam}\,
-B'$. Thus $B\subseteq B'^\epsilon$.
+\mathcal{G}_k$ with $B\cap B'\neq\varnothing$. But $\text{diam}\,B'>\frac{D}{\epsilon^j}$
+and $\text{diam}\,B\leq\frac{D}{\epsilon^{j-1}}$; so that
+\[ \text{diam}\,B\leq \frac{D}{\epsilon^{j-1}} < \epsilon\text{diam}\,B'\]
+Thus $B\subseteq\prescript{\epsilon}{}B'$.
 
-\par
+\vspace{1ex}
+\textbf{Remark:} This is a generalised version of the proof from the book
+"Measure theory and fine properties of functions" where it is done for an
+obscure case of $\epsilon=5$.
+
 \vspace{1ex}
 \textbf{Whitney covering theorem:}
 Let $C\subseteq \mathbb{R}^n$ be a closed set and $f:C\rightarrow\mathbb R$,
@@ -349,9 +365,53 @@ Then there exists a fuction $\overline f\in\mathcal{C}^1(\mathbb{R}^n,\mathbb{R}
 and $D\overline f|_C=d$.
 
 \vspace{1ex}
-\textbf{Proof:} Let $U=C^c$ be an open set. Let $r(x)=\min(1,\text{dist}(x,C)$.
-By Vitali's covering theorem 
+\textbf{Proof:} Let $U=C^c$ be an open set. Let $r(x)=\frac{1}{8}\min(1,\text{dist}(x,C))$.
+By Vitali's covering theorem there exist a countable set
+$\{x_j\}_{j\in\mathbb{N}}$ and a countable set of disjoint closed balls $\{B_j=B(x_j, r(x_j))\}_
+{j\in\mathbb{N}}$ such that $\bigcup_{j\in\mathbb{N}}\prescript{2}{}B_j=U$. We
+need one $\frac{1}{2}$ in the definition of $r(x)$ to make sure that $\prescript{2}{}
+B_j\subseteq U$. Then for every $x\in U$ we shall define $S_x=\{x_j\,|\,B(x,4r(x))
+\cap B(x_j,4r(x))\neq\varnothing\}$. We want to make the radius again twice as
+big to constrain on subset big enough? And we still want to have $B(x,4r(x))\subseteq U$
+for a reason .... which is the reason we have chosen to multiply by another $1/2$.
 
+\vspace{1ex}
+Here we chech that $S_x$ is bounded for each dimention.
+Let $x_j\in S_x$ then $|r(x)-r(x_j)| \leq 1/8|x-x_j|$ because $|r(x)-r(x_j)|=
+1/8|\min(1,\text{dist}(x,C))-\min(1,\text{dist}(x_j,C))|$ and without loss of
+generality we can consider 3 cases:
+\begin{enumerate}
+    \item $\text{dist}(x,C),\text{dist}(x_j,C)>1$ then $|\min(1,\text{dist}(x,C))
+        -\min(1,\text{dist}(x_j,C))|=0\leq|x-x_j|$.
+    \item $\text{dist}(x,C)\leq1,\text{dist}(x_j,C)>1$, then $|\min(1,\text{dist}
+        (x,C))-\min(1,\text{dist}(x_j,C))| = 1-\text{dist}(x,C)<\text{dist}(x_j,C)
+        -\text{dist}(x,C)=|x_j-s|-|x-s|\leq|x_j-x|$, where $s$ is a projection
+        of $x$ on $C$. 
+    \item $\text{dist}(x,C)\leq\text{dist}(x_j,C)\leq1$, then $|\min(1,\text{dist}
+        (x,C))-\min(1,\text{dist}(x_j,C))| = \text{dist}(x_j,C)-\text{dist}(x,C)
+        \leq|x_j-x|$.
+\end{enumerate}
+
+So we have $|r(x)-r(x_j)| \leq 1/8|x-x_j|\leq1/8|4r(x)-4r(x_j)|=1/2|r(x)+r(x_j)$
+as $x_j\in S_x$. And hence
+\[
+\begin{aligned}
+    &r(x)-r(x_j)\leq1/2(r(x)+r(x_j))\;\Rightarrow\;r(x)\leq 3r(x_j)\\
+    &r(x_j)-r(x)\leq1/2(r(x)+r(x_j))\;\Rightarrow\;r(x_j)\leq 3r(x)
+\end{aligned}
+\]
+In addition we have $|x-x_j|+r(x_j)\leq4(r(x)+r(x_j))+r(x_j)\leq4r(x)+12r(x)+3r(x)=
+19r(x)$. Which means that $B(x_j, r(x_j))\subseteq B(x, 19r(x))$ and since
+$B(x_j, r(x_j))$ are disjoint we have an inquality on volumes:
+\[
+    \#S_x\omega_n(r(x)/3)^n\leq\#S_x\omega_n(r(x_j))^n=\sum_{x_j\in S_x}\text{Vol}
+    \,B_j\leq\text{Vol}(B(x,19r(x))=\omega_n(19r(x))^n
+\]
+Therefor $\#S_x\leq(3\cdot19)^n=57^n$ is bounded by a fixed constant in each
+dimention.
+
+\vspace{1ex}
+The goal of that part is to construct the function $\overline f$.
 
 \section{Countably n-rectifiable sets}
 
