@@ -32,10 +32,7 @@
 \maketitle
 
 \section{Introduction}
-Here I will write some observations about geometric measure theory. Every fact
-written here is a necessary theorem for achieving each sub goal. I aim to
-calculate the dimension of generalized Cantor sets and to explore some key
-theorems.
+Here are my observations about geometric measure theory.
 
 \subsection{Acknowledged results from measure theory}
 
@@ -155,20 +152,20 @@ As to a positive measure we can associate an integral, we need to utilise some
 results from functional analysis.
 \vspace{1ex}
 
-For topological spaces $Y_i$ and set of functions $f_i:X\rightarrow Y_i$. We can
-define the smallest, coarsest topology on $Y$ that makes those functions continuous.
-By the definition such topology is defined by $\tau(\{f_i\})=\bigcap\{\tau\,|\,
-\tau\text{ is a topology of }X\text{ and }f_i\text{ are continuous}\}$. As an
-example a topology of product is exactly $\tau(\{\pi_i\})$, where $\pi_i$ are
+For topological spaces $Y_i$ and a set of functions $f_i:X\rightarrow Y_i$, we can
+define the smallest, coarsest topology on $X$ that makes those functions continuous.
+By definition such topology is $\tau(\{f_i\})=\bigcap\{\tau\,|\,
+\tau$ is a topology on $X$ and $f_i$ are continuous$\}$. As an
+example, the product topology is exactly $\tau(\{\pi_i\})$, where $\pi_i$ are
 canonical projections.
 \vspace{1ex}
 
-\textbf{Proposition:} Let $\tau$ be a topology on $X$. Then $\tau=\tau(\{f_i\})$ iff
-every function $g:W\rightarrow X$ such that $f_i\circ g$ are continuous is
-continuous.
+\textbf{Proposition:} Let $\tau$ be a topology on $X$. Then $\tau=\tau(\{f_i\})$
+if and only if every function $g:W\rightarrow X$ such that $f_i\circ g$ are
+continuous is continuous.
 \vspace{1ex}
 
-\textbf{Remark:} This is a well known property of caorsest topology, but I
+\textbf{Remark:} This is a well-known property of caorsest topology, but I
 checked that it's also an alternative characterisation of such topology.
 
 If $\tau=\tau(\{f_i\})$ and $g:W\rightarrow X$ is such function that $f_i\circ
@@ -179,8 +176,8 @@ which is open by hypotheses.
 \vspace{1ex}
 
 If $\tau$ is a such topology, that for every function $g:W\rightarrow X$ it's
-continuous iff $f_i\circ g$ are continuous. The in particular we have $\text{id}:
-(X, \tau)\rightarrow(X,\tau)$ continuous and that means that $f_i = f_i\circ
+continuous if and only if $f_i\circ g$ are continuous, then in particular we
+have $\text{id}:(X,\tau)\rightarrow(X,\tau)$ continuous and that means that $f_i = f_i\circ
 \text{id}$ are continuous and we have $\tau(\{f_i\})\subseteq\tau$. On the other
 hand we have $\text{id}':(X,\tau(\{f_i\}))\rightarrow(X,\tau)$ continuous
 because $f_i = f_i\circ\text{id}':(X,\tau(\{f_i\}))\rightarrow Y_i$ are continuous
@@ -189,7 +186,7 @@ and that means that $\tau\subseteq\tau(\{f_i\})$. And finally $\tau=\tau(\{f_i\}
 
 \vspace{1ex}
 
-\textbf{Theorem (Tichonoff):} Product of compact spaces is compact.
+\textbf{Theorem (Tychonoff):} Product of compact spaces is compact.
 \vspace{1ex}
 
 \textbf{General structure:} Let $I$ be a set of indices and $E_i$ for $i\in I$
@@ -211,16 +208,16 @@ Let $X$ be a topological space and $M\subseteq\tau$ a maximal cover that does
 not contain a finite sub-cover. \textbf{Then if $V\in M^c$, we have $U_1,\ldots,
 U_n\in M$ such that $V\cup U_1\cup\ldots\cup U_n=X$.} Because otherwise we
 could have added $V$ to $M$ and M would not be maximum. \textbf{If
-$U,V\in M^c$ then $U\overline V\in M^c$.} In other words $M^c$ is a multiplicative
+$U,V\in M^c$ then $U\cap V\in M^c$.} In other words $M^c$ is a multiplicative
 system, which is similar to the statement that $\mathfrak{p}^c$ is a multiplicative
 for a prime ideal $\mathfrak{p}$. This is true due to the fact that we have
 $U_1,\ldots,U_k\in M$ and $V_1,\ldots,V_l\in M$ such that $U\cup U_1\cup\ldots
 \cup U_n = X = V\cup V_1\cup\ldots\cup V_l$ and thus $(U\cap V)\cup U_1\cup\ldots
-\cup U_k\cup V_1\cup\ldots\cup V_l=X$, which implies that $U\cap V\in X$.
+\cup U_k\cup V_1\cup\ldots\cup V_l=X$, which implies that $U\cap V\in M^c$.
 \vspace{1ex}
 
 \textbf{Alexander's lemma about prebase: Let $B$ be a prebase of a topological
-space $X$. Then if in every cover of $X$ by elements of $B$ exists a finite
+space $X$. Then if in every cover of $X$ by elements of $B$ there exists a finite
 subcover, then the space $X$ is compact.} If $X$ is not compact, then we have
 a $M$ maximal cover that does not contain a finite sub-cover. Then to every
 $x\in X$ we can associate its neighborhood $V_x\in M$. Then we find some
@@ -243,19 +240,19 @@ it does not lie in every set of $\mathcal{S}$, thus it's not a cover and we get
 a contradiction.
 
 \vspace{1ex}
-\textbf{Remark:} This is the most non trivial part of the proof of Banach-Alaglaua
-theorem and as I had this proof noted I've decided to also put it here.
+\textbf{Remark:} This is the most non-trivial part of the proof of Banach-Alaoglu
+theorem and as I had this proof noted I have decided to also put it here.
 
 \subsection{Topologies on spaces $E$ and $E^*$}
-In this section $E$ is a normed vector space and $E^*$ is it's dual space of continuous
-1-forms on $E$. Then on the space $E$ apart from it's metric topology we have
-the weak topology $\sigma(E, E^*)=\tau(\{f\}_{f\in E^*})$. As $f\in E^*$ are
-continuous for the regular topology, the topology $\sigma(E, E^*)$ is finer
-then the regular topology, which we call strong.
+In this section, $E$ is a normed vector space and $E^*$ is its dual space of continuous
+1-forms on $E$. On the space $E$, apart from its metric topology, we have
+the weak topology $\sigma(E, E^*)=\tau(\{f\}_{f\in E^*})$. As $f\in E^*$ is
+continuous with respect to the regular topology, the topology $\sigma(E, E^*)$
+is coarser then the regular topology, which we call strong.
 \vspace{1ex}
 
-On the space $E^*$ we also have strong topology with the norm for linear
-operators. And we have a weak* topology $\sigma(E^*, E)=\tau(\{v\}_{v\in E})$.
+On the space $E^*$, we also have strong topology with the operator norm.
+Additionally, we have the weak* topology $\sigma(E^*, E)=\tau(\{v\}_{v\in E})$.
 
 \vspace{1ex}
 \textbf{Proposition:} Weak* topology is a trace topology from the space
@@ -308,12 +305,12 @@ For a ball $B=B(x, r)$ of center $x$ and radius $r$ we shall note $\prescript{\e
 
 \vspace{1ex}
 \textbf{Vitali's covering theorem:}
-Let $\epsilon > 0$ and $\mathcal{F}$ be any collection of any collection of
-nondegenearted closed balls in $\mathbb{R}^n$ with
+Let $\mathcal{F}$ be any collection of nondegenearted closed balls in
+$\mathbb{R}^n$ with
 \[ \sup\{\text{diam}\,B\,|\, B\in\mathcal{F}\}<\infty \]
 Then for every $\epsilon>1$ there exist a countable family $\mathcal{G}$ of
 disjoint balls in $\mathcal{F}$ such that
-\[\bigcup_{B\in\mathcal{F}}B\subseteq\bigcup_{B\in\mathcal{G}}B^\epsilon\]
+\[\bigcup_{B\in\mathcal{F}}B\subseteq\bigcup_{B\in\mathcal{G}}\prescript{2\epsilon}{}B\]
 
 \vspace{1ex}
 \textbf{Proof:}
@@ -332,19 +329,21 @@ They exist by Zorn's Lemma. Finally, define $\mathcal{G}=\bigcup_{j\in\mathbb{N}
 a collection of disjoint balls and $\mathcal{G}\subseteq\mathcal{F}$.
 
 \vspace{1ex}
-Prooving that for each ball $B\in\mathcal{F}$, there exists a ball $B'\in\mathcal{G}$
+Proving that for each ball $B\in\mathcal{F}$, there exists a ball $B'\in\mathcal{G}$
 such that $B\cap B'\neq\varnothing$ and $B\subseteq\prescript{\epsilon}{}B'$. Fix
 $B\in\mathcal{F}$, there exists and index $j$ such that $B\in\mathcal{F}_j$ and
 by maximality of $\mathcal{G}_k$ there exists a ball $B'\in\bigcup_{k=1}^j
 \mathcal{G}_k$ with $B\cap B'\neq\varnothing$. But $\text{diam}\,B'>\frac{D}{\epsilon^j}$
 and $\text{diam}\,B\leq\frac{D}{\epsilon^{j-1}}$; so that
 \[ \text{diam}\,B\leq \frac{D}{\epsilon^{j-1}} < \epsilon\text{diam}\,B'\]
-Thus $B\subseteq\prescript{\epsilon}{}B'$.
+Thus $B\subseteq\prescript{2\epsilon}{}B'$.
 
 \vspace{1ex}
 \textbf{Remark:} This is a generalised version of the proof from the book
-"Measure theory and fine properties of functions" where it is done for an
-obscure case of $\epsilon=5$.
+"Measure theory and fine properties of functions" where it is done for the
+smallest integral case $\epsilon = 2$. The generalised proof shows the reason
+why the final dilatation is $5 = 1+2\epsilon$, but actually it is true for
+dilatation $\ge 3$ and the smallest such integer is 4.
 
 \vspace{1ex}
 \textbf{Whitney covering theorem:}
@@ -365,13 +364,27 @@ Then there exists a fuction $\overline f\in\mathcal{C}^1(\mathbb{R}^n,\mathbb{R}
 and $D\overline f|_C=d$.
 
 \vspace{1ex}
-\textbf{Proof:} Let $U=C^c$ be an open set. Let $r(x)=\frac{1}{4}\min(1,\text{dist}(x,C))$.
+\textbf{Remark:}
+I seek to give a more explicit version of the proof given in the book "Measure
+theory and fine properties of functions". In books that looked at about
+geometric measure theory this proof usually is not stated and pointed to the
+book of Federer wheres at least in version of that book the theorem is proved
+in much more general context and the theorem statement differs from the one we
+want.
+
+\vspace{1ex}
+\textbf{Proof:}
+The main challenge is to find a suitable extension of $f$. To construct this
+extension we will select regularly enough points in the complementary set and
+make a such function so that on those points it's an extension via averaged linear extrapolation and in
+between we interpolate by some close enough points. Let $U=C^c$ be a complementary
+open set. Let $r(x)=\frac{1}{4}\min(1,\text{dist}(x,C))$.
 By Vitali's covering theorem there exist a countable set
 $\{x_j\}_{j\in\mathbb{N}}$ and a countable set of disjoint closed balls $\{B_j=B(x_j, r(x_j))\}_
 {j\in\mathbb{N}}$ such that $\bigcup_{j\in\mathbb{N}}\prescript{2}{}B_j=U$. We
 need $\frac{1}{2}$ in the definition of $r(x)$ to make sure that $\prescript{2}{}
 B_j\subseteq U$. Then for every $x\in U$ we shall define $S_x=\{x_j\,|\,B(x,2r(x))
-\cap B(x_j,2r(x))\neq\varnothing\}$. 
+\cap B(x_j,2r(x_j))\neq\varnothing\}$. 
 
 \vspace{1ex}
 Now we chech that $S_x$ is bounded for each dimention.
@@ -390,7 +403,7 @@ generality we can consider 3 cases:
         \leq|x_j-x|$.
 \end{enumerate}
 
-So we have $|r(x)-r(x_j)| \leq 1/4|x-x_j|\leq1/4|2r(x)-2r(x_j)|=1/2|r(x)+r(x_j)$
+So we have $|r(x)-r(x_j)| \leq 1/4|x-x_j|\leq1/4|2r(x)-2r(x_j)|=1/2(r(x)+r(x_j))$
 as $x_j\in S_x$. And hence
 \[
 \begin{aligned}
@@ -398,18 +411,23 @@ as $x_j\in S_x$. And hence
     &r(x_j)-r(x)\leq1/2(r(x)+r(x_j))\;\Rightarrow\;r(x_j)\leq 3r(x)
 \end{aligned}
 \]
-In addition we have $|x-x_j|+r(x_j)\leq4(r(x)+r(x_j))+r(x_j)\leq4r(x)+12r(x)+3r(x)=
-19r(x)$. Which means that $B(x_j, r(x_j))\subseteq B(x, 19r(x))$ and since
+In addition we have $|x-x_j|+r(x_j)\leq2(r(x)+r(x_j))+r(x_j)\leq2r(x)+6r(x)+3r(x)=
+11r(x)$. Which means that $B(x_j, r(x_j))\subseteq B(x, 11r(x))$ and since
 $B(x_j, r(x_j))$ are disjoint we have an inquality on volumes:
 \[
     \#S_x\omega_n(r(x)/3)^n\leq\#S_x\omega_n(r(x_j))^n=\sum_{x_j\in S_x}\text{Vol}
-    \,B_j\leq\text{Vol}(B(x,19r(x))=\omega_n(19r(x))^n
+    \,B_j\leq\text{Vol}(B(x,11r(x))=\omega_n(11r(x))^n
 \]
-Therefor $\#S_x\leq(3\cdot19)^n=57^n$ is bounded by a fixed constant in each
+Therefor $\#S_x\leq(3\cdot11)^n=33^n$ is bounded by a fixed constant in each
 dimention.
 
 \vspace{1ex}
-The goal of that part is to construct the function $\overline f$.
+The goal of that part is to construct the function $\overline f$. Let $\mu:
+\mathbb{R}\rightarrow\mathbb{R}$ be a $\mathcal{C}^\infty$ function such that
+$0\leq\mu\leq1$, $\mu(t) = 1$ if $t\leq 1$ and $\mu(t)=0$ if $t\geq 2$. Then
+for each $j=1,\ldots$ we set $u_j(x)=\mu\left(\frac{|x-x_j|}{2r(x_j)}\right)$
+for $x\in\mathbb{R}^n$. Then $u_j\in\mathcal{C}^\infty$, $0\leq u_j\leq1$ and
+$u_j\equiv 1$ on $B(x_j, 2r(x_j))$ and $u_j\equiv 0$ on $B(x_j, 4r(x_j))$. 
 
 \section{Countably n-rectifiable sets}
 
@@ -419,7 +437,7 @@ The goal of that part is to construct the function $\overline f$.
 In this section we introduce the topological space $G(m,n)$.
 \vspace{1ex}
 
-Similarly to projective spaces $P\mathbb{R}^n$ we can generalise this notion to
+Similarly to projective spaces $P\mathbb{R}^n$ one can generalise this notion to
 smaller subspaces than hyperplanes. The set of $m$ dimensional subspaces of a
 vector space $\mathbb{R}^n$ is called grassmannian and noted by $G(m,n)$. It
 has a topology identified from a topology of orthogonal projection on

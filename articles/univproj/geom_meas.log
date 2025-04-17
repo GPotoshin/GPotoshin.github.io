@@ -1,7 +1,7 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/nixos.org)  (format=lualatex 1980.1.1)  3 APR 2025 09:38
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/nixos.org)  (format=lualatex 1980.1.1)  17 APR 2025 17:31
  restricted system commands enabled.
-**my_story.tex
-(./my_story.tex
+**geom_meas.tex
+(./geom_meas.tex
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-10-09>
 Lua module: luaotfload 2024-02-14 3.28 Lua based OpenType font support
@@ -1134,8 +1134,8 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
 (/nix/store/x5kcgsgqvfy71nk7xq6899qzx0k2r4p6-texlive-2024-env-texmfdist/tex/lat
 ex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./my_story.aux)
-\openout1 = my_story.aux
+) (./geom_meas.aux)
+\openout1 = geom_meas.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
@@ -1193,10 +1193,10 @@ LaTeX Font Info:    ... okay on input line 20.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 20.
-(./my_story.out) (./my_story.out)
+(./geom_meas.out) (./geom_meas.out)
 \@outlinefile=\write4
 
-\openout4 = my_story.out
+\openout4 = geom_meas.out
 
 (/nix/store/x5kcgsgqvfy71nk7xq6899qzx0k2r4p6-texlive-2024-env-texmfdist/tex/con
 text/base/mkii/supp-pdf.mkii
@@ -1264,7 +1264,7 @@ Package unicode-math Warning: I'm going to overwrite the following commands
 LaTeX Warning: No \author given.
 
 
-Overfull \hbox (13.74538pt too wide) in paragraph at lines 44--49
+Overfull \hbox (13.74538pt too wide) in paragraph at lines 41--46
 \TU/LinuxLibertineO(0)/m/n/10 The Haus-dorff mea-sure gen-er-alises the no-tion of mea-sure for lower di-men-sional ob-jects in higher-dimensional
  []
 
@@ -1274,7 +1274,7 @@ Overfull \hbox (13.74538pt too wide) in paragraph at lines 44--49
 
 {/nix/store/y8r9lk8m298rj4hm7k6qd1hp561ymy00-texlive-2024-env/share/texmf-var/fo
 nts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (19.36835pt too wide) detected at line 130
+Overfull \hbox (19.36835pt too wide) detected at line 127
 \TU/CambriaMath(1)/m/n/10 |𝐼|[] = (|𝐽| + |𝐽[]| + |𝐾|)[] ≥ ((1 + [
 ]))(|𝐽| + |𝐽[]|))[] = ([]1/2(|𝐽| + |𝐽[]|))[] = 2(1/2(|𝐽| + |
 𝐽[]|))[] ≥ |𝐽|[] + |𝐽[]|[]
@@ -1285,26 +1285,26 @@ Overfull \hbox (19.36835pt too wide) detected at line 130
 [2]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 249.
+(hyperref)                removing `math shift' on input line 246.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 249.
+(hyperref)                removing `math shift' on input line 246.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 249.
+(hyperref)                removing `math shift' on input line 246.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 249.
+(hyperref)                removing `superscript' on input line 246.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 249.
+(hyperref)                removing `math shift' on input line 246.
 
 
-Overfull \hbox (2.78572pt too wide) in paragraph at lines 290--298
+Overfull \hbox (2.78572pt too wide) in paragraph at lines 287--295
 []\TU/LinuxLibertineO(0)/m/n/10 Hence it is in-te-sec-tion of fol-low-ing sets 
 $\TU/CambriaMath(1)/m/n/10 𝐵 = 𝐾 ∩ [][] 𝐴[] ∩ [][] 𝐵[]$\TU/Linu
 xLibertineO(0)/m/n/10 , where $\TU/CambriaMath(1)/m/n/10 𝐾 = {𝑓 ∈ ℝ[]
@@ -1316,7 +1316,7 @@ xLibertineO(0)/m/n/10 , where $\TU/CambriaMath(1)/m/n/10 𝐾 = {𝑓 ∈ ℝ[]
 [3]
 
 [4]
-Overfull \hbox (10.96483pt too wide) in paragraph at lines 388--391
+Overfull \hbox (10.96483pt too wide) in paragraph at lines 401--404
 []$[]\TU/CambriaMath(1)/m/n/10 (𝑥, 𝐶) ≤ [](𝑥[], 𝐶) ≤ 1$\TU/Linu
 xLibertineO(0)/m/n/10 , then $\TU/CambriaMath(1)/m/n/10 | [](1, [](𝑥, 𝐶)) 
 − [](1, [](𝑥[], 𝐶))| = [](𝑥[], 𝐶) − [](𝑥, 𝐶) ≤
@@ -1324,12 +1324,12 @@ xLibertineO(0)/m/n/10 , then $\TU/CambriaMath(1)/m/n/10 | [](1, [](𝑥, 𝐶))
 
 
 
-[5] (./my_story.aux)
+[5] (./geom_meas.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-10-09>
  ***********
-Package rerunfilecheck Info: File `my_story.out' has not changed.
+Package rerunfilecheck Info: File `geom_meas.out' has not changed.
 (rerunfilecheck)             Checksum: 09C4CD61FE7104AF381131A4149A89A7;2158.
 )
 
@@ -1339,15 +1339,15 @@ Here is how much of LuaTeX's memory you used:
  655 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 53 attribute, 58 glue_spec
 , 28 attribute_list, 2 write nodes
-   avail lists: 2:1148,3:286,4:22,5:1058,6:71,7:10763,8:92,9:711,10:14,11:567
+   avail lists: 2:1097,3:299,4:21,5:1066,6:71,7:10787,8:92,9:612,10:14,11:522
  52119 multiletter control sequences out of 65536+600000
  73 fonts using 33130095 bytes
- 116i,8n,114p,469b,449s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,8n,114p,470b,369s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/giorno/Library/Fonts/CambriaMath.ttc></Users/giorno/Library/Fonts/Cambri
 aMath.ttc></Users/giorno/Library/Fonts/CambriaMath.ttc></Users/giorno/Library/Fo
 nts/LinLibertine_R.otf></Users/giorno/Library/Fonts/LinLibertine_RB.otf></Users/
 giorno/Library/Fonts/LinLibertine_RI.otf>
-Output written on my_story.pdf (5 pages, 154100 bytes).
+Output written on geom_meas.pdf (5 pages, 156023 bytes).
 
 PDF statistics: 132 PDF objects out of 1000 (max. 8388607)
  105 compressed objects within 2 object streams
