@@ -296,7 +296,26 @@ closed. This proves that $B$ is compact.
 
 \section{Measures and convergence}
 
-Let $\mu$ be a Radon measure
+\subsection{Vector valued measure}
+Let $X$ be a topological space and $V$ a normed vector space, then $\mu:\mathcal{B}(X)
+\rightarrow Y$ is a $V$-valued Borel measure if
+\[\sum_n\mu(E_n(=\mu(\bigcap_n E_n)\]
+for any disjoint countable family $\{E_n\}$ of Borel sets.
+
+\vspace{1ex} Let $\mu$ be a vector valued measure. Then the \emph{total
+variation} $\|\mu\|$ of measure $\mu$ is defined by:
+\[\|\mu\| = \text{sup}\{\sum_n|\mu(E_n)\,|\,\{E_n\}\}\]
+
+
+\vspace{1ex}
+In the context of geometric measure theory we are interested in the vector
+space $E=\mathcal{C}^0_c(\mathbb{R}^n, \mathbb{R}^m)$ with the supremum norm.
+Then it's dual space is $E^*=\{L:E\rightarrow\mathbb{R}\,|\,L\text{ is linear
+and continious}\}$. Then on the $E^*$ from now and on we will consider the weak*
+star topology. To make the connection with measure we shall state the result for
+Reisz's representation of $E^*$. In fact every functional $L\in E^*$ can be
+represented by vector valued Radon measure $\mu$, such that
+\[\langle L,\phi\rangle=\int\phi d\mu\]
 
 \section{Analysis results}
 
