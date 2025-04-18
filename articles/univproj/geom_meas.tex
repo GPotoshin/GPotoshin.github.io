@@ -34,9 +34,17 @@
 \section{Introduction}
 Here are my observations about geometric measure theory.
 
-\subsection{Acknowledged results from measure theory}
+\subsection{Acknowledged results and definition from analysis and measure theory}
+\textbf{Definition: An measure $\mu$ is said to be \emph{absolutely continuous
+with respect to} measure $\lambda$ if for any Borel set $A$, $\lambda(A)=0$
+implies $\mu(A)=0$.}
 
-% @Checked: 17 mar until Steiner symmetrisation
+\vspace{1ex}
+\textbf{Definition: For a function $f:X\rightarrow Y$ between metric spaces we can
+define its \emph{Lipschitz constant} $\text{Lip}(f) = \textnormal{inf}\{L\in
+\mathbb{R}\,|\,d(f(x),f(y))\leq d(x,y) \forall x,y\in X\}$}
+
+
 \subsection{Hausdorff measure}
 The Hausdorff measure generalises the notion of measure for lower dimensional
 objects in higher-dimensional space. The idea is essentially similar to the
@@ -293,6 +301,21 @@ thus $f\mapsto f(x+y)-f(x)-f(y)$ is continuous and $A_{x,y}$. For similar
 reasons $B_{\lambda, x}=\{f\in\mathbb{R}^E\,|\,f(\lambda x)-\lambda f(x)=0\}$ is
 closed. This proves that $B$ is compact.
 
+\section{Differentiation of Radon measure}
+\textbf{Definition: Let $\mu$ and $\nu$ be Radon measures on $\mathbb{R}^n$.
+Then we can define upper and lower derivatives of $\nu$ by $\mu$ by
+\begin{align*}
+    &\overline D_\mu\nu(x) =
+    \left\{\begin{array}{rcl}
+        \limsup_{r\rightarrow0}\frac{\nu(B(x,r))}{\mu(B(x,r))} & \textnormal{if }\mu(B(x,r))>0\textnormal{ for all }r>0\\
+        +\infty & \quad\textnormal{if }\mu(B(x,r))=0\textnormal{ for some }r>0
+    \end{array}\right.\\
+    &\underline D_\mu\nu(x) =
+    \left\{\begin{array}{rcl}
+        \liminf_{r\rightarrow0}\frac{\nu(B(x,r))}{\mu(B(x,r))} & \textnormal{if }\mu(B(x,r))>0\textnormal{ for all }r>0\\
+        +\infty & \quad\textnormal{if }\mu(B(x,r))=0\textnormal{ for some }r>0
+    \end{array}\right.
+\end{align*}}
 
 \section{Measures and convergence}
 
@@ -339,6 +362,8 @@ maybe we need a better hypotheses on a space X.  Maybe it should be separable?]
 \vspace{1ex}
 The \emph{mass} of $\mu$ is set to be $\|\mu\|=|\mu|(X)$. Does it coincide with
 the operator norm?
+
+\subsection{Representation of vector valued measures and Radon-Nikodym Theorem}
 
 \vspace{1ex}
 In the context of geometric measure theory we are interested in the vector
@@ -494,12 +519,40 @@ $u_j\equiv 1$ on $B(x_j, 2r(x_j))$ and $u_j\equiv 0$ on $B(x_j, 4r(x_j))$.
 
 \vspace{1ex}
 \textbf{Lipschitz function extension theorem: Let $X$ be a metric space,
-$A\subseteq X$ and $f:A\rightarrow\mathbb{R}^n$. Then there exists a Lipschitz
-function $\overline f:X\mapsto\mathbb{R}^n$ such that $\text{Lip}(f)=\text{Lip}
+$A\subseteq X$ and $f:A\rightarrow\mathbb{R}$. Then there exists a Lipschitz
+function $\overline f:X\mapsto\mathbb{R}$ such that $\textnormal{Lip}(f)=\textnormal{Lip}
 (\overline f)$} and $\overline f|_A=f$.
 
 \vspace{1ex}
-Firstly, we prove the statement for the case  
+This is a proof from "Simons Lectures on geometric measure theory". Let's set
+$L=\text{Lip}(f)$. Then we define
+\[\overline f(x) = \text{inf}_{y\in A}(f(y)+Ld(x,y)\]
+By the definition, for all $x\in A$, $\overline f(x)\leq f(x)$ as in particular
+we can chose $y=x$.
+Furthermore, for all $a,b\in A$ and $x\in X$, we have an inequality for a
+Lipschitz function $f(b)-f(a)\leq Ld(b,a)\leq Ld(b,x)+Ld(a,x)$ and thus we have
+\[ f(a)+Ld(a,x)\geq f(b)-Ld(b,x)\] 
+and if we apply an infinum over a, we have $\overline f(x)\geq f(b)-L(b,x)$ and
+if $x\in A$ we can chose $b=x$ and we have an inequality in the other direction
+and thus the equality $\overline f(x)=f(x)$.
+
+\vspace{1ex}
+Now we check the Lipschitz constant
+%\begin{align*}
+%
+%\end{align*}
+
+\vspace{1ex}
+\textbf{Consequence: Let $X$ be a metric space, $A\subseteq X$ and
+$f:A\rightarrow\mathbb{R}^n$. Then there exists a Lipschitz
+function $\overline f:X\mapsto\mathbb{R^n}$ such that $\overline f|_A=f$}
+
+\vspace{1ex}
+Let's set $\overline f = (\overline f_i)_i$ extension by coordinate functions. 
+
+\vspace{1ex}
+\textbf{Remark:} I was thinking about extending the theorem to the case where
+function take vector values, but I can only prove it for the maximum norm.
 
 \section{Countably n-rectifiable sets}
 Let $M\subseteq\mathbb{R}^{n+k}$ is called an \emph{$n$-rectifiable} if
