@@ -297,7 +297,7 @@ closed. This proves that $B$ is compact.
 \section{Measures and convergence}
 
 \subsection{Vector valued measure}
-Let $X$ be a topological space and $V$ a normed vector space, then $\mu:\mathcal{B}(X)
+Let $X$ be a topological space and $V$ a Banach space, then $\mu:\mathcal{B}(X)
 \rightarrow Y$ is a $V$-valued Borel measure if
 \[\sum_n\mu(E_n)=\mu(\bigcup_n E_n)\]
 for any disjoint countable family $\{E_n\}$ of Borel sets. From that definition
@@ -309,8 +309,10 @@ to the absolute convergence of that series.
 \vspace{1ex} Let $\mu$ be a vector valued measure. Then the \emph{total
 variation} $|\mu|$ of a Borel set $A$  by measure $\mu$ is defined by:
 \[|\mu|(A) = \text{sup}\{\sum_n|\mu(A_n)|\,|\,\{A_n\}\text{ countable partition of }A\}\]
+
 \textbf{Proposition: Total variation is a positive bounded measure.}
 
+\vspace{1ex}
 It is easy to see that $|\mu|(\varnothing)=0$ since all partitions of an empty
 set consist of empty sets which measure is zero. The image of $|\mu|$ by the
 definition consists of positive numbers. Lastly we shall verify $\sigma$-additivity.
@@ -320,7 +322,24 @@ Let $\{S_n\}$ be a disjoint countable collection of Borel sets. Then
 \]
 Then we remark that for each choice of $\{S_{n,m}\}$, it is a countable Borel
 partition of $S=\bigcup_n S_n$, and thus $|\mu|(S)>\sum_n|\mu|(S_n)$. On the
-other hand if $\{A_k\}$ is a countable partition of 
+other hand if $\{A_k\}$ is a countable Borel partition of $S$ then we have
+partitions of $S_n$ defined as $\{S_{n,k}=A_k\cap S_n\}_k$ and we have the
+following inequality:
+\[
+    \sum_k|\mu(A_k)|=\sum_k|\sum_n\mu(S_{n,k})|\leq\sum_n\sum_k|\mu(S_{n,k})|
+\]
+which implies $|\mu|(S)\leq\sum_n|\mu|(S_n)$ and we conclude that $|\mu|$ is a
+positive measure. Let's verify that total variation is bounded. If we suppose it
+is not then we find countable Borel partitions of $X$ $\{A_{n, m}\}_m$ such
+that $\sum_m|\mu(A_{n,m})| > n$. (and so)? [I have an idea that we can
+construct a partition by taking the intersections but the method I know will
+result into uncountable partition and we would no get the contradiction. Then
+maybe we need a better hypotheses on a space X.  Maybe it should be separable?]
+
+\vspace{1ex}
+The \emph{mass} of $\mu$ is set to be $\|\mu\|=|\mu|(X)$. Does it coincide with
+the operator norm?
+
 \vspace{1ex}
 In the context of geometric measure theory we are interested in the vector
 space $E=\mathcal{C}^0_c(\mathbb{R}^n, \mathbb{R}^m)$ with the supremum norm.
@@ -328,8 +347,17 @@ Then it's dual space is $E^*=\{L:E\rightarrow\mathbb{R}\,|\,L\text{ is linear
 and continious}\}$. Then on the $E^*$ from now and on we will consider the weak*
 star topology. To make the connection with measure we shall state the result for
 Reisz's representation of $E^*$. In fact every functional $L\in E^*$ can be
-represented by vector valued Radon measure $\mu$, such that
+represented by an $\mathbb{R}^m$-valued Radon measure $\mu$, such that
 \[\langle L,\phi\rangle=\int\phi d\mu\]
+We shall denote $\mathcal{M}(X,\mathbb{R}^n)$ the space of $\mathbb{R}^n$
+measures on $X$ endowed with weak* topology.
+\subsection{Riesz representation theoremes for vector valued measure}
+The map
+\begin{align*}
+    \Lambda:\mathcal{M}(X, \mathbb{R}^n)&\rightarrow\mathcal{C}_0(X,\mathbb{R}^n)^*\\
+    \mu\quad&\mapsto\quad\Lambda_\mu
+\end{align*}
+is an isometry
 
 \subsection{Interpretation of Banach-Alaoglu theorem for vector valued measures}
 
@@ -464,8 +492,29 @@ for each $j=1,\ldots$ we set $u_j(x)=\mu\left(\frac{|x-x_j|}{2r(x_j)}\right)$
 for $x\in\mathbb{R}^n$. Then $u_j\in\mathcal{C}^\infty$, $0\leq u_j\leq1$ and
 $u_j\equiv 1$ on $B(x_j, 2r(x_j))$ and $u_j\equiv 0$ on $B(x_j, 4r(x_j))$. 
 
-\section{Countably n-rectifiable sets}
+\vspace{1ex}
+\textbf{Lipschitz function extension theorem: Let $X$ be a metric space,
+$A\subseteq X$ and $f:A\rightarrow\mathbb{R}^n$. Then there exists a Lipschitz
+function $\overline f:X\mapsto\mathbb{R}^n$ such that $\text{Lip}(f)=\text{Lip}
+(\overline f)$} and $\overline f|_A=f$.
 
+\vspace{1ex}
+Firstly, we prove the statement for the case  
+
+\section{Countably n-rectifiable sets}
+Let $M\subseteq\mathbb{R}^{n+k}$ is called an \emph{$n$-rectifiable} if
+\[
+    M\subseteq M_0\cup\bigcup_{i\in\mathbb{N}^*}F_i[\mathbb{R}^n]
+\]
+where $\mathcal{H}^n(M_0)=0$ and $F_i$ are Lipschitz functions.
+
+\textbf{Proposition: Alternatively we can define an $n$-rectifiable set by
+inclusion $M\subseteq M_0\cup\bigcup_{i\in\mathbb{N}^*}F_i[A_i]$, where the only
+thing we change is $F_i:A_i\rightarrow\mathbb{R}^{n+m}$ the domain of Lipschitz
+function.}
+
+Clearly the definition in the proposition covers a wider variety of sets. To
+prove that they are equal we shall recall an extension theorem.
 
 \section{Grassmannian}
 
