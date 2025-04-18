@@ -315,8 +315,29 @@ Then we can define upper and lower derivatives of $\nu$ by $\mu$ by
         \liminf_{r\rightarrow0}\frac{\nu(B(x,r))}{\mu(B(x,r))} & \textnormal{if }\mu(B(x,r))>0\textnormal{ for all }r>0\\
         +\infty & \quad\textnormal{if }\mu(B(x,r))=0\textnormal{ for some }r>0
     \end{array}\right.
-\end{align*}}
+\end{align*}
+If $\overline D_\mu\nu(x)=\underline D_\mu\nu(x)<+\infty$ then we say that $\nu$
+is \emph{differentiable} with respect to $\mu$ at x.
+}
 
+\vspace{1ex}
+\textbf{Definition: Let $\mu$ be Radon measure and $\nu$ be a vector measure on
+$\mathbb{R}^n$. Then we say that...
+\begin{align*}
+    &\overline D_\mu\nu(x) =
+    \left\{\begin{array}{rcl}
+        \limsup_{r\rightarrow0}\frac{\nu(B(x,r))}{\mu(B(x,r))} & \textnormal{if }\mu(B(x,r))>0\textnormal{ for all }r>0\\
+        +\infty & \quad\textnormal{if }\mu(B(x,r))=0\textnormal{ for some }r>0
+    \end{array}\right.\\
+    &\underline D_\mu\nu(x) =
+    \left\{\begin{array}{rcl}
+        \liminf_{r\rightarrow0}\frac{\nu(B(x,r))}{\mu(B(x,r))} & \textnormal{if }\mu(B(x,r))>0\textnormal{ for all }r>0\\
+        +\infty & \quad\textnormal{if }\mu(B(x,r))=0\textnormal{ for some }r>0
+    \end{array}\right.
+\end{align*}
+If $\overline D_\mu\nu(x)=\underline D_\mu\nu(x)<+\infty$ the we say that $\nu$
+is \emph{differentiable} with respect to $\mu$ at x.
+}
 \section{Measures and convergence}
 
 \subsection{Vector valued measure}
