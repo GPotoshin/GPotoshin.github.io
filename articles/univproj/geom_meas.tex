@@ -299,14 +299,28 @@ closed. This proves that $B$ is compact.
 \subsection{Vector valued measure}
 Let $X$ be a topological space and $V$ a normed vector space, then $\mu:\mathcal{B}(X)
 \rightarrow Y$ is a $V$-valued Borel measure if
-\[\sum_n\mu(E_n(=\mu(\bigcap_n E_n)\]
-for any disjoint countable family $\{E_n\}$ of Borel sets.
+\[\sum_n\mu(E_n)=\mu(\bigcup_n E_n)\]
+for any disjoint countable family $\{E_n\}$ of Borel sets. From that definition
+we have $\mu(A)+\mu(\varnothing)=\mu(A\cup\varnothing)=\mu(A)$ and thus 
+$\mu(\varnothing)=0$. This is a quite a strong property as the convergence of
+the sum does not depend on the order, which in finite dimenetions is equivalent
+to the absolute convergence of that series.
 
 \vspace{1ex} Let $\mu$ be a vector valued measure. Then the \emph{total
-variation} $\|\mu\|$ of measure $\mu$ is defined by:
-\[\|\mu\| = \text{sup}\{\sum_n|\mu(E_n)\,|\,\{E_n\}\}\]
+variation} $|\mu|$ of a Borel set $A$  by measure $\mu$ is defined by:
+\[|\mu|(A) = \text{sup}\{\sum_n|\mu(A_n)|\,|\,\{A_n\}\text{ countable partition of }A\}\]
+\textbf{Proposition: Total variation is a positive bounded measure.}
 
-
+It is easy to see that $|\mu|(\varnothing)=0$ since all partitions of an empty
+set consist of empty sets which measure is zero. The image of $|\mu|$ by the
+definition consists of positive numbers. Lastly we shall verify $\sigma$-additivity.
+Let $\{S_n\}$ be a disjoint countable collection of Borel sets. Then
+\[ 
+    \sum_n|\mu|(S_n) = \sum_n\sup\{\sum_m|\mu(S_{n,m})|\,|\,(S_{n,m})_m\text{ is a countable Borel partition of }S_n\} \\ 
+\]
+Then we remark that for each choice of $\{S_{n,m}\}$, it is a countable Borel
+partition of $S=\bigcup_n S_n$, and thus $|\mu|(S)>\sum_n|\mu|(S_n)$. On the
+other hand if $\{A_k\}$ is a countable partition of 
 \vspace{1ex}
 In the context of geometric measure theory we are interested in the vector
 space $E=\mathcal{C}^0_c(\mathbb{R}^n, \mathbb{R}^m)$ with the supremum norm.
@@ -316,6 +330,8 @@ star topology. To make the connection with measure we shall state the result for
 Reisz's representation of $E^*$. In fact every functional $L\in E^*$ can be
 represented by vector valued Radon measure $\mu$, such that
 \[\langle L,\phi\rangle=\int\phi d\mu\]
+
+\subsection{Interpretation of Banach-Alaoglu theorem for vector valued measures}
 
 \section{Analysis results}
 
