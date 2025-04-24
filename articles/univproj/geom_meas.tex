@@ -174,7 +174,7 @@ continuous is continuous.
 \vspace{1ex}
 
 \textbf{Remark:} This is a well-known property of caorsest topology, but I
-checked that it's also an alternative characterisation of such topology.
+checked that it is also an alternative characterisation of such topology.
 
 If $\tau=\tau(\{f_i\})$ and $g:W\rightarrow X$ is such function that $f_i\circ
 g$ are continuous. It's sufficient to check that for all elements of prebase
@@ -183,7 +183,7 @@ elements of the form $f_i^{-1}[U]$ and its inverse image is $(f_i\circ g)^{-1}[U
 which is open by hypotheses.
 \vspace{1ex}
 
-If $\tau$ is a such topology, that for every function $g:W\rightarrow X$ it's
+If $\tau$ is a such topology, that for every function $g:W\rightarrow X$ it is
 continuous if and only if $f_i\circ g$ are continuous, then in particular we
 have $\text{id}:(X,\tau)\rightarrow(X,\tau)$ continuous and that means that $f_i = f_i\circ
 \text{id}$ are continuous and we have $\tau(\{f_i\})\subseteq\tau$. On the other
@@ -244,7 +244,7 @@ we shall pose $S_j=\{\pi_j^{-1}[V_{i,j}]=U_i\,|\,V_{i,j}\in\tau_j,i\in I_j\}$.
 Then $(V_{i,j})_{i\in I}$ cannot be a cover of $E_j$, because otherwise we can
 extract a finite sub-cover of $E_j$ and hence of $E$. So we can chose $x_j\in
 E_j$ such that $x_j\notin\bigcup_{i\in I_j}V_{i,j}$. Let $x=(x_j)_{j\in J}$ and
-it does not lie in every set of $\mathcal{S}$, thus it's not a cover and we get
+it does not lie in every set of $\mathcal{S}$, thus it is not a cover and we get
 a contradiction.
 
 \vspace{1ex}
@@ -373,12 +373,36 @@ following inequality:
     \sum_k|\mu(A_k)|=\sum_k|\sum_n\mu(S_{n,k})|\leq\sum_n\sum_k|\mu(S_{n,k})|
 \]
 which implies $|\mu|(S)\leq\sum_n|\mu|(S_n)$ and we conclude that $|\mu|$ is a
-positive measure. Let's verify that total variation is bounded. If we suppose it
-is not then we find countable Borel partitions of $X$ $\{A_{n, m}\}_m$ such
-that $\sum_m|\mu(A_{n,m})| > n$. (and so)? [I have an idea that we can
-construct a partition by taking the intersections but the method I know will
-result into uncountable partition and we would no get the contradiction. Then
-maybe we need a better hypotheses on a space X.  Maybe it should be separable?]
+positive measure.
+
+\vspace{1ex}
+Let's verify that total variation is bounded.
+That is a tricker question and we
+shall follow the proof from "...". The measure can be partitioned into projection measures
+$\mu=(\mu_i)_{i=1}^n$. As all the norms are equivalent we can concider $|\cdot|
+= \|\cdot\|_1$. Then as we have the following inequality:
+\[\sup\{\sum_i|\mu(X_i)|\,|\,X_i\text{ is a borel partition of }X\} \leq \sum_j\sup\{\sum_i|\mu_j(X_i)|\,|\,X_i\text{ is a borel partition of }X\}\]
+It is sufficient to prove that for real valued measures its total variation is bound.
+If we suppose it is not, then we have a real valued measure $\mu$,
+countable Borel partition of $X$ $\{X_m\}_m$ and $n\in\mathbb{N}$ such that
+\[\sum_{m=0}^n|\mu(X_m)|>2(|\mu(X)|+1)\]
+Let $P=\{X_i|\mu(X_i)>0\}$ and $N=\{X_i|\mu(X_i)<0\}$. Then
+we have $|\mu(\bigcup P)|>|\mu(X)|+1$ or $|\mu(\bigcup N)|>|\mu(X)|+1$, thus we
+have a set $E$ such that $|\mu(E)|>|\mu(X)|+1$. Then we have $|\mu(E^c)|=|\mu(X)
+-\mu(E)|\geq |\mu(E)|-|\mu(X)|>1$. Then by additivity of $|\mu|$ we have
+$|\mu|(E)=\infty$ or $|\mu|(E^c)=\infty$; supposing the latter we pose $E_1=E$
+(or $=F$) we always have $\mu(E_1)>1$ and if we continue the same procidure for
+$X=E^c$ we construct by the choice axiom the following sequence of disjoint sets
+$(E_i)_i$ and $|\mu|(E_i)>1$ and thus $\sum\mu(E_i)$ does not converge and we
+have a contracdiction to the definition of vector valued measure. Thus $\mu$
+is bound.
+
+\vspace{1ex}
+By setting
+\[\mu_+=\frac{|\mu|+\mu}{2}\quad\quad\quad\quad\quad\quad\mu_-=\frac{|\mu|-\mu}{2}\]
+we have $\mu_+$ and $\mu_-$ positive bounded measures and $\mu=\mu_+-\mu_-$
+which ports a name a \emph{Jordan decomposition}.
+
 
 \vspace{1ex}
 The \emph{mass} of $\mu$ is set to be $\|\mu\|=|\mu|(X)$. Does it coincide with
@@ -389,7 +413,7 @@ the operator norm?
 \vspace{1ex}
 In the context of geometric measure theory we are interested in the vector
 space $E=\mathcal{C}^0_c(\mathbb{R}^n, \mathbb{R}^m)$ with the supremum norm.
-Then it's dual space is $E^*=\{L:E\rightarrow\mathbb{R}\,|\,L\text{ is linear
+Then its dual space is $E^*=\{L:E\rightarrow\mathbb{R}\,|\,L\text{ is linear
 and continious}\}$. Then on the $E^*$ from now and on we will consider the weak*
 star topology. To make the connection with measure we shall state the result for
 Reisz's representation of $E^*$. In fact every functional $L\in E^*$ can be
@@ -485,7 +509,7 @@ want.
 \textbf{Proof:}
 The main challenge is to find a suitable extension of $f$. To construct this
 extension we will select regularly enough points in the complementary set and
-make a such function so that on those points it's an extension via averaged linear extrapolation and in
+make a such function so that on those points it is an extension via averaged linear extrapolation and in
 between we interpolate by some close enough points. Let $U=C^c$ be a complementary
 open set. Let $r(x)=\frac{1}{4}\min(1,\text{dist}(x,C))$.
 By Vitali's covering theorem there exist a countable set
