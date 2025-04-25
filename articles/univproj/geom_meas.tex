@@ -35,49 +35,54 @@
 Here are my observations about geometric measure theory.
 
 \subsection{Acknowledged results and definition from analysis and measure theory}
-\textbf{Definition: An \emph{outer measure} on $X$ is a set function on $X$ with
+\textbf{Definition:} An \emph{outer measure} on $X$ is a set function on $X$ with
 values in $[0,\infty]$ with
 \begin{itemize}
     \item $\mu(\varnothing)=0$
     \item $E\subseteq\bigcup_{h\in\mathbb{N}}E_h\quad\Rightarrow\quad\mu(E)\leq\sum_{h\in\mathbb{N}}\mu(E_h)$
 \end{itemize}
-}
 
 \vspace{2ex}
-\textbf{Carathéodory's theorem: if $\mu$ is an outer measure on $X$ and $\mathcal
+\textbf{Carathéodory's theorem:} if $\mu$ is an outer measure on $X$ and $\mathcal
 M(\mu)$ is the family of those $E\subseteq X$ such that
 \[\mu(F)=\mu(E\cap F)+\mu(F\setminus E),\quad\quad\forall F\subseteq X\]
 then $\mathcal M(\mu)$ is a $\sigma$-algebra and $\mu$ is a measure on $\mathcal
 M(\mu)$.
-}
-
 
 \vspace{2ex}
-\textbf{Definition: $\mu$ is a \emph{Borel measure} on a topological space $X$
+\textbf{Definition:} $\mu$ is a \emph{Borel measure} on a topological space $X$
 if it is an outer measure on $X$ such that $\mathcal B(X)\subseteq\mathcal M(\mu)$.
-}
 
 \vspace{2ex}
-\textbf{Definition: A measure $\mu$ is said to be \emph{absolutely continuous
+\textbf{Definition:} A measure $\mu$ is said to be \emph{absolutely continuous
 with respect to} measure $\lambda$ if for any set $A$, $\lambda(A)=0$
-implies $\mu(A)=0$ and we write it $\mu << \lambda$}
+implies $\mu(A)=0$ and we write it $\mu << \lambda$
 
 \vspace{2ex}
-\textbf{Definition: We say that a Borel measure $\mu$ is \emph{regular} if
-for every }
+\textbf{Definition:} We say that a Borel measure $\mu$ is \emph{regular} if
+for every $F\subseteq X$ there exists a Borel set $E\in\mathcal B(X)$ such that
+\[F\subseteq E,\quad\quad\quad\quad\quad\quad\mu(F)=\mu(E)\]
 
 \vspace{2ex}
-\textbf{Definition: An outer measure $\mu$ is a \emph{Radon measure} on a
-topological space if it is locally finite (finite on all compact spaces).
-}
+\textbf{Definition:} An outer measure $\mu$ on $X$ is \emph{locally finite} if
+$\mu(K)<\infty$ for every compact set $K\subseteq X$.
 
 \vspace{2ex}
-\textbf{}
+\textbf{Definition:} An outer measure $\mu$ is a \emph{Radon measure} on a
+topological space if it is locally finite, Borel regular measure on $X$.
 
 \vspace{2ex}
-\textbf{Definition: For a function $f:X\rightarrow Y$ between metric spaces we can
+\textbf{Property of Radon measures on $\mathbb{R}^n$:} If $\mu$ is a Radon
+measure on $\mathbb{R}^n$, then
+\[
+    \mu(E)=\inf\{\mu(A)\,|\,E\subseteq A,\,A\textnormal{ is open}\}
+          =\sup\{\mu{K}\,|\,K\subseteq E,\,K\textnormal{ is compact}\}
+\]
+
+\vspace{2ex}
+\textbf{Definition:} For a function $f:X\rightarrow Y$ between metric spaces we can
 define its \emph{Lipschitz constant} $\text{Lip}(f) = \textnormal{inf}\{L\in
-\mathbb{R}\,|\,d(f(x),f(y))\leq d(x,y) \forall x,y\in X\}$}
+\mathbb{R}\,|\,d(f(x),f(y))\leq d(x,y) \forall x,y\in X\}$
 
 \subsection{Hausdorff measure}
 The Hausdorff measure generalises the notion of measure for lower dimensional
@@ -335,6 +340,212 @@ thus $f\mapsto f(x+y)-f(x)-f(y)$ is continuous and $A_{x,y}$. For similar
 reasons $B_{\lambda, x}=\{f\in\mathbb{R}^E\,|\,f(\lambda x)-\lambda f(x)=0\}$ is
 closed. This proves that $B$ is compact.
 
+\section{Analysis results}
+
+Geometric measure theory is based on few deep and not trivial results on space
+$\mathbb{R}^n$ which I found in the book "Measure theory and fine properties
+of functions". I took those results and proofs from that book with little
+modifications.
+
+\vspace{2ex}
+For a ball $B=B(x, r)$ of center $x$ and radius $r$ we shall note $\prescript{\epsilon}{}B
+=B(x, (1+\epsilon)r)$ for every $\epsilon>0$. I chose the prefix notation to
+avoid confusion with set power and Minkowski product.
+
+\vspace{1ex}
+\textbf{Vitali's covering theorem:}
+Let $\mathcal{F}$ be any collection of nondegenearted closed balls in
+$\mathbb{R}^n$ with
+\[ \sup\{\text{diam}\,B\,|\, B\in\mathcal{F}\}<\infty \]
+Then for every $\epsilon>1$ there exist a countable family $\mathcal{G}$ of
+disjoint balls in $\mathcal{F}$ such that
+\[\bigcup_{B\in\mathcal{F}}B\subseteq\bigcup_{B\in\mathcal{G}}\prescript{2\epsilon}{}B\]
+
+\vspace{1ex}
+\textbf{Proof:}
+Set $D=\sup\{\text{diam}\,B\,|\,B\in \mathcal{F}\}$. Set
+\[\mathcal{F}_j=\left\{B\in\mathcal{F}\,|\,\frac{D}{\epsilon^j}<\text{diam}\,B\leq\frac{D}{\epsilon^{j-1}}\right\},\quad j=1,2,\ldots\]
+We define $\mathcal{G}_j\subseteq\mathcal{F}_j$ as follows
+\begin{itemize}
+    \item Let $\mathcal{G}_1$ be any maximal disjoint collection of balls in
+        $\mathcal{F}_1$.
+
+    \item Assuming $\mathcal{G}_1,\ldots,\mathcal{G}_{k-1}$ have been selected,
+        we chose $\mathcal{G}_k$ to be any maximal disjoint subcollection of
+        \[ \{B\in\mathcal{F}_k\,|\,B\cap B'=\varnothing\text{ for all }B'\in\bigcup_{j=1}^{k-1}\mathcal{G}_j\}\]
+\end{itemize}
+They exist by Zorn's Lemma. Finally, define $\mathcal{G}=\bigcup_{j\in\mathbb{N}^*}\mathcal{G}_j$
+a collection of disjoint balls and $\mathcal{G}\subseteq\mathcal{F}$.
+
+\vspace{1ex}
+Proving that for each ball $B\in\mathcal{F}$, there exists a ball $B'\in\mathcal{G}$
+such that $B\cap B'\neq\varnothing$ and $B\subseteq\prescript{\epsilon}{}B'$. Fix
+$B\in\mathcal{F}$, there exists and index $j$ such that $B\in\mathcal{F}_j$ and
+by maximality of $\mathcal{G}_k$ there exists a ball $B'\in\bigcup_{k=1}^j
+\mathcal{G}_k$ with $B\cap B'\neq\varnothing$. But $\text{diam}\,B'>\frac{D}{\epsilon^j}$
+and $\text{diam}\,B\leq\frac{D}{\epsilon^{j-1}}$; so that
+\[ \text{diam}\,B\leq \frac{D}{\epsilon^{j-1}} < \epsilon\text{diam}\,B'\]
+Thus $B\subseteq\prescript{2\epsilon}{}B'$.
+
+\vspace{1ex}
+\textbf{Remark:} This is a generalised version of the proof from the book
+"Measure theory and fine properties of functions" where it is done for the
+smallest integral case $\epsilon = 2$. The generalised proof shows the reason
+why the final dilatation is $5 = 1+2\epsilon$, but actually it is true for
+dilatation $\ge 3$ and the smallest such integer is 4.
+
+
+\vspace{2ex}
+\textbf{Besicovitch’s Covering Theorem:} There exists a constant $N_n$, depending
+only on the dimension $n$ with the following property:
+
+\vspace{1ex}
+If $\mathcal{F}$ is any collcection of nondegenerated closed balls in
+$\mathbb{R}^n$ with
+\[\sup\{\textnormal{diam}\,B\,|\,B\in\mathcal F\}<\infty\]
+and $A$ is the set of centers of balls in $\mathcal F$, then there $N_n$
+countable collections $\mathcal{G}_1,\ldots,\mathcal{G}_{N_n}$ of disjoint
+balls in $\mathcal{F}$ such that
+\[A\subseteq\bigcup_{i=1}^{N_n}\bigcup_{B\in\mathcal{G_i}}B\]
+
+
+
+\vspace{2ex}
+\textbf{Filling open sets with balls theorem: Let $\mu$ be a Borel measure on
+$\mathbb{R}^n$, and $\mathcal{F}$ any collection of nondegenerated closed balls.
+Let $A$ denote the set of centers of the balls in $\mathcal F$. Assume
+\[\mu(A)<\infty\]
+and
+\[\inf\{r\,|\,B(a,r)\in\mathcal F\}=0\]
+for each $a\in A$. Then for each open set $U\subseteq\mathbb{R}^n$, there
+exists a countable collection $\mathcal G$ of disjoint balls in $\mathcal F$ such that
+\[\bigcup_{B\in\mathcal G} B\subseteq U\]
+and
+\[\mu\left((A\cap U)\setminus\bigcup_{B\in\mathcal G}B\right)=0.\]
+}
+
+\vspace{2ex}
+\textbf{Whitney covering theorem:}
+Let $C\subseteq \mathbb{R}^n$ be a closed set and $f:C\rightarrow\mathbb R$,
+$d:C\rightarrow\mathbb{R}^{n*}$ be continuous functions. We shall use notions
+\[
+\begin{aligned}
+    &R(y,x)=\frac{f(y)-f(x)-d(x)(y-x)}{|x-y|},\quad\forall x,y\in C, x\neq y \\
+    &\rho_k(\delta)=\sup\{|R(x,y)|\, |\, 0<|x-y|\leq\delta, x, y\in K\}
+\end{aligned}
+\]
+if we suppose that for every compact $K\subseteq C$
+\begin{equation}
+\rho_K(\delta)\rightarrow 0\text{ as }\delta\rightarrow 0
+\end{equation}
+
+Then there exists a fuction $\overline f\in\mathcal{C}^1(\mathbb{R}^n,\mathbb{R})$
+and $D\overline f|_C=d$.
+
+\vspace{1ex}
+\textbf{Remark:}
+I seek to give a more explicit version of the proof given in the book "Measure
+theory and fine properties of functions". In books that looked at about
+geometric measure theory this proof usually is not stated and pointed to the
+book of Federer wheres at least in version of that book the theorem is proved
+in much more general context and the theorem statement differs from the one we
+want.
+
+\vspace{1ex}
+\textbf{Proof:}
+The main challenge is to find a suitable extension of $f$. To construct this
+extension we will select regularly enough points in the complementary set and
+make a such function so that on those points it is an extension via averaged linear extrapolation and in
+between we interpolate by some close enough points. Let $U=C^c$ be a complementary
+open set. Let $r(x)=\frac{1}{4}\min(1,\text{dist}(x,C))$.
+By Vitali's covering theorem there exist a countable set
+$\{x_j\}_{j\in\mathbb{N}}$ and a countable set of disjoint closed balls $\{B_j=B(x_j, r(x_j))\}_
+{j\in\mathbb{N}}$ such that $\bigcup_{j\in\mathbb{N}}\prescript{2}{}B_j=U$. We
+need $\frac{1}{2}$ in the definition of $r(x)$ to make sure that $\prescript{2}{}
+B_j\subseteq U$. Then for every $x\in U$ we shall define $S_x=\{x_j\,|\,B(x,2r(x))
+\cap B(x_j,2r(x_j))\neq\varnothing\}$. 
+
+\vspace{1ex}
+Now we chech that $S_x$ is bounded for each dimention.
+Let $x_j\in S_x$ then $|r(x)-r(x_j)| \leq 1/4|x-x_j|$ because $|r(x)-r(x_j)|=
+1/4|\min(1,\text{dist}(x,C))-\min(1,\text{dist}(x_j,C))|$ and without loss of
+generality we can consider 3 cases:
+\begin{enumerate}
+    \item $\text{dist}(x,C),\text{dist}(x_j,C)>1$ then $|\min(1,\text{dist}(x,C))
+        -\min(1,\text{dist}(x_j,C))|=0\leq|x-x_j|$.
+    \item $\text{dist}(x,C)\leq1,\text{dist}(x_j,C)>1$, then $|\min(1,\text{dist}
+        (x,C))-\min(1,\text{dist}(x_j,C))| = 1-\text{dist}(x,C)<\text{dist}(x_j,C)
+        -\text{dist}(x,C)=|x_j-s|-|x-s|\leq|x_j-x|$, where $s$ is a projection
+        of $x$ on $C$. 
+    \item $\text{dist}(x,C)\leq\text{dist}(x_j,C)\leq1$, then $|\min(1,\text{dist}
+        (x,C))-\min(1,\text{dist}(x_j,C))| = \text{dist}(x_j,C)-\text{dist}(x,C)
+        \leq|x_j-x|$.
+\end{enumerate}
+
+So we have $|r(x)-r(x_j)| \leq 1/4|x-x_j|\leq1/4|2r(x)-2r(x_j)|=1/2(r(x)+r(x_j))$
+as $x_j\in S_x$. And hence
+\[
+\begin{aligned}
+    &r(x)-r(x_j)\leq1/2(r(x)+r(x_j))\;\Rightarrow\;r(x)\leq 3r(x_j)\\
+    &r(x_j)-r(x)\leq1/2(r(x)+r(x_j))\;\Rightarrow\;r(x_j)\leq 3r(x)
+\end{aligned}
+\]
+In addition we have $|x-x_j|+r(x_j)\leq2(r(x)+r(x_j))+r(x_j)\leq2r(x)+6r(x)+3r(x)=
+11r(x)$. Which means that $B(x_j, r(x_j))\subseteq B(x, 11r(x))$ and since
+$B(x_j, r(x_j))$ are disjoint we have an inquality on volumes:
+\[
+    \#S_x\omega_n(r(x)/3)^n\leq\#S_x\omega_n(r(x_j))^n=\sum_{x_j\in S_x}\text{Vol}
+    \,B_j\leq\text{Vol}(B(x,11r(x))=\omega_n(11r(x))^n
+\]
+Therefor $\#S_x\leq(3\cdot11)^n=33^n$ is bounded by a fixed constant in each
+dimention.
+
+\vspace{1ex}
+The goal of that part is to construct the function $\overline f$. Let $\mu:
+\mathbb{R}\rightarrow\mathbb{R}$ be a $\mathcal{C}^\infty$ function such that
+$0\leq\mu\leq1$, $\mu(t) = 1$ if $t\leq 1$ and $\mu(t)=0$ if $t\geq 2$. Then
+for each $j=1,\ldots$ we set $u_j(x)=\mu\left(\frac{|x-x_j|}{2r(x_j)}\right)$
+for $x\in\mathbb{R}^n$. Then $u_j\in\mathcal{C}^\infty$, $0\leq u_j\leq1$ and
+$u_j\equiv 1$ on $B(x_j, 2r(x_j))$ and $u_j\equiv 0$ on $B(x_j, 4r(x_j))$. 
+
+
+\vspace{2ex}
+\textbf{Lipschitz function extension theorem: Let $X$ be a metric space,
+$A\subseteq X$ and $f:A\rightarrow\mathbb{R}$. Then there exists a Lipschitz
+function $\overline f:X\mapsto\mathbb{R}$ such that $\textnormal{Lip}(f)=\textnormal{Lip}
+(\overline f)$} and $\overline f|_A=f$.
+
+\vspace{1ex}
+This is a proof from "Simons Lectures on geometric measure theory". Let's set
+$L=\text{Lip}(f)$. Then we define
+\[\overline f(x) = \text{inf}_{y\in A}(f(y)+Ld(x,y)\]
+By the definition, for all $x\in A$, $\overline f(x)\leq f(x)$ as in particular
+we can chose $y=x$.
+Furthermore, for all $a,b\in A$ and $x\in X$, we have an inequality for a
+Lipschitz function $f(b)-f(a)\leq Ld(b,a)\leq Ld(b,x)+Ld(a,x)$ and thus we have
+\[ f(a)+Ld(a,x)\geq f(b)-Ld(b,x)\] 
+and if we apply an infinum over a, we have $\overline f(x)\geq f(b)-L(b,x)$ and
+if $x\in A$ we can chose $b=x$ and we have an inequality in the other direction
+and thus the equality $\overline f(x)=f(x)$.
+
+\vspace{1ex}
+Now we check the Lipschitz constant
+%\begin{align*}
+%
+%\end{align*}
+
+\vspace{1ex}
+\textbf{Consequence: Let $X$ be a metric space, $A\subseteq X$ and
+$f:A\rightarrow\mathbb{R}^n$. Then there exists a Lipschitz
+function $\overline f:X\mapsto\mathbb{R^n}$ such that $\overline f|_A=f$}
+
+\vspace{1ex}
+Let's set $\overline f = (\overline f_i)_i$ extension by coordinate functions. 
+
+\vspace{1ex}
+\textbf{Remark:} I was thinking about extending the theorem to the case where
+function take vector values, but I can only prove it for the maximum norm.
+
 \section{Measures and convergence}
 
 \subsection{Vector valued measure}
@@ -451,6 +662,7 @@ have
 }
 
 \vspace{1ex}
+Proof can be found in
 
 \vspace{1ex}
 \textbf{Proposition: Let $\mu$ be a Radon measure and $\nu$ be a Radon or Vector
@@ -501,173 +713,6 @@ is an isometry
 
 \subsection{Interpretation of Banach-Alaoglu theorem for vector valued measures}
 
-\section{Analysis results}
-
-For a ball $B=B(x, r)$ of center $x$ and radius $r$ we shall note $\prescript{\epsilon}{}B
-=B(x, (1+\epsilon)r)$ for every $\epsilon>0$.
-
-\vspace{1ex}
-\textbf{Vitali's covering theorem:}
-Let $\mathcal{F}$ be any collection of nondegenearted closed balls in
-$\mathbb{R}^n$ with
-\[ \sup\{\text{diam}\,B\,|\, B\in\mathcal{F}\}<\infty \]
-Then for every $\epsilon>1$ there exist a countable family $\mathcal{G}$ of
-disjoint balls in $\mathcal{F}$ such that
-\[\bigcup_{B\in\mathcal{F}}B\subseteq\bigcup_{B\in\mathcal{G}}\prescript{2\epsilon}{}B\]
-
-\vspace{1ex}
-\textbf{Proof:}
-Set $D=\sup\{\text{diam}\,B\,|\,B\in \mathcal{F}\}$. Set
-\[\mathcal{F}_j=\left\{B\in\mathcal{F}\,|\,\frac{D}{\epsilon^j}<\text{diam}\,B\leq\frac{D}{\epsilon^{j-1}}\right\},\quad j=1,2,\ldots\]
-We define $\mathcal{G}_j\subseteq\mathcal{F}_j$ as follows
-\begin{itemize}
-    \item Let $\mathcal{G}_1$ be any maximal disjoint collection of balls in
-        $\mathcal{F}_1$.
-
-    \item Assuming $\mathcal{G}_1,\ldots,\mathcal{G}_{k-1}$ have been selected,
-        we chose $\mathcal{G}_k$ to be any maximal disjoint subcollection of
-        \[ \{B\in\mathcal{F}_k\,|\,B\cap B'=\varnothing\text{ for all }B'\in\bigcup_{j=1}^{k-1}\mathcal{G}_j\}\]
-\end{itemize}
-They exist by Zorn's Lemma. Finally, define $\mathcal{G}=\bigcup_{j\in\mathbb{N}^*}\mathcal{G}_j$
-a collection of disjoint balls and $\mathcal{G}\subseteq\mathcal{F}$.
-
-\vspace{1ex}
-Proving that for each ball $B\in\mathcal{F}$, there exists a ball $B'\in\mathcal{G}$
-such that $B\cap B'\neq\varnothing$ and $B\subseteq\prescript{\epsilon}{}B'$. Fix
-$B\in\mathcal{F}$, there exists and index $j$ such that $B\in\mathcal{F}_j$ and
-by maximality of $\mathcal{G}_k$ there exists a ball $B'\in\bigcup_{k=1}^j
-\mathcal{G}_k$ with $B\cap B'\neq\varnothing$. But $\text{diam}\,B'>\frac{D}{\epsilon^j}$
-and $\text{diam}\,B\leq\frac{D}{\epsilon^{j-1}}$; so that
-\[ \text{diam}\,B\leq \frac{D}{\epsilon^{j-1}} < \epsilon\text{diam}\,B'\]
-Thus $B\subseteq\prescript{2\epsilon}{}B'$.
-
-\vspace{1ex}
-\textbf{Remark:} This is a generalised version of the proof from the book
-"Measure theory and fine properties of functions" where it is done for the
-smallest integral case $\epsilon = 2$. The generalised proof shows the reason
-why the final dilatation is $5 = 1+2\epsilon$, but actually it is true for
-dilatation $\ge 3$ and the smallest such integer is 4.
-
-\vspace{1ex}
-\textbf{Whitney covering theorem:}
-Let $C\subseteq \mathbb{R}^n$ be a closed set and $f:C\rightarrow\mathbb R$,
-$d:C\rightarrow\mathbb{R}^{n*}$ be continuous functions. We shall use notions
-\[
-\begin{aligned}
-    &R(y,x)=\frac{f(y)-f(x)-d(x)(y-x)}{|x-y|},\quad\forall x,y\in C, x\neq y \\
-    &\rho_k(\delta)=\sup\{|R(x,y)|\, |\, 0<|x-y|\leq\delta, x, y\in K\}
-\end{aligned}
-\]
-if we suppose that for every compact $K\subseteq C$
-\begin{equation}
-\rho_K(\delta)\rightarrow 0\text{ as }\delta\rightarrow 0
-\end{equation}
-
-Then there exists a fuction $\overline f\in\mathcal{C}^1(\mathbb{R}^n,\mathbb{R})$
-and $D\overline f|_C=d$.
-
-\vspace{1ex}
-\textbf{Remark:}
-I seek to give a more explicit version of the proof given in the book "Measure
-theory and fine properties of functions". In books that looked at about
-geometric measure theory this proof usually is not stated and pointed to the
-book of Federer wheres at least in version of that book the theorem is proved
-in much more general context and the theorem statement differs from the one we
-want.
-
-\vspace{1ex}
-\textbf{Proof:}
-The main challenge is to find a suitable extension of $f$. To construct this
-extension we will select regularly enough points in the complementary set and
-make a such function so that on those points it is an extension via averaged linear extrapolation and in
-between we interpolate by some close enough points. Let $U=C^c$ be a complementary
-open set. Let $r(x)=\frac{1}{4}\min(1,\text{dist}(x,C))$.
-By Vitali's covering theorem there exist a countable set
-$\{x_j\}_{j\in\mathbb{N}}$ and a countable set of disjoint closed balls $\{B_j=B(x_j, r(x_j))\}_
-{j\in\mathbb{N}}$ such that $\bigcup_{j\in\mathbb{N}}\prescript{2}{}B_j=U$. We
-need $\frac{1}{2}$ in the definition of $r(x)$ to make sure that $\prescript{2}{}
-B_j\subseteq U$. Then for every $x\in U$ we shall define $S_x=\{x_j\,|\,B(x,2r(x))
-\cap B(x_j,2r(x_j))\neq\varnothing\}$. 
-
-\vspace{1ex}
-Now we chech that $S_x$ is bounded for each dimention.
-Let $x_j\in S_x$ then $|r(x)-r(x_j)| \leq 1/4|x-x_j|$ because $|r(x)-r(x_j)|=
-1/4|\min(1,\text{dist}(x,C))-\min(1,\text{dist}(x_j,C))|$ and without loss of
-generality we can consider 3 cases:
-\begin{enumerate}
-    \item $\text{dist}(x,C),\text{dist}(x_j,C)>1$ then $|\min(1,\text{dist}(x,C))
-        -\min(1,\text{dist}(x_j,C))|=0\leq|x-x_j|$.
-    \item $\text{dist}(x,C)\leq1,\text{dist}(x_j,C)>1$, then $|\min(1,\text{dist}
-        (x,C))-\min(1,\text{dist}(x_j,C))| = 1-\text{dist}(x,C)<\text{dist}(x_j,C)
-        -\text{dist}(x,C)=|x_j-s|-|x-s|\leq|x_j-x|$, where $s$ is a projection
-        of $x$ on $C$. 
-    \item $\text{dist}(x,C)\leq\text{dist}(x_j,C)\leq1$, then $|\min(1,\text{dist}
-        (x,C))-\min(1,\text{dist}(x_j,C))| = \text{dist}(x_j,C)-\text{dist}(x,C)
-        \leq|x_j-x|$.
-\end{enumerate}
-
-So we have $|r(x)-r(x_j)| \leq 1/4|x-x_j|\leq1/4|2r(x)-2r(x_j)|=1/2(r(x)+r(x_j))$
-as $x_j\in S_x$. And hence
-\[
-\begin{aligned}
-    &r(x)-r(x_j)\leq1/2(r(x)+r(x_j))\;\Rightarrow\;r(x)\leq 3r(x_j)\\
-    &r(x_j)-r(x)\leq1/2(r(x)+r(x_j))\;\Rightarrow\;r(x_j)\leq 3r(x)
-\end{aligned}
-\]
-In addition we have $|x-x_j|+r(x_j)\leq2(r(x)+r(x_j))+r(x_j)\leq2r(x)+6r(x)+3r(x)=
-11r(x)$. Which means that $B(x_j, r(x_j))\subseteq B(x, 11r(x))$ and since
-$B(x_j, r(x_j))$ are disjoint we have an inquality on volumes:
-\[
-    \#S_x\omega_n(r(x)/3)^n\leq\#S_x\omega_n(r(x_j))^n=\sum_{x_j\in S_x}\text{Vol}
-    \,B_j\leq\text{Vol}(B(x,11r(x))=\omega_n(11r(x))^n
-\]
-Therefor $\#S_x\leq(3\cdot11)^n=33^n$ is bounded by a fixed constant in each
-dimention.
-
-\vspace{1ex}
-The goal of that part is to construct the function $\overline f$. Let $\mu:
-\mathbb{R}\rightarrow\mathbb{R}$ be a $\mathcal{C}^\infty$ function such that
-$0\leq\mu\leq1$, $\mu(t) = 1$ if $t\leq 1$ and $\mu(t)=0$ if $t\geq 2$. Then
-for each $j=1,\ldots$ we set $u_j(x)=\mu\left(\frac{|x-x_j|}{2r(x_j)}\right)$
-for $x\in\mathbb{R}^n$. Then $u_j\in\mathcal{C}^\infty$, $0\leq u_j\leq1$ and
-$u_j\equiv 1$ on $B(x_j, 2r(x_j))$ and $u_j\equiv 0$ on $B(x_j, 4r(x_j))$. 
-
-\vspace{1ex}
-\textbf{Lipschitz function extension theorem: Let $X$ be a metric space,
-$A\subseteq X$ and $f:A\rightarrow\mathbb{R}$. Then there exists a Lipschitz
-function $\overline f:X\mapsto\mathbb{R}$ such that $\textnormal{Lip}(f)=\textnormal{Lip}
-(\overline f)$} and $\overline f|_A=f$.
-
-\vspace{1ex}
-This is a proof from "Simons Lectures on geometric measure theory". Let's set
-$L=\text{Lip}(f)$. Then we define
-\[\overline f(x) = \text{inf}_{y\in A}(f(y)+Ld(x,y)\]
-By the definition, for all $x\in A$, $\overline f(x)\leq f(x)$ as in particular
-we can chose $y=x$.
-Furthermore, for all $a,b\in A$ and $x\in X$, we have an inequality for a
-Lipschitz function $f(b)-f(a)\leq Ld(b,a)\leq Ld(b,x)+Ld(a,x)$ and thus we have
-\[ f(a)+Ld(a,x)\geq f(b)-Ld(b,x)\] 
-and if we apply an infinum over a, we have $\overline f(x)\geq f(b)-L(b,x)$ and
-if $x\in A$ we can chose $b=x$ and we have an inequality in the other direction
-and thus the equality $\overline f(x)=f(x)$.
-
-\vspace{1ex}
-Now we check the Lipschitz constant
-%\begin{align*}
-%
-%\end{align*}
-
-\vspace{1ex}
-\textbf{Consequence: Let $X$ be a metric space, $A\subseteq X$ and
-$f:A\rightarrow\mathbb{R}^n$. Then there exists a Lipschitz
-function $\overline f:X\mapsto\mathbb{R^n}$ such that $\overline f|_A=f$}
-
-\vspace{1ex}
-Let's set $\overline f = (\overline f_i)_i$ extension by coordinate functions. 
-
-\vspace{1ex}
-\textbf{Remark:} I was thinking about extending the theorem to the case where
-function take vector values, but I can only prove it for the maximum norm.
 
 \section{Countably n-rectifiable sets}
 Let $M\subseteq\mathbb{R}^{n+k}$ is called an \emph{$n$-rectifiable} if
@@ -676,10 +721,10 @@ Let $M\subseteq\mathbb{R}^{n+k}$ is called an \emph{$n$-rectifiable} if
 \]
 where $\mathcal{H}^n(M_0)=0$ and $F_i$ are Lipschitz functions.
 
-\textbf{Proposition: Alternatively we can define an $n$-rectifiable set by
+\textbf{Proposition:} Alternatively we can define an $n$-rectifiable set by
 inclusion $M\subseteq M_0\cup\bigcup_{i\in\mathbb{N}^*}F_i[A_i]$, where the only
 thing we change is $F_i:A_i\rightarrow\mathbb{R}^{n+m}$ the domain of Lipschitz
-function.}
+function.
 
 Clearly the definition in the proposition covers a wider variety of sets. To
 prove that they are equal we shall recall an extension theorem.
