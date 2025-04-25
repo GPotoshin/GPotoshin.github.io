@@ -35,15 +35,49 @@
 Here are my observations about geometric measure theory.
 
 \subsection{Acknowledged results and definition from analysis and measure theory}
-\textbf{Definition: An measure $\mu$ is said to be \emph{absolutely continuous
-with respect to} measure $\lambda$ if for any Borel set $A$, $\lambda(A)=0$
-implies $\mu(A)=0$.}
+\textbf{Definition: An \emph{outer measure} on $X$ is a set function on $X$ with
+values in $[0,\infty]$ with
+\begin{itemize}
+    \item $\mu(\varnothing)=0$
+    \item $E\subseteq\bigcup_{h\in\mathbb{N}}E_h\quad\Rightarrow\quad\mu(E)\leq\sum_{h\in\mathbb{N}}\mu(E_h)$
+\end{itemize}
+}
 
-\vspace{1ex}
+\vspace{2ex}
+\textbf{Carathéodory's theorem: if $\mu$ is an outer measure on $X$ and $\mathcal
+M(\mu)$ is the family of those $E\subseteq X$ such that
+\[\mu(F)=\mu(E\cap F)+\mu(F\setminus E),\quad\quad\forall F\subseteq X\]
+then $\mathcal M(\mu)$ is a $\sigma$-algebra and $\mu$ is a measure on $\mathcal
+M(\mu)$.
+}
+
+
+\vspace{2ex}
+\textbf{Definition: $\mu$ is a \emph{Borel measure} on a topological space $X$
+if it is an outer measure on $X$ such that $\mathcal B(X)\subseteq\mathcal M(\mu)$.
+}
+
+\vspace{2ex}
+\textbf{Definition: A measure $\mu$ is said to be \emph{absolutely continuous
+with respect to} measure $\lambda$ if for any set $A$, $\lambda(A)=0$
+implies $\mu(A)=0$ and we write it $\mu << \lambda$}
+
+\vspace{2ex}
+\textbf{Definition: We say that a Borel measure $\mu$ is \emph{regular} if
+for every }
+
+\vspace{2ex}
+\textbf{Definition: An outer measure $\mu$ is a \emph{Radon measure} on a
+topological space if it is locally finite (finite on all compact spaces).
+}
+
+\vspace{2ex}
+\textbf{}
+
+\vspace{2ex}
 \textbf{Definition: For a function $f:X\rightarrow Y$ between metric spaces we can
 define its \emph{Lipschitz constant} $\text{Lip}(f) = \textnormal{inf}\{L\in
 \mathbb{R}\,|\,d(f(x),f(y))\leq d(x,y) \forall x,y\in X\}$}
-
 
 \subsection{Hausdorff measure}
 The Hausdorff measure generalises the notion of measure for lower dimensional
@@ -301,43 +335,6 @@ thus $f\mapsto f(x+y)-f(x)-f(y)$ is continuous and $A_{x,y}$. For similar
 reasons $B_{\lambda, x}=\{f\in\mathbb{R}^E\,|\,f(\lambda x)-\lambda f(x)=0\}$ is
 closed. This proves that $B$ is compact.
 
-\section{Differentiation of Radon measure}
-\textbf{Definition: Let $\mu$ and $\nu$ be Radon measures on $\mathbb{R}^n$.
-Then we can define upper and lower derivatives of $\nu$ by $\mu$ by
-\begin{align*}
-    &\overline D_\mu\nu(x) =
-    \left\{\begin{array}{rcl}
-        \limsup_{r\rightarrow0}\frac{\nu(B(x,r))}{\mu(B(x,r))} & \textnormal{if }\mu(B(x,r))>0\textnormal{ for all }r>0\\
-        +\infty & \quad\textnormal{if }\mu(B(x,r))=0\textnormal{ for some }r>0
-    \end{array}\right.\\
-    &\underline D_\mu\nu(x) =
-    \left\{\begin{array}{rcl}
-        \liminf_{r\rightarrow0}\frac{\nu(B(x,r))}{\mu(B(x,r))} & \textnormal{if }\mu(B(x,r))>0\textnormal{ for all }r>0\\
-        +\infty & \quad\textnormal{if }\mu(B(x,r))=0\textnormal{ for some }r>0
-    \end{array}\right.
-\end{align*}
-If $\overline D_\mu\nu(x)=\underline D_\mu\nu(x)<+\infty$ then we say that $\nu$
-is \emph{differentiable} with respect to $\mu$ at x.
-}
-
-\vspace{1ex}
-\textbf{Definition: Let $\mu$ be Radon measure and $\nu$ be a vector measure on
-$\mathbb{R}^n$. Then we say that...
-\begin{align*}
-    &\overline D_\mu\nu(x) =
-    \left\{\begin{array}{rcl}
-        \limsup_{r\rightarrow0}\frac{\nu(B(x,r))}{\mu(B(x,r))} & \textnormal{if }\mu(B(x,r))>0\textnormal{ for all }r>0\\
-        +\infty & \quad\textnormal{if }\mu(B(x,r))=0\textnormal{ for some }r>0
-    \end{array}\right.\\
-    &\underline D_\mu\nu(x) =
-    \left\{\begin{array}{rcl}
-        \liminf_{r\rightarrow0}\frac{\nu(B(x,r))}{\mu(B(x,r))} & \textnormal{if }\mu(B(x,r))>0\textnormal{ for all }r>0\\
-        +\infty & \quad\textnormal{if }\mu(B(x,r))=0\textnormal{ for some }r>0
-    \end{array}\right.
-\end{align*}
-If $\overline D_\mu\nu(x)=\underline D_\mu\nu(x)<+\infty$ the we say that $\nu$
-is \emph{differentiable} with respect to $\mu$ at x.
-}
 \section{Measures and convergence}
 
 \subsection{Vector valued measure}
@@ -408,16 +405,89 @@ which ports a name a \emph{Jordan decomposition}.
 The \emph{mass} of $\mu$ is set to be $\|\mu\|=|\mu|(X)$. Does it coincide with
 the operator norm?
 
-\subsection{Representation of vector valued measures and Radon-Nikodym Theorem}
+\subsection{Differentiation of Radon measure and Radon-Nikodym Theorem}
+\textbf{Remark:} That section is an adopted version of paragraph 1.6 from the
+book "Measure theory and fine properties of functions" for vector measures.
+
+\vspace{1ex}
+\textbf{Definition: Let $\mu$ and $\nu$ be Radon measures on $\mathbb{R}^n$.
+Then we can define upper and lower derivatives of $\nu$ by $\mu$ by
+\begin{align*}
+    &\overline D_\mu\nu(x) =
+    \left\{\begin{array}{rcl}
+        \limsup_{r\rightarrow0}\frac{\nu(B(x,r))}{\mu(B(x,r))} & \textnormal{if }\mu(B(x,r))>0\textnormal{ for all }r>0\\
+        +\infty & \quad\textnormal{if }\mu(B(x,r))=0\textnormal{ for some }r>0
+    \end{array}\right.\\
+    &\underline D_\mu\nu(x) =
+    \left\{\begin{array}{rcl}
+        \liminf_{r\rightarrow0}\frac{\nu(B(x,r))}{\mu(B(x,r))} & \textnormal{if }\mu(B(x,r))>0\textnormal{ for all }r>0\\
+        +\infty & \quad\textnormal{if }\mu(B(x,r))=0\textnormal{ for some }r>0
+    \end{array}\right.
+\end{align*}
+If $\overline D_\mu\nu(x)=\underline D_\mu\nu(x)<+\infty$ then we say that $\nu$
+is \emph{differentiable} with respect to $\mu$ at x and we write
+\[D_\mu\nu(x)=\overline D_\mu\nu(x)=\underline D_\mu\nu(x)\]
+}
+
+\vspace{1ex}
+\textbf{Definition: Let $\mu$ be Radon measure and $\nu$ be a vector measure on
+$\mathbb{R}^n$. Then we define a derivatives as
+\[
+    D_\mu\nu(x) =
+    \left\{\begin{array}{rcl}
+        \lim_{r\rightarrow0}\frac{\nu(B(x,r))}{\mu(B(x,r))} & \textnormal{if }\mu(B(x,r))>0\textnormal{ for all }r>0\\
+        +\infty & \quad\textnormal{if }\mu(B(x,r))=0\textnormal{ for some }r>0
+    \end{array}\right.
+\]
+}
+
+\vspace{1ex}
+\textbf{Upper and lower derivatives lemmas: For $\alpha\in\mathbb{R}_{>0}$ we
+have
+\begin{itemize}
+    \item $A\subseteq\{x\in\mathbb{R}^n\,|\,\underline D_\mu\nu(x)\leq\alpha\}$ implies $\nu(A)\leq\alpha\mu(A)$.
+    \item $A\subseteq\{x\in\mathbb{R}^n\,|\,\overline D_\mu\nu(x)\geq\alpha\}$ implies $\nu(A)\geq\alpha\mu(A)$.
+\end{itemize}
+}
+
+\vspace{1ex}
+
+\vspace{1ex}
+\textbf{Proposition: Let $\mu$ be a Radon measure and $\nu$ be a Radon or Vector
+measure. Then
+\begin{itemize}
+    \item $D_\mu\nu$ exists and is finite $\mu$-a.e.
+    \item $D_\mu\nu$ is $\mu$-measurable.
+\end{itemize}
+}
+
+\vspace{1ex} We start by proving statements for $\mu$-Radon measure and then I
+will pass to Vector space. We may assume $\mu(\mathbb{R}^n), \nu(\mathbb{R}^n)<\infty$.
+Otherwise we can take restriction on bounded neiboouds of each point. Let's
+prove the first assertion.
+
+\vspace{1ex} Let $I=\{x\,|\,D_\mu\nu(x)=\infty\}$. Observe that for each
+$\alpha>0,\,I\subseteq\{x\,|\,D_\mu\nu(x)\geq\alpha\}$. Thus by Lemma
+
+\vspace{1ex}
+\textbf{Radon-Nikodym Theorem: Let $\nu$ be a vector measure and $\mu$ a Radon
+measure on $\mathbb{R}^n$. Then
+\[
+    \nu(A) = \int_AD_\mu\nu\,d\mu
+\]
+}
+\subsection{Representation of vector valued measures }
+
 
 \vspace{1ex}
 In the context of geometric measure theory we are interested in the vector
 space $E=\mathcal{C}^0_c(\mathbb{R}^n, \mathbb{R}^m)$ with the supremum norm.
 Then its dual space is $E^*=\{L:E\rightarrow\mathbb{R}\,|\,L\text{ is linear
-and continious}\}$. Then on the $E^*$ from now and on we will consider the weak*
-star topology. To make the connection with measure we shall state the result for
-Reisz's representation of $E^*$. In fact every functional $L\in E^*$ can be
-represented by an $\mathbb{R}^m$-valued Radon measure $\mu$, such that
+and continious}\}$ is a vector space of bound measure. Then on the $E^*$ from 
+now and on we will consider the weak* star topology. To make the connection
+with measure we shall state the result for Reisz's representation of $E^*$. In 
+fact every functional $L\in E^*$ can be represented by an $\mathbb{R}^m$-valued
+Radon measure $\mu$, such that
 \[\langle L,\phi\rangle=\int\phi d\mu\]
 We shall denote $\mathcal{M}(X,\mathbb{R}^n)$ the space of $\mathbb{R}^n$
 measures on $X$ endowed with weak* topology.
