@@ -392,7 +392,7 @@ Thus $B\subseteq\prescript{2\epsilon}{}B'$.
 "Measure theory and fine properties of functions" where it is done for the
 smallest integral case $\epsilon = 2$. The generalised proof shows the reason
 why the final dilatation is $5 = 1+2\epsilon$, but actually it is true for
-dilatation $\ge 3$ and the smallest such integer is 4.
+dilatation $>3$ and the smallest such integer is 4.
 
 
 \vspace{2ex}
@@ -400,7 +400,7 @@ dilatation $\ge 3$ and the smallest such integer is 4.
 only on the dimension $n$ with the following property:
 
 \vspace{1ex}
-If $\mathcal{F}$ is any collcection of nondegenerated closed balls in
+If $\mathcal{F}$ is any collection of non-degenerated closed balls in
 $\mathbb{R}^n$ with
 \[\sup\{\textnormal{diam}\,B\,|\,B\in\mathcal F\}<\infty\]
 and $A$ is the set of centers of balls in $\mathcal F$, then there $N_n$
@@ -408,11 +408,17 @@ countable collections $\mathcal{G}_1,\ldots,\mathcal{G}_{N_n}$ of disjoint
 balls in $\mathcal{F}$ such that
 \[A\subseteq\bigcup_{i=1}^{N_n}\bigcup_{B\in\mathcal{G_i}}B\]
 
-
+\vspace{1ex}
+\textbf{Proof:} [TODO]
+First suppose that $A$ is bounded and $\mathcal F$ non-empty as this case does
+not deserve consideration. Write
+\[D=\sup\{\text{diam}\,B\,|\,B\in\mathcal F\}\]
+Chose any ball $B_1=B(a_1, \tau_1)\in\mathcal F$ such that $\tau_1\geq\frac{3}{4}
+\frac{D}{2}$, it exists. Inductively chose $B_j$ for $j>1$ as follows. Let
 
 \vspace{2ex}
-\textbf{Filling open sets with balls theorem: Let $\mu$ be a Borel measure on
-$\mathbb{R}^n$, and $\mathcal{F}$ any collection of nondegenerated closed balls.
+\textbf{Filling open sets with balls theorem:} Let $\mu$ be a Borel measure on
+$\mathbb{R}^n$, and $\mathcal{F}$ any collection of non-degenerated closed balls.
 Let $A$ denote the set of centers of the balls in $\mathcal F$. Assume
 \[\mu(A)<\infty\]
 and
@@ -422,7 +428,9 @@ exists a countable collection $\mathcal G$ of disjoint balls in $\mathcal F$ suc
 \[\bigcup_{B\in\mathcal G} B\subseteq U\]
 and
 \[\mu\left((A\cap U)\setminus\bigcup_{B\in\mathcal G}B\right)=0.\]
-}
+
+\vspace{1ex}
+\textbf{Proof:} [TODO]
 
 \vspace{2ex}
 \textbf{Whitney covering theorem:}
@@ -452,7 +460,7 @@ in much more general context and the theorem statement differs from the one we
 want.
 
 \vspace{1ex}
-\textbf{Proof:}
+\textbf{Proof:} [TODO]
 The main challenge is to find a suitable extension of $f$. To construct this
 extension we will select regularly enough points in the complementary set and
 make a such function so that on those points it is an extension via averaged linear extrapolation and in
@@ -613,14 +621,20 @@ which ports a name a \emph{Jordan decomposition}.
 
 
 \vspace{1ex}
-The \emph{mass} of $\mu$ is set to be $\|\mu\|=|\mu|(X)$. Does it coincide with
-the operator norm?
+The \emph{mass} of $\mu$ is set to be $\|\mu\|=|\mu|(X)$.
+
+\vspace{1ex}
+\textbf{Proposition:}
+The set of vector norms with the mass form a normed vector space.
+
+\vspace{1ex}
+\textbf{Proof:} [TODO]
 
 \subsection{Differentiation of Radon measure and Radon-Nikodym Theorem}
 \textbf{Remark:} That section is an adopted version of paragraph 1.6 from the
 book "Measure theory and fine properties of functions" for vector measures.
 
-\vspace{1ex}
+\vspace{2ex}
 \textbf{Definition: Let $\mu$ and $\nu$ be Radon measures on $\mathbb{R}^n$.
 Then we can define upper and lower derivatives of $\nu$ by $\mu$ by
 \begin{align*}
@@ -682,20 +696,27 @@ prove the first assertion.
 $\alpha>0,\,I\subseteq\{x\,|\,D_\mu\nu(x)\geq\alpha\}$. Thus by Lemma
 
 \vspace{1ex}
-\textbf{Radon-Nikodym Theorem: Let $\nu$ be a vector measure and $\mu$ a Radon
+\textbf{Radon-Nikodym Theorem:} Let $\nu$ be a vector measure and $\mu$ a Radon
 measure on $\mathbb{R}^n$. Then
 \[
     \nu(A) = \int_AD_\mu\nu\,d\mu
 \]
-}
-\subsection{Representation of vector valued measures }
 
+\vspace{2ex}
+This gives us a representation of a vector valued measure $\mu$ as $\mu=
+D_{|\mu|}\mu\,|\mu|$. And we can define the integration with respect to such
+measure as
+\[
+    \int fd\mu = \int f\cdot D_{|\mu|}\mu\,d|\mu|
+\]
+
+\subsection{Representation of vector valued measures }
 
 \vspace{1ex}
 In the context of geometric measure theory we are interested in the vector
 space $E=\mathcal{C}^0_c(\mathbb{R}^n, \mathbb{R}^m)$ with the supremum norm.
 Then its dual space is $E^*=\{L:E\rightarrow\mathbb{R}\,|\,L\text{ is linear
-and continious}\}$ is a vector space of bound measure. Then on the $E^*$ from 
+and continious}\}$ is a vector space of bound linear functionals. Then on the $E^*$ from 
 now and on we will consider the weak* star topology. To make the connection
 with measure we shall state the result for Reisz's representation of $E^*$. In 
 fact every functional $L\in E^*$ can be represented by an $\mathbb{R}^m$-valued
@@ -703,7 +724,16 @@ Radon measure $\mu$, such that
 \[\langle L,\phi\rangle=\int\phi d\mu\]
 We shall denote $\mathcal{M}(X,\mathbb{R}^n)$ the space of $\mathbb{R}^n$
 measures on $X$ endowed with weak* topology.
-\subsection{Riesz representation theoremes for vector valued measure}
+
+\subsection{Riesz representation theorems for vector valued measure}
+For an $\mathbb{R}^n$-valued measure $\mu$ on $X$ we define an associated
+functional
+\begin{align*}
+    \Lambda_\mu:\mathcal C_0(X,\mathbb{R}^n)&\rightarrow\mathbb{R}\\
+    f&\mapsto\int f\,d\mu
+\end{align*}
+
+\textbf{Riesz representation theorem:}
 The map
 \begin{align*}
     \Lambda:\mathcal{M}(X, \mathbb{R}^n)&\rightarrow\mathcal{C}_0(X,\mathbb{R}^n)^*\\
@@ -711,7 +741,23 @@ The map
 \end{align*}
 is an isometry
 
+\vspace{1ex}:
+\textbf{Proof:} [TODO]
+
 \subsection{Interpretation of Banach-Alaoglu theorem for vector valued measures}
+The weak* convergence can be interpreted as convergence of evaluation of measure
+on every continuous function on compact sets.
+
+\vspace{2ex}
+The original statement of Banch-Alaoglu theorem is \textbf{the closed unit ball
+$B=\{f\in E^*\,|\,|f|\leq 1\}$ is compact in the weak* topology}. If we replace
+the termes in this proof by measure terms we have the following theorem
+
+\vspace{1ex}
+\textbf{Banach-Alaoglu Theorem for $\mathcal M(X,\mathbb{R}^n)$:}
+The set $B=\{\mu\in\mathcal M(X,\mathbb{R}^n)\,|\,\|\mu\|\leq C\}$ is compact
+for every $C\in\mathbb{R}_{>0}$. That's said every bounded sequence of vector
+measures has a weakly* converging subsequence.
 
 
 \section{Countably n-rectifiable sets}
