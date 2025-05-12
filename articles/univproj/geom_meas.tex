@@ -17,6 +17,8 @@
 \usepackage{unicode-math}
 \setmathfont{Cambria Math}
 
+\usepackage[nottoc]{tocbibind}
+
 \begin{document}
 \title{
 \textit{\small{Georgii Potoshin, 2025}}\\
@@ -35,54 +37,55 @@
 Here are my observations about geometric measure theory.
 
 \subsection{Acknowledged results and definition from analysis and measure theory}
-\textbf{Definition:} An \emph{outer measure} on $X$ is a set function on $X$ with
+\textbf{Definition:} \textit{An \textbf{outer measure} on $X$ is a set function on $X$ with
 values in $[0,\infty]$ with
 \begin{itemize}
     \item $\mu(\varnothing)=0$
     \item $E\subseteq\bigcup_{h\in\mathbb{N}}E_h\quad\Rightarrow\quad\mu(E)\leq\sum_{h\in\mathbb{N}}\mu(E_h)$
 \end{itemize}
+}
 
 \vspace{2ex}
-\textbf{Carathéodory's theorem:} if $\mu$ is an outer measure on $X$ and $\mathcal
+\textbf{Carathéodory's theorem:} \textit{If $\mu$ is an outer measure on $X$ and $\mathcal
 M(\mu)$ is the family of those $E\subseteq X$ such that
 \[\mu(F)=\mu(E\cap F)+\mu(F\setminus E),\quad\quad\forall F\subseteq X\]
 then $\mathcal M(\mu)$ is a $\sigma$-algebra and $\mu$ is a measure on $\mathcal
-M(\mu)$.
+M(\mu)$.}
 
 \vspace{2ex}
-\textbf{Definition:} $\mu$ is a \emph{Borel measure} on a topological space $X$
-if it is an outer measure on $X$ such that $\mathcal B(X)\subseteq\mathcal M(\mu)$.
+\textbf{Definition:} \textit{$\mu$ is a \textbf{Borel measure} on a topological space $X$
+if it is an outer measure on $X$ such that $\mathcal B(X)\subseteq\mathcal M(\mu)$.}
 
 \vspace{2ex}
-\textbf{Definition:} A measure $\mu$ is said to be \emph{absolutely continuous
+\textbf{Definition:} \textit{A measure $\mu$ is said to be \textbf{absolutely continuous
 with respect to} measure $\lambda$ if for any set $A$, $\lambda(A)=0$
-implies $\mu(A)=0$ and we write it $\mu << \lambda$
+implies $\mu(A)=0$ and we write it $\mu << \lambda$.}
 
 \vspace{2ex}
-\textbf{Definition:} We say that a Borel measure $\mu$ is \emph{regular} if
+\textbf{Definition:} \textit{We say that a Borel measure $\mu$ is \textbf{regular} if
 for every $F\subseteq X$ there exists a Borel set $E\in\mathcal B(X)$ such that
-\[F\subseteq E,\quad\quad\quad\quad\quad\quad\mu(F)=\mu(E)\]
+\[F\subseteq E,\quad\quad\quad\quad\quad\quad\mu(F)=\mu(E)\]}
 
 \vspace{2ex}
-\textbf{Definition:} An outer measure $\mu$ on $X$ is \emph{locally finite} if
-$\mu(K)<\infty$ for every compact set $K\subseteq X$.
+\textbf{Definition:} \textit{An outer measure $\mu$ on $X$ is \textbf{locally finite} if
+$\mu(K)<\infty$ for every compact set $K\subseteq X$.}
 
 \vspace{2ex}
-\textbf{Definition:} An outer measure $\mu$ is a \emph{Radon measure} on a
-topological space if it is locally finite, Borel regular measure on $X$.
+\textbf{Definition:} \textit{An outer measure $\mu$ is a \textbf{Radon measure} on a
+topological space if it is locally finite, Borel regular measure on $X$.}
 
 \vspace{2ex}
-\textbf{Property of Radon measures on $\mathbb{R}^n$:} If $\mu$ is a Radon
+\textbf{Property of Radon measures on $\mathbb{R}^n$:} \textit{If $\mu$ is a Radon
 measure on $\mathbb{R}^n$, then
 \[
     \mu(E)=\inf\{\mu(A)\,|\,E\subseteq A,\,A\textnormal{ is open}\}
           =\sup\{\mu{K}\,|\,K\subseteq E,\,K\textnormal{ is compact}\}
-\]
+\]}
 
 \vspace{2ex}
-\textbf{Definition:} For a function $f:X\rightarrow Y$ between metric spaces we can
-define its \emph{Lipschitz constant} $\text{Lip}(f) = \textnormal{inf}\{L\in
-\mathbb{R}\,|\,d(f(x),f(y))\leq d(x,y) \forall x,y\in X\}$
+\textbf{Definition:} \textit{For a function $f:X\rightarrow Y$ between metric spaces we can
+define its \textbf{Lipschitz constant} $\text{Lip}(f) = \textnormal{inf}\{L\in
+\mathbb{R}\,|\,d(f(x),f(y))\leq d(x,y) \forall x,y\in X\}$}
 
 \subsection{Hausdorff measure}
 The Hausdorff measure generalises the notion of measure for lower dimensional
@@ -102,37 +105,37 @@ because $\mathcal{H}_\delta^s(E)$ is increasing function of $\delta$. We note
 I shall introduce the notion of $s$-variation of a cover $S$ as
 \[\text{Var}^s(S)=\sum_{I\in S}\omega_s\left(\frac{\text{diam}(I)}{2}\right)^s\]
 
-\textbf{Proposition:} For a natural $n\geq 0$, $\omega_n$ is a volume of a unit
-$n$-dimensional ball.
+\textbf{Proposition:} \textbf{For a natural $n\geq 0$, $\omega_n$ is a volume of a unit
+$n$-dimensional ball.}
 \vspace{1ex}
 
 \subsection{Properties of Hausdorff measure}
 
-\textbf{Proposition:} Hausdorff measure is a Borel measure for regular topology.
+\textbf{Proposition:} \textit{Hausdorff measure is a Borel measure for regular topology.}
 
 \vspace{1ex}
-\textbf{Proposition:} In the definition of Hausdorff measure we can consider
-only closed or open sets.
+\textbf{Proposition:} \textit{In the definition of Hausdorff measure we can consider
+only closed or open sets.}
 
 \vspace{1ex}
-\textbf{Proposition:} Hausdorff measure of dimension $m\in N$ coincide on
-$m$-dimensional affine subspaces with their Lebesgue measure.
+\textbf{Proposition:} \textit{Hausdorff measure of dimension $m\in N$ coincide on
+$m$-dimensional affine subspaces with their Lebesgue measure.}
 
 \vspace{1ex}
-\textbf{Proposition:} For a Lipschitz function $f:\mathbb{R}^n\rightarrow
+\textbf{Proposition:} \textit{For a Lipschitz function $f:\mathbb{R}^n\rightarrow
 \mathbb{R}^m$ we have the following inequality
 \[ \mathcal{H}^s(f[E])\leq\text{Lip}(f)^s\mathcal{H}^s(E) \]
-for every $s>0$ and $E\subseteq\mathbb{R}^n$. And $\text{dim}(E)<\text{dim}(f[E])$.
+for every $s>0$ and $E\subseteq\mathbb{R}^n$. And $\text{dim}(E)<\text{dim}(f[E])$.}
 
 \vspace{1ex}
-\textbf{Proposition:} The $n$-dimetional Hausdorff measure traced to a
+\textbf{Proposition:} \textit{The $n$-dimetional Hausdorff measure traced to a
 $n$-dimentional $\mathcal{C}^1$-submanifold of $R^m$ induces the area measure
 on this submanifold and coincides with the integral measure via parametrisation
-on it.
+on it.}
 
 \vspace{1ex}
 \textbf{Remark:} Proofs to those proposition can be found in the book "Geometric
-measure theory" be Francesco Maggi.
+measure theory" be Francesco Maggi \cite{maggi}.
 \subsection{Hausdorff dimension}
 
 To a set $S$ we can associate a number $s=\text{inf}\{a\geq 0\,|\,\mathcal{H}^a
@@ -184,8 +187,8 @@ of fractal sets" by K. J. Flaconer, generelised to the case of arbitrary $m$ and
 $n$. In this book the proof is done for the case $m=1$, $n=3$.
 
 \vspace{1ex}
-\textbf{Proposition:} There is a subset of $[0,1]$ with а Hausdorff dimension
-$1$, but Lebesgue measure 0.
+\textbf{Proposition:} \textit{There is a subset of $[0,1]$ with а Hausdorff dimension
+$1$, but Lebesgue measure 0.}
 
 \vspace{1ex}
 To show that we shall use Cantor's sets. Let $C_{m/n}$ be a set discussed in a
@@ -207,9 +210,9 @@ example, the product topology is exactly $\tau(\{\pi_i\})$, where $\pi_i$ are
 canonical projections.
 \vspace{1ex}
 
-\textbf{Proposition:} Let $\tau$ be a topology on $X$. Then $\tau=\tau(\{f_i\})$
+\textbf{Proposition:} \textit{Let $\tau$ be a topology on $X$. Then $\tau=\tau(\{f_i\})$
 if and only if every function $g:W\rightarrow X$ such that $f_i\circ g$ are
-continuous is continuous.
+continuous is continuous.}
 \vspace{1ex}
 
 \textbf{Remark:} This is a well-known property of caorsest topology, but I
@@ -233,7 +236,7 @@ and that means that $\tau\subseteq\tau(\{f_i\})$. And finally $\tau=\tau(\{f_i\}
 
 \vspace{1ex}
 
-\textbf{Theorem (Tychonoff):} Product of compact spaces is compact.
+\textbf{Tichonoff's Theorem:} \textit{Product of compact spaces is compact.}
 \vspace{1ex}
 
 \textbf{General structure:} Let $I$ be a set of indices and $E_i$ for $i\in I$
@@ -256,7 +259,7 @@ not contain a finite sub-cover. \textbf{Then if $V\in M^c$, we have $U_1,\ldots,
 U_n\in M$ such that $V\cup U_1\cup\ldots\cup U_n=X$.} Because otherwise we
 could have added $V$ to $M$ and M would not be maximum. \textbf{If
 $U,V\in M^c$ then $U\cap V\in M^c$.} In other words $M^c$ is a multiplicative
-system, which is similar to the statement that $\mathfrak{p}^c$ is a multiplicative
+system, which is similar to the statement that $\mathfrak{p}^c$ is multiplicative
 for a prime ideal $\mathfrak{p}$. This is true due to the fact that we have
 $U_1,\ldots,U_k\in M$ and $V_1,\ldots,V_l\in M$ such that $U\cup U_1\cup\ldots
 \cup U_n = X = V\cup V_1\cup\ldots\cup V_l$ and thus $(U\cap V)\cup U_1\cup\ldots
@@ -302,8 +305,8 @@ On the space $E^*$, we also have strong topology with the operator norm.
 Additionally, we have the weak* topology $\sigma(E^*, E)=\tau(\{v\}_{v\in E})$.
 
 \vspace{1ex}
-\textbf{Proposition:} The weak* topology is a trace topology from the space
-$\mathbb{R}^E$ with the product topology.
+\textbf{Proposition:} \textit{The weak* topology is a trace topology from the space
+$\mathbb{R}^E$ with the product topology.}
 
 \vspace{1ex}
 \textbf{Proof:} Let $\tau(\{\pi_v\}_{v\in E})$ be the trace topology. Then it
@@ -313,13 +316,13 @@ topology.
 
 \vspace{1ex}
 \textbf{Remark:} In the book "Functional Analysis" by Haim Brezis, the part
-above is done by establishing an homeomorpism and the verification of its bicontinuity.
+above is done by establishing an homeomorpism and a verification of its bicontinuity.
 As you have seen, there is actually nothing substantial to prove since these are 
 just two notions of the same concept – projection and evaluation in the dual-space.
 
 \vspace{1ex}
-\textbf{Theorem (Banach-Alaoglu):} The closed unit ball $B=\{f\in E^*\,|\,|
-f|\leq 1\}$ is compact in the weak* topology $\sigma(E^*, E)$.
+\textbf{Theorem (Banach-Alaoglu):} \textit{The closed unit ball $B=\{f\in E^*\,|\,|
+f|\leq 1\}$ is compact in the weak* topology $\sigma(E^*, E)$.}
 
 \vspace{1ex}
 \textbf{Proof:}
@@ -353,13 +356,13 @@ For a ball $B=B(x, r)$ of center $x$ and radius $r$ we shall note $\prescript{\e
 avoid confusion with set power and Minkowski product.
 
 \vspace{1ex}
-\textbf{Vitali's covering theorem:}
+\textbf{Vitali's covering theorem:} \textit{
 Let $\mathcal{F}$ be any collection of nondegenearted closed balls in
 $\mathbb{R}^n$ with
 \[ \sup\{\text{diam}\,B\,|\, B\in\mathcal{F}\}<\infty \]
 Then for every $\epsilon>1$ there exist a countable family $\mathcal{G}$ of
 disjoint balls in $\mathcal{F}$ such that
-\[\bigcup_{B\in\mathcal{F}}B\subseteq\bigcup_{B\in\mathcal{G}}\prescript{2\epsilon}{}B\]
+\[\bigcup_{B\in\mathcal{F}}B\subseteq\bigcup_{B\in\mathcal{G}}\prescript{2\epsilon}{}B\]}
 
 \vspace{1ex}
 \textbf{Proof:}
@@ -396,28 +399,23 @@ dilatation $>3$ and the smallest such integer is 4.
 
 
 \vspace{2ex}
-\textbf{Besicovitch’s Covering Theorem:} There exists a constant $N_n$, depending
-only on the dimension $n$ with the following property:
+\textbf{Besicovitch’s Covering Theorem:} \textit{There exists a constant $N_n$, depending
+only on the dimension $n$ with the following property:}
 
-\vspace{1ex}
+\vspace{1ex} \textit{
 If $\mathcal{F}$ is any collection of non-degenerated closed balls in
 $\mathbb{R}^n$ with
 \[\sup\{\textnormal{diam}\,B\,|\,B\in\mathcal F\}<\infty\]
 and $A$ is the set of centers of balls in $\mathcal F$, then there $N_n$
 countable collections $\mathcal{G}_1,\ldots,\mathcal{G}_{N_n}$ of disjoint
 balls in $\mathcal{F}$ such that
-\[A\subseteq\bigcup_{i=1}^{N_n}\bigcup_{B\in\mathcal{G_i}}B\]
+\[A\subseteq\bigcup_{i=1}^{N_n}\bigcup_{B\in\mathcal{G_i}}B\]}
 
 \vspace{1ex}
-\textbf{Proof:} [TODO]
-First suppose that $A$ is bounded and $\mathcal F$ non-empty as this case does
-not deserve consideration. Write
-\[D=\sup\{\text{diam}\,B\,|\,B\in\mathcal F\}\]
-Chose any ball $B_1=B(a_1, \tau_1)\in\mathcal F$ such that $\tau_1\geq\frac{3}{4}
-\frac{D}{2}$, it exists. Inductively chose $B_j$ for $j>1$ as follows. Let
+\textbf{Proof:} take a look at \cite{evans_gariepy}.
 
 \vspace{2ex}
-\textbf{Filling open sets with balls theorem:} Let $\mu$ be a Borel measure on
+\textbf{Filling open sets with balls theorem:} \textit{Let $\mu$ be a Borel measure on
 $\mathbb{R}^n$, and $\mathcal{F}$ any collection of non-degenerated closed balls.
 Let $A$ denote the set of centers of the balls in $\mathcal F$. Assume
 \[\mu(A)<\infty\]
@@ -427,28 +425,26 @@ for each $a\in A$. Then for each open set $U\subseteq\mathbb{R}^n$, there
 exists a countable collection $\mathcal G$ of disjoint balls in $\mathcal F$ such that
 \[\bigcup_{B\in\mathcal G} B\subseteq U\]
 and
-\[\mu\left((A\cap U)\setminus\bigcup_{B\in\mathcal G}B\right)=0.\]
+\[\mu\left((A\cap U)\setminus\bigcup_{B\in\mathcal G}B\right)=0.\]}
 
 \vspace{1ex}
 \textbf{Proof:} [TODO]
 
 \vspace{2ex}
-\textbf{Whitney covering theorem:}
+\textbf{Whitney covering theorem:}\textit{
 Let $C\subseteq \mathbb{R}^n$ be a closed set and $f:C\rightarrow\mathbb R$,
-$d:C\rightarrow\mathbb{R}^{n*}$ be continuous functions. We shall use notions
-\[
-\begin{aligned}
+$d:C\rightarrow\mathbb{R}^{n*}$ be continuous functions. We shall use notions}
+\begin{align*}
     &R(y,x)=\frac{f(y)-f(x)-d(x)(y-x)}{|x-y|},\quad\forall x,y\in C, x\neq y \\
     &\rho_k(\delta)=\sup\{|R(x,y)|\, |\, 0<|x-y|\leq\delta, x, y\in K\}
-\end{aligned}
-\]
-if we suppose that for every compact $K\subseteq C$
+\end{align*}
+\textit{if we suppose that for every compact $K\subseteq C$}
 \begin{equation}
 \rho_K(\delta)\rightarrow 0\text{ as }\delta\rightarrow 0
 \end{equation}
 
-Then there exists a fuction $\overline f\in\mathcal{C}^1(\mathbb{R}^n,\mathbb{R})$
-and $D\overline f|_C=d$.
+\textit{Then there exists a fuction $\overline f\in\mathcal{C}^1(\mathbb{R}^n,\mathbb{R})$
+and $D\overline f|_C=d$.}
 
 \vspace{1ex}
 \textbf{Remark:}
@@ -460,68 +456,16 @@ in much more general context and the theorem statement differs from the one we
 want.
 
 \vspace{1ex}
-\textbf{Proof:} [TODO]
-The main challenge is to find a suitable extension of $f$. To construct this
-extension we will select regularly enough points in the complementary set and
-make a such function so that on those points it is an extension via averaged linear extrapolation and in
-between we interpolate by some close enough points. Let $U=C^c$ be a complementary
-open set. Let $r(x)=\frac{1}{4}\min(1,\text{dist}(x,C))$.
-By Vitali's covering theorem there exist a countable set
-$\{x_j\}_{j\in\mathbb{N}}$ and a countable set of disjoint closed balls $\{B_j=B(x_j, r(x_j))\}_
-{j\in\mathbb{N}}$ such that $\bigcup_{j\in\mathbb{N}}\prescript{2}{}B_j=U$. We
-need $\frac{1}{2}$ in the definition of $r(x)$ to make sure that $\prescript{2}{}
-B_j\subseteq U$. Then for every $x\in U$ we shall define $S_x=\{x_j\,|\,B(x,2r(x))
-\cap B(x_j,2r(x_j))\neq\varnothing\}$. 
-
-\vspace{1ex}
-Now we chech that $S_x$ is bounded for each dimention.
-Let $x_j\in S_x$ then $|r(x)-r(x_j)| \leq 1/4|x-x_j|$ because $|r(x)-r(x_j)|=
-1/4|\min(1,\text{dist}(x,C))-\min(1,\text{dist}(x_j,C))|$ and without loss of
-generality we can consider 3 cases:
-\begin{enumerate}
-    \item $\text{dist}(x,C),\text{dist}(x_j,C)>1$ then $|\min(1,\text{dist}(x,C))
-        -\min(1,\text{dist}(x_j,C))|=0\leq|x-x_j|$.
-    \item $\text{dist}(x,C)\leq1,\text{dist}(x_j,C)>1$, then $|\min(1,\text{dist}
-        (x,C))-\min(1,\text{dist}(x_j,C))| = 1-\text{dist}(x,C)<\text{dist}(x_j,C)
-        -\text{dist}(x,C)=|x_j-s|-|x-s|\leq|x_j-x|$, where $s$ is a projection
-        of $x$ on $C$. 
-    \item $\text{dist}(x,C)\leq\text{dist}(x_j,C)\leq1$, then $|\min(1,\text{dist}
-        (x,C))-\min(1,\text{dist}(x_j,C))| = \text{dist}(x_j,C)-\text{dist}(x,C)
-        \leq|x_j-x|$.
-\end{enumerate}
-
-So we have $|r(x)-r(x_j)| \leq 1/4|x-x_j|\leq1/4|2r(x)-2r(x_j)|=1/2(r(x)+r(x_j))$
-as $x_j\in S_x$. And hence
-\[
-\begin{aligned}
-    &r(x)-r(x_j)\leq1/2(r(x)+r(x_j))\;\Rightarrow\;r(x)\leq 3r(x_j)\\
-    &r(x_j)-r(x)\leq1/2(r(x)+r(x_j))\;\Rightarrow\;r(x_j)\leq 3r(x)
-\end{aligned}
-\]
-In addition we have $|x-x_j|+r(x_j)\leq2(r(x)+r(x_j))+r(x_j)\leq2r(x)+6r(x)+3r(x)=
-11r(x)$. Which means that $B(x_j, r(x_j))\subseteq B(x, 11r(x))$ and since
-$B(x_j, r(x_j))$ are disjoint we have an inquality on volumes:
-\[
-    \#S_x\omega_n(r(x)/3)^n\leq\#S_x\omega_n(r(x_j))^n=\sum_{x_j\in S_x}\text{Vol}
-    \,B_j\leq\text{Vol}(B(x,11r(x))=\omega_n(11r(x))^n
-\]
-Therefor $\#S_x\leq(3\cdot11)^n=33^n$ is bounded by a fixed constant in each
-dimention.
-
-\vspace{1ex}
-The goal of that part is to construct the function $\overline f$. Let $\mu:
-\mathbb{R}\rightarrow\mathbb{R}$ be a $\mathcal{C}^\infty$ function such that
-$0\leq\mu\leq1$, $\mu(t) = 1$ if $t\leq 1$ and $\mu(t)=0$ if $t\geq 2$. Then
-for each $j=1,\ldots$ we set $u_j(x)=\mu\left(\frac{|x-x_j|}{2r(x_j)}\right)$
-for $x\in\mathbb{R}^n$. Then $u_j\in\mathcal{C}^\infty$, $0\leq u_j\leq1$ and
-$u_j\equiv 1$ on $B(x_j, 2r(x_j))$ and $u_j\equiv 0$ on $B(x_j, 4r(x_j))$. 
+\textbf{Proof:} You can find one in this book \cite{evans_gariepy}, it's quite
+complecated and I do not fill empowered to invate on it and it is not a purpose
+of this paper.
 
 
 \vspace{2ex}
-\textbf{Lipschitz function extension theorem: Let $X$ be a metric space,
+\textbf{Lipschitz function extension theorem:} \textit{Let $X$ be a metric space,
 $A\subseteq X$ and $f:A\rightarrow\mathbb{R}$. Then there exists a Lipschitz
 function $\overline f:X\mapsto\mathbb{R}$ such that $\textnormal{Lip}(f)=\textnormal{Lip}
-(\overline f)$} and $\overline f|_A=f$.
+(\overline f)$ and $\overline f|_A=f$.}
 
 \vspace{1ex}
 This is a proof from "Simons Lectures on geometric measure theory". Let's set
@@ -543,7 +487,7 @@ Now we check the Lipschitz constant
 %\end{align*}
 
 \vspace{1ex}
-\textbf{Consequence: Let $X$ be a metric space, $A\subseteq X$ and
+\textbf{Consequence:} \textit{Let $X$ be a metric space, $A\subseteq X$ and
 $f:A\rightarrow\mathbb{R}^n$. Then there exists a Lipschitz
 function $\overline f:X\mapsto\mathbb{R^n}$ such that $\overline f|_A=f$}
 
@@ -558,7 +502,7 @@ function take vector values, but I can only prove it for the maximum norm.
 
 \subsection{Vector valued measure}
 Let $X$ be a topological space and $V$ a Banach space, then $\mu:\mathcal{B}(X)
-\rightarrow Y$ is a $V$-valued Borel measure if
+\rightarrow V$ is a $V$-valued Borel measure if
 \[\sum_n\mu(E_n)=\mu(\bigcup_n E_n)\]
 for any disjoint countable family $\{E_n\}$ of Borel sets. From that definition
 we have $\mu(A)+\mu(\varnothing)=\mu(A\cup\varnothing)=\mu(A)$ and thus 
@@ -570,18 +514,18 @@ to the absolute convergence of that series.
 variation} $|\mu|$ of a Borel set $A$  by measure $\mu$ is defined by:
 \[|\mu|(A) = \text{sup}\{\sum_n|\mu(A_n)|\,|\,\{A_n\}\text{ countable partition of }A\}\]
 
-\textbf{Proposition: Total variation is a positive bounded measure.}
+\textbf{Proposition:} \textit{Total variation is a positive bounded measure.}
 
 \vspace{1ex}
 It is easy to see that $|\mu|(\varnothing)=0$ since all partitions of an empty
 set consist of empty sets which measure is zero. The image of $|\mu|$ by the
-definition consists of positive numbers. Lastly we shall verify $\sigma$-additivity.
+definition consists of positive numbers. Lastly we verify $\sigma$-additivity.
 Let $\{S_n\}$ be a disjoint countable collection of Borel sets. Then
 \[ 
     \sum_n|\mu|(S_n) = \sum_n\sup\{\sum_m|\mu(S_{n,m})|\,|\,(S_{n,m})_m\text{ is a countable Borel partition of }S_n\} \\ 
 \]
 Then we remark that for each choice of $\{S_{n,m}\}$, it is a countable Borel
-partition of $S=\bigcup_n S_n$, and thus $|\mu|(S)>\sum_n|\mu|(S_n)$. On the
+partition of $S=\bigcup_n S_n$, and thus $|\mu|(S)\geq\sum_n|\mu|(S_n)$. On the
 other hand if $\{A_k\}$ is a countable Borel partition of $S$ then we have
 partitions of $S_n$ defined as $\{S_{n,k}=A_k\cap S_n\}_k$ and we have the
 following inequality:
@@ -625,17 +569,26 @@ The \emph{mass} of $\mu$ is set to be $\|\mu\|=|\mu|(X)$.
 
 \vspace{1ex}
 \textbf{Proposition:}
-The set of vector norms with the mass form a normed vector space.
+\textit{The set of vector norms with the mass form a normed vector space.}
 
 \vspace{1ex}
-\textbf{Proof:} [TODO]
+\textbf{Proof:} Let $\mu:\mathcal{B}(X)\rightarrow V$ for $V$ an $\mathbb
+R$-vector space be a vector norm. Then evidently $\|k\mu\|=|k|\|mu\|$. Let $\nu$
+be another vector measure then
+\begin{align*}
+    \|\mu+\nu\|&=\sup\left\{\sum_{n=0}^{+\infty}|(\mu+\nu)(E_n)|\,|\,\{E_n\}_n\text{ countable paritition of }X\right\}\\
+    &\leq\sup\left\{\sum_{n=0}^{+\infty}|\mu(E_n)|+|\nu(E_n)|\,|\,\{E_n\}_n\text{ countable paritition of }X\right\}\\
+    &\leq\sup\left\{\sum_{n=0}^{+\infty}|\mu(E_n)|\,|\,\{E_n\}_n\text{ countable paritition of }X\right\}\\
+    &+\sup\left\{\sum_{n=0}^{+\infty}|\nu(E_n)|\,|\,\{E_n\}_n\text{ countable paritition of }X\right\}\\
+    &=\|\mu\|+\|\nu\|
+\end{align*}
 
 \subsection{Differentiation of Radon measure and Radon-Nikodym Theorem}
 \textbf{Remark:} That section is an adopted version of paragraph 1.6 from the
 book "Measure theory and fine properties of functions" for vector measures.
 
 \vspace{2ex}
-\textbf{Definition: Let $\mu$ and $\nu$ be Radon measures on $\mathbb{R}^n$.
+\textbf{Definition:} \textit{Let $\mu$ and $\nu$ be Radon measures on $\mathbb{R}^n$.
 Then we can define upper and lower derivatives of $\nu$ by $\mu$ by
 \begin{align*}
     &\overline D_\mu\nu(x) =
@@ -655,7 +608,7 @@ is \emph{differentiable} with respect to $\mu$ at x and we write
 }
 
 \vspace{1ex}
-\textbf{Definition: Let $\mu$ be Radon measure and $\nu$ be a vector measure on
+\textbf{Definition:} \textit{Let $\mu$ be Radon measure and $\nu$ be a vector measure on
 $\mathbb{R}^n$. Then we define a derivatives as
 \[
     D_\mu\nu(x) =
@@ -667,8 +620,8 @@ $\mathbb{R}^n$. Then we define a derivatives as
 }
 
 \vspace{1ex}
-\textbf{Upper and lower derivatives lemmas: For $\alpha\in\mathbb{R}_{>0}$ we
-have
+\textit{Upper and lower derivatives lemmas: For Rado measures and
+$\alpha\in\mathbb{R}_{>0}$ we have
 \begin{itemize}
     \item $A\subseteq\{x\in\mathbb{R}^n\,|\,\underline D_\mu\nu(x)\leq\alpha\}$ implies $\nu(A)\leq\alpha\mu(A)$.
     \item $A\subseteq\{x\in\mathbb{R}^n\,|\,\overline D_\mu\nu(x)\geq\alpha\}$ implies $\nu(A)\geq\alpha\mu(A)$.
@@ -676,11 +629,35 @@ have
 }
 
 \vspace{1ex}
-Proof can be found in
+\textbf{Proof:}
+We may assume that radon measures are finite, otherwise we can always take
+restriction to compact sets. For $\epsilon>0$ and open $U\supseteq A$, where
+$A$ satisfies the first hypothesis. We set
+\[\mathcal{F}=\{B\;|\;B=B(a, r), a\in A, B\subseteq U, \nu(B)\leq(\alpha+\epsilon)\mu(B)\}\]
+Then $\inf\{r\;|\;B(a,r)\in\mathcal F\}=0$ for each $a\in A$ and hence
+\emph{Filling Theorem} provides us with a countable collection $\mathcal G$ of disjoint
+balls in $\mathcal F$ such that
+\[\nu\left(A-\bigcup_{B\in\mathcal G}B\right)=0\]
+Then
+\[\nu(A)\leq\sum_{B\in\mathcal G}\nu(B)\leq(\alpha+\epsilon)\sum_{B\in G}\mu(B)
+\leq(\alpha+\epsilon)\mu(U)\]
+This esteem is valid for each open set $U$ and thus as we have a radon measure,
+we have $\nu(A)\leq(a+\epsilon)\mu(A)$, which proves the first bullet.
 
 \vspace{1ex}
-\textbf{Proposition: Let $\mu$ be a Radon measure and $\nu$ be a Radon or Vector
-measure. Then
+To prove the second bullet we do a similar routine. We pose similar $U$ and
+$\epsilon$. We slightly change $\mathcal F$
+\[\mathcal{F}=\{B\;|\;B=B(a, r), a\in A, B\subseteq U, \nu(B)\leq(\alpha-\epsilon)\mu(B)\}\]
+and we find $\mathcal G$ for $\mu$ instead of $\nu$ such that
+\[\mu\left(A-\bigcup_{B\in\mathcal G}B\right)=0\]
+Then
+\[\mu(A)\leq\sum_{B\in\mathcal G}\mu(B)\leq1/(\alpha-\epsilon)\sum_{B\in G}\nu(B)
+\leq1/(\alpha-\epsilon)\nu(U)\]
+and we get the second bullet.
+
+\vspace{1ex}
+\textbf{Proposition:} \textit{Let $\mu$ be a Radon measure and $\nu$ be a Radon
+or Vector measure. Then
 \begin{itemize}
     \item $D_\mu\nu$ exists and is finite $\mu$-a.e.
     \item $D_\mu\nu$ is $\mu$-measurable.
@@ -696,11 +673,11 @@ prove the first assertion.
 $\alpha>0,\,I\subseteq\{x\,|\,D_\mu\nu(x)\geq\alpha\}$. Thus by Lemma
 
 \vspace{1ex}
-\textbf{Radon-Nikodym Theorem:} Let $\nu$ be a vector measure and $\mu$ a Radon
+\textbf{Radon-Nikodym Theorem:} \textit{Let $\nu$ be a vector measure and $\mu$ a Radon
 measure on $\mathbb{R}^n$. Then
 \[
     \nu(A) = \int_AD_\mu\nu\,d\mu
-\]
+\]}
 
 \vspace{2ex}
 This gives us a representation of a vector valued measure $\mu$ as $\mu=
@@ -733,13 +710,13 @@ functional
     f&\mapsto\int f\,d\mu
 \end{align*}
 
-\textbf{Riesz representation theorem:}
+\textbf{Riesz representation theorem:} \textit{
 The map
 \begin{align*}
     \Lambda:\mathcal{M}(X, \mathbb{R}^n)&\rightarrow\mathcal{C}_0(X,\mathbb{R}^n)^*\\
     \mu\quad&\mapsto\quad\Lambda_\mu
 \end{align*}
-is an isometry
+is an isometry}
 
 \vspace{1ex}:
 \textbf{Proof:} [TODO]
@@ -754,10 +731,10 @@ $B=\{f\in E^*\,|\,|f|\leq 1\}$ is compact in the weak* topology}. If we replace
 the termes in this proof by measure terms we have the following theorem
 
 \vspace{1ex}
-\textbf{Banach-Alaoglu Theorem for $\mathcal M(X,\mathbb{R}^n)$:}
+\textbf{Banach-Alaoglu Theorem for $\mathcal M(X,\mathbb{R}^n)$:}\textit{
 The set $B=\{\mu\in\mathcal M(X,\mathbb{R}^n)\,|\,\|\mu\|\leq C\}$ is compact
 for every $C\in\mathbb{R}_{>0}$. That's said every bounded sequence of vector
-measures has a weakly* converging subsequence.
+measures has a weakly* converging subsequence.}
 
 
 \section{Countably n-rectifiable sets}
@@ -767,10 +744,11 @@ Let $M\subseteq\mathbb{R}^{n+k}$ is called an \emph{$n$-rectifiable} if
 \]
 where $\mathcal{H}^n(M_0)=0$ and $F_i$ are Lipschitz functions.
 
-\textbf{Proposition:} Alternatively we can define an $n$-rectifiable set by
+\vspace{2ex}
+\textbf{Proposition:} \textit{Alternatively we can define an $n$-rectifiable set by
 inclusion $M\subseteq M_0\cup\bigcup_{i\in\mathbb{N}^*}F_i[A_i]$, where the only
 thing we change is $F_i:A_i\rightarrow\mathbb{R}^{n+m}$ the domain of Lipschitz
-function.
+function.}
 
 Clearly the definition in the proposition covers a wider variety of sets. To
 prove that they are equal we shall recall an extension theorem.
@@ -792,11 +770,15 @@ An $m$-dimensional varifold $V$ is a Radon measure over $\mathbb{R}^n\times
 G(n,m)$ endowed with a product topology. We say $\|V\|$ is a measure in
 $\mathbb{R}^n$ which is reciprocally projection of a varifold $V$ by $\pi_1^{-1}$.
 
-\textbf{Proposition: For varifolds we concider weak* topology. Then we have a
+\vspace{2ex}
+\textbf{Proposition:} \textit{For varifolds we concider weak* topology. Then we have a
 convergence criteria that $V_i\rightarrow V$ if and only if
 \[\int fdV_i\rightarrow\int fdV\]
 for every continuous function $f:\mathbb{R}^n\times G(m,n)\rightarrow R$ with a
 compact support.}
 \vspace{1ex}
 
+\medskip
+\bibliographystyle{apalike}
+\bibliography{books}
 \end{document}
