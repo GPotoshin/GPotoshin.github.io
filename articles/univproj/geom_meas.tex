@@ -620,7 +620,7 @@ $\mathbb{R}^n$. Then we define a derivatives as
 }
 
 \vspace{1ex}
-\textit{Upper and lower derivatives lemmas: For Rado measures and
+\textit{Upper and lower derivatives lemmas: For Radon measures and
 $\alpha\in\mathbb{R}_{>0}$ we have
 \begin{itemize}
     \item $A\subseteq\{x\in\mathbb{R}^n\,|\,\underline D_\mu\nu(x)\leq\alpha\}$ implies $\nu(A)\leq\alpha\mu(A)$.
@@ -630,13 +630,15 @@ $\alpha\in\mathbb{R}_{>0}$ we have
 
 \vspace{1ex}
 \textbf{Proof:}
-We may assume that radon measures are finite, otherwise we can always take
+We may assume that measures are finite, otherwise we can always take
 restriction to compact sets. For $\epsilon>0$ and open $U\supseteq A$, where
 $A$ satisfies the first hypothesis. We set
 \[\mathcal{F}=\{B\;|\;B=B(a, r), a\in A, B\subseteq U, \nu(B)\leq(\alpha+\epsilon)\mu(B)\}\]
-Then $\inf\{r\;|\;B(a,r)\in\mathcal F\}=0$ for each $a\in A$ and hence
-\emph{Filling Theorem} provides us with a countable collection $\mathcal G$ of disjoint
-balls in $\mathcal F$ such that
+This family has the following properties. We have infinitely many balls in it
+around each point with diminishing radius, because we have lower limit $\leq a$
+there. Then $\inf\{r\;|\;B(a,r)\in\mathcal F\}=0$ for each $a\in A$ and hence
+\emph{Filling Theorem} provides us with a countable collection $\mathcal G$ of
+disjoint balls in $\mathcal F$ such that
 \[\nu\left(A-\bigcup_{B\in\mathcal G}B\right)=0\]
 Then
 \[\nu(A)\leq\sum_{B\in\mathcal G}\nu(B)\leq(\alpha+\epsilon)\sum_{B\in G}\mu(B)
@@ -647,7 +649,7 @@ we have $\nu(A)\leq(a+\epsilon)\mu(A)$, which proves the first bullet.
 \vspace{1ex}
 To prove the second bullet we do a similar routine. We pose similar $U$ and
 $\epsilon$. We slightly change $\mathcal F$
-\[\mathcal{F}=\{B\;|\;B=B(a, r), a\in A, B\subseteq U, \nu(B)\leq(\alpha-\epsilon)\mu(B)\}\]
+\[\mathcal{F}=\{B\;|\;B=B(a, r), a\in A, B\subseteq U, \nu(B)\geq(\alpha-\epsilon)\mu(B)\}\]
 and we find $\mathcal G$ for $\mu$ instead of $\nu$ such that
 \[\mu\left(A-\bigcup_{B\in\mathcal G}B\right)=0\]
 Then
@@ -655,36 +657,44 @@ Then
 \leq1/(\alpha-\epsilon)\nu(U)\]
 and we get the second bullet.
 
-\vspace{1ex}
-\textbf{Proposition:} \textit{Let $\mu$ be a Radon measure and $\nu$ be a Radon
-or Vector measure. Then
+\vspace{2ex}
+\textbf{Differentiating measures theorem:} \textit{Let $\mu$ and $\nu$ be Radon
+measures on $\mathbb{R}^n$. Then
 \begin{itemize}
     \item $D_\mu\nu$ exists and is finite $\mu$-a.e.
-    \item $D_\mu\nu$ is $\mu$-measurable.
+    \item $D_\mu\nu$ is $\mu$-measurable
 \end{itemize}
+We can again assume that $\mu$ and $\nu$ are finite. Let's prove the first part.
+Let $A$ be a set where derivative is infinite. Then $A\subseteq\{x\;|\;\}$.
 }
 
-\vspace{1ex} We start by proving statements for $\mu$-Radon measure and then I
-will pass to Vector space. We may assume $\mu(\mathbb{R}^n), \nu(\mathbb{R}^n)<\infty$.
-Otherwise we can take restriction on bounded neiboouds of each point. Let's
-prove the first assertion.
+\vspace{2ex}
+\textbf{Remark:} This is a brilliant version with a proof of Radon Nikodym
+Theorem by von Neumann, that suffices our need for representing vector measures.
 
-\vspace{1ex} Let $I=\{x\,|\,D_\mu\nu(x)=\infty\}$. Observe that for each
-$\alpha>0,\,I\subseteq\{x\,|\,D_\mu\nu(x)\geq\alpha\}$. Thus by Lemma
+\textbf{Radon-Nikodym Theorem:} \textit{Let $\mu$ and $\nu$ be finite measures
+on $(\Omega, \mathcal F)$ then there exists a non-negative measurable function
+$f$ and a $\mu$-null set $B$ such that
+\[\nu(A) = \int_Af\,d\mu=\nu(A\cap B)\]
+for each $A \in \mathcal F$.
+}
 
 \vspace{1ex}
-\textbf{Radon-Nikodym Theorem:} \textit{Let $\nu$ be a vector measure and $\mu$ a Radon
-measure on $\mathbb{R}^n$. Then
-\[
-    \nu(A) = \int_AD_\mu\nu\,d\mu
-\]}
+\textbf{Proof:} Let $\pi=\mu+\nu$ and consider $T(f)=\int fd\nu$. Then for
+every $f\in L^2(\pi)$ we have $f\in L^1(\nu)$ and since measures are finite
+$f\in L^1(\pi)$ and thus in $L^1(\nu)$, then
+\[|T(f)|=|\int f\,d\nu|\leq\|f\|_{L^2(\nu)}\|1\|_{L^2(\nu)}\leq C\|f\|_{L^2(\pi)}\]
+where $C$ is a constant. Thus $T$ is a continuous operator on $L^2(\pi)$ and by
+Reisz representation theorem for Hilbert spaces we find a function $h\in L^2(\pi)$
+such that
+\[T(f)=\int f\,d\nu=\int fh\,d\pi\]
 
 \vspace{2ex}
 This gives us a representation of a vector valued measure $\mu$ as $\mu=
 D_{|\mu|}\mu\,|\mu|$. And we can define the integration with respect to such
 measure as
 \[
-    \int fd\mu = \int f\cdot D_{|\mu|}\mu\,d|\mu|
+\int fd\mu = \int f\cdot D_{|\mu|}\mu\,d|\mu|
 \]
 
 \subsection{Representation of vector valued measures }
@@ -706,15 +716,15 @@ measures on $X$ endowed with weak* topology.
 For an $\mathbb{R}^n$-valued measure $\mu$ on $X$ we define an associated
 functional
 \begin{align*}
-    \Lambda_\mu:\mathcal C_0(X,\mathbb{R}^n)&\rightarrow\mathbb{R}\\
-    f&\mapsto\int f\,d\mu
+\Lambda_\mu:\mathcal C_0(X,\mathbb{R}^n)&\rightarrow\mathbb{R}\\
+f&\mapsto\int f\,d\mu
 \end{align*}
 
 \textbf{Riesz representation theorem:} \textit{
 The map
 \begin{align*}
-    \Lambda:\mathcal{M}(X, \mathbb{R}^n)&\rightarrow\mathcal{C}_0(X,\mathbb{R}^n)^*\\
-    \mu\quad&\mapsto\quad\Lambda_\mu
+\Lambda:\mathcal{M}(X, \mathbb{R}^n)&\rightarrow\mathcal{C}_0(X,\mathbb{R}^n)^*\\
+\mu\quad&\mapsto\quad\Lambda_\mu
 \end{align*}
 is an isometry}
 
