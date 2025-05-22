@@ -664,8 +664,6 @@ measures on $\mathbb{R}^n$. Then
     \item $D_\mu\nu$ exists and is finite $\mu$-a.e.
     \item $D_\mu\nu$ is $\mu$-measurable
 \end{itemize}
-We can again assume that $\mu$ and $\nu$ are finite. Let's prove the first part.
-Let $A$ be a set where derivative is infinite. Then $A\subseteq\{x\;|\;\}$.
 }
 
 \vspace{2ex}
@@ -675,7 +673,7 @@ Theorem by von Neumann, that suffices our need for representing vector measures.
 \textbf{Radon-Nikodym Theorem:} \textit{Let $\mu$ and $\nu$ be finite measures
 on $(\Omega, \mathcal F)$ then there exists a non-negative measurable function
 $f$ and a $\mu$-null set $B$ such that
-\[\nu(A) = \int_Af\,d\mu=\nu(A\cap B)\]
+\[\nu(A) = \int_Af\,d\mu+\nu(A\cap B)\]
 for each $A \in \mathcal F$.
 }
 
@@ -688,29 +686,52 @@ where $C$ is a constant. Thus $T$ is a continuous operator on $L^2(\pi)$ and by
 Reisz representation theorem for Hilbert spaces we find a function $h\in L^2(\pi)$
 such that
 \[T(f)=\int f\,d\nu=\int fh\,d\pi\]
-
-\vspace{2ex}
-This gives us a representation of a vector valued measure $\mu$ as $\mu=
-D_{|\mu|}\mu\,|\mu|$. And we can define the integration with respect to such
-measure as
-\[
-\int fd\mu = \int f\cdot D_{|\mu|}\mu\,d|\mu|
-\]
-
-\subsection{Representation of vector valued measures }
+Now consider the following sets
+\[N=\{h<0\},\quad M=\{0\leq h<1\},\quad B=\{h\geq 1\}\]
+Then
+\[0\geq\int_N h\,d\pi=\int\chi_N h\,d\pi=\nu(N)\geq 0\]
+Thus we have $\nu(N)=0$ and since $h<0$ on $N$ and $\int h\,d\mu=0$ we have
+$\mu(N)=0$ also.
 
 \vspace{1ex}
+Now let's study $B$. We have
+\[\nu(B)=T(\chi_B)=\int_Bh\,d\mu+\int_B h\,d\nu\geq\nu(B)+\mu(B)\]
+thus $\mu(B)=0$.
+
+For the last let we set $M_n=\{0\leq h\leq1-1/n\}$ and from representation of
+$T$ with $h$ we have $\int(1-h)f\,d\nu=\int hf\,d\mu$ and why apply it to
+\[\nu(M_n)=\int\frac{\chi_{M_n}}{1-h}(1-h)\,d\nu=\int h\frac{\chi_{M_n}}{1-h}\,d\mu\]
+
+Let $f=\frac{h}{1-h}$ then by applying monotone convergence and recalling that
+$\mu(B)=\mu(N)=0$ we have
+\[\nu(M\cap A)=\int_A f\,d\mu\]
+
+Finally for all $A\in\mathcal F$ we have
+\[\nu(A)=\nu(A\cap N)+\nu(A\cap M)+\nu(A\cap B) = \int_A f\,d\mu+\nu(A\cap B)\]
+
+\vspace{2ex}
+\textbf{Corollary:} If $\mu >> \nu$, then $\nu(A)=\int_A f\,d\mu$
+
+\vspace{1ex}
+It's evident as $\mu(B)=0\Rightarrow\nu(B)=0$ then. 
+
+\vspace{2ex}
+\textbf{Remark:} If $\mu$ and $\nu$ are Radon measures, then $f=D_\mu\nu$.
+
+\vspace{2ex}
+\textbf{Corollary:}
+This gives us a representation of a vector valued measure $\mu$ as $\mu=f\,|\mu|$.
+And we can define the integration with respect to such measure as
+\[
+\int g\,d\mu = \int g\cdot f\,d|\mu|
+\]
+
+\vspace{2ex}
 In the context of geometric measure theory we are interested in the vector
-space $E=\mathcal{C}^0_c(\mathbb{R}^n, \mathbb{R}^m)$ with the supremum norm.
+space $E=\mathcal{C}^0_c(X, \mathbb{R}^m)$ with the supremum norm.
 Then its dual space is $E^*=\{L:E\rightarrow\mathbb{R}\,|\,L\text{ is linear
 and continious}\}$ is a vector space of bound linear functionals. Then on the $E^*$ from 
-now and on we will consider the weak* star topology. To make the connection
-with measure we shall state the result for Reisz's representation of $E^*$. In 
-fact every functional $L\in E^*$ can be represented by an $\mathbb{R}^m$-valued
-Radon measure $\mu$, such that
-\[\langle L,\phi\rangle=\int\phi d\mu\]
-We shall denote $\mathcal{M}(X,\mathbb{R}^n)$ the space of $\mathbb{R}^n$
-measures on $X$ endowed with weak* topology.
+now and on we will consider the weak* star topology.
 
 \subsection{Riesz representation theorems for vector valued measure}
 For an $\mathbb{R}^n$-valued measure $\mu$ on $X$ we define an associated
@@ -728,8 +749,24 @@ The map
 \end{align*}
 is an isometry}
 
-\vspace{1ex}:
-\textbf{Proof:} [TODO]
+\vspace{1ex}
+\textbf{Proof:} A proof of bijectivity of $\Lambda$ can be found on pages 34-41
+\cite{maggi}. Let's check that it's an isomorphism. Let measure $\mu$ be
+represented by a functional $L$. Then 
+\begin{align*}
+    &\|L\|=\sup\{L(f)\;|\;\|f\|\le1\}\\
+    &\|\mu\|=\sup\{\sum|\mu(B_i)|\,|\,\{B_i\}\text{ a partition of } X\}
+\end{align*}
+
+For $f\in C_0(X,\mathbb R^n)$ we find a series of step functions $f_n=\sum a_i\chi_{B_i}$ 
+such that $f_n\rightarrow f$ and $a_i\leq 1$. Thus by dominant convergence
+$\int f_n\,d\mu\rightarrow L(f)$. On the other hand we have
+\[|\int f_n\,d\mu = |\sum a_i\cdot\mu(B_i)|\leq\sum|a_i||\mu(B_i)|\leq\sum|\mu(B_i)|\leq\|\mu\|\]
+
+and thus we have $|\int f\,d_\mu|\leq\|\mu\|$ and thus $\|L\|\leq\|\mu\|$.
+
+In the other direction it obviously follows form the fact the $C^0$ is dense
+in $L^1$.
 
 \subsection{Interpretation of Banach-Alaoglu theorem for vector valued measures}
 The weak* convergence can be interpreted as convergence of evaluation of measure
@@ -745,6 +782,10 @@ the termes in this proof by measure terms we have the following theorem
 The set $B=\{\mu\in\mathcal M(X,\mathbb{R}^n)\,|\,\|\mu\|\leq C\}$ is compact
 for every $C\in\mathbb{R}_{>0}$. That's said every bounded sequence of vector
 measures has a weakly* converging subsequence.}
+
+\vspace{1ex}
+\textbf{Consequence:} If $(\mu_n)$ is a bounded sequence of vector measures, 
+then it has a converging subsequence.
 
 
 \section{Countably n-rectifiable sets}
