@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage[a4paper,left=3cm,right=3cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[a4paper,left=3cm,right=3cm,top=1.5cm,bottom=2cm]{geometry}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{hyperref}
@@ -21,16 +21,12 @@
 
 \begin{document}
 \title{
+\vspace{-1cm}
 \textit{\small{Georgii Potoshin, 2025}}\\
 \vspace{0.3ex}
 \textit{\huge{Geometry and measure}}\vspace{1ex}
 }
 \date{\vspace{-5ex}}
-\maketitle
-
-
-\date{\vspace{-10ex}}
-
 \maketitle
 
 \section{Introduction}
@@ -862,18 +858,68 @@ $\mathcal H^d (E\cap f[\mathbb R^d]) = 0$ for every Lipschitz map $f:\mathbb R^d
 $n$-Hausdorff measure. Then $M=M_r\cup M_u$, where $M_r$ is rectifiable
 and $M_u$ is unrectifiable.}
 
-\subsection{Tangent Bundle}
+\section{Tangents}
 
-\section{Grassmannian}
-
-In this section we introduce the topological space $G(m,n)$.
-\vspace{1ex}
-
-Similarly to projective spaces $P\mathbb{R}^n$ one can generalise this notion to
+Similarly to projective spaces $\mathbb{R}P^n$ one can generalise this notion to
 smaller subspaces than hyperplanes. The set of $m$ dimensional subspaces of a
 vector space $\mathbb{R}^n$ is called grassmannian and noted by $G(m,n)$. It
 has a topology identified from a topology of orthogonal projection on
 $m$-dimensional subspaces.
+
+\subsection{Tangent Bundle}
+
+\textbf{Proposition:} \textit{Let $\Sigma, \Sigma′\subseteq R^{n+m}$ be
+$n$-dimensional surfaces of class $C^1$. Then the tangent planes are equal at 
+$\mathcal H^n$-almost every point in the intersection $x∈\Sigma\cap\Sigma′$.}
+
+\vspace{1ex}
+To prove it we take a point $x\in\Sigma\cap\Sigma'$ such that $T_x\Sigma\neq T_x
+\Sigma'$. Then locally at x surfaces are represented by submersions $F,G:\mathbb
+R^{m+n}\rightarrow\mathbb R^m$, i.e $\Sigma\cap A=F^{-1}(0)\cap A$ and
+$\Sigma'\cap B=G^{-1}(0)\cap B$. Thus $\Sigma\cap\Sigma'=(F\times G)^{-1}(0)$.
+$F\times G$ is not necessary a submersion, but if in the differential of $F
+\times G$ we take indices of a maximum linear independent set of lines, which
+has a bigger cardinal then $n$, because tangent spaces are not equal and the
+dimension of one is $n$, we can take corresponding lines in the matrix of $F
+\times G$ and leaving only those lines we get an submersion $H:\mathbb R^{n+m}
+\rightarrow\mathbb R^{M}$, where $m<M<n+m$ is the rang of $H$ in $x$. Hence we
+get $n+m-M<n$ dimensional surface $H^{-1}(0)\cap A\cap B=\Sigma''$ and $\Sigma\cap\Sigma'\cap A\cap B
+\subset\Sigma''$, thus has a null $\mathcal H^n$ measure. Finally we showed
+that the desiring set in a neighborhood of each point has a null measure, thus
+it's a $\mathcal H^n$-null set.
+
+\vspace{2ex}
+\textbf{Lemma:} \textit{Let $f,g\in\mathcal C^1(\mathbb R^n, \mathbb R)$, then $\nabla f
+=\nabla g$ $\mathcal L^d$-a.e. on $\{f=f'\}$.}
+
+\vspace{1ex}
+It's sufficient to see that points where they are not equal is a 1 dimensional
+surface and its Lebesgue's measure is 0. 
+
+\vspace{2ex}
+\textbf{Definition:} \textit{Let $E$ be a Borel $n$-rectifiable set. A map $T$
+from $E$ to the Grassmannian manifold $G(n, d)$ that sends $x$ to $T(x)$ is a
+\textbf{weak tangent bundle} for the set E if and only if for every $\Sigma$ $d$-dimensional
+surface of class $\mathcal C^1$ it turns out that $T_x\Sigma = T(x)$ for $\mathcal
+H^d$-almost every $x\in\Sigma\cap E$.}
+
+\vspace{2ex}
+\textbf{Proposition:} \textit{A $d$-rectifiable Borel set $E\subseteq\mathbb R^n$
+admits a unique up to $\mathcal H^d$-null sets a weak tangent bundle.}
+
+\vspace{1ex}
+\textbf{Proof:} We have $E\subseteq M_0\cup\bigcup\Sigma_i$, hence we can define
+a bundle as following. For $x\in M_0$ we can take what ever we want, for $x\in
+\Sigma_1$ we take $T_x\Sigma_1$ and for $x\in \Sigma_s\setminus\bigcup_{i=1}^{s
+-1}\Sigma_i$ we take $T_x\Sigma_s$.
+
+\subsection{Approximate Tangent}
+
+\textbf{Definition:} \textit{Let $\alpha$ be a fixed angle, let $x\in\mathbb R^n$
+be a point and let $V$ be a $d$-dimensional plane in $\mathbb R^n$. The cone of
+angle $\alpha$ around $V$ centered at $x$ is defined by setting
+
+
 
 \section{Varifold}
 
