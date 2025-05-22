@@ -787,22 +787,82 @@ measures has a weakly* converging subsequence.}
 \textbf{Consequence:} If $(\mu_n)$ is a bounded sequence of vector measures, 
 then it has a converging subsequence.
 
+\subsection{Weak-* convergence of measures}
+\textbf{Proposition:} \textit{Let $(\mu_n)_n$ be a sequence of positives
+measures converging to $\mu$, then we have
+\begin{enumerate}
+    \item For any open subset $A\subseteq X$, $\liminf\mu_n(A)\geq\mu(A)$
+    \item For any compact subset $K\subseteq X$, $\limsup\mu_n(K)\leq\mu(K)$
+    \item For any relatively compact $E\subseteq X$ such that $µ(\partial E)=0$
+\end{enumerate}
+}
+
+\vspace{1ex}
+\textbf{Proof:} prof. Giovanni Alberti
 
 \section{Countably n-rectifiable sets}
-Let $M\subseteq\mathbb{R}^{n+k}$ is called an \emph{$n$-rectifiable} if
+\textit{Let $M\subseteq X$ be a subset of a metric space. Then $M$ is called
+\textbf{$n$-rectifiable} if
 \[
-    M\subseteq M_0\cup\bigcup_{i\in\mathbb{N}^*}F_i[\mathbb{R}^n]
+    M\subseteq M_0\cup\bigcup f_i[\mathbb{R}^n]
 \]
-where $\mathcal{H}^n(M_0)=0$ and $F_i$ are Lipschitz functions.
+where $\mathcal{H}^n(M_0)=0$ and $f_i$ are Lipschitz functions.
+}
 
 \vspace{2ex}
-\textbf{Proposition:} \textit{Alternatively we can define an $n$-rectifiable set by
-inclusion $M\subseteq M_0\cup\bigcup_{i\in\mathbb{N}^*}F_i[A_i]$, where the only
-thing we change is $F_i:A_i\rightarrow\mathbb{R}^{n+m}$ the domain of Lipschitz
-function.}
+\textbf{Remarque:} \textit{Hausdorff dimension of $d$-rectifiable set is less or
+eqaul to $d$}
 
-Clearly the definition in the proposition covers a wider variety of sets. To
-prove that they are equal we shall recall an extension theorem.
+\vspace{1ex}
+This is true due to the fact that Lipschitz maps does not increase the dimension.
+
+\vspace{2ex}
+\textbf{Criteria of Rectifiability:} \textit{Let $X=\mathbb R^{n+m}$, and let $M
+\subseteq X$ be a Borel set.}
+
+\textit{The following assertions are equivalent:
+\begin{enumerate}
+    \item The set $M$ is $n$-rectifiable
+    \item There exist open sets $A_i$, $M_0$ $\mathcal H^n$-null set and
+        differentiable functions $f_i: A_i\rightarrow X$ such that
+        \[M\subseteq M_0\cup\bigcup f_i[A_i]\]
+    \item There exist open sets $A_i$, $M_0$ $\mathcal H^n$-null set and
+        diffeomorphisms $f_i: A_i\rightarrow X$ such that
+        \[M\subseteq M_0\cup\bigcup f_i[A_i]\]
+    \item There exist $n$-dimensional surfaces $\Sigma_i\subseteq X$ and $M_0$
+        $\mathcal H^n$-null set such that
+        \[M\subseteq M_0\cup\bigcup \Sigma_i\]
+\end{enumerate}
+}
+
+\vspace{2ex}
+\textbf{Definition:} \textit{Let $X$ be a metric space. A Borel set $E\subseteq
+X$ is a $d$-dimensional unrectifiable set if and only if
+$\mathcal H^d (E\cap f[\mathbb R^d]) = 0$ for every Lipschitz map $f:\mathbb R^d
+\rightarrow X$.}
+
+\vspace{2ex}
+\textbf{Criteria of Unrectifiability:} \textit{Let $X=\mathbb R^{n+m}$, and let $M
+\subseteq X$ be a Borel set.}
+
+\textit{The following assertions are equivalent:
+\begin{enumerate}
+    \item The set $M$ is $n$-unrectifiable
+    \item For every $C^1$ map $f:\mathbb R^n\rightarrow\mathbb R^{m+n}$ we have
+        \[\mathcal H^d(M\cap \textnormal{im} f)=0\]
+    \item For every $C^1$-diffeomorphism $f:A\subseteq \mathbb R^n\rightarrow\mathbb R^{m+n}$ we have
+        \[\mathcal H^d(M\cap \textnormal{im} f)=0\]
+    \item For every $C^1$-surface $\Sigma\subseteq\mathbb R^{n+m}$ we have
+        \[\mathcal H^d(M\cap \Sigma)=0\]
+\end{enumerate}
+}
+
+\vspace{2ex}
+\textbf{Proposition:} \textit{Let $M\subseteq X$ be a Borel set with finite
+$n$-Hausdorff measure. Then $M=M_r\cup M_u$, where $M_r$ is rectifiable
+and $M_u$ is unrectifiable.}
+
+\subsection{Tangent Bundle}
 
 \section{Grassmannian}
 
