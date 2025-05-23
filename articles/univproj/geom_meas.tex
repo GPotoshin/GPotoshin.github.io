@@ -81,11 +81,16 @@ measure on $\mathbb{R}^n$, then
 \vspace{2ex}
 \textbf{Definition:} \textit{For a function $f:X\rightarrow Y$ between metric spaces we can
 define its \textbf{Lipschitz constant} $\text{Lip}(f) = \textnormal{inf}\{L\in
-\mathbb{R}\,|\,d(f(x),f(y))\leq d(x,y) \forall x,y\in X\}$}
+\mathbb{R}\,|\,d(f(x),f(y))\leq Ld(x,y) \forall x,y\in X\}$}
 
+\vspace{2ex}
+\textbf{Definition:} \textit{A Borel measure $\mu$ on a metric space $X$ is
+said to be a \textbf{doubling measure} if there exists a constant $C$ such that
+\[0<\mu(B(x,2r))\leq C\mu(B(x,r))<\infty\]}
 \subsection{Hausdorff measure}
 The Hausdorff measure generalises the notion of measure for lower dimensional
-objects in higher-dimensional space. The idea is essentially similar to the
+objects in higher-dimensional space or even in an arbitrary metric space. The
+idea is essentially similar to the
 construction of Lebesgue's measure except that we take a lower limit instead of
 an infinum. We define a cover of $E$ by sets of diameter less then $\delta$ as
 a $\delta$-cover of $E$. And we conceder only countable covers. We note that
@@ -109,21 +114,18 @@ $n$-dimensional ball.}
 
 \textbf{Proposition:} \textit{Hausdorff measure is a Borel measure for regular topology.}
 
-\vspace{1ex}
+\vspace{2ex}
+\textbf{Proposition:} $\mathcal H^0$ is the counting measure.
+
+\vspace{2ex}
 \textbf{Proposition:} \textit{In the definition of Hausdorff measure we can consider
 only closed or open sets.}
 
-\vspace{1ex}
+\vspace{2ex}
 \textbf{Proposition:} \textit{Hausdorff measure of dimension $m\in N$ coincide on
 $m$-dimensional affine subspaces with their Lebesgue measure.}
 
-\vspace{1ex}
-\textbf{Proposition:} \textit{For a Lipschitz function $f:\mathbb{R}^n\rightarrow
-\mathbb{R}^m$ we have the following inequality
-\[ \mathcal{H}^s(f[E])\leq\text{Lip}(f)^s\mathcal{H}^s(E) \]
-for every $s>0$ and $E\subseteq\mathbb{R}^n$. And $\text{dim}(E)<\text{dim}(f[E])$.}
-
-\vspace{1ex}
+\vspace{2ex}
 \textbf{Proposition:} \textit{The $n$-dimetional Hausdorff measure traced to a
 $n$-dimentional $\mathcal{C}^1$-submanifold of $R^m$ induces the area measure
 on this submanifold and coincides with the integral measure via parametrisation
@@ -137,8 +139,20 @@ measure theory" be Francesco Maggi \cite{maggi}.
 To a set $S$ we can associate a number $s=\text{inf}\{a\geq 0\,|\,\mathcal{H}^a
 (S)=0\}$. It's called its Hausdorff dimension.
 
-\vspace{1ex}
-\textbf{Proposition:}
+\vspace{2ex}
+\textbf{Proposition:} \textit{If $E\subseteq\mathbb R$ then $\dim(E)\in [0, n]$.
+Moreover $\mathcal H^s(E)=\infty$ for every $s<\dim(E)$ and $\mathcal H^S(E)\in
+(0,\infty)$ implies $s=\dim(E)$.}
+
+\vspace{2ex}
+\textbf{Proposition:} \textit{If $A$ is an open set in $\mathbb R^n$, then $\dim
+(A) = n$.}
+
+\vspace{2ex}
+\textbf{Proposition:} \textit{For a Lipschitz function $f:\mathbb{R}^n\rightarrow
+\mathbb{R}^m$ we have the following inequality
+\[ \mathcal{H}^s(f[E])\leq\text{Lip}(f)^s\mathcal{H}^s(E) \]
+for every $s>0$ and $E\subseteq\mathbb{R}^n$ and $\text{dim}(E)<\text{dim}(f[E])$.}
 
 \section{Dimension of cantor sets}
 Here we calculate the dimension of generalized set. Let $n\in\mathbb{N}$ and
@@ -353,8 +367,8 @@ avoid confusion with set power and Minkowski product.
 
 \vspace{1ex}
 \textbf{Vitali's covering theorem:} \textit{
-Let $\mathcal{F}$ be any collection of nondegenearted closed balls in
-$\mathbb{R}^n$ with
+Let $\mathcal{F}$ be any collection of nondegenearted closed balls in a metric
+space $X$ with
 \[ \sup\{\text{diam}\,B\,|\, B\in\mathcal{F}\}<\infty \]
 Then for every $\epsilon>1$ there exist a countable family $\mathcal{G}$ of
 disjoint balls in $\mathcal{F}$ such that
@@ -495,6 +509,10 @@ Let's set $\overline f = (\overline f_i)_i$ extension by coordinate functions.
 function take vector values, but I can only prove it for the maximum norm.
 
 \section{Measures and convergence}
+
+The following sections are highly inspired by lecture notes of \cite{giovanni_alberti}.
+Most propositions are taken from those, however remarks or sketches for proofs
+are not.
 
 \subsection{Vector valued measure}
 Let $X$ be a topological space and $V$ a Banach space, then $\mu:\mathcal{B}(X)
@@ -858,6 +876,45 @@ $\mathcal H^d (E\cap f[\mathbb R^d]) = 0$ for every Lipschitz map $f:\mathbb R^d
 $n$-Hausdorff measure. Then $M=M_r\cup M_u$, where $M_r$ is rectifiable
 and $M_u$ is unrectifiable.}
 
+\section{Density of Measures}
+
+\textbf{Definition:} \textit{Let $E\subseteq X$ be a Borel subset of a metric
+space. The \textbf{density} of a measure $\mu$ of the set $E$ is given, at the point $x\in 
+X$, by the following limit:
+\[\Theta(\mu, E, x)=\lim_{r\rightarrow 0}\frac{\mu(E\cap B(x,r))}{\mu(B(x,r)}\]
+}
+
+\vspace{2ex}
+\textbf{Definition:} \textit{Let $E$ be a Borel subset of a metric space $X$.
+The \textbf{upper $d$-dimensional density} (with respect to $\mathcal H^d$) of $E$ at
+the point $x$ is defined by setting
+\[\Theta^*_d(E,x)=\limsup_{r\rightarrow 0}\frac{\mathcal H^d(E\cap B_c(x,r))}{\omega_dr^d}\]}
+
+\vspace{2ex}
+\textbf{Theorem:} \textit{Let $E$ be a Borel subset of a metric space $X$, and
+assume that $E$ is locally $\mathcal H^d$-finite. Then the following properties
+hold true:
+\begin{enumerate}
+    \item  The upper density of external points is almost everywhere zero,
+        $\Theta^*_d(E, x)=0$ for $\mathcal H^d$-almost every $x\in E^c$.
+    \item The upper density is bounded from below, $\frac{1}{2^d}\leq\Theta^*
+        _d(E,x)$ for $\mathcal H^d$-almost every $x\in E^c$.
+    \item If $X\cong\mathbb R^n$, then the upper density is bounded from above
+        by 1, $\Theta^*_d(E,x)\leq 1$ for $\mathcal H^d$-almost every $x\in E$.
+    \item If $X$ is a generic metric space, then the upper density is bounded
+        from above by a slightly different constant, $\Theta^*_d(E,x)\leq5^d$
+        for $\mathcal H^d$-almost every $x\in E$.
+\end{enumerate}
+}
+
+\vspace{1ex}
+\textbf{Remark:} Theoretically we can reduce the constant in the last statement
+from 5 to 4 and if there is some sort of continuity we may even try to reduce
+it to 3.
+
+\vspace{1ex}
+\textbf{Proof:} Proofs of propositions 1-3 can be found in \cite{giovanni_alberti}
+on page 48. Lets check a more optimal version of the last proposition.
 \section{Tangents}
 
 Similarly to projective spaces $\mathbb{R}P^n$ one can generalise this notion to
@@ -865,6 +922,7 @@ smaller subspaces than hyperplanes. The set of $m$ dimensional subspaces of a
 vector space $\mathbb{R}^n$ is called grassmannian and noted by $G(m,n)$. It
 has a topology identified from a topology of orthogonal projection on
 $m$-dimensional subspaces.
+
 
 \subsection{Tangent Bundle}
 
@@ -940,7 +998,10 @@ and
 \[\mathcal H^d((E∩B(x, r))∩\mathcal C(x, V, α))\sim \omega_dr^d\]
 }
 
-
+\textbf{Theorem:} \textit{Let $E\subseteq\mathbb R^{n+m}$ be a Borel set. If $E$
+is a $d$-rectifiable $\mathcal H^d$-locally finite set, then the weak tangent
+bundle $T(x)$ is the approximate tangent plane to $E$ at $x$ for $\mathcal H^d$-almost
+every $x\in E$.}
 
 
 
