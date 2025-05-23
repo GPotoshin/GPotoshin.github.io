@@ -911,13 +911,37 @@ admits a unique up to $\mathcal H^d$-null sets a weak tangent bundle.}
 \textbf{Proof:} We have $E\subseteq M_0\cup\bigcup\Sigma_i$, hence we can define
 a bundle as following. For $x\in M_0$ we can take what ever we want, for $x\in
 \Sigma_1$ we take $T_x\Sigma_1$ and for $x\in \Sigma_s\setminus\bigcup_{i=1}^{s
--1}\Sigma_i$ we take $T_x\Sigma_s$.
+-1}\Sigma_i$ we take $T_x\Sigma_s$. This is a necessary condition as planes
+should be a.e. equal to the planes tangent to those surfaces. The condition for
+a weak tangent bundle is satisfied due to the previous preposition.
 
 \subsection{Approximate Tangent}
 
 \textbf{Definition:} \textit{Let $\alpha$ be a fixed angle, let $x\in\mathbb R^n$
-be a point and let $V$ be a $d$-dimensional plane in $\mathbb R^n$. The cone of
-angle $\alpha$ around $V$ centered at $x$ is defined by setting
+be a point and let $V$ be a $n$-dimensional plane in $\mathbb R^{n+m}$. The \textbf{
+cone of angle $\alpha$ around $V$ centered at $x$} is defined by setting
+\[\mathcal C(x,V,\alpha)=\{x'\in\mathbb R^{n+m}\;|\; |x′−x|\sin(\alpha)\geq d(x−x′, V)\}\]
+}
+
+\vspace{2ex}
+\textbf{Definition:} \textit{Let $V\in G(n+m, n)$ be a $d$-dimensional plane.
+If $E$ is a Borel set and $x\in E$ a point, then $V$ is a \textbf{strong tangent plane}
+to $E$ at $x$ if and only if for every $\alpha >0$ there exists a positive
+radius $r_0 >0$ such that
+\[E∩B(x, r_0)\subseteq C(x, V, \alpha)\]
+}
+
+\vspace{2ex}
+\textbf{Definition:} \textit{Let $V\in G(n+m, n)$ be a $d$-dimensional plane.
+If $E$ is a Borel set and $x\in E$ a point, then $V$ is an \textbf{approximate tangent
+plane} to $E$ at $x$ if and only if for every $\alpha>0$ it turns out that
+\[\mathcal H^d((E∩B(x,r))\setminus\mathcal C(x, V, \alpha)) = o(r^d)\]
+and
+\[\mathcal H^d((E∩B(x, r))∩\mathcal C(x, V, α))\sim \omega_dr^d\]
+}
+
+
+
 
 
 

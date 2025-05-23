@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/nixos.org)  (format=lualatex 1980.1.1)  22 MAY 2025 21:52
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/nixos.org)  (format=lualatex 1980.1.1)  23 MAY 2025 09:12
  restricted system commands enabled.
 **geom_meas.tex
 (./geom_meas.tex
@@ -1349,36 +1349,29 @@ Missing character: There is no µ (U+00B5) in font cmmi10!
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-Package rerunfilecheck Warning: File `geom_meas.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `geom_meas.out':
-(rerunfilecheck)             Before: 5C4C832E5671FDBE300616240D925AF6;4033
-(rerunfilecheck)             After:  68E33EC5538C3ECEAACDCED082FF5905;4189.
+Package rerunfilecheck Info: File `geom_meas.out' has not changed.
+(rerunfilecheck)             Checksum: 68E33EC5538C3ECEAACDCED082FF5905;4189.
 )
 
 Here is how much of LuaTeX's memory you used:
- 30322 strings out of 475514
+ 30323 strings out of 475514
  125009,1373583 words of node,token memory allocated
- 950 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 145 attribute, 60 glue_spe
-c, 74 attribute_list, 2 write nodes
-   avail lists: 2:891,3:299,4:34,5:979,6:66,7:11327,8:86,9:759,10:14,11:588
- 52610 multiletter control sequences out of 65536+600000
- 77 fonts using 34529807 bytes
+ 974 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 153 attribute, 60 glue_spe
+c, 78 attribute_list, 2 write nodes
+   avail lists: 2:882,3:299,4:34,5:979,6:66,7:11327,8:86,9:759,10:14,11:588
+ 52611 multiletter control sequences out of 65536+600000
+ 77 fonts using 34529739 bytes
  116i,16n,114p,470b,432s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/giorno/Library/Fonts/CambriaMath.ttc></Users/giorno/Library/Fonts/Cambri
 aMath.ttc></Users/giorno/Library/Fonts/CambriaMath.ttc></Users/giorno/Library/Fo
 nts/LinLibertine_RBI.otf></Users/giorno/Library/Fonts/LinLibertine_R.otf></Users
 /giorno/Library/Fonts/LinLibertine_RB.otf></Users/giorno/Library/Fonts/LinLibert
 ine_RI.otf>
-Output written on geom_meas.pdf (12 pages, 206534 bytes).
+Output written on geom_meas.pdf (12 pages, 209120 bytes).
 
-PDF statistics: 218 PDF objects out of 1000 (max. 8388607)
- 181 compressed objects within 2 object streams
+PDF statistics: 221 PDF objects out of 1000 (max. 8388607)
+ 184 compressed objects within 2 object streams
  48 named destinations out of 1000 (max. 131072)
- 176 words of extra memory for PDF output out of 10000 (max. 100000000)
+ 184 words of extra memory for PDF output out of 10000 (max. 100000000)
 
