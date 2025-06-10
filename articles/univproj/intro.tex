@@ -1,0 +1,130 @@
+\textbf{Convention:} To any product we associate morphisms denoted by $\pi_i$,
+where $i$ is an index of product component we are projecting to or is the component
+itself. For example for $A\times B$ we have $\pi_A:A\times B\rightarrow A$, for
+$A^n$ we have $\pi_i:A^n\rightarrow A$ with $i\in\llbracket1,n\rrbracket$, for $\prod_{i\in I} A_i$
+we have $\pi_{i_0}:\prod_{i\in I} A_i\rightarrow A_{i_0}$ for $i_0\in I$.
+Similarly we introduce a notion $i$ for morphisms associated to coproducts.
+Notions of morphisms $\pi$ and $i$ are reserved only for those needs.
+
+\vspace{2ex}
+\textbf{Definition:} \textit{An \textbf{outer measure} on $X$ is a set function on $X$ with
+values in $[0,\infty]$ with
+\begin{itemize}
+    \item $\mu(\varnothing)=0$
+    \item $E\subseteq\bigcup_{h\in\mathbb{N}}E_h\quad\Rightarrow\quad\mu(E)\leq\sum_{h\in\mathbb{N}}\mu(E_h)$
+\end{itemize}
+}
+
+\vspace{2ex}
+\textbf{Carathéodory's theorem:} \textit{If $\mu$ is an outer measure on $X$ and $\mathcal
+M(\mu)$ is the family of those $E\subseteq X$ such that
+\[\mu(F)=\mu(E\cap F)+\mu(F\setminus E),\quad\quad\forall F\subseteq X\]
+then $\mathcal M(\mu)$ is a $\sigma$-algebra and $\mu$ is a measure on $\mathcal
+M(\mu)$.}
+
+\vspace{2ex}
+\textbf{Definition:} \textit{$\mu$ is a \textbf{Borel measure} on a topological space $X$
+if it is an outer measure on $X$ such that $\mathcal B(X)\subseteq\mathcal M(\mu)$.}
+
+\vspace{2ex}
+\textbf{Definition:} \textit{A measure $\mu$ is said to be \textbf{absolutely continuous
+with respect to} measure $\lambda$ if for any set $A$, $\lambda(A)=0$
+implies $\mu(A)=0$ and we write it $\mu << \lambda$.}
+
+\vspace{2ex}
+\textbf{Definition:} \textit{We say that a Borel measure $\mu$ is \textbf{regular} if
+for every $F\subseteq X$ there exists a Borel set $E\in\mathcal B(X)$ such that
+\[F\subseteq E,\quad\quad\quad\quad\quad\quad\mu(F)=\mu(E)\]}
+
+\vspace{2ex}
+\textbf{Definition:} \textit{An outer measure $\mu$ on $X$ is \textbf{locally finite} if
+$\mu(K)<\infty$ for every compact set $K\subseteq X$.}
+
+\vspace{2ex}
+\textbf{Definition:} \textit{An outer measure $\mu$ is a \textbf{Radon measure} on a
+topological space if it is locally finite, Borel regular measure on $X$.}
+
+\vspace{2ex}
+\textbf{Property of Radon measures on $\mathbb{R}^n$:} \textit{If $\mu$ is a Radon
+measure on $\mathbb{R}^n$, then
+\[
+    \mu(E)=\inf\{\mu(A)\,|\,E\subseteq A,\,A\textnormal{ is open}\}
+          =\sup\{\mu{K}\,|\,K\subseteq E,\,K\textnormal{ is compact}\}
+\]}
+
+\vspace{2ex}
+\textbf{Definition:} \textit{For a function $f:X\rightarrow Y$ between metric spaces we can
+define its \textbf{Lipschitz constant} $\text{Lip}(f) = \textnormal{inf}\{L\in
+\mathbb{R}\,|\,d(f(x),f(y))\leq Ld(x,y) \forall x,y\in X\}$}
+
+\vspace{2ex}
+\textbf{Definition:} \textit{A Borel measure $\mu$ on a metric space $X$ is
+said to be a \textbf{doubling measure} if there exists a constant $C$ such that
+\[0<\mu(B(x,2r))\leq C\mu(B(x,r))<\infty\]}
+\subsection{Hausdorff measure}
+The Hausdorff measure generalises the notion of measure for lower dimensional
+objects in higher-dimensional space or even in an arbitrary metric space. The
+idea is essentially similar to the
+construction of Lebesgue's measure except that we take a lower limit instead of
+an infinum. We define a cover of $E$ by sets of diameter less then $\delta$ as
+a $\delta$-cover of $E$. And we conceder only countable covers. We note that
+\[\mathcal{H}_\delta^s(E)=\inf_{C}\sum_{I\in C}\omega_s\left(\frac{\text{diam}(I)}{2}\right)^s\]
+where $s\in\mathbb{R}_{\geq 0}$ is a dimension, $\omega_s\in\mathbb{R}$ is a
+coefficient, preferably continuous or smooth as a function of $s$, and $C$ is a
+$\delta$-cover of $E$. We may assume that
+\[\omega_s = \frac{\pi^{s/2}}{\Gamma(1+s/2)}\]
+We define the Hausdorff measure as a limit of the previous value. It exists
+because $\mathcal{H}_\delta^s(E)$ is increasing function of $\delta$. We note
+\[\mathcal{H}^s(E)=\lim_{\delta\rightarrow0^+}\mathcal{H}^s_\delta(E)\]
+
+I shall introduce the notion of $s$-variation of a cover $S$ as
+\[\text{Var}^s(S)=\sum_{I\in S}\omega_s\left(\frac{\text{diam}(I)}{2}\right)^s\]
+
+\textbf{Proposition:} \textbf{For a natural $n\geq 0$, $\omega_n$ is a volume of a unit
+$n$-dimensional ball.}
+\vspace{1ex}
+
+\subsection{Properties of Hausdorff measure}
+
+\textbf{Proposition:} \textit{Hausdorff measure is a Borel measure for regular topology.}
+
+\vspace{2ex}
+\textbf{Proposition:} $\mathcal H^0$ is the counting measure.
+
+\vspace{2ex}
+\textbf{Proposition:} \textit{In the definition of Hausdorff measure we can consider
+only closed or open sets.}
+
+\vspace{2ex}
+\textbf{Proposition:} \textit{Hausdorff measure of dimension $m\in N$ coincide on
+$m$-dimensional affine subspaces with their Lebesgue measure.}
+
+\vspace{2ex}
+\textbf{Proposition:} \textit{The $n$-dimetional Hausdorff measure traced to a
+$n$-dimentional $\mathcal{C}^1$-submanifold of $R^m$ induces the area measure
+on this submanifold and coincides with the integral measure via parametrisation
+on it.}
+
+\vspace{1ex}
+\textbf{Remark:} Proofs to those proposition can be found in the book "Geometric
+measure theory" be Francesco Maggi \cite{maggi}.
+\subsection{Hausdorff dimension}
+
+To a set $S$ we can associate a number $s=\text{inf}\{a\geq 0\,|\,\mathcal{H}^a
+(S)=0\}$. It's called its Hausdorff dimension.
+
+\vspace{2ex}
+\textbf{Proposition:} \textit{If $E\subseteq\mathbb R$ then $\dim(E)\in [0, n]$.
+Moreover $\mathcal H^s(E)=\infty$ for every $s<\dim(E)$ and $\mathcal H^S(E)\in
+(0,\infty)$ implies $s=\dim(E)$.}
+
+\vspace{2ex}
+\textbf{Proposition:} \textit{If $A$ is an open set in $\mathbb R^n$, then $\dim
+(A) = n$.}
+
+\vspace{2ex}
+\textbf{Proposition:} \textit{For a Lipschitz function $f:\mathbb{R}^n\rightarrow
+\mathbb{R}^m$ we have the following inequality
+\[ \mathcal{H}^s(f[E])\leq\text{Lip}(f)^s\mathcal{H}^s(E) \]
+for every $s>0$ and $E\subseteq\mathbb{R}^n$ and $\text{dim}(E)<\text{dim}(f[E])$.}
+

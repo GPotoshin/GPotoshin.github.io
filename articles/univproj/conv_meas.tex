@@ -1,0 +1,362 @@
+Measures not only allow us to compute integrals, but they can also be used to
+model geometric figures and to test different properties of these figures. One
+of the fundamental ideas at the heart of geometric measure theory is that one
+can replace figures with the measures induced on these figures.
+\[E\rightsquigarrow \mu\,\llcorner\hspace{-1mm}E\]
+Now, we need to compare two figures. To do this, we can compare the values of
+integrals of functions with respect to associated measures; in other words, we will
+treat measures as linear functionals. Furthermore, if two figures are close to
+one another, then we want their associated measures to yield sufficiently close
+values. This implies that we want the function values to remain bounded in small
+neighborhoods and not vary too much. Therefore, we only consider continuous
+functions. Lastly, since we want to be able to work with possibly unbounded
+figures, we would like the integration of measures with respect to functions to
+be well-defined and finite. Thus, we only use continuous functions with compact
+support, $\mathcal C_c(X)$.
+
+\vspace{1ex}
+This allows us to establish a notion of convergence of shapes, equivalent to a
+convergence of measures. We'll see examples of this later, but for now, I'd
+like to specify the type of convergence we'll be using.
+
+We are treating measures as linear functionals on the space $\mathcal C_c(X)$.
+In this context, convergence is defined by the behavior of these functionals on
+each test function; specifically, we are considering that the integral values
+converge for every function in $\mathcal C_c$. Such convergence is called 
+weak-* convergence. Before discussing this convergence further, I shall first
+demonstrate that there is a space of measures which serves as the dual space to
+$\mathcal C_c$.
+
+\subsection{Topologies on spaces $E$ and $E^*$}
+For topological spaces $Y_i$ and a set of functions $f_i:X\rightarrow Y_i$, we can
+define the smallest, coarsest topology on $X$ that makes those functions continuous.
+By definition such topology is $\tau(\{f_i\})=\bigcap\{\tau\,|\,
+\tau$ is a topology on $X$ and $f_i$ are continuous$\}$. As an
+example, the product topology is exactly $\tau(\{\pi_i\})$, where $\pi_i$ are
+canonical projections.
+\vspace{1ex}
+
+\textbf{Proposition:} \textit{Let $\tau$ be a topology on $X$. Then $\tau=\tau(\{f_i\})$
+if and only if every function $g:W\rightarrow X$ such that $f_i\circ g$ are
+continuous is continuous.}
+\vspace{1ex}
+
+\textbf{Remark:} This is a well-known property of caorsest topology, but I
+checked that it is also an alternative characterisation of such topology.
+
+If $\tau=\tau(\{f_i\})$ and $g:W\rightarrow X$ is such function that $f_i\circ
+g$ are continuous. It's sufficient to check that for all elements of prebase
+of $\tau(\{f_i\})$ the inverse image is open, but the prebase consists of
+elements of the form $f_i^{-1}[U]$ and its inverse image is $(f_i\circ g)^{-1}[U]$
+which is open by hypotheses.
+\vspace{1ex}
+
+If $\tau$ is a such topology, that for every function $g:W\rightarrow X$ it is
+continuous if and only if $f_i\circ g$ are continuous, then in particular we
+have $\text{id}:(X,\tau)\rightarrow(X,\tau)$ continuous and that means that $f_i = f_i\circ
+\text{id}$ are continuous and we have $\tau(\{f_i\})\subseteq\tau$. On the other
+hand we have $\text{id}':(X,\tau(\{f_i\}))\rightarrow(X,\tau)$ continuous
+because $f_i = f_i\circ\text{id}':(X,\tau(\{f_i\}))\rightarrow Y_i$ are continuous
+by the definition of coarsest topology. Thus we have $\text{id}'$ continuous
+and that means that $\tau\subseteq\tau(\{f_i\})$. And finally $\tau=\tau(\{f_i\})$.
+
+\vspace{1ex}
+
+\textbf{Tichonoff's Theorem:} \textit{Product of compact spaces is compact.}
+\vspace{1ex}
+
+\textbf{General structure:} Let $I$ be a set of indices and $E_i$ for $i\in I$
+be a topological space with a topology $\tau_i$. The prebase of the product
+topology on  $\prod_{i\in I} E_i$ is $\{\pi_i^{-1}[U]\,|\,i\in I,U\in\tau_i\}$.
+a set of products of open subspaces of one spaces on others. All the finite
+intersections form a base of product topology. Its elements are products of
+open sets where almost all factors are $E_i$.
+\vspace{1ex}
+
+\textbf{Maximal covers:} Let's note that a set of covers that does not contain
+finite sub-covers for a partially ordered set with the relation of inclusion.
+For every chain we have its union which does not contain a finite sub-cover,
+which otherwise would have been in some element of chain. Thus each chain has an
+upper bound. By the Zorn's lemma we find a maximal element $M$.
+\vspace{1ex}
+
+Let $X$ be a topological space and $M\subseteq\tau$ a maximal cover that does
+not contain a finite sub-cover. \textbf{Then if $V\in M^c$, we have $U_1,\ldots,
+U_n\in M$ such that $V\cup U_1\cup\ldots\cup U_n=X$.} Because otherwise we
+could have added $V$ to $M$ and M would not be maximum. \textbf{If
+$U,V\in M^c$ then $U\cap V\in M^c$.} In other words $M^c$ is a multiplicative
+system, which is similar to the statement that $\mathfrak{p}^c$ is multiplicative
+for a prime ideal $\mathfrak{p}$. This is true due to the fact that we have
+$U_1,\ldots,U_k\in M$ and $V_1,\ldots,V_l\in M$ such that $U\cup U_1\cup\ldots
+\cup U_n = X = V\cup V_1\cup\ldots\cup V_l$ and thus $(U\cap V)\cup U_1\cup\ldots
+\cup U_k\cup V_1\cup\ldots\cup V_l=X$, which implies that $U\cap V\in M^c$.
+\vspace{1ex}
+
+\textbf{Alexander's lemma about prebase: Let $B$ be a prebase of a topological
+space $X$. Then if in every cover of $X$ by elements of $B$ there exists a finite
+subcover, then the space $X$ is compact.} If $X$ is not compact, then we have
+a $M$ maximal cover that does not contain a finite sub-cover. Then to every
+$x\in X$ we can associate its neighborhood $V_x\in M$. Then we find some
+element of a basis $U_x=U_{1,x}\cup\ldots\cup U_{n_x,x}\subseteq V_x$ where
+$U_{i,x}\in B$ are elements of prebase. Thus by maximality $U_x\in M$ as
+$U_x\subseteq V_x$. But as $U_x=U_{1,x}\cup\ldots\cup U_{n_x,x}$ and as $M^c$
+is a multiplicative system, for some $i$ we have $U_{i,x}\in M$. It means that
+in $M$ we have a sub-cover of $X$ by elements of a prebase $B$. And by hypotheses
+we can chose a finite sub-cover which gives a contradiction.
+\vspace{1ex}
+
+\textbf{Tichonoff theorem's proof:} Let $\mathcal{S}=(U_i)_{i\in I}$ be a cover of a
+product $E=\prod_{j\in J} E_j$ of compact space by elements of canonical prebase.
+Let's suppose that it does not contain a finite sub-cover. For every $j\in J$
+we shall pose $S_j=\{\pi_j^{-1}[V_{i,j}]=U_i\,|\,V_{i,j}\in\tau_j,i\in I_j\}$.
+Then $(V_{i,j})_{i\in I}$ cannot be a cover of $E_j$, because otherwise we can
+extract a finite sub-cover of $E_j$ and hence of $E$. So we can chose $x_j\in
+E_j$ such that $x_j\notin\bigcup_{i\in I_j}V_{i,j}$. Let $x=(x_j)_{j\in J}$ and
+it does not lie in every set of $\mathcal{S}$, thus it is not a cover and we get
+a contradiction.
+
+\vspace{1ex}
+\textbf{Remark:} This is the most non-trivial part of the proof of Banach-Alaoglu
+theorem and as I had this proof noted I have decided to also put it here.
+
+\vspace{1ex}
+In this section, $E$ is a normed vector space and $E^*$ is its dual space of continuous
+1-forms on $E$. On the space $E$, apart from its metric topology, we have
+the weak topology $\sigma(E, E^*)=\tau(\{f\}_{f\in E^*})$. As $f\in E^*$ is
+continuous with respect to the regular topology, the topology $\sigma(E, E^*)$
+is coarser then the regular topology, which we call strong.
+\vspace{1ex}
+
+On the space $E^*$, we also have strong topology with the operator norm.
+Additionally, we have the weak-$*$ topology $\sigma(E^*, E)=\tau(\{v\}_{v\in E})$.
+
+\vspace{1ex}
+\textbf{Proposition:} \textit{The weak-$*$ topology is a trace topology from the space
+$\mathbb{R}^E$ with the product topology.}
+
+\vspace{1ex}
+\textbf{Proof:} Let $\tau(\{\pi_v\}_{v\in E})$ be the trace topology. Then it
+is easy to see that $\pi_v=v$ as both function are evaluations at $v$ and thus
+$\tau(\{\pi_v\}_{v\in E})=\tau(\{v\}_{v\in E})=\sigma(E^*, E)$ is a weak-$*$
+topology.
+
+\vspace{1ex}
+\textbf{Remark:} In the book "Functional Analysis" by Haim Brezis, the part
+above is done by establishing an homeomorpism and a verification of its bicontinuity.
+As you have seen, there is actually nothing substantial to prove since these are 
+just two notions of the same concept – projection and evaluation in the dual-space.
+
+\vspace{1ex}
+\textbf{Theorem (Banach-Alaoglu):} \textit{The closed unit ball $B=\{f\in E^*\,|\,|
+f|\leq 1\}$ is compact in the weak-$*$ topology $\sigma(E^*, E)$.}
+
+\vspace{1ex}
+\textbf{Proof:}
+\[ B=\left\{f\in\mathbb{R}^E\,|\,
+\begin{cases}
+    |f(x)|<|x|,\;\forall x\in E\\
+    f(\lambda x)=\lambda f(x),\;\forall\lambda\in\mathbb{R}, x\in E\\
+    f(x+y)=f(x)+f(y)\;\forall x,y\in E
+\end{cases}
+\right\} \] 
+
+Hence it is intersection of the following sets $B=K\cap\bigcap_{x,y\in E} A_{x,y}
+\cap\bigcap_{x\in E, \lambda\in\mathbb{R}}B_{\lambda,x}$, where $K=\{f\in\mathbb
+{R}^E\,|\,|f(x)|\leq|x|\}=\prod_{x\in E}[-|x|, |x|]$ is compact by Tichonoff
+theorem, where for $x,y\in E$, we define $A_{x,y}=\{f\in\mathbb{R}^E\,|\,f(x+y)-
+f(x)-f(y)=0\}$, which is closed since evaluations and addition are continuous, and
+thus $f\mapsto f(x+y)-f(x)-f(y)$ is continuous and $A_{x,y}$. For similar
+reasons $B_{\lambda, x}=\{f\in\mathbb{R}^E\,|\,f(\lambda x)-\lambda f(x)=0\}$ is
+closed. This proves that $B$ is compact.
+
+\subsection{Vector valued measure}
+Later on, when we'll need to talk about generalisation of weak derivatives and
+for this purpose we'll need to have the theory in a more generic context. More
+precicely we'll need vector valued measures and then if needed, we can take a
+restriction to Radon measures.
+
+\vspace{2ex}
+Let $X$ be a topological space and $V$ a Banach space, then $\mu:\mathcal{B}(X)
+\rightarrow V$ is a $V$-valued Borel measure if
+\[\sum_n\mu(E_n)=\mu(\bigcup_n E_n)\]
+for any disjoint countable family $\{E_n\}$ of Borel sets. From that definition
+we have $\mu(A)+\mu(\varnothing)=\mu(A\cup\varnothing)=\mu(A)$ and thus 
+$\mu(\varnothing)=0$. This is a quite a strong property as the convergence of
+the sum does not depend on the order, which in finite dimenetions is equivalent
+to the absolute convergence of that series.
+
+\vspace{1ex} Let $\mu$ be a vector valued measure. Then the \emph{total
+variation} $|\mu|$ of a Borel set $A$  by measure $\mu$ is defined by:
+\[|\mu|(A) = \text{sup}\{\sum_n|\mu(A_n)|\,|\,\{A_n\}\text{ countable partition of }A\}\]
+
+\textbf{Proposition:} \textit{Total variation is a positive bounded measure.}
+
+\vspace{1ex}
+It is easy to see that $|\mu|(\varnothing)=0$ since all partitions of an empty
+set consist of empty sets which measure is zero. The image of $|\mu|$ by the
+definition consists of positive numbers. Lastly we verify $\sigma$-additivity.
+Let $\{S_n\}$ be a disjoint countable collection of Borel sets. Then
+\[ 
+    \sum_n|\mu|(S_n) = \sum_n\sup\{\sum_m|\mu(S_{n,m})|\,|\,(S_{n,m})_m\text{ is a countable Borel partition of }S_n\} \\ 
+\]
+Then we remark that for each choice of $\{S_{n,m}\}$, it is a countable Borel
+partition of $S=\bigcup_n S_n$, and thus $|\mu|(S)\geq\sum_n|\mu|(S_n)$. On the
+other hand if $\{A_k\}$ is a countable Borel partition of $S$ then we have
+partitions of $S_n$ defined as $\{S_{n,k}=A_k\cap S_n\}_k$ and we have the
+following inequality:
+\[
+    \sum_k|\mu(A_k)|=\sum_k|\sum_n\mu(S_{n,k})|\leq\sum_n\sum_k|\mu(S_{n,k})|
+\]
+which implies $|\mu|(S)\leq\sum_n|\mu|(S_n)$ and we conclude that $|\mu|$ is a
+positive measure.
+
+\vspace{1ex}
+Let's verify that total variation is bounded.
+That is a tricker question and we
+shall follow the proof from "...". The measure can be partitioned into projection measures
+$\mu=(\mu_i)_{i=1}^n$. As all the norms are equivalent we can concider $|\cdot|
+= \|\cdot\|_1$. Then as we have the following inequality:
+\[\sup\{\sum_i|\mu(X_i)|\,|\,X_i\text{ is a borel partition of }X\} \leq \sum_j\sup\{\sum_i|\mu_j(X_i)|\,|\,X_i\text{ is a borel partition of }X\}\]
+It is sufficient to prove that for real valued measures its total variation is bound.
+If we suppose it is not, then we have a real valued measure $\mu$,
+countable Borel partition of $X$ $\{X_m\}_m$ and $n\in\mathbb{N}$ such that
+\[\sum_{m=0}^n|\mu(X_m)|>2(|\mu(X)|+1)\]
+Let $P=\{X_i|\mu(X_i)>0\}$ and $N=\{X_i|\mu(X_i)<0\}$. Then
+we have $|\mu(\bigcup P)|>|\mu(X)|+1$ or $|\mu(\bigcup N)|>|\mu(X)|+1$, thus we
+have a set $E$ such that $|\mu(E)|>|\mu(X)|+1$. Then we have $|\mu(E^c)|=|\mu(X)
+-\mu(E)|\geq |\mu(E)|-|\mu(X)|>1$. Then by additivity of $|\mu|$ we have
+$|\mu|(E)=\infty$ or $|\mu|(E^c)=\infty$; supposing the latter we pose $E_1=E$
+(or $=F$) we always have $\mu(E_1)>1$ and if we continue the same procidure for
+$X=E^c$ we construct by the choice axiom the following sequence of disjoint sets
+$(E_i)_i$ and $|\mu|(E_i)>1$ and thus $\sum\mu(E_i)$ does not converge and we
+have a contracdiction to the definition of vector valued measure. Thus $\mu$
+is bound.
+
+\vspace{1ex}
+By setting
+\[\mu_+=\frac{|\mu|+\mu}{2}\quad\quad\quad\quad\quad\quad\mu_-=\frac{|\mu|-\mu}{2}\]
+we have $\mu_+$ and $\mu_-$ positive bounded measures and $\mu=\mu_+-\mu_-$
+which ports a name a \emph{Jordan decomposition}.
+
+
+\vspace{1ex}
+The \emph{mass} of $\mu$ is set to be $\|\mu\|=|\mu|(X)$.
+
+\vspace{1ex}
+\textbf{Proposition:}
+\textit{The set of vector norms with the mass form a normed vector space.}
+
+\vspace{1ex}
+\textbf{Proof:} Let $\mu:\mathcal{B}(X)\rightarrow V$ for $V$ an $\mathbb
+R$-vector space be a vector norm. Then evidently $\|k\mu\|=|k|\|\mu\|$. Let $\nu$
+be another vector measure then
+\begin{align*}
+    \|\mu+\nu\|&=\sup\left\{\sum_{n=0}^{+\infty}|(\mu+\nu)(E_n)|\,|\,\{E_n\}_n\text{ countable paritition of }X\right\}\\
+    &\leq\sup\left\{\sum_{n=0}^{+\infty}|\mu(E_n)|+|\nu(E_n)|\,|\,\{E_n\}_n\text{ countable paritition of }X\right\}\\
+    &\leq\sup\left\{\sum_{n=0}^{+\infty}|\mu(E_n)|\,|\,\{E_n\}_n\text{ countable paritition of }X\right\}\\
+    &+\sup\left\{\sum_{n=0}^{+\infty}|\nu(E_n)|\,|\,\{E_n\}_n\text{ countable paritition of }X\right\}\\
+    &=\|\mu\|+\|\nu\|
+\end{align*}
+
+\subsection{Riesz representation theorems for vector valued measure}
+For an $\mathbb{R}^n$-valued measure $\mu$ on $X$ we define an associated
+functional
+\begin{align*}
+\Lambda_\mu:\mathcal C_0(X,\mathbb{R}^n)&\rightarrow\mathbb{R}\\
+f&\mapsto\int f\,d\mu
+\end{align*}
+
+\textbf{Riesz representation theorem:} \textit{
+The map
+\begin{align*}
+\Lambda:\mathcal{M}(X, \mathbb{R}^n)&\rightarrow\mathcal{C}_0(X,\mathbb{R}^n)^*\\
+\mu\quad&\mapsto\quad\Lambda_\mu
+\end{align*}
+is an isometry}
+
+\vspace{1ex}
+\textbf{Proof:} The injectivity of $\Lambda$ is quit obvious. For sujectivity
+we make an inverse construction, for a given functional $L$ we take its total
+variation defined by
+\[|L|(A)=\sup\{\langle L\,|\,\phi\rangle\,|\,\phi\in\mathcal C_c(A,\mathbb R^n), |\phi|<1\}\]
+for open set $A$. And for other sets we set
+\[|L|(E)=\inf\{|L|(A)\,|\,E\subseteq A\}\]
+Thus $|L|$ is localy finite, because it's continuous and thus bounded. Whats
+more the second property yeilds us the regularity of the total variation as we
+can take a countable intersection of $\{A_n\}$ of open sets such that $|L|(A_n)
+\rightarrow |L|(E)$, thus the total vatiation is a radon measure. Then the
+proof of existance of function $f$ such that $L$ is equal to integration with
+respect to $f|L|$ and $|f|=1$ $|L$-a.e. can be found on pages 34-41
+\cite{maggi}. Let's check that it's an isometry. Let measure $\mu$ be
+represented by a functional $L$. Then 
+\begin{align*}
+    &\|L\|=\sup\{L(f)\;|\;\|f\|\le1\}\\
+    &\|\mu\|=\sup\{\sum|\mu(B_i)|\,|\,\{B_i\}\text{ a partition of } X\}
+\end{align*}
+
+For $f\in C_0(X,\mathbb R^n)$ we find a series of step functions $f_n=\sum a_i\chi_{B_i}$ 
+such that $f_n\rightarrow f$ and $a_i\leq 1$. Thus by dominant convergence
+$\int f_n\,d\mu\rightarrow L(f)$. On the other hand we have
+\[|\int f_n\,d\mu = |\sum a_i\cdot\mu(B_i)|\leq\sum|a_i||\mu(B_i)|\leq\sum|\mu(B_i)|\leq\|\mu\|\]
+
+and thus we have $|\int f\,d_\mu|\leq\|\mu\|$ and thus $\|L\|\leq\|\mu\|$.
+
+In the other direction it obviously follows form the fact the $C^0$ is dense
+in $L^1$.
+
+\vspace{2ex}
+\textbf{Corollary:} \textit{Continuous positive funcitonals are represented by
+Radon measures}
+
+\vspace{1ex}
+Because $f=1$.
+
+\subsection{Interpretation of Banach-Alaoglu theorem for vector valued measures}
+The weak-$*$ convergence can be interpreted as convergence of evaluation of measure
+on every continuous function on compact sets.
+
+\vspace{2ex}
+The original statement of Banch-Alaoglu theorem is \textbf{the closed unit ball
+$B=\{f\in E^*\,|\,|f|\leq 1\}$ is compact in the weak-$*$ topology}. If we replace
+the termes in this proof by measure terms we have the following theorem
+
+\vspace{1ex}
+\textbf{Banach-Alaoglu Theorem for $\mathcal M(X,\mathbb{R}^n)$:}\textit{
+The set $B=\{\mu\in\mathcal M(X,\mathbb{R}^n)\,|\,\|\mu\|\leq C\}$ is compact
+for every $C\in\mathbb{R}_{>0}$. That's said every bounded sequence of vector
+measures has a weakly-$*$ converging subsequence.}
+
+\vspace{1ex}
+\textbf{Consequence:} If $(\mu_n)$ is a bounded sequence of vector measures, 
+then it has a converging subsequence.
+
+\subsection{Weak-* convergence of measures}
+\textbf{Proposition:} \textit{Let $(\mu_n)_n$ be a sequence of positives
+measures converging to $\mu$, then we have
+\begin{enumerate}
+    \item For any open subset $A\subseteq X$, $\liminf\mu_n(A)\geq\mu(A)$
+    \item For any compact subset $K\subseteq X$, $\limsup\mu_n(K)\leq\mu(K)$
+    \item For any relatively compact $E\subseteq X$ such that $µ(\partial E)=0$
+\end{enumerate}
+}
+
+\vspace{1ex}
+\textbf{Proof:} We will simultaneously demonstrate propositions 1 and 2. Let $K \subset A$,
+where $K$ is compact and $A$ is open. Consider a function $f\in\mathcal{C}
+_c(X)$ such that $\chi_K\leq f\leq\chi_A$. For a Radon measure $\nu$, we then have:
+\[\nu(K) \leq \int f \,d\nu \leq \nu(A)\]
+And by considering the limits, we obtain:
+\[\limsup \mu_i(K) \leq \limsup \int f \,d\mu_i = \int f \,d\mu \leq \mu(A)\]
+\[\mu(K) \leq \int f \,d\mu = \liminf \int f \,d\mu_i \leq \liminf \mu_i(A)\]
+Since we are dealing with Radon measures and these inequalities hold for
+every compact $K$ and every open $A$, we can pass to the limit. The
+lines then transform into:
+\[\limsup \mu_i(K) \leq \mu(K)\]
+\[\mu(A) \leq \liminf \mu_i(A)\]
+Point three is a consequence of the two preceding points. Indeed, we have:
+\[\limsup\mu_i(\overline E)\leq\mu(\overline E)=\mu(\text{int}(E))\leq\liminf\mu_i(\text{int}(E))\]
+
+\vspace{2ex}
+\textbf{Remark:} The third proposition gives us the property that the
+measures of a sequence of figures converge to the other figure; thus,
+locally in the ball, the area also converges.

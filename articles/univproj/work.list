@@ -1,4 +1,28 @@
+------ PARAGRAPHS ANALYSIS ------
+Paragraph on results:
+* Do we need a doubling measure?? 
+* In vitali we need fineness? 
+* Lipschitz function extension theorem proof is unfinished
+* We need to move Radon Nikodim
+
+Hausdorff:
+* write a better version for d-dimensional density
+
+Convergence:
+* Vector valued measures - motivation
+* What about Riezs theorem for Radon measures???
+
+
+
+
+
+
+
+
+
 ----- WORK LIST -----
+* Add to prerequisits where they are used
+
 Insert what you've done for ENS to english version:
 * Move tangents closer to convergence, I loved that structure
 
@@ -6,7 +30,6 @@ Hausdorff measure:
 * Change text
 
 Weak convergence of measures:
-* Make a sketch of a proof
 * Add a motivation
 
 Analysis results section:
