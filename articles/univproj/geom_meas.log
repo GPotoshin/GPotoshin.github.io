@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/nixos.org)  (format=lualatex 1980.1.1)  2 JUN 2025 13:51
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/nixos.org)  (format=lualatex 1980.1.1)  10 JUN 2025 12:48
  restricted system commands enabled.
 **geom_meas.tex
 (./geom_meas.tex
@@ -1295,7 +1295,7 @@ Package unicode-math Warning: I'm going to overwrite the following commands
 LaTeX Warning: No \author given.
 
 
-Overfull \hbox (13.74538pt too wide) in paragraph at lines 101--107
+Overfull \hbox (13.74538pt too wide) in paragraph at lines 105--111
 \TU/LinuxLibertineO(0)/m/n/10 The Haus-dorff mea-sure gen-er-alises the no-tion of mea-sure for lower di-men-sional ob-jects in higher-dimensional
  []
 
@@ -1307,7 +1307,7 @@ Overfull \hbox (13.74538pt too wide) in paragraph at lines 101--107
 nts/map/pdftex/updmap/pdftex.map}]
 
 [2]
-Overfull \hbox (19.36835pt too wide) detected at line 197
+Overfull \hbox (19.36835pt too wide) detected at line 201
 \TU/CambriaMath(1)/m/n/10 |𝐼|[] = (|𝐽| + |𝐽[]| + |𝐾|)[] ≥ ((1 + [
 ]))(|𝐽| + |𝐽[]|))[] = ([]1/2(|𝐽| + |𝐽[]|))[] = 2(1/2(|𝐽| + |
 𝐽[]|))[] ≥ |𝐽|[] + |𝐽[]|[]
@@ -1318,28 +1318,28 @@ Overfull \hbox (19.36835pt too wide) detected at line 197
 [3]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 316.
+(hyperref)                removing `math shift' on input line 346.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 316.
+(hyperref)                removing `math shift' on input line 346.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 316.
+(hyperref)                removing `math shift' on input line 346.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 316.
+(hyperref)                removing `superscript' on input line 346.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 316.
+(hyperref)                removing `math shift' on input line 346.
 
 
 
 [4]
-Overfull \hbox (109.43726pt too wide) in paragraph at lines 374--377
+Overfull \hbox (109.43726pt too wide) in paragraph at lines 404--407
 []\TU/LinuxLibertineO(0)/b/n/10 Def-i-ni-tion: [] 
  []
 
@@ -1354,36 +1354,43 @@ Overfull \hbox (109.43726pt too wide) in paragraph at lines 374--377
 [8]
 
 [9]
+
+[10]
 Missing character: There is no µ (U+00B5) in font cmmi10!
 
 
-[10]
-
 [11]
 
-[12] (./geom_meas.bbl
+[12]
 
-[13])
+[13] (./geom_meas.bbl)
 
 [14] (./geom_meas.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `geom_meas.out' has not changed.
-(rerunfilecheck)             Checksum: C8E511A095C2C83E787CC561CCBB1083;4402.
+
+
+Package rerunfilecheck Warning: File `geom_meas.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `geom_meas.out':
+(rerunfilecheck)             Before: C8E511A095C2C83E787CC561CCBB1083;4402
+(rerunfilecheck)             After:  E4F00BD810A948BF86852FB7335A0D5E;4364.
 )
 
 Here is how much of LuaTeX's memory you used:
  30573 strings out of 475514
- 100000,1373583 words of node,token memory allocated
- 1004 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 163 attribute, 60 glue_spe
-c, 83 attribute_list, 2 write nodes
-   avail lists: 2:853,3:271,4:52,5:1018,6:63,7:10175,8:86,9:700,10:14,11:514
+ 125009,1373583 words of node,token memory allocated
+ 1010 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 165 attribute, 60 glue_spe
+c, 84 attribute_list, 2 write nodes
+   avail lists: 2:881,3:284,4:48,5:1047,6:63,7:11314,8:86,9:746,10:14,11:607
  52843 multiletter control sequences out of 65536+600000
  83 fonts using 34902983 bytes
- 116i,16n,114p,520b,496s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,16n,114p,520b,481s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/giorno/Library/Fonts/LinLibertine_RBI.otf></Users/giorno/Library/Fonts/C
 ambriaMath.ttc></Users/giorno/Library/Fonts/CambriaMath.ttc></Users/giorno/Libra
 ry/Fonts/CambriaMath.ttc></Users/giorno/Library/Fonts/LinLibertine_R.otf></Users
@@ -1391,7 +1398,7 @@ ry/Fonts/CambriaMath.ttc></Users/giorno/Library/Fonts/LinLibertine_R.otf></Users
 ine_RI.otf></nix/store/0qbbmnkja87w072z4w7027i27j513r9v-texlive-2024-env-texmfdi
 st/fonts/type1/public/stmaryrd/stmary10.pfb></nix/store/0qbbmnkja87w072z4w7027i2
 7j513r9v-texlive-2024-env-texmfdist/fonts/type1/public/stmaryrd/stmary7.pfb>
-Output written on geom_meas.pdf (14 pages, 222845 bytes).
+Output written on geom_meas.pdf (14 pages, 225583 bytes).
 
 PDF statistics: 250 PDF objects out of 1000 (max. 8388607)
  208 compressed objects within 3 object streams

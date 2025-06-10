@@ -25,13 +25,17 @@
 \vspace{-1cm}
 \textit{\small{Georgii Potoshin, 2025}}\\
 \vspace{0.3ex}
-\textit{\huge{Geometry and measure}}\vspace{1ex}
+\textit{\huge{Geometries and measures}}\vspace{1ex}
 }
 \date{\vspace{-5ex}}
 \maketitle
 
 \section{Introduction}
-Here are my observations about geometric measure theory.
+Geometric Measure Theory is indeed a geometric theory, because it is
+driven by geometric ideas. A primary interest of this domain is to study how
+measures can be used to investigate geometric properties of objects. With measures,
+we can describe such things as shape convergence and local geometric properties
+of objects.
 
 \subsection{Conventions, acknowledged results and definition from analysis and measure theory}
 \textbf{Convention:} To any product we associate morphisms denoted by $\pi_i$,
@@ -217,9 +221,35 @@ for every $0\leq s<1$ there is such $m$, that $\text{log}_{n/m}(2)=\text{log}_{
 (2m+1)/m}(2)>s$, as $\text{log}_{(2m+1)/m}(2)\rightarrow 1$. And thus $\mathcal
 {H}^s(S)>\mathcal{H}^s(C_{m/(2m+1)})=\infty$.
 
-\section{Weak* topology and compactness}
-As to a positive measure we can associate an integral, we need to utilise some
-results from functional analysis.
+\section{Convergence of measures}
+Measures not only allow us to compute integrals, but they can also be used to
+model geometric figures and to test different properties of these figures. One
+of the fundamental ideas at the heart of geometric measure theory is that one
+can replace figures with the measures induced on these figures.
+\[E\rightsquigarrow \mu\,\llcorner\hspace{-1mm}E\]
+Now, we need to compare two measures. To do this, we can compare the values of
+integrals of functions with respect to these measures; in other words, we will
+treat measures as linear functionals. Furthermore, if two figures are close to
+one another, then we want their associated measures to yield sufficiently close
+values. This implies that we want the function values to remain bounded in small
+neighborhoods and not vary too much. Therefore, we only consider continuous
+functions. Lastly, since we want to be able to work with possibly unbounded
+figures, we would like the integration of measures with respect to functions to
+be well-defined and finite. Thus, we only use continuous functions with compact
+support, $\mathcal C_c(X)$.
+
+\vspace{1ex}
+This allows us to establish a notion of convergence of shapes, equivalent to a
+convergence of measures. We'll see examples of this later, but for now, I'd
+like to specify the type of convergence we'll be using.
+
+We are treating measures as linear functionals on the space $\mathcal C_c(X)$.
+In this context, convergence is defined by the behavior of these functionals on
+each test function; specifically, we are considering that the integral values
+converge for every function in $\mathcal C_c$. Such convergence is called 
+weak-* convergence. Before discussing this convergence further, I shall first
+demonstrate that there is a space of measures which serves as the dual space to
+$\mathcal C_c$.
 \vspace{1ex}
 
 For topological spaces $Y_i$ and a set of functions $f_i:X\rightarrow Y_i$, we can
