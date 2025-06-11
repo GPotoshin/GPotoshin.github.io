@@ -24,7 +24,7 @@ $n$-dimensional ball.}
 
 \subsection{Properties of Hausdorff measure}
 
-\textbf{Proposition:} \textit{Hausdorff measure is a Borel measure for regular topology.}
+\textbf{Proposition:} \textit{Hausdorff measure is a Borel measure.}
 
 \vspace{2ex}
 \textbf{Proposition:} $\mathcal H^0$ is the counting measure.
@@ -43,6 +43,10 @@ $n$-dimentional $\mathcal{C}^1$-submanifold of $R^m$ induces the area measure
 on this submanifold and coincides with the integral measure via parametrisation
 on it.}
 
+\vspace{2ex}
+\textbf{Proposition:} \textit{A restriction of $\mathcal H^s$ on a locally
+$\mathcal H^s$-finite set is a Radon measure.}
+
 \vspace{1ex}
 \textbf{Remark:} Proofs to those proposition can be found in the book "Geometric
 measure theory" be Francesco Maggi \cite{maggi}.
@@ -58,7 +62,7 @@ the point $x$ is defined by setting
 assume that $E$ is locally $\mathcal H^d$-finite. Then the following properties
 hold true:
 \begin{enumerate}
-    \item  The upper density of external points is almost everywhere zero,
+    \item The upper density of external points is almost everywhere zero,
         $\Theta^*_d(E, x)=0$ for $\mathcal H^d$-almost every $x\in E^c$.
     \item The upper density is bounded from below, $\frac{1}{2^d}\leq\Theta^*
         _d(E,x)$ for $\mathcal H^d$-almost every $x\in E^c$.
@@ -78,8 +82,22 @@ it to 3.
 \vspace{1ex}
 \textbf{Proof:} Proofs of propositions 1-3 can be found in \cite{giovanni_alberti}
 on page 48. Lets check a more optimal version of the last proposition.
-\subsection{Hausdorff dimension}
 
+\vspace{1ex}
+\begin{enumerate}
+    \item The core of this proof is to use regularity of $\mu:=\mathcal H^d\,
+        \llcorner E$ and Vitali's lemma. Let $E_t:=\{x\in E^c\,|\,\Theta^*_d(E,x)>t\}$
+        and we prove that it's $\mathcal H^d$-null for $t>0$. From the
+        definition of $E_t$ we know that $E$ is highly concentrated around of
+        points of $E_t$. Thus in some sense we can replace a study of $E_t$ with
+        study of covers. Let $A\supseteq E_t$ be an open neighborhood of $E_t$.
+        Then we take $\mathcal F:=\{\overline{B(x,r)}\subset A\,|\,x\in E_m\;\&
+        \;\mathcal H^d(\overline{B(x,r)}\cap E)>t\omega_dr^d\}$. In this family
+        we can?? leave only balls of diameter $<1$. Then for \textbf{Vitali's
+        Covering Lemma} we can choose a dilation coefficient $k\in(3,+\infty)$
+\end{enumerate}
+
+\subsection{Hausdorff dimension}
 To a set $S$ we can associate a number $s=\text{inf}\{a\geq 0\,|\,\mathcal{H}^a
 (S)=0\}$. It's called its Hausdorff dimension.
 
