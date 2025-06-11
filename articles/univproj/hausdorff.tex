@@ -69,19 +69,14 @@ hold true:
     \item If $X\cong\mathbb R^n$, then the upper density is bounded from above
         by 1, $\Theta^*_d(E,x)\leq 1$ for $\mathcal H^d$-almost every $x\in E$.
     \item If $X$ is a generic metric space, then the upper density is bounded
-        from above by a slightly different constant, $\Theta^*_d(E,x)\leq5^d$
+        from above by a slightly different constant, $\Theta^*_d(E,x)\leq3^d$
         for $\mathcal H^d$-almost every $x\in E$.
 \end{enumerate}
 }
 
 \vspace{1ex}
-\textbf{Remark:} Theoretically we can reduce the constant in the last statement
-from 5 to 4 and if there is some sort of continuity we may even try to reduce
-it to 3.
-
-\vspace{1ex}
-\textbf{Proof:} Proofs of propositions 1-3 can be found in \cite{giovanni_alberti}
-on page 48. Lets check a more optimal version of the last proposition.
+\textbf{Proof:} Proofs of propositions 2-3 can be found in \cite{giovanni_alberti}
+on page 48.
 
 \vspace{1ex}
 \begin{enumerate}
@@ -93,8 +88,29 @@ on page 48. Lets check a more optimal version of the last proposition.
         study of covers. Let $A\supseteq E_t$ be an open neighborhood of $E_t$.
         Then we take $\mathcal F:=\{\overline{B(x,r)}\subset A\,|\,x\in E_m\;\&
         \;\mathcal H^d(\overline{B(x,r)}\cap E)>t\omega_dr^d\}$. In this family
-        we can?? leave only balls of diameter $<1$. Then for \textbf{Vitali's
+        we can leave only balls of diameter $<1$. Then for \textbf{Vitali's
         Covering Lemma} we can choose a dilation coefficient $k\in(3,+\infty)$
+        and we fix ball dilatation procedure with coefficient $k$ by $B\mapsto
+        \widehat B$. Lemma gives us a disjoint subfamily $\mathcal G$ such that
+        after $\widehat\cdot$ it covers $E_t$. And we have a following
+        inequality
+        \begin{align*}
+            \mu(A)\geq\sum_{B\in\mathcal G}\mu(B)\geq t\omega_d\sum_{B\in
+            \mathcal G}r(B)^d=\frac{t}{k^d}\omega_d\sum_{B\in\mathcal G}r(
+            \widehat B)^d\geq\frac{t}{k^d}\mathcal H^d_1(E_n)
+        \end{align*}
+        And as we can chose $\mu(A)$ arbitrary small, $\mathcal H^d_1(E_t)=0$ and thus
+        $\mathcal H^d(E_t)=0$.
+    \item No proofs for now
+    \item No profs for now
+    \item If we follow a similar construction as in the proof of the first
+        proposition for a set $E_t:=\{x\in E\,|\,\Theta^*_d(E,x)>t\}$, then
+        at the end we'll get
+        \[\mathcal H^d(E_m)\geq\frac{t}{k^d}\mathcal H^d(E_m)\]
+        and if $t>k^d$ we get $\mathcal H^d(E_m)=0$, and as it is true for all
+        $k>3$, we have $\Theta^*_d(E,x)\leq3^d$. Remarque that usually there
+        are no generalisation in Vitali's lemma and one usually proves for 5
+        instead of 3.
 \end{enumerate}
 
 \subsection{Hausdorff dimension}

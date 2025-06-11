@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/nixos.org)  (format=lualatex 1980.1.1)  11 JUN 2025 11:15
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/nixos.org)  (format=lualatex 1980.1.1)  11 JUN 2025 12:42
  restricted system commands enabled.
 **geom_meas.tex
 (./geom_meas.tex
@@ -1319,18 +1319,20 @@ Package luatex.def Info: Vitali.png  used on input line 115.
 <cantor.png, id=135, 1415.2875pt x 593.21625pt>
 File: cantor.png Graphic file (type png)
 <use cantor.png>
-Package luatex.def Info: cantor.png  used on input line 126.
+Package luatex.def Info: cantor.png  used on input line 142.
 (luatex.def)             Requested size: 212.28397pt x 88.97859pt.
 
 
-[7<./cantor.png>]
-Overfull \hbox (19.36835pt too wide) detected at line 151
+[7]
+Overfull \hbox (19.36835pt too wide) detected at line 167
 \TU/CambriaMath(1)/m/n/10 |𝐼|[] = (|𝐽| + |𝐽[]| + |𝐾|)[] ≥ ((1 + [
 ]))(|𝐽| + |𝐽[]|))[] = ([]1/2(|𝐽| + |𝐽[]|))[] = 2(1/2(|𝐽| + |
 𝐽[]|))[] ≥ |𝐽|[] + |𝐽[]|[]
  []
 
 ) (./conv_meas.tex
+
+[8<./cantor.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 30.
@@ -1352,8 +1354,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 30.
 
 
-
-[8]
 
 [9]
 
@@ -1381,16 +1381,15 @@ Package rerunfilecheck Info: File `geom_meas.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 30616 strings out of 475514
+ 30619 strings out of 475514
  125007,1373583 words of node,token memory allocated
- 1118 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 201 attribute, 60 glue_spe
-c, 102 attribute_list, 2 write nodes
-   avail lists: 1:1,2:811,3:276,4:33,5:1058,6:63,7:11368,8:86,9:676,10:14,11:606
-
+ 1124 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 203 attribute, 60 glue_spe
+c, 103 attribute_list, 2 write nodes
+   avail lists: 2:807,3:281,4:42,5:1020,6:63,7:11669,8:86,9:616,10:14,11:652
  52865 multiletter control sequences out of 65536+600000
- 83 fonts using 34903119 bytes
- 116i,16n,114p,579b,475s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83 fonts using 34903187 bytes
+ 116i,16n,114p,579b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/giorno/Library/Fonts/LinLibertine_RBI.otf></Users/giorno/Library/Fonts/C
 ambriaMath.ttc></Users/giorno/Library/Fonts/CambriaMath.ttc></Users/giorno/Libra
 ry/Fonts/CambriaMath.ttc></Users/giorno/Library/Fonts/LinLibertine_R.otf></Users
@@ -1398,10 +1397,10 @@ ry/Fonts/CambriaMath.ttc></Users/giorno/Library/Fonts/LinLibertine_R.otf></Users
 ine_RI.otf></nix/store/0qbbmnkja87w072z4w7027i27j513r9v-texlive-2024-env-texmfdi
 st/fonts/type1/public/stmaryrd/stmary10.pfb></nix/store/0qbbmnkja87w072z4w7027i2
 7j513r9v-texlive-2024-env-texmfdist/fonts/type1/public/stmaryrd/stmary7.pfb>
-Output written on geom_meas.pdf (16 pages, 615043 bytes).
+Output written on geom_meas.pdf (16 pages, 616586 bytes).
 
-PDF statistics: 259 PDF objects out of 1000 (max. 8388607)
- 211 compressed objects within 3 object streams
- 58 named destinations out of 1000 (max. 131072)
+PDF statistics: 261 PDF objects out of 1000 (max. 8388607)
+ 213 compressed objects within 3 object streams
+ 61 named destinations out of 1000 (max. 131072)
  184 words of extra memory for PDF output out of 10000 (max. 100000000)
 
