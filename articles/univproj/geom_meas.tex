@@ -58,6 +58,62 @@ vector space $\mathbb{R}^n$ is called grassmannian and noted by $G(m,n)$. It
 has a topology identified from a topology of orthogonal projection on
 $m$-dimensional subspaces.
 
+\subsection{Approximate Tangent}
+
+\textbf{Definition:} \textit{Let $\alpha$ be a fixed angle, let $x\in\mathbb R^n$
+be a point and let $V$ be a $n$-dimensional plane in $\mathbb R^{n+m}$. The \textbf{
+cone of angle $\alpha$ around $V$ centered at $x$} is defined by setting
+\[\mathcal C(x,V,\alpha)=\{x'\in\mathbb R^{n+m}\;|\; |x′−x|\sin(\alpha)\geq d(x−x′, V)\}\]
+}
+
+\vspace{2ex}
+\textbf{Definition:} \textit{Let $V\in G(n+m, n)$ be a $d$-dimensional plane.
+If $E$ is a Borel set and $x\in E$ a point, then $V$ is a \textbf{strong tangent plane}
+to $E$ at $x$ if and only if for every $\alpha >0$ there exists a positive
+radius $r_0 >0$ such that
+\[E∩B(x, r_0)\subseteq C(x, V, \alpha)\]
+}
+
+\vspace{2ex}
+\textbf{Definition:} \textit{Let $V\in G(n+m, n)$ be a $d$-dimensional plane.
+If $E$ is a Borel set and $x\in E$ a point, then $V$ is an \textbf{approximate tangent
+plane} to $E$ at $x$ if and only if for every $\alpha>0$ it turns out that
+\[\mathcal H^d((E∩B(x,r))\setminus\mathcal C(x, V, \alpha)) = o(r^d)\]
+and
+\[\mathcal H^d((E∩B(x, r))∩\mathcal C(x, V, α))\sim \omega_dr^d\]
+}
+
+\vspace{2ex}
+Finally, one can define a tangent space using weak-* convergence. Spaces
+satisfying this definition are generally also called approximate, but to reduce
+confusion, here I will call them \textbf{limit spaces}.
+
+\vspace{1ex}
+\textbf{Definition:} \textit{Let $\psi_{x,r}:\mathbb R^{n+m}\rightarrow \mathbb
+R^{n+m}=x'\mapsto \frac{x'-x}{r}$ be the dilation map. And let $E_{x,r}$ be the
+image of $E$ under $\psi_{x,r}$. An $n$-dimensional plane $V$ is a
+\textbf{limit plane} to the set $E$ at point $x$ if and only if
+\[\mathcal H^n\,\llcorner\hspace{-1mm}E_{x,r}\rightharpoonup\mathcal H^n\,\llcorner\hspace{-1mm}V\]}
+
+\vspace{2ex}
+\textbf{Proposition:} \textit{A limit plane is an approximate tangent plane.}
+
+\vspace{1ex}
+\textbf{Proof:} Let $V$ be a limit plane of $E$ at $x$. Let $\mu:= \mathcal{H}^n
+\,\llcorner V$ and $\mu_r:=\mathcal{H}^n\,\llcorner E_{x,r}$. Since $\mu$ and
+$\mu_r$ are Radon measures and $B(0,1)$ is relatively compact and its boundary
+is $\mu$-negligible, then $\mu_r(B(0,1)) \rightarrow_{r\rightarrow 0}
+\mu(B(0,1)) = \omega_n$. Furthermore, we have
+\[\mu_{x,r}(B(0,1)) = \mathcal{H}^n(\psi_{x,r}[E\cap B(x, r)]) = \frac{1}{r^n}\mathcal{H}^n(E\cap B(x, r))\]
+and thus
+\[\mathcal{H}^n(E\cap B(x, r)) \sim \omega_n r^n\]
+If, in the preceding constructions, we replace $B(0,1)$ by $B(0,1)\cap\mathcal{C}
+(0,V,\alpha)$, we find
+\[\mathcal{H}^n(E\cap B(x, r)\cap\mathcal{C}(x,V,\alpha)) \sim \omega_n r^n\]
+And if we take the difference of these two equalities by dividing them by $r^n$,
+we find that
+\[\frac{\mathcal{H}^n(E\cap B(x, r)) - \mathcal{H}^n(E\cap B(x, r)\cap\mathcal{C}(x,V,\alpha))}{r^n} = \frac{\mathcal{H}^n(E\cap B(x, r)\setminus\mathcal{C}(x,V,\alpha))}{r^n} \sim 0\]
+And therefore the plane is approximate.
 
 \subsection{Tangent Bundle}
 \textbf{Proposition:} \textit{Let $\Sigma, \Sigma′\subseteq R^{n+m}$ be
@@ -119,79 +175,7 @@ from $E$ to the Grassmannian manifold $G(n, d)$ that sends $x$ to $T(x)$ is a
 surface of class $\mathcal C^1$ it turns out that $T_x\Sigma = T(x)$ for $\mathcal
 H^d$-almost every $x\in\Sigma\cap E$.}
 
-\vspace{2ex}
-\textbf{Proposition:} \textit{A $d$-rectifiable Borel set $E\subseteq\mathbb R^n$
-admits a unique up to $\mathcal H^d$-null sets a weak tangent bundle.}
 
-\vspace{1ex}
-\textbf{Proof:} We have $E\subseteq M_0\cup\bigcup\Sigma_i$, hence we can define
-a bundle as following. For $x\in M_0$ we can take what ever we want, for $x\in
-\Sigma_1$ we take $T_x\Sigma_1$ and for $x\in \Sigma_s\setminus\bigcup_{i=1}^{s
--1}\Sigma_i$ we take $T_x\Sigma_s$. This is a necessary condition as planes
-should be a.e. equal to the planes tangent to those surfaces. The condition for
-a weak tangent bundle is satisfied due to the previous preposition.
-
-\subsection{Approximate Tangent}
-
-\textbf{Definition:} \textit{Let $\alpha$ be a fixed angle, let $x\in\mathbb R^n$
-be a point and let $V$ be a $n$-dimensional plane in $\mathbb R^{n+m}$. The \textbf{
-cone of angle $\alpha$ around $V$ centered at $x$} is defined by setting
-\[\mathcal C(x,V,\alpha)=\{x'\in\mathbb R^{n+m}\;|\; |x′−x|\sin(\alpha)\geq d(x−x′, V)\}\]
-}
-
-\vspace{2ex}
-\textbf{Definition:} \textit{Let $V\in G(n+m, n)$ be a $d$-dimensional plane.
-If $E$ is a Borel set and $x\in E$ a point, then $V$ is a \textbf{strong tangent plane}
-to $E$ at $x$ if and only if for every $\alpha >0$ there exists a positive
-radius $r_0 >0$ such that
-\[E∩B(x, r_0)\subseteq C(x, V, \alpha)\]
-}
-
-\vspace{2ex}
-\textbf{Definition:} \textit{Let $V\in G(n+m, n)$ be a $d$-dimensional plane.
-If $E$ is a Borel set and $x\in E$ a point, then $V$ is an \textbf{approximate tangent
-plane} to $E$ at $x$ if and only if for every $\alpha>0$ it turns out that
-\[\mathcal H^d((E∩B(x,r))\setminus\mathcal C(x, V, \alpha)) = o(r^d)\]
-and
-\[\mathcal H^d((E∩B(x, r))∩\mathcal C(x, V, α))\sim \omega_dr^d\]
-}
-
-\textbf{Theorem:} \textit{Let $E\subseteq\mathbb R^{n+m}$ be a Borel set. If $E$
-is a $d$-rectifiable $\mathcal H^d$-locally finite set, then the weak tangent
-bundle $T(x)$ is the approximate tangent plane to $E$ at $x$ for $\mathcal H^d$-almost
-every $x\in E$.}
-
-\vspace{2ex}
-Finally, one can define a tangent space using weak-* convergence. Spaces
-satisfying this definition are generally also called approximate, but to reduce
-confusion, here I will call them \textbf{limit spaces}.
-
-\vspace{1ex}
-\textbf{Definition:} \textit{Let $\psi_{x,r}:\mathbb R^{n+m}\rightarrow \mathbb
-R^{n+m}=x'\mapsto \frac{x'-x}{r}$ be the dilation map. And let $E_{x,r}$ be the
-image of $E$ under $\psi_{x,r}$. An $n$-dimensional plane $V$ is a
-\textbf{limit plane} to the set $E$ at point $x$ if and only if
-\[\mathcal H^n\,\llcorner\hspace{-1mm}E_{x,r}\rightharpoonup\mathcal H^n\,\llcorner\hspace{-1mm}V\]}
-
-\vspace{2ex}
-\textbf{Proposition:} \textit{A limit plane is an approximate tangent plane.}
-
-\vspace{1ex}
-\textbf{Proof:} Let $V$ be a limit plane of $E$ at $x$. Let $\mu:= \mathcal{H}^n
-\,\llcorner V$ and $\mu_r:=\mathcal{H}^n\,\llcorner E_{x,r}$. Since $\mu$ and
-$\mu_r$ are Radon measures and $B(0,1)$ is relatively compact and its boundary
-is $\mu$-negligible, then $\mu_r(B(0,1)) \rightarrow_{r\rightarrow 0}
-\mu(B(0,1)) = \omega_n$. Furthermore, we have
-\[\mu_{x,r}(B(0,1)) = \mathcal{H}^n(\psi_{x,r}[E\cap B(x, r)]) = \frac{1}{r^n}\mathcal{H}^n(E\cap B(x, r))\]
-and thus
-\[\mathcal{H}^n(E\cap B(x, r)) \sim \omega_n r^n\]
-If, in the preceding constructions, we replace $B(0,1)$ by $B(0,1)\cap\mathcal{C}
-(0,V,\alpha)$, we find
-\[\mathcal{H}^n(E\cap B(x, r)\cap\mathcal{C}(x,V,\alpha)) \sim \omega_n r^n\]
-And if we take the difference of these two equalities by dividing them by $r^n$,
-we find that
-\[\frac{\mathcal{H}^n(E\cap B(x, r)) - \mathcal{H}^n(E\cap B(x, r)\cap\mathcal{C}(x,V,\alpha))}{r^n} = \frac{\mathcal{H}^n(E\cap B(x, r)\setminus\mathcal{C}(x,V,\alpha))}{r^n} \sim 0\]
-And therefore the plane is approximate.
 \section{Countably n-rectifiable sets}
 \textit{Let $M\subseteq X$ be a subset of a metric space. Then $M$ is called
 \textbf{$n$-rectifiable} if
@@ -203,7 +187,7 @@ where $\mathcal{H}^n(M_0)=0$ and $f_i$ are Lipschitz functions.
 
 \vspace{2ex}
 \textbf{Remarque:} \textit{Hausdorff dimension of $d$-rectifiable set is less or
-eqaul to $d$}
+equal to $d$}
 
 \vspace{1ex}
 This is true due to the fact that Lipschitz maps does not increase the dimension.
@@ -228,32 +212,31 @@ This is true due to the fact that Lipschitz maps does not increase the dimension
 }
 
 \vspace{2ex}
-\textbf{Definition:} \textit{Let $X$ be a metric space. A Borel set $E\subseteq
-X$ is a $d$-dimensional unrectifiable set if and only if
-$\mathcal H^d (E\cap f[\mathbb R^d]) = 0$ for every Lipschitz map $f:\mathbb R^d
-\rightarrow X$.}
+\textbf{Proposition:} \textit{A $d$-rectifiable Borel set $E\subseteq\mathbb R^n$
+admits a unique up to $\mathcal H^d$-null sets a weak tangent bundle.}
+
+\vspace{1ex}
+\textbf{Proof:} We have $E\subseteq M_0\cup\bigcup\Sigma_i$, hence we can define
+a bundle as following. For $x\in M_0$ we can take what ever we want, for $x\in
+\Sigma_1$ we take $T_x\Sigma_1$ and for $x\in \Sigma_s\setminus\bigcup_{i=1}^{s
+-1}\Sigma_i$ we take $T_x\Sigma_s$. This is a necessary condition as planes
+should be a.e. equal to the planes tangent to those surfaces. The condition for
+a weak tangent bundle is satisfied due to the previous preposition.
 
 \vspace{2ex}
-\textbf{Criteria of Unrectifiability:} \textit{Let $X=\mathbb R^{n+m}$, and let $M
-\subseteq X$ be a Borel set.}
-
-\textit{The following assertions are equivalent:
-\begin{enumerate}
-    \item The set $M$ is $n$-unrectifiable
-    \item For every $C^1$ map $f:\mathbb R^n\rightarrow\mathbb R^{m+n}$ we have
-        \[\mathcal H^d(M\cap \textnormal{im} f)=0\]
-    \item For every $C^1$-diffeomorphism $f:A\subseteq \mathbb R^n\rightarrow\mathbb R^{m+n}$ we have
-        \[\mathcal H^d(M\cap \textnormal{im} f)=0\]
-    \item For every $C^1$-surface $\Sigma\subseteq\mathbb R^{n+m}$ we have
-        \[\mathcal H^d(M\cap \Sigma)=0\]
-\end{enumerate}
-}
-\vspace{2ex}
-\textbf{Theorem:} \textit{If $E$ is a Borel, $n$-rectifiable, $\mathcal{H}^n$-locally finite set, then the weak tangent bundle $T(x)$ is the limit plane to $E$ at $x$ for $\mathcal{H}^d$-almost every $x\in E$.}
+\textbf{Theorem:} \textit{If $E$ is a Borel, $n$-rectifiable, $\mathcal{H}^n$-
+locally finite set, then the weak tangent bundle $T(x)$ is the limit plane to
+$E$ at $x$ for $\mathcal{H}^d$-almost every $x\in E$.}
 
 \vspace{1ex}
 \textbf{Proof:}
-We will show that $T_x\Sigma_i$ is a \textbf{limit plane} to $E$ at $x$ for $\mathcal H^n$-almost every $x\in E\cap\Sigma_i$. Associated with this plane, we consider four measures: $\mu_{x,r}:=\mathcal H^n\,\llcorner E_{x,r}$, $\nu_{x,r}:=\mathcal H^n\,\llcorner\Sigma_{i,x,r}$, $\eta_{x,r}:=\mathcal H^n\,\llcorner (\Sigma_i\setminus E)_{x,r}$ and $\sigma_{x,r}:=\mathcal H^n\,\llcorner (E\setminus\Sigma_i)_{x,r}$. We then observe that $\mu_{x,r}=\nu_{x,r}-\eta_{x,r}+\sigma_{x,r}$.
+We will show that $T_x\Sigma_i$ is a \textbf{limit plane} to $E$ at $x$ for
+$\mathcal H^n$-almost every $x\in E\cap\Sigma_i$. Associated with this plane,
+we consider four measures: $\mu_{x,r}:=\mathcal H^n\,\llcorner E_{x,r}$,
+$\nu_{x,r}:=\mathcal H^n\,\llcorner\Sigma_{i,x,r}$, $\eta_{x,r}:=\mathcal H^n\,
+\llcorner (\Sigma_i\setminus E)_{x,r}$ and $\sigma_{x,r}:=\mathcal H^n\,
+\llcorner (E\setminus\Sigma_i)_{x,r}$. We then observe that $\mu_{x,r}=\nu_{x,r}
+-\eta_{x,r}+\sigma_{x,r}$.
 
 \vspace{1ex}
 At $x$, the surface $\Sigma_i$ is locally represented by an immersion $\phi: T_x\Sigma_i \cap U \rightarrow \Sigma_i \cap V$. We can assume that $D\phi(0)=\text{Id}$ and that $B(0,1)\subseteq U,V$. Let $f\in\mathcal C_c$, without loss of generality, we can assume that $\text{spt}(f)\subseteq B(0,1)$. Thus, $\psi_{x,r}\circ \phi(h)=(h+o(h))/r$. If we only take $h<r$, we find that $\phi_{x,r}=\psi_{x,r}\circ \phi|_{B(0,r)}\circ \psi_{0,1/r}:B(0,1) \rightarrow \Sigma_{i,x,r}$ is given by $h\mapsto (rh+|rh|\epsilon(rh))/r=h+|h|\epsilon(rh)$.
@@ -291,6 +274,12 @@ for almost all $x$.
 \textbf{Proposition:} \textit{Let $M\subseteq X$ be a Borel set with finite
 $n$-Hausdorff measure. Then $M=M_r\cup M_u$, where $M_r$ is rectifiable
 and $M_u$ is unrectifiable.}
+
+\vspace{2ex}
+\textbf{Theorem:} \textit{Let $E\subseteq\mathbb R^{n+m}$ be a Borel set. If $E$
+is a $d$-rectifiable $\mathcal H^d$-locally finite set, then the weak tangent
+bundle $T(x)$ is the approximate tangent plane to $E$ at $x$ for $\mathcal H^d$-almost
+every $x\in E$.}
 
 \section{Varifold}
 An $m$-dimensional varifold $V$ is a Radon measure over $\mathbb{R}^n\times

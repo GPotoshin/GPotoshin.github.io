@@ -68,11 +68,6 @@ $\mathbb{R}^n$ which I found in the book "Measure theory and fine properties
 of functions". I took those results from that book with little modifications.
 
 \vspace{2ex}
-\textbf{Definition:} \textit{A cover of $A$ by a family $B$ is called \textbf{fine}
-if for any $x\in A$ we can find a covering set from $B$ of arbitrary small
-diameter.}
-
-\vspace{2ex}
 For a ball $B=B(x, r)$ of center $x$ and radius $r$ we shall note $\prescript{\epsilon}{}B
 =B(x, (1+\epsilon)r)$ for every $\epsilon>0$. I chose the prefix notation to
 avoid confusion with set power and Minkowski product.
@@ -140,20 +135,23 @@ balls in $\mathcal{F}$ such that
 \textbf{Proof:} take a look at \cite{evans_gariepy}.
 
 \vspace{2ex}
+\textbf{Definition:} \textit{A cover of $A$ by a family $B$ is called \textbf{fine}
+if for any $x\in A$ we can find a covering set from $B$ of arbitrary small
+diameter.}
+
+\vspace{2ex}
 \textbf{Filling open sets with balls theorem:} \textit{Let $\mu$ be a Borel measure on
 $\mathbb{R}^n$, and $\mathcal{F}$ any collection of non-degenerated closed balls.
 Let $A$ denote the set of centers of the balls in $\mathcal F$. Assume
 \[\mu(A)<\infty\]
-and
-\[\inf\{r\,|\,B(a,r)\in\mathcal F\}=0\]
-for each $a\in A$. Then for each open set $U\subseteq\mathbb{R}^n$, there
+and $\mathcal F$ is a fine cover of $A$. Then for each open set $U\subseteq\mathbb{R}^n$, there
 exists a countable collection $\mathcal G$ of disjoint balls in $\mathcal F$ such that
 \[\bigcup_{B\in\mathcal G} B\subseteq U\]
 and
 \[\mu\left((A\cap U)\setminus\bigcup_{B\in\mathcal G}B\right)=0.\]}
 
 \vspace{1ex}
-\textbf{Proof:} [TODO]
+\textbf{Proof:}
 
 \vspace{2ex}
 \textbf{Whitney's extension theorem:}\textit{
