@@ -1,13 +1,38 @@
-Let's suppose that we have $M$ an $n$-dimensional $\mathcal C^1$ submanifold of
+Let's suppose that we have $\Sigma$ an $n$-dimensional $\mathcal C^1$ submanifold of
 $\mathbb R^{n+m}$ and an open set $U$. Let's fix a $\mathcal C^2$ map $\phi:(-1,1)
 \times U\rightarrow U$ and a closed subset $K\subset U$ such that:
 \begin{enumerate}
-    \item $\phi(t,\cdot)$ is a $\mathcal C^1$-diffeomorphism for every $t$
-    \item $\phi(0,\cdot)=\text{id}$
-    \item $\phi(t,\cdot)|_{K^c}=\text{id}$ for every $t$
+    \item $\phi_t:=\phi(t,\cdot)$ is a $\mathcal C^1$-diffeomorphism for every $t$
+    \item $\phi_0=\text{id}$
+    \item $\phi_t|_{K^c}=\text{id}$ for every $t$
 \end{enumerate}
 Thus $\phi$ is a controlled geometrical variation of $K$. Let $V:=\partial_t\phi
 (0,\cdot)$ be a velocity vector field and $A:=\partial_t^2\phi(0,\cdot)$ an
 acceleration field, then
 \[\phi(t,\cdot)=\text{id}+tV+\frac{t^2}{2}A+o(t^2)\]
 
+Lets note $M:=\phi(\cdot,\Sigma\cap K)$ and $\psi_t:=\phi_t|_{\Sigma}$
+
+\vspace{1ex}
+\textbf{Definition:} By first and second variations of families $M$ we mean 
+following derivatives $\mathcal H^n(M)'(0)$ and $\mathcal H^n(M)''(0)$.
+
+\vspace{1ex}
+If we recall the area formula then we can compute variations as a function of
+$\phi$
+\[\mathcal H^n(M(t))=\int_{M(0)}(\text{J}\psi_t)d\mathcal H^n\]
+[Introduce earlier this formula]
+Thus we construct a map
+\[D_x\psi_t:T_x\Sigma\rightarrow\mathbb R^{n+m}=\text{id}+tD_xV+\frac{t^2}{2}D_xA+o(t^2)\]
+[does $D_xA$ even exist in this context?] Lets chose an orthogonal basis $\tau$
+for $T_xM$ and an orthogonal basis $e$ for $\mathbb R^{n+m}$. Then in those
+basis we can write matrix of $D_x\psi_t$.
+\[[D_x\psi_t]_i^l=\tau_i^l+tD_xV^l(\tau_i)+\frac{t^2}{2}D_xA^l(\tau_i)+o(t^2)\]
+To calculate $\text{J}\psi_t$ we need to know $(D_x\psi_t)^*\circ(D_x\psi_t)$
+\begin{align*}
+[&(D_x\psi_t)^*\circ(D_x\psi_t)]_i^j=\sum_l[D_x\psi_t]_j^l[D_x\psi_t]_i^l=\sum_l
+(\tau_j^l+tD_xV^l(\tau_j)+\frac{t^2}{2}D_xA^l(\tau_j)+o(t^2))\\
+&(\tau_i^l+tD_xV^l(\tau_i)+\frac{t^2}{2}D_xA^l(\tau_i)+o(t^2))\\
+&=\tau_j\cdot\tau_i+t(\tau_j\cdot D_xV(\tau_i)+\tau_i\cdot D_xV(\tau_j))+\tau^2
+(\frac{1}{2}(\tau_j\cdot D_xA(\tau_i)+\tau_i\cdot D_xA(\tau_j))+D_xV(\tau_i)\cdot D_xV(\tau_j))+o(t^2)
+\end{align*}

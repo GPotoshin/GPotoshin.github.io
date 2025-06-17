@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/nixos.org)  (format=lualatex 1980.1.1)  17 JUN 2025 15:02
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/nixos.org)  (format=lualatex 1980.1.1)  17 JUN 2025 17:28
  restricted system commands enabled.
 **geom_meas.tex
 (./geom_meas.tex
@@ -1369,9 +1369,16 @@ Missing character: There is no µ (U+00B5) in font cmmi10!
 
 [14] (./fvariation.tex
 
-[15]) (./varifold.tex) (./geom_meas.bbl)
+[15]
+Overfull \hbox (25.47232pt too wide) detected at line 38
+[]
+ []
 
-[16] (./geom_meas.aux)
+) (./varifold.tex) (./geom_meas.bbl
+
+[16])
+
+[17] (./geom_meas.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1381,15 +1388,15 @@ Package rerunfilecheck Info: File `geom_meas.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 30636 strings out of 475514
+ 30637 strings out of 475514
  125007,1373583 words of node,token memory allocated
- 1112 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 199 attribute, 60 glue_spe
-c, 101 attribute_list, 2 write nodes
-   avail lists: 2:890,3:276,4:33,5:1058,6:63,7:11368,8:86,9:676,10:14,11:606
+ 1130 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 205 attribute, 60 glue_spe
+c, 104 attribute_list, 2 write nodes
+   avail lists: 2:881,3:276,4:33,5:1058,6:63,7:11368,8:86,9:676,10:14,11:606
  52872 multiletter control sequences out of 65536+600000
- 83 fonts using 34902983 bytes
- 116i,16n,114p,579b,472s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83 fonts using 34903051 bytes
+ 116i,16n,114p,579b,494s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/giorno/Library/Fonts/LinLibertine_RBI.otf></Users/giorno/Library/Fonts/C
 ambriaMath.ttc></Users/giorno/Library/Fonts/CambriaMath.ttc></Users/giorno/Libra
 ry/Fonts/CambriaMath.ttc></Users/giorno/Library/Fonts/LinLibertine_R.otf></Users
@@ -1397,10 +1404,10 @@ ry/Fonts/CambriaMath.ttc></Users/giorno/Library/Fonts/LinLibertine_R.otf></Users
 ine_RI.otf></nix/store/5ncc9528d6ixnismwbvqmldwxjrw10rb-texlive-2024-env-texmfdi
 st/fonts/type1/public/stmaryrd/stmary10.pfb></nix/store/5ncc9528d6ixnismwbvqmldw
 xjrw10rb-texlive-2024-env-texmfdist/fonts/type1/public/stmaryrd/stmary7.pfb>
-Output written on geom_meas.pdf (16 pages, 617396 bytes).
+Output written on geom_meas.pdf (17 pages, 620597 bytes).
 
-PDF statistics: 265 PDF objects out of 1000 (max. 8388607)
- 217 compressed objects within 3 object streams
- 61 named destinations out of 1000 (max. 131072)
+PDF statistics: 269 PDF objects out of 1000 (max. 8388607)
+ 220 compressed objects within 3 object streams
+ 62 named destinations out of 1000 (max. 131072)
  192 words of extra memory for PDF output out of 10000 (max. 100000000)
 
