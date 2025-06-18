@@ -33,6 +33,19 @@ To calculate $\text{J}\psi_t$ we need to know $(D_x\psi_t)^*\circ(D_x\psi_t)$
 [&(D_x\psi_t)^*\circ(D_x\psi_t)]_i^j=\sum_l[D_x\psi_t]_j^l[D_x\psi_t]_i^l=\sum_l
 (\tau_j^l+tD_xV^l(\tau_j)+\frac{t^2}{2}D_xA^l(\tau_j)+o(t^2))\\
 &(\tau_i^l+tD_xV^l(\tau_i)+\frac{t^2}{2}D_xA^l(\tau_i)+o(t^2))\\
-&=\tau_j\cdot\tau_i+t(\tau_j\cdot D_xV(\tau_i)+\tau_i\cdot D_xV(\tau_j))+\tau^2
+&=\tau_j\cdot\tau_i+t(\tau_j\cdot D_xV(\tau_i)+\tau_i\cdot D_xV(\tau_j))+t^2
 (\frac{1}{2}(\tau_j\cdot D_xA(\tau_i)+\tau_i\cdot D_xA(\tau_j))+D_xV(\tau_i)\cdot D_xV(\tau_j))+o(t^2)
 \end{align*}
+
+This can be abstracted as $I+tA+t^2B$ and we want to calculate a development
+of determinant of it. We have a Jacobi formula $\det(M(t))'=\det(M(t))\text{tr}
+(M(t)^{-1}M'(t))$ and it's derivative
+\[\det(M(t))''=\det(M(t))'\text{tr}(M(t)^{-1}M'(t))+\det(M(t))\text{tr}(-M(t)^
+{-1}M'(t)M(t)^{-1}M'(t)+M(t)^{-1}M''(t))\]
+and is we replace $M(t)=I+tA+t^2B$, then $\det(I+tA+t^2B)'=\det(I+tA+t^2B)\text{tr}
+((I+tA+t^2B)^{-1}(A+2tB))$ and at zero we have a following equality
+$\det(M(t))'|_{t=0}=\text{tr}(A)$ and for a second derivative we have
+\[\det(M(t))''|_{t=0}=\text{tr}(A)^2-\text{tr}(A^2)+2\text{tr}(B)\]
+Thus we can write a limited development
+\[\det(I+tA+t^2B)=1+t\text{tr}(A)+\frac{t^2}{2}(\]
+
