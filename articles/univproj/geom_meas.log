@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/nixos.org)  (format=lualatex 1980.1.1)  23 JUN 2025 18:16
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/nixos.org)  (format=lualatex 1980.1.1)  24 JUN 2025 00:12
  restricted system commands enabled.
 **geom_meas.tex
 (./geom_meas.tex
@@ -1296,30 +1296,18 @@ LaTeX Warning: No \author given.
 
 (./prereq.tex
 
-LaTeX Warning: Citation `maggi' on page 1 undefined on input line 34.
-
-
-
 [1
 
 {/nix/store/2dh09ifhvwqvvkcgvhakbx6pxcrw2dsq-texlive-2024-env/share/texmf-var/fo
 nts/map/pdftex/updmap/pdftex.map}]
-<Vitali.png, id=96, 1286.8075pt x 839.135pt>
+<Vitali.png, id=115, 1286.8075pt x 839.135pt>
 File: Vitali.png Graphic file (type png)
 <use Vitali.png>
 Package luatex.def Info: Vitali.png  used on input line 113.
 (luatex.def)             Requested size: 128.68828pt x 83.91841pt.
 
 
-LaTeX Warning: Citation `evans_gariepy' on page 2 undefined on input line 138.
-
-
-
 [2<./Vitali.png>]
-
-LaTeX Warning: Citation `evans_gariepy' on page 3 undefined on input line 185.
-
-
 
 [3]
 
@@ -1327,16 +1315,8 @@ LaTeX Warning: Citation `evans_gariepy' on page 3 undefined on input line 185.
 
 [5]
 
-LaTeX Warning: Citation `maggi' on page 6 undefined on input line 52.
-
-
-LaTeX Warning: Citation `giovanni_alberti' on page 6 undefined on input line 78
-.
-
-
-
 [6]
-<cantor.png, id=123, 1415.2875pt x 593.21625pt>
+<cantor.png, id=149, 1415.2875pt x 593.21625pt>
 File: cantor.png Graphic file (type png)
 <use cantor.png>
 Package luatex.def Info: cantor.png  used on input line 142.
@@ -1379,18 +1359,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 [10]
 
-LaTeX Warning: Citation `maggi' on page 11 undefined on input line 290.
-
-
-
 [11]
 Missing character: There is no µ (U+00B5) in font cmmi10!
 )
-
-LaTeX Warning: Citation `giovanni_alberti' on page 12 undefined on input line 4
-9.
-
-
 
 [12]
 
@@ -1399,45 +1370,34 @@ LaTeX Warning: Citation `giovanni_alberti' on page 12 undefined on input line 4
 [14] (./submanifolds.tex
 
 [15]) (./fvariation.tex
+
+[16]
 Overfull \hbox (20.92154pt too wide) detected at line 38
 []
  []
 
+) (./varifold.tex
 
+[17]) (./geom_meas.bbl)
 
-[16]) (./varifold.tex) (./geom_meas.bbl)
-
-[17] (./geom_meas.aux)
+[18] (./geom_meas.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `geom_meas.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `geom_meas.out':
-(rerunfilecheck)             Before: 2A8283C20D48ED6330A5220B29F1D913;3958
-(rerunfilecheck)             After:  822570A5AD380C1898DFEC152C4AB86D;4454.
+Package rerunfilecheck Info: File `geom_meas.out' has not changed.
+(rerunfilecheck)             Checksum: 822570A5AD380C1898DFEC152C4AB86D;4454.
 )
 
 Here is how much of LuaTeX's memory you used:
- 30643 strings out of 475514
+ 30650 strings out of 475514
  125007,1373583 words of node,token memory allocated
- 1178 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 221 attribute, 60 glue_spe
-c, 112 attribute_list, 2 write nodes
-   avail lists: 2:768,3:280,4:33,5:1058,6:65,7:11368,8:88,9:694,10:14,11:606
- 52872 multiletter control sequences out of 65536+600000
- 83 fonts using 34903187 bytes
+ 1202 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 229 attribute, 60 glue_spe
+c, 116 attribute_list, 2 write nodes
+   avail lists: 2:884,3:284,4:33,5:1058,6:66,7:11368,8:88,9:906,10:14,11:606
+ 52878 multiletter control sequences out of 65536+600000
+ 85 fonts using 35669215 bytes
  116i,16n,114p,579b,472s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/giorno/Library/Fonts/LinLibertine_RBI.otf></Users/giorno/Library/Fonts/C
 ambriaMath.ttc></Users/giorno/Library/Fonts/CambriaMath.ttc></Users/giorno/Libra
@@ -1446,10 +1406,10 @@ ry/Fonts/CambriaMath.ttc></Users/giorno/Library/Fonts/LinLibertine_R.otf></Users
 ine_RI.otf></nix/store/5ncc9528d6ixnismwbvqmldwxjrw10rb-texlive-2024-env-texmfdi
 st/fonts/type1/public/stmaryrd/stmary10.pfb></nix/store/5ncc9528d6ixnismwbvqmldw
 xjrw10rb-texlive-2024-env-texmfdist/fonts/type1/public/stmaryrd/stmary7.pfb>
-Output written on geom_meas.pdf (17 pages, 626443 bytes).
+Output written on geom_meas.pdf (18 pages, 630922 bytes).
 
-PDF statistics: 250 PDF objects out of 1000 (max. 8388607)
- 201 compressed objects within 3 object streams
- 63 named destinations out of 1000 (max. 131072)
- 168 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 279 PDF objects out of 1000 (max. 8388607)
+ 229 compressed objects within 3 object streams
+ 64 named destinations out of 1000 (max. 131072)
+ 200 words of extra memory for PDF output out of 10000 (max. 100000000)
 

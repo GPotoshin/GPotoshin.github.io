@@ -1,5 +1,6 @@
 In this section we study once again $\mathbb C^1$ $n$-dimentional submanifold $M$
-of $\mathbb R^{n+m}$.
+of $\mathbb R^{n+m}$ to observe several properties of standart constructions to
+then motivate a definition for analogus constructions for measures.
 
 \vspace{2ex}
 We can define a gradient $\nabla^M$ associated to $M$ by
@@ -14,7 +15,33 @@ introduce diveregence of $X:M\rightarrow\mathbb R^{n+m}$ on $M$ by chosing
 a basis $(w_1,\ldots,w_n)$ of $TM$ and setting
 \[\text{div}_MX=(w_i)(\nabla^MX^i)\]
 where $X=(X^i)_{i\in\llbracket1,n+m\rrbracket}$ are coordinats in orthogonal
-extension of $(w_i)$.
+extension of $(w_i)$. Or if we associate all indicies to the one basis we get
+\[\text{div}_MX=\partial_iX^i\]
+Now let suppose that we have curvelinear coordinates $(c^i)$, to them we can
+associate a standart basis 
+\[\mathbf{c}_i=\mathbf{w}_j\frac{\partial w^j}{\partial c^i}\]
+which consists of tangents to constant curbes. Since at from point to point
+basis vectors varies in ambient space, we can naturally diffine following coefficients
+\[\frac{\partial\mathbf{c}_i}{\partial c^j} = \mathbf{c}_k\Gamma_{ij}^k\]
+Let $X'$ be $X$ rewritten in new coordinates, i.e.
+\[\mathbf{X}(w^1,...,w^n)=\mathbf{X}'(...v^i(w^1,...,w^n)...)\]
+Now we take a partial derivative of both sides:
+\begin{align*}
+\frac{\partial}{\partial w^j}\mathbf{w}_iX^i&
+=\frac{\partial}{\partial w^j}\mathbf{c}_pX'^p
+=(\frac{\partial}{\partial c^k}\mathbf{c}_pX'^p)\frac{\partial c^k}{\partial w^j}
+=(\mathbf{c}_p\frac{\partial X'^p}{\partial c^k}+\frac{\partial\mathbf{c}_p}{\partial c^k}X'^p)\frac{\partial c^k}{\partial w^j}
+=(\mathbf{c}_p\frac{\partial X'^p}{\partial c^k}+\mathbf{c}_l\Gamma^l_{p,k}X'^p)\frac{\partial c^k}{\partial w^j}\\
+&=(\mathbf{c}_p\frac{\partial X'^p}{\partial c^k}+\mathbf{c}_p\Gamma^p_{l,k}X'^l)\frac{\partial c^k}{\partial w^j}
+=\mathbf{c}_p(\frac{\partial X'^p}{\partial c^k}+\Gamma^p_{l,k}X'^l)\frac{\partial c^k}{\partial w^j}
+\end{align*}
+Then we can calculate divergence formula by
+\begin{align*}
+\text{div}\mathbf{X}&=\mathbf{w_j}\cdot\frac{\partial}{\partial w^j}\mathbf{w}_iX^i
+=\mathbf{w}_j\cdot\mathbf{c}_p(\frac{\partial X'^p}{\partial c^k}+\Gamma^p_{l,k}X'^l)\frac{\partial c^k}{\partial w^j}
+=\mathbf{w}_j\cdot\mathbf{w}_i\frac{\partial w^i}{\partial c^p}(\frac{\partial X'^p}{\partial c^k}+\Gamma^p_{l,k}X'^l)\frac{\partial c^k}{\partial w^j}\\
+&=
+\end{align*}
 
 \vspace{2ex}
 \textbf{Theorem:} \textit{Let $M\subset \mathbb R^{n+m}$ be a $n$-dimentional
@@ -26,5 +53,9 @@ $\mathcal C^1$ bounded submanifold-with-boundary. Then we have a following resul
 \textbf{Proof:} since $M$ is compact we can find a finite open cover $U_i$ of
 $M$ such that at every $U_i$ we find a local coordinate system. We can associated
 a $\mathcal C^\infty$ partition of unit $(\psi_i)$ on $M$ associated to $U_i$ such
-that $psi_i\in\mathcal C^\infty_c(U_i)$ and $\sum\psi_i=1_M$.
+that $\psi_i\in\mathcal C^\infty_c(U_i)$ and $\sum\psi_i=1_M$. And by liniarity
+of equation we want to prove, we can prove it jsut for $\psi_iX$, or without
+loss of generality we will write just $X$.
+
+\vspace{1ex} If patch $U_i$ is disjoint from $\partial M$, then 
 
