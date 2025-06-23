@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/nixos.org)  (format=lualatex 1980.1.1)  24 JUN 2025 00:12
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/nixos.org)  (format=lualatex 1980.1.1)  24 JUN 2025 01:48
  restricted system commands enabled.
 **geom_meas.tex
 (./geom_meas.tex
@@ -1369,16 +1369,16 @@ Missing character: There is no µ (U+00B5) in font cmmi10!
 
 [14] (./submanifolds.tex
 
-[15]) (./fvariation.tex
+[15]
 
-[16]
+[16]) (./fvariation.tex
 Overfull \hbox (20.92154pt too wide) detected at line 38
 []
  []
 
-) (./varifold.tex
 
-[17]) (./geom_meas.bbl)
+
+[17]) (./varifold.tex) (./geom_meas.bbl)
 
 [18] (./geom_meas.aux)
  ***********
@@ -1392,12 +1392,12 @@ Package rerunfilecheck Info: File `geom_meas.out' has not changed.
 Here is how much of LuaTeX's memory you used:
  30650 strings out of 475514
  125007,1373583 words of node,token memory allocated
- 1202 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 229 attribute, 60 glue_spe
-c, 116 attribute_list, 2 write nodes
-   avail lists: 2:884,3:284,4:33,5:1058,6:66,7:11368,8:88,9:906,10:14,11:606
+ 1220 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 235 attribute, 60 glue_spe
+c, 119 attribute_list, 2 write nodes
+   avail lists: 2:859,3:284,4:33,5:1119,6:66,7:11368,8:88,9:1228,10:14,11:606
  52878 multiletter control sequences out of 65536+600000
- 85 fonts using 35669215 bytes
+ 85 fonts using 35669147 bytes
  116i,16n,114p,579b,472s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/giorno/Library/Fonts/LinLibertine_RBI.otf></Users/giorno/Library/Fonts/C
 ambriaMath.ttc></Users/giorno/Library/Fonts/CambriaMath.ttc></Users/giorno/Libra
@@ -1406,7 +1406,7 @@ ry/Fonts/CambriaMath.ttc></Users/giorno/Library/Fonts/LinLibertine_R.otf></Users
 ine_RI.otf></nix/store/5ncc9528d6ixnismwbvqmldwxjrw10rb-texlive-2024-env-texmfdi
 st/fonts/type1/public/stmaryrd/stmary10.pfb></nix/store/5ncc9528d6ixnismwbvqmldw
 xjrw10rb-texlive-2024-env-texmfdist/fonts/type1/public/stmaryrd/stmary7.pfb>
-Output written on geom_meas.pdf (18 pages, 630922 bytes).
+Output written on geom_meas.pdf (18 pages, 632746 bytes).
 
 PDF statistics: 279 PDF objects out of 1000 (max. 8388607)
  229 compressed objects within 3 object streams

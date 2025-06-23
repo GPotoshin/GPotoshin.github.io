@@ -22,7 +22,18 @@ associate a standart basis
 \[\mathbf{c}_i=\mathbf{w}_j\frac{\partial w^j}{\partial c^i}\]
 which consists of tangents to constant curbes. Since at from point to point
 basis vectors varies in ambient space, we can naturally diffine following coefficients
+[for the following part I think that we need to be in $\mathcal C^2$, but apperently new coordinates
+are $\mathcal C^1$]
 \[\frac{\partial\mathbf{c}_i}{\partial c^j} = \mathbf{c}_k\Gamma_{ij}^k\]
+In fact we observe symmetry on botton coeffitiants since
+\[\frac{\partial\mathbf{c}_i}{\partial c^j} = \frac{\partial}{\partial c^j}\mathbf{w}_j\frac{\partial w^j}{\partial c^i}
+=\mathbf{w}_j\frac{\partial^2 w^j}{\partial c^j\partial c^i}=\mathbf{w}_j\frac{\partial^2 w^j}{\partial c^i\partial c^j}
+=\mathbf{c}_k\Gamma_{ji}^k\]
+Also in new basis $(\mathbf{c}_k)$ we have scalar product, which is usually denoted by
+\[\langle\mathbf{c}_l,\mathbf{c}_k\rangle=g_{lk}=\frac{\partial w^i}{\partial c^l}\frac{\partial w^i}{\partial c^k}\]
+which is also symmetric. And if we rewrite a little bit equality for $\Gamma$, we get
+\[\mathbf{w}_j\frac{\partial^2 w^j}{\partial c^j\partial c^i}=\mathbf{c}_k\Gamma_{ji}^k
+=\mathbf{w}_j\frac{\partial w^j}{\partial c^k}\Gamma_{ji}^k\]
 Let $X'$ be $X$ rewritten in new coordinates, i.e.
 \[\mathbf{X}(w^1,...,w^n)=\mathbf{X}'(...v^i(w^1,...,w^n)...)\]
 Now we take a partial derivative of both sides:
@@ -31,17 +42,21 @@ Now we take a partial derivative of both sides:
 =\frac{\partial}{\partial w^j}\mathbf{c}_pX'^p
 =(\frac{\partial}{\partial c^k}\mathbf{c}_pX'^p)\frac{\partial c^k}{\partial w^j}
 =(\mathbf{c}_p\frac{\partial X'^p}{\partial c^k}+\frac{\partial\mathbf{c}_p}{\partial c^k}X'^p)\frac{\partial c^k}{\partial w^j}
-=(\mathbf{c}_p\frac{\partial X'^p}{\partial c^k}+\mathbf{c}_l\Gamma^l_{p,k}X'^p)\frac{\partial c^k}{\partial w^j}\\
-&=(\mathbf{c}_p\frac{\partial X'^p}{\partial c^k}+\mathbf{c}_p\Gamma^p_{l,k}X'^l)\frac{\partial c^k}{\partial w^j}
-=\mathbf{c}_p(\frac{\partial X'^p}{\partial c^k}+\Gamma^p_{l,k}X'^l)\frac{\partial c^k}{\partial w^j}
+=(\mathbf{c}_p\frac{\partial X'^p}{\partial c^k}+\mathbf{c}_l\Gamma^l_{pk}X'^p)\frac{\partial c^k}{\partial w^j}\\
+&=(\mathbf{c}_p\frac{\partial X'^p}{\partial c^k}+\mathbf{c}_p\Gamma^p_{lk}X'^l)\frac{\partial c^k}{\partial w^j}
+=\mathbf{c}_p(\frac{\partial X'^p}{\partial c^k}+\Gamma^p_{lk}X'^l)\frac{\partial c^k}{\partial w^j}
 \end{align*}
 Then we can calculate divergence formula by
 \begin{align*}
 \text{div}\mathbf{X}&=\mathbf{w_j}\cdot\frac{\partial}{\partial w^j}\mathbf{w}_iX^i
 =\mathbf{w}_j\cdot\mathbf{c}_p(\frac{\partial X'^p}{\partial c^k}+\Gamma^p_{l,k}X'^l)\frac{\partial c^k}{\partial w^j}
 =\mathbf{w}_j\cdot\mathbf{w}_i\frac{\partial w^i}{\partial c^p}(\frac{\partial X'^p}{\partial c^k}+\Gamma^p_{l,k}X'^l)\frac{\partial c^k}{\partial w^j}\\
-&=
+&=\frac{\partial c^k}{\partial w^j}\frac{\partial w^j}{\partial c^p}(\frac{\partial X'^p}{\partial c^k}+\Gamma^p_{l,k}X'^l)
+=\frac{\partial c^k}{\partial c^p}(\frac{\partial X'^p}{\partial c^k}+\Gamma^p_{l,k}X'^l)
+=\sum_p(\frac{\partial X'^p}{\partial c^p}+\Gamma^p_{l,p}X'^l)
 \end{align*}
+For the next part we are differentiating $g_{lm}$
+\[\frac{\partial}{\partial c^k}g_{lm}=\]
 
 \vspace{2ex}
 \textbf{Theorem:} \textit{Let $M\subset \mathbb R^{n+m}$ be a $n$-dimentional
