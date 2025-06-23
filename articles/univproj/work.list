@@ -1,7 +1,5 @@
 ------ PARAGRAPHS ANALYSIS ------
 Paragraph on results:
-* Do we need a doubling measure?? 
-* In vitali we need fineness? No
 - But we need to rename everywhere for fineness
 * Lipschitz function extension theorem proof is unfinished
 * We need to move Radon Nikodim
@@ -14,6 +12,8 @@ Convergence:
 * Vector valued measures - motivation
 
 ----- WORK LIST -----
+* Rectifiable set criteria proof
+
 * Area formulas
 
 * Add to prerequisits where they are used

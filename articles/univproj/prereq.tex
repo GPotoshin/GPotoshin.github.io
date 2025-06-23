@@ -4,7 +4,15 @@ itself. For example for $A\times B$ we have $\pi_A:A\times B\rightarrow A$, for
 $A^n$ we have $\pi_i:A^n\rightarrow A$ with $i\in\llbracket1,n\rrbracket$, for $\prod_{i\in I} A_i$
 we have $\pi_{i_0}:\prod_{i\in I} A_i\rightarrow A_{i_0}$ for $i_0\in I$.
 Similarly we introduce a notion $i$ for morphisms associated to coproducts.
-Notions of morphisms $\pi$ and $i$ are reserved only for those needs.
+
+\vspace{2ex}
+\textbf{Convention:} Let $\{w_i\}_i$ be a family of some kind of objects, then
+we write a row of those objects by $(w_i)$ and column by $(w^i)$. We use matrix
+multiplication notion to shotify equations even between possible not scalars, for
+example a basis change formula from basis $(w_i)$ to a basis $(u_i)$ with a matrix
+$P$ is denoted by $(u_i)=(w_i)P$. If we have two function $f,g$ defined on $X$
+and we have $a,b\in X$ then we may write
+\[\left(\begin{array}{c}f\\g\end{array}\right)(a\;\;b)=\left(\begin{array}{cc}f(a)&f(b)\\g(a)&g(b)\end{array}\right)\]
 
 \subsection{Measure theory}
 \textbf{Definition:} \textit{An \textbf{outer measure} on $X$ is a set function on $X$ with
@@ -21,6 +29,9 @@ M(\mu)$ is the family of those $E\subseteq X$ such that
 \[\mu(F)=\mu(E\cap F)+\mu(F\setminus E),\quad\quad\forall F\subseteq X\]
 then $\mathcal M(\mu)$ is a $\sigma$-algebra and $\mu$ is a measure on $\mathcal
 M(\mu)$.}
+
+\vspace{2ex}
+A proof can be found on pages 8-9 of \cite{maggi}.
 
 \vspace{2ex}
 \textbf{Definition:} \textit{$\mu$ is a \textbf{Borel measure} on a topological space $X$
@@ -52,20 +63,12 @@ measure on $\mathbb{R}^n$, then
           =\sup\{\mu(K)\,|\,K\subseteq E,\,K\textnormal{ is compact}\}
 \]}
 
-\vspace{2ex}
-\textbf{Definition:} \textit{A Borel measure $\mu$ on a metric space $X$ is
-said to be a \textbf{doubling measure} if there exists a constant $C$ such that
-\[0<\mu(B(x,2r))\leq C\mu(B(x,r))<\infty\]}
-
 \subsection{Analysis}
-\textbf{Definition:} \textit{For a function $f:X\rightarrow Y$ between metric spaces we can
-define its \textbf{Lipschitz constant} $\text{Lip}(f) = \textnormal{inf}\{L\in
-\mathbb{R}\,|\,d(f(x),f(y))\leq Ld(x,y) \forall x,y\in X\}$}
-
-\vspace{2ex}
-Geometric measure theory is based on few deep and not trivial results on space
-$\mathbb{R}^n$ which I found in the book "Measure theory and fine properties
-of functions". I took those results from that book with little modifications.
+Geometric measure theory relies on several profound and not-trivial results
+established within metric spaces or even in $\mathbb{R}^n$. This foundational
+properties, which I adapted with minor modifications or gave direct
+generalisations, are primarly sourced from "Measure theory and fine properties
+of functions".
 
 \vspace{2ex}
 For a ball $B=B(x, r)$ of center $x$ and radius $r$ we shall note $\prescript{\epsilon}{}B
@@ -77,7 +80,7 @@ avoid confusion with set power and Minkowski product.
 Let $\mathcal{F}$ be any collection of nondegenearted closed balls in a metric
 space $X$ with
 \[ \sup\{\text{diam}\,B\,|\, B\in\mathcal{F}\}<\infty \]
-Then for every $\epsilon>1$ there exist a countable family $\mathcal{G}$ of
+Then for every $\epsilon>1$ there exists a countable family $\mathcal{G}$ of
 disjoint balls in $\mathcal{F}$ such that
 \[\bigcup_{B\in\mathcal{F}}B\subseteq\bigcup_{B\in\mathcal{G}}\prescript{2\epsilon}{}B\]}
 
@@ -183,6 +186,10 @@ want.
 complecated and I do not fill empowered to invate on it and it is not a purpose
 of this paper.
 
+\vspace{2ex}
+\textbf{Definition:} \textit{For a function $f:X\rightarrow Y$ between metric spaces we can
+define its \textbf{Lipschitz constant} $\text{Lip}(f) = \textnormal{inf}\{L\in
+\mathbb{R}\,|\,d(f(x),f(y))\leq Ld(x,y) \forall x,y\in X\}$}
 
 \vspace{2ex}
 \textbf{Lipschitz function extension theorem:} \textit{Let $X$ be a metric space,

@@ -1,0 +1,30 @@
+In this section we study once again $\mathbb C^1$ $n$-dimentional submanifold $M$
+of $\mathbb R^{n+m}$.
+
+\vspace{2ex}
+We can define a gradient $\nabla^M$ associated to $M$ by
+\[\nabla^M f = (w_i)(Df(w^i))\]
+for an orthogonal basis $(w_i)$ of $TM$. This notion is independed from the choice,
+since as we have another orthogonal basis $(w_i)=(u_i)P$, where $P$ is orthogonal, 
+then $(w^i)=P^t(u^i)$ and thus $(w_i)(Df(w^i))=(u_i)P(Df(P^t(u^i)))=(u_i)PP^tDf(u^i)=(u_i)Df(u^i)$
+
+\vspace{2ex}
+If for two vectors $a,b$ by $ab$ we right their scalar product, then we can
+introduce diveregence of $X:M\rightarrow\mathbb R^{n+m}$ on $M$ by chosing
+a basis $(w_1,\ldots,w_n)$ of $TM$ and setting
+\[\text{div}_MX=(w_i)(\nabla^MX^i)\]
+where $X=(X^i)_{i\in\llbracket1,n+m\rrbracket}$ are coordinats in orthogonal
+extension of $(w_i)$.
+
+\vspace{2ex}
+\textbf{Theorem:} \textit{Let $M\subset \mathbb R^{n+m}$ be a $n$-dimentional
+$\mathcal C^1$ bounded submanifold-with-boundary. Then we have a following result}
+\[\int_M \text{div}_MXd\mathcal H^n=\int_{\partial M}X\nu d\mathcal H^{n-1}\;\textit{for every}\;X\in\mathcal C^1(M,TM)\]
+\textit{where $\nu$ is an orthogonal unitary vector to the boundry pointing outwards.}
+
+\vspace{1ex}
+\textbf{Proof:} since $M$ is compact we can find a finite open cover $U_i$ of
+$M$ such that at every $U_i$ we find a local coordinate system. We can associated
+a $\mathcal C^\infty$ partition of unit $(\psi_i)$ on $M$ associated to $U_i$ such
+that $psi_i\in\mathcal C^\infty_c(U_i)$ and $\sum\psi_i=1_M$.
+
