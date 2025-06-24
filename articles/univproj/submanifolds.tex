@@ -24,16 +24,27 @@ which consists of tangents to constant curbes. Since at from point to point
 basis vectors varies in ambient space, we can naturally diffine following coefficients
 [for the following part I think that we need to be in $\mathcal C^2$, but apperently new coordinates
 are $\mathcal C^1$]
-\[\frac{\partial\mathbf{c}_i}{\partial c^j} = \mathbf{c}_k\Gamma_{ij}^k\]
+\[\frac{\partial\mathbf{c}_i}{\partial c^j} = \mathbf{c}_k\Gamma_{ji}^k\]
 In fact we observe symmetry on botton coeffitiants since
-\[\frac{\partial\mathbf{c}_i}{\partial c^j} = \frac{\partial}{\partial c^j}\mathbf{w}_j\frac{\partial w^j}{\partial c^i}
-=\mathbf{w}_j\frac{\partial^2 w^j}{\partial c^j\partial c^i}=\mathbf{w}_j\frac{\partial^2 w^j}{\partial c^i\partial c^j}
-=\mathbf{c}_k\Gamma_{ji}^k\]
+\[\frac{\partial\mathbf{c}_i}{\partial c^j} = \frac{\partial}{\partial c^j}\mathbf{w}_l\frac{\partial w^l}{\partial c^i}
+=\mathbf{w}_l\frac{\partial^2 w^l}{\partial c^j\partial c^i}=\mathbf{w}_l\frac{\partial^2 w^l}{\partial c^i\partial c^j}
+=\mathbf{c}_k\Gamma_{ij}^k\]
 Also in new basis $(\mathbf{c}_k)$ we have scalar product, which is usually denoted by
 \[\langle\mathbf{c}_l,\mathbf{c}_k\rangle=g_{lk}=\frac{\partial w^i}{\partial c^l}\frac{\partial w^i}{\partial c^k}\]
 which is also symmetric. And if we rewrite a little bit equality for $\Gamma$, we get
 \[\mathbf{w}_j\frac{\partial^2 w^j}{\partial c^j\partial c^i}=\mathbf{c}_k\Gamma_{ji}^k
 =\mathbf{w}_j\frac{\partial w^j}{\partial c^k}\Gamma_{ji}^k\]
+Metric defines an isomorphism $\phi$ from our space $V$ to a dual space $V^*$ by
+\[\phi(\mathbf{c}_i):=\langle\mathbf{c}_i,\cdot\rangle=g_{lm}\mathbf{c}^{*l}\otimes\mathbf{c}^{*m}\mathbf{c}_i=g_{li}\mathbf{c}^{*l}\]
+This $g_{ij}$ is a matrix of $\phi$ in local coordinates. And a matrix of $\phi^{-1}$ is
+$(g_{ij})^{-1}$. Associated to this ismorphism we can construct a dual product by
+\begin{align*}
+    \langle\cdot,\cdot\rangle^*:&=\phi^{-1}(\langle\cdot,\cdot\rangle)=\phi^{-1}(g_{lm}\mathbf{c}^{*l}\otimes\mathbf{c}^{*m})
+=g_{lm}\phi^{-1}(\mathbf{c}^{*l})\otimes\phi^{-1}(\mathbf{c}^{*m})\\
+    &=g_{lm}(g^{-1,lr}\mathbf{c}_r)\otimes(g^{-1,mk}\mathbf{c}_k)
+=\delta_m^r\mathbf{c}_r\otimes g^{-1,mk}\mathbf{c}_k=g^{-1,rk}\mathbf{c}_r\otimes \mathbf{c}_k
+\end{align*}
+Or we just usually simplu write $\langle\cdot,\cdot\rangle^*=g^{mk}\mathbf{w}_m\otimes \mathbf{w}_k$.
 Let $X'$ be $X$ rewritten in new coordinates, i.e.
 \[\mathbf{X}(w^1,...,w^n)=\mathbf{X}'(...v^i(w^1,...,w^n)...)\]
 Now we take a partial derivative of both sides:
@@ -56,7 +67,30 @@ Then we can calculate divergence formula by
 =\sum_p(\frac{\partial X'^p}{\partial c^p}+\Gamma^p_{l,p}X'^l)
 \end{align*}
 For the next part we are differentiating $g_{lm}$
-\[\frac{\partial}{\partial c^k}g_{lm}=\]
+\[\frac{\partial}{\partial c^k}g_{lm}=(\frac{\partial}{\partial c^k}\frac{\partial w^i}{\partial c^l})\frac{\partial w^i}{\partial c^m}
++\frac{\partial w^i}{\partial c^l}(\frac{\partial}{\partial c^k}\frac{\partial w^i}{\partial c^m})
+=\frac{\partial w^i}{\partial c^r}\Gamma^r_{kl}\frac{\partial w^i}{\partial c^m}+
+\frac{\partial w^i}{\partial c^l}\frac{\partial w^i}{\partial c^r}\Gamma^r_{km}
+=g_{mr}\Gamma^r_{kl}+g_{lr}\Gamma^r_{km}\]
+Now lets consider a following quantity
+\[\frac{\partial g_{kl}}{\partial c^m}+\frac{\partial g_{km}}{\partial c^l}-\frac{\partial g_{ml}}{\partial c^k}
+=g_{kr}\Gamma^r_{ml}+g_{lr}\Gamma^r_{mk}+g_{kr}\Gamma^r_{lm}+g_{mr}\Gamma^r_{lk}-g_{mr}\Gamma^r_{kl}-g_{lr}\Gamma^r_{km}=2g_{kr}\Gamma^r_{ml}
+\]
+And if we multiply both sides by $1/2g^{ak}$ we get
+\[g^{ak}g_{kr}\Gamma^r_{ml}=\delta_r^a\Gamma^r_{ml}=\Gamma^a_{ml}=\frac{1}{2}g^{ak}(\frac{\partial g_{kl}}{\partial c^m}+\frac{\partial g_{km}}{\partial c^l}-\frac{\partial g_{ml}}{\partial c^k})\]
+Now lets take Cristoffel symbol from divergence formula and develop it
+\[\Gamma^p_{pl}=\frac{1}{2}g^{pk}(\frac{\partial g_{kl}}{\partial c^p}+\frac{\partial g_{kp}}{\partial c^l}-\frac{\partial g_{pl}}{\partial c^k})
+=\frac{1}{2}g^{pk}\frac{\partial g_{kp}}{\partial c^l}\]
+Now knowing that $\partial_k(\det A)=\det(A)\text{tr}(A^{-1}\partial_k A)$ and
+writing $g=\det(g_{ij})$ we have
+\[g^{pk}\partial_l g_{kp}=\text{tr}((g_{kp})^{-1}\partial_l(g_{kp}))=\frac{\partial_l g}{g}\]
+And since $\partial_l\sqrt g=\frac{1}{2\sqrt g}\partial_l g$ we have
+\[\Gamma^p_{pl}=\frac{1}{\sqrt g}\partial_l\sqrt g\]
+and finally we can rewrite divergence formula as
+\[\text{div}\mathbf X=\partial_p X'^p+\frac{1}{\sqrt g}\partial_l\sqrt g X'^l
+=\frac{1}{\sqrt g}\sqrt g\partial_p X'^p+\frac{1}{\sqrt g}\partial_p\sqrt g X'^p
+=\frac{1}{\sqrt g}\partial_p(\sqrt g X'^p)
+\]
 
 \vspace{2ex}
 \textbf{Theorem:} \textit{Let $M\subset \mathbb R^{n+m}$ be a $n$-dimentional
