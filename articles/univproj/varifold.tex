@@ -9,11 +9,17 @@ convergence criteria that $V_i\rightarrow V$ if and only if
 for every continuous function $f:\mathbb{R}^n\times G(m,n)\rightarrow R$ with a
 compact support.}
 
+\textbf{Remarque:} Varifolds let us separate notion of a tangent plane from
+geometric properties (actually in computer graphics a similar idea is used for
+normal maps), they let us concider possible many planes in the same point with
+different masses and also to change the mass of gemetric figure.
+
 \vspace{2ex}
 \textbf{Definition:} To an $n$-rectifiable set $E$ we can naturally assosiate
 a varifold $V_E$ by intruducing a following functional
 \[\langle V_E\,|\, f\rangle:=\int_Ef(x,T(E,x))d\mathcal H^m,\quad f\in\mathcal C_c(\mathbb R^n, G(m,n))\]
-That as we know is also a measure. Such varifolds are called integral.
 
 \vspace{2ex}
-\textbf{Definition:}
+\textbf{Definition:} By analogy to the variation of submanifolds, one can define
+first variation of varifolds as a following functional
+\[\delta V:X\in\mathcal C^1_c(\mathbb R^n,\mathbb R^n)\rightarrow\int_{\mathbb R^n\times G_{d,n}}\text{div}_SXdV(x,s)\]

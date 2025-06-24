@@ -55,4 +55,12 @@ In our case we are calculating $\det((D_x\psi_t)^*\circ(D_x\psi_t))=(\text{J}(\p
 \[
     \text{tr}(T)=\text{div}_\Sigma A+\sum_i|DV(\tau_i)|^2
 \]
-
+\[
+    \text{tr}(S^2)=(\tau_i\cdot D_xV(\tau_j)+\tau_j\cdot D_xV(\tau_i))(\tau_i\cdot D_xV(\tau_j)+\tau_j\cdot D_xV(\tau_i))
+    =2(\tau_i\cdot D_xV(\tau_j)(\tau_j\cdot D_xV(\tau_i))
+\]
+And thus we can express the variations
+\[\det(M(t))''|_{t=0}=2\text{div}_\Sigma V(x)\]
+\[\det(M(t))''=4(\text{div}_\Sigma V(x))^2+2(\text{div}_\Sigma A+\sum_i|DV(\tau_i)|^2)-2(\tau_i\cdot D_xV(\tau_j)(\tau_j\cdot D_xV(\tau_i))\]
+Thus
+\[\frac{d}{dt}\mathcal H^n(M)=\int_M(0)\text{div}_{M(0)}Vd\mathcal H^n\]
