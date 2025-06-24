@@ -129,6 +129,13 @@ approximate a submanifold by a submanifold-with-boubdary and in that case
 we have a prove.
 
 \vspace{2ex}
+\textbf{Conjecture:} Let $M$ be a $C^1$ submanifold of $\mathbb{R}^{n+m}$ of
+dimention $n$, then there exists a suquence $(M_n)$ of submanifolds-with-boundery
+of $M$ of dimention $n$ such that $\mathcal H^n\llcorner M_k$ weakly* convergece to
+$\mathcal H^n\llcorner M$ and $\mathcal H^{n-1}\llcorner\partial M_n$ weakly* convergece to 
+$\mathcal H^{n-1}\llcorner\partial M$.
+
+\vspace{2ex}
 \textbf{Definition:} \textit{Let $\mathbf{v}_i$ be an orthonormal basis of $T_yM$ which
 is $C^1$ funciton of $y$. Then we can define \textbf{the second fundamental form}
 $B_y:T_yM\times T_yM\rightarrow (T_yM)^\perp$ by setting $B_y(t,n):=-(n\cdot D_y
@@ -154,4 +161,26 @@ Thus we get coordinates for normal curvature
 $\kappa_N = -(t\cdot D(\mathbf v_i)(t))\mathbf v_i=B(t,t)$
 
 \vspace{2ex}
-\textbf{Definition:}
+Simillarly if $\phi:U\subset\mathbb R^2\rightarrow M$, then
+\[0=\frac{\partial}{\partial x_2}(\frac{\partial}{\partial x_1}\phi\cdot\mathbb{v}_i)=
+\frac{\partial^2}{\partial x_2\partial x_1}\phi\cdot\mathbf{v}_i)+\frac{\partial}{\partial x_1}\phi\cdot\frac{\partial}{\partial x_2}\mathbf{v}_i(\phi(x_1,x_2))=
+\frac{\partial^2}{\partial x_2\partial x_1}\phi\cdot\mathbf{v}_i)+\frac{\partial}{\partial x_1}\phi\cdot D\mathbf{v}_i(\frac{\partial\phi}{\partial x_2})
+\]
+And thus $B(\frac{\partial\phi}{\partial x_1},\frac{\partial\phi}{\partial x_2})=(\frac{\partial^2\phi}{\partial x_2\partial x_1})^\bot$
+and we remark that $B$ is symmetric.
+
+\vspace{2ex}
+\textbf{Definition:} \textit{We define the mean curvature vector $\mathbf H_y$
+of $M$ at $y$ to be trace $B_y$; thus}
+\[\mathbf H_y=B_y(\mathbf t_i,\mathbf t_i)\]
+\textit{where $(\mathbf t_i)$ is an orthonormal basis of $T_yM$.}
+
+\vspace{2ex}
+If we rewrite this definition and recall the definition of divergence, we obtain
+\[\mathbf H_y=-(t_j\cdot D_{\mathbf t_j}(\mathbf v_i)(\mathbf v_i))\mathbf v_i=\text{div}_M(\mathbf v_i)\mathbf v_i\]
+Let $X$ be a vector field, then $X^\bot=(\mathbf v_i\cdot x)\mathbf v_i$ and if we take divergence on $M$, we get
+\[\text{div}_M X^\bot=(\mathbf v_i\cdot x)\text{div}_M \mathbf v_i\]
+because other components are in orthogonal space. Thus we conclude
+\[\text{div}_M X\bot=\mathbf H\cdot X\]
+and recalling the integration theorem, we get
+\[\int_M \text{div}_MXd\mathcal H^n=\int_{\partial M}\nu\cdot Xd\mathcal H^{n-1}-\int_M \mathbf H\cdot Xd\mathcal H^n\]
