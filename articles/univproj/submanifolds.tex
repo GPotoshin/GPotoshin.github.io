@@ -102,9 +102,21 @@ $\mathcal C^1$ bounded submanifold-with-boundary. Then we have a following resul
 \textbf{Proof:} since $M$ is compact we can find a finite open cover $U_i$ of
 $M$ such that at every $U_i$ we find a local coordinate system. We can associated
 a $\mathcal C^\infty$ partition of unit $(\psi_i)$ on $M$ associated to $U_i$ such
-that $\psi_i\in\mathcal C^\infty_c(U_i)$ and $\sum\psi_i=1_M$. And by liniarity
-of equation we want to prove, we can prove it jsut for $\psi_iX$, or without
-loss of generality we will write just $X$.
+that $\psi_i\in\mathcal C^\infty_c(U_i)$ and $\sum\psi_i=1_M$. We shall write
+$O_i=U_i\cap M$. And by liniarity of equation we want to prove, we can prove it
+jsut for $\psi_iX$, or without loss of generality we will write just $X$. Let
+coordinates take values in $V_i$
 
-\vspace{1ex} If patch $U_i$ is disjoint from $\partial M$, then 
-
+\vspace{1ex}
+If patch $U_i$ is disjoint from $\partial M$, then $V_i$ are open and $X$ is of
+a compact support inside $V_i$ and we can integrate by parts
+\[0=\int_{V_i}\partial_j 1X^j\sqrt gdc=-\int_{V_i}1\partial_j(X^j\sqrt c)=
+-\int_{V_i}\frac{1}{\sqrt g}\partial_j(X^j\sqrt g)\sqrt gdc=-\int_{U_i}\text{div}_M Xd\mathcal H^n\]
+Thus inner patches have no contribution. Lets take a patch $U_i$ that intersects
+boundary. By definition of submanifold-with-boundary we can introduce coordinates
+$c^i$ such that $\{c_n=0\}=\partial M\cap U_i$ and $c_n$ has values only in
+$(-\infty,0]$. This time $X$ does not have a compact support inside $V_i$ and
+thus in integration by parts we have the 2 terms
+\[0=\int_{V_i}\partial_j 1X^j\sqrt gdc=-\int_{U_i}\text{div}_M Xd\mathcal H^n+\int_{\mathbb R^{n-1}}X^n(c',0)\sqrt g(x',0)dc'\]
+And as we can chose such coordinates, that $X^n(c',0)=\nu\cdot X(c',0)$ we have
+\[\int_{U_i}\text{div}_M Xd\mathcal H^n=\int_{\partial M}\nu\cdot Xd\mathcal H^{n-1}\]
