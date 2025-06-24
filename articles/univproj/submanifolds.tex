@@ -64,7 +64,7 @@ Then we can calculate divergence formula by
 =\mathbf{w}_j\cdot\mathbf{w}_i\frac{\partial w^i}{\partial c^p}(\frac{\partial X'^p}{\partial c^k}+\Gamma^p_{l,k}X'^l)\frac{\partial c^k}{\partial w^j}\\
 &=\frac{\partial c^k}{\partial w^j}\frac{\partial w^j}{\partial c^p}(\frac{\partial X'^p}{\partial c^k}+\Gamma^p_{l,k}X'^l)
 =\frac{\partial c^k}{\partial c^p}(\frac{\partial X'^p}{\partial c^k}+\Gamma^p_{l,k}X'^l)
-=\sum_p(\frac{\partial X'^p}{\partial c^p}+\Gamma^p_{l,p}X'^l)
+=\frac{\partial X'^p}{\partial c^p}+\Gamma^p_{l,p}X'^l
 \end{align*}
 For the next part we are differentiating $g_{lm}$
 \[\frac{\partial}{\partial c^k}g_{lm}=(\frac{\partial}{\partial c^k}\frac{\partial w^i}{\partial c^l})\frac{\partial w^i}{\partial c^m}
@@ -117,6 +117,33 @@ boundary. By definition of submanifold-with-boundary we can introduce coordinate
 $c^i$ such that $\{c_n=0\}=\partial M\cap U_i$ and $c_n$ has values only in
 $(-\infty,0]$. This time $X$ does not have a compact support inside $V_i$ and
 thus in integration by parts we have the 2 terms
-\[0=\int_{V_i}\partial_j 1X^j\sqrt gdc=-\int_{U_i}\text{div}_M Xd\mathcal H^n+\int_{\mathbb R^{n-1}}X^n(c',0)\sqrt g(x',0)dc'\]
+\[0=\int_{V_i}\partial_j 1X^j\sqrt gdc=-\int_{U_i}\text{div}_M Xd\mathcal H^n+\int_{\mathbb R^{n-1}}X^n(c',0)\sqrt{g(c',0)}dc'\]
 And as we can chose such coordinates, that $X^n(c',0)=\nu\cdot X(c',0)$ we have
 \[\int_{U_i}\text{div}_M Xd\mathcal H^n=\int_{\partial M}\nu\cdot Xd\mathcal H^{n-1}\]
+
+\vspace{2ex}
+\textbf{Remark:} Result stays true even if do not suppose that $M$ is a
+submanifold-with-boundary, as it said on page 43 of "Simon Lectures on
+Geometric measure theory", but I do not know a proof. Probably we can alway
+approximate a submanifold by a submanifold-with-boubdary and in that case
+we have a prove.
+
+\vspace{2ex}
+\textbf{Definition:} \textit{Let $\mathbf{v}_i$ be an orthonormal basis of $T_yM$ which
+is $C^1$ funciton of $y$. Then we can define \textbf{the second fundamental form}
+$B_y:T_yM\times T_yM\rightarrow (T_yM)^\perp$ by setting $B_y(t,n):=-(n\cdot D_y
+(\mathbf v_i)(t))\mathbf v_i$
+}
+
+\vspace{2ex} Lets verify that this definition is independent from the choice of
+$\mathbf v_i$, thus let $\mathbf w_i$ be a different orthonormal basis. Then
+they are related with an orthogonal matrix $\mathbf v_i=O_i^j\mathbf w_j$. And
+if we compute coordinate change we get
+\begin{align*}
+    (n\cdot D_y(\mathbf v_i)(t))\mathbf v_i&=(n\cdot D_y(O_i^j\mathbf w_j)(t))\mathbf O_i^k\mathbf w_k
+=(n\cdot D_y(O_i^j)(t)\mathbf w_j + O_i^j n\cdot D_y(\mathbf w_j)(t))\mathbf O_i^k\mathbf w_k\\
+    &=(O_i^jO_i^k(n\cdot D_y(\mathbf w_j)(t))\mathbf w_k)=(n\cdot D_y(\mathbf w_k)(t))\mathbf w_k
+\end{align*}
+
+\vspace{2ex}
+\textbf{Definition:}
