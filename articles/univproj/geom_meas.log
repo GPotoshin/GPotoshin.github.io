@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/nixos.org)  (format=lualatex 1980.1.1)  24 JUN 2025 14:08
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/nixos.org)  (format=lualatex 1980.1.1)  27 JUN 2025 09:14
  restricted system commands enabled.
 **geom_meas.tex
 (./geom_meas.tex
@@ -1300,7 +1300,7 @@ LaTeX Warning: No \author given.
 
 {/nix/store/2dh09ifhvwqvvkcgvhakbx6pxcrw2dsq-texlive-2024-env/share/texmf-var/fo
 nts/map/pdftex/updmap/pdftex.map}]
-<Vitali.png, id=115, 1286.8075pt x 839.135pt>
+<Vitali.png, id=119, 1286.8075pt x 839.135pt>
 File: Vitali.png Graphic file (type png)
 <use Vitali.png>
 Package luatex.def Info: Vitali.png  used on input line 113.
@@ -1316,7 +1316,7 @@ Package luatex.def Info: Vitali.png  used on input line 113.
 [5]
 
 [6]
-<cantor.png, id=149, 1415.2875pt x 593.21625pt>
+<cantor.png, id=153, 1415.2875pt x 593.21625pt>
 File: cantor.png Graphic file (type png)
 <use cantor.png>
 Package luatex.def Info: cantor.png  used on input line 142.
@@ -1361,53 +1361,66 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 [11]
 Missing character: There is no µ (U+00B5) in font cmmi10!
-)
+) (./tangent.tex
 
 [12]
 
 [13]
 
-[14] (./submanifolds.tex
+[14]) (./submanifolds.tex
 
 [15]
+<maps.png, id=211, 1013.7875pt x 503.8825pt>
+File: maps.png Graphic file (type png)
+<use maps.png>
+Package luatex.def Info: maps.png  used on input line 43.
+(luatex.def)             Requested size: 202.7539pt x 100.7747pt.
 
-[16]
+
+[16<./maps.png>]
 
 [17]
 Missing character: There is no ⟂ (U+27C2) in font "name:Cambria Math:mode=base
 ;script=math;language=dflt;mathfontdimen=xetex;"!
 Missing character: There is no ⟂ (U+27C2) in font "name:Cambria Math:mode=base
 ;script=math;language=dflt;mathfontdimen=xetex;+ssty=0;"!
-) (./fvariation.tex
 
-[18]
+
+[18]) (./fvariation.tex
 Overfull \hbox (20.92154pt too wide) detected at line 38
 []
  []
 
 
 
-[19]) (./varifold.tex) (./geom_meas.bbl)
+[19]) (./varifold.tex
 
-[20] (./geom_meas.aux)
+[20]
+Overfull \hbox (14.80176pt too wide) detected at line 80
+[]
+ []
+
+) (./geom_meas.bbl)
+
+[21] (./geom_meas.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `geom_meas.out' has not changed.
-(rerunfilecheck)             Checksum: 822570A5AD380C1898DFEC152C4AB86D;4454.
+(rerunfilecheck)             Checksum: 4E2278B7FF4E9EDA05DC8373647E73AE;4557.
 )
 
 Here is how much of LuaTeX's memory you used:
- 30652 strings out of 475514
+ 30672 strings out of 475514
  125007,1373583 words of node,token memory allocated
- 1358 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 281 attribute, 60 glue_spe
-c, 142 attribute_list, 2 write nodes
-   avail lists: 2:977,3:284,4:33,5:1389,6:66,7:11368,8:94,9:1604,10:14,11:606
- 52878 multiletter control sequences out of 65536+600000
- 85 fonts using 35669487 bytes
- 116i,16n,114p,579b,472s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 1394 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 293 attribute, 60 glue_spe
+c, 148 attribute_list, 2 write nodes
+   avail lists: 2:1106,3:284,4:33,5:1451,6:66,7:11368,8:94,9:1892,10:14,11:606
+ 52889 multiletter control sequences out of 65536+600000
+ 85 fonts using 35669079 bytes
+ 116i,16n,114p,599b,472s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/giorno/Library/Fonts/LinLibertine_RBI.otf></Users/giorno/Library/Fonts/C
 ambriaMath.ttc></Users/giorno/Library/Fonts/CambriaMath.ttc></Users/giorno/Libra
 ry/Fonts/CambriaMath.ttc></Users/giorno/Library/Fonts/LinLibertine_R.otf></Users
@@ -1415,10 +1428,10 @@ ry/Fonts/CambriaMath.ttc></Users/giorno/Library/Fonts/LinLibertine_R.otf></Users
 ine_RI.otf></nix/store/5ncc9528d6ixnismwbvqmldwxjrw10rb-texlive-2024-env-texmfdi
 st/fonts/type1/public/stmaryrd/stmary10.pfb></nix/store/5ncc9528d6ixnismwbvqmldw
 xjrw10rb-texlive-2024-env-texmfdist/fonts/type1/public/stmaryrd/stmary7.pfb>
-Output written on geom_meas.pdf (20 pages, 649009 bytes).
+Output written on geom_meas.pdf (21 pages, 769331 bytes).
 
-PDF statistics: 288 PDF objects out of 1000 (max. 8388607)
- 236 compressed objects within 3 object streams
- 66 named destinations out of 1000 (max. 131072)
- 200 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 299 PDF objects out of 1000 (max. 8388607)
+ 244 compressed objects within 3 object streams
+ 68 named destinations out of 1000 (max. 131072)
+ 208 words of extra memory for PDF output out of 10000 (max. 100000000)
 

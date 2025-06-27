@@ -1,34 +1,56 @@
-In this section we study once again $\mathbb C^1$ $n$-dimentional submanifold $M$
+In this section we study once again $\mathcal C^1$ $n$-dimentional submanifold $M$
 of $\mathbb R^{n+m}$ to observe several properties of standart constructions to
 then motivate a definition for analogus constructions for measures.
 
 \vspace{2ex}
-We can define a gradient $\nabla^M$ associated to $M$ by
-\[\nabla^M f = (w_i)(Df(w^i))\]
-for an orthogonal basis $(w_i)$ of $TM$. This notion is independed from the choice,
-since as we have another orthogonal basis $(w_i)=(u_i)P$, where $P$ is orthogonal, 
-then $(w^i)=P^t(u^i)$ and thus $(w_i)(Df(w^i))=(u_i)P(Df(P^t(u^i)))=(u_i)PP^tDf(u^i)=(u_i)Df(u^i)$
+We can define a gradient $\nabla$ by representation
+\[\langle \nabla f, \cdot\rangle=Df\]
+Then we define a gradient $\nabla^M$ associated to $M$ by
+\[\nabla^M f(x) := \pi_{T_xM}(\nabla f(x))\]
+and if we have an orthogonal basis $(\mathbf w_i)$ of $T_xM$
+\[\nabla^M f(x) = (\mathbf w_1,\ldots,\mathbf w_n)\left(\begin{array}{c}D_xf(\mathbf w_1)\\ \vdots\\D_xf(\mathbf w_1)\end{array}\right)=(\mathbf w_i)(D_xf(\mathbf w^i))\]
+for an orthogonal basis $(\mathbf w_i)$ of $TM$. If we take that for a deffinition
+using a mtrix notation it's also easy to show that this notion is independed from the choice,
+which is already evident from coordinateless defintion.If  we have another
+orthogonal basis $(\mathbf w_i)=(\mathbf u_i)P$, where $P$ is orthogonal, 
+then $(\mathbf w^i)=P^t(\mathbf u^i)$ and thus $(\mathbf w_i)(Df(\mathbf w^i))
+=(\mathbf u_i)P(DfP^t(\mathbf u^i))=(\mathbf u_i)PP^tDf(\mathbf u^i)=(u_i)Df(u^i)$
 
 \vspace{2ex}
 If for two vectors $a,b$ by $ab$ we right their scalar product, then we can
 introduce diveregence of $X:M\rightarrow\mathbb R^{n+m}$ on $M$ by chosing
-a basis $(w_1,\ldots,w_n)$ of $TM$ and setting
-\[\text{div}_MX=(w_i)(\nabla^MX^i)\]
+a basis $(\mathbf w_1,\ldots,\mathbf w_n)$ of $T_xM$ and setting
+\[\text{div}_MX(x)=(\mathbf w_i)(\nabla^MX^i(x))\]
 where $X=(X^i)_{i\in\llbracket1,n+m\rrbracket}$ are coordinats in orthogonal
-extension of $(w_i)$. Or if we associate all indicies to the one basis we get
-\[\text{div}_MX=\partial_iX^i\]
-Now let suppose that we have curvelinear coordinates $(c^i)$, to them we can
+extension of $(w_i)$. We will need a following theorem
+
+\vspace{2ex}
+\textbf{Theorem:} \textit{Let $M\subset \mathbb R^{n+m}$ be a $n$-dimentional
+$\mathcal C^1$ bounded submanifold-with-boundary. Then we have a following result}
+\[\int_M \text{div}_MXd\mathcal H^n=\int_{\partial M}X\nu d\mathcal H^{n-1}\;\textit{for every}\;X\in\mathcal C^1(M,TM)\]
+\textit{where $\nu$ is an orthogonal unitary vector to the boundry pointing outwards.}
+
+\vspace{2ex}
+I will give you a proof for a case $\mathcal C^2$, because then we can just change
+coordimates and integrate by parts. So in that section we suppose that $X(x)\in
+T_xM$. Now let suppose that we have an orthonormal basis $(\mathbf w_i)$ of $T_xM$
+which is completed by vectors $(\mathbf w_i')$ to an orthogonal basis of
+$\mathbb R^{m+n}$ and curvelinear
+coordinates $(c^i):M\cap U\rightarrow \mathbb{R^n}\cap V$, to them we can
 associate a standart basis 
-\[\mathbf{c}_i=\mathbf{w}_j\frac{\partial w^j}{\partial c^i}\]
-which consists of tangents to constant curbes. Since at from point to point
+\[\mathbf{c}_i=\mathbf{w}_j\frac{\partial w^j}{\partial c^i}+\mathbf{w'}_j\frac{\partial w'^j}{\partial c^i}\]
+\begin{center}
+\includegraphics[scale=0.2]{maps.png}
+\end{center}
+which consists of tangents to constant curbes. Thus $(\mathbf c_i)$ is a variable
+basis and $(\mathbf w_i)$ is a constatn baisis. In following parts we write
+everything at point x, to move a different point we need to chose a new tangent basis. Since at from point to point
 basis vectors varies in ambient space, we can naturally diffine following coefficients
-[for the following part I think that we need to be in $\mathcal C^2$, but apperently new coordinates
-are $\mathcal C^1$]
-\[\frac{\partial\mathbf{c}_i}{\partial c^j} = \mathbf{c}_k\Gamma_{ji}^k\]
+\[\mathbf c_k\Gamma_{ji}^k=\pi_{T_x M}(\frac{\partial\mathbf{c}_i}{\partial c^j})\]
 In fact we observe symmetry on botton coeffitiants since
-\[\frac{\partial\mathbf{c}_i}{\partial c^j} = \frac{\partial}{\partial c^j}\mathbf{w}_l\frac{\partial w^l}{\partial c^i}
+\[\pi_{T_xM}(\frac{\partial\mathbf{c}_i}{\partial c^j}) = \frac{\partial}{\partial c^j}(\mathbf{w}_l\frac{\partial w^l}{\partial c^i})
 =\mathbf{w}_l\frac{\partial^2 w^l}{\partial c^j\partial c^i}=\mathbf{w}_l\frac{\partial^2 w^l}{\partial c^i\partial c^j}
-=\mathbf{c}_k\Gamma_{ij}^k\]
+=\Gamma_{ij}^k\]
 Also in new basis $(\mathbf{c}_k)$ we have scalar product, which is usually denoted by
 \[\langle\mathbf{c}_l,\mathbf{c}_k\rangle=g_{lk}=\frac{\partial w^i}{\partial c^l}\frac{\partial w^i}{\partial c^k}\]
 which is also symmetric. And if we rewrite a little bit equality for $\Gamma$, we get
@@ -46,18 +68,20 @@ $(g_{ij})^{-1}$. Associated to this ismorphism we can construct a dual product b
 \end{align*}
 Or we just usually simplu write $\langle\cdot,\cdot\rangle^*=g^{mk}\mathbf{w}_m\otimes \mathbf{w}_k$.
 Let $X'$ be $X$ rewritten in new coordinates, i.e.
-\[\mathbf{X}(w^1,...,w^n)=\mathbf{X}'(...v^i(w^1,...,w^n)...)\]
-Now we take a partial derivative of both sides:
+\[\mathbf{X}(w^1,...,w^n)=\mathbf{X}'(...c^i(w^1,...,w^n)...)\]
+Now we take a partial derivative of both sides and actually in this part it is
+crutial that $X$ has values tangent space, because then we can write $X$ in the
+curvalinear basis:
 \begin{align*}
 \frac{\partial}{\partial w^j}\mathbf{w}_iX^i&
-=\frac{\partial}{\partial w^j}\mathbf{c}_pX'^p
-=(\frac{\partial}{\partial c^k}\mathbf{c}_pX'^p)\frac{\partial c^k}{\partial w^j}
-=(\mathbf{c}_p\frac{\partial X'^p}{\partial c^k}+\frac{\partial\mathbf{c}_p}{\partial c^k}X'^p)\frac{\partial c^k}{\partial w^j}
-=(\mathbf{c}_p\frac{\partial X'^p}{\partial c^k}+\mathbf{c}_l\Gamma^l_{pk}X'^p)\frac{\partial c^k}{\partial w^j}\\
-&=(\mathbf{c}_p\frac{\partial X'^p}{\partial c^k}+\mathbf{c}_p\Gamma^p_{lk}X'^l)\frac{\partial c^k}{\partial w^j}
+=\pi_{T_x M}(\frac{\partial}{\partial w^j}\mathbf{c}_pX'^p)
+=\pi_{T_x M}(\frac{\partial}{\partial c^k}\mathbf{c}_pX'^p)\frac{\partial c^k}{\partial w^j})
+    =(\mathbf{c}_p\frac{\partial X'^p}{\partial c^k}+\pi_{T_x M}(\frac{\partial\mathbf{c}_p}{\partial c^k})X'^p)\frac{\partial c^k}{\partial w^j}\\
+&=(\mathbf{c}_p\frac{\partial X'^p}{\partial c^k}+\mathbf{c}_l\Gamma^l_{pk}X'^p)\frac{\partial c^k}{\partial w^j}
+=(\mathbf{c}_p\frac{\partial X'^p}{\partial c^k}+\mathbf{c}_p\Gamma^p_{lk}X'^l)\frac{\partial c^k}{\partial w^j}
 =\mathbf{c}_p(\frac{\partial X'^p}{\partial c^k}+\Gamma^p_{lk}X'^l)\frac{\partial c^k}{\partial w^j}
 \end{align*}
-Then we can calculate divergence formula by
+Then we can calculate divergence formula at $x$ by
 \begin{align*}
 \text{div}\mathbf{X}&=\mathbf{w_j}\cdot\frac{\partial}{\partial w^j}\mathbf{w}_iX^i
 =\mathbf{w}_j\cdot\mathbf{c}_p(\frac{\partial X'^p}{\partial c^k}+\Gamma^p_{l,k}X'^l)\frac{\partial c^k}{\partial w^j}
@@ -92,12 +116,6 @@ and finally we can rewrite divergence formula as
 =\frac{1}{\sqrt g}\partial_p(\sqrt g X'^p)
 \]
 
-\vspace{2ex}
-\textbf{Theorem:} \textit{Let $M\subset \mathbb R^{n+m}$ be a $n$-dimentional
-$\mathcal C^1$ bounded submanifold-with-boundary. Then we have a following result}
-\[\int_M \text{div}_MXd\mathcal H^n=\int_{\partial M}X\nu d\mathcal H^{n-1}\;\textit{for every}\;X\in\mathcal C^1(M,TM)\]
-\textit{where $\nu$ is an orthogonal unitary vector to the boundry pointing outwards.}
-
 \vspace{1ex}
 \textbf{Proof:} since $M$ is compact we can find a finite open cover $U_i$ of
 $M$ such that at every $U_i$ we find a local coordinate system. We can associated
@@ -120,13 +138,6 @@ thus in integration by parts we have the 2 terms
 \[0=\int_{V_i}\partial_j 1X^j\sqrt gdc=-\int_{U_i}\text{div}_M Xd\mathcal H^n+\int_{\mathbb R^{n-1}}X^n(c',0)\sqrt{g(c',0)}dc'\]
 And as we can chose such coordinates, that $X^n(c',0)=\nu\cdot X(c',0)$ we have
 \[\int_{U_i}\text{div}_M Xd\mathcal H^n=\int_{\partial M}\nu\cdot Xd\mathcal H^{n-1}\]
-
-\vspace{2ex}
-\textbf{Remark:} Result stays true even if do not suppose that $M$ is a
-submanifold-with-boundary, as it said on page 43 of "Simon Lectures on
-Geometric measure theory", but I do not know a proof. Probably we can alway
-approximate a submanifold by a submanifold-with-boubdary and in that case
-we have a prove.
 
 \vspace{2ex}
 \textbf{Conjecture:} Let $M$ be a $C^1$ submanifold of $\mathbb{R}^{n+m}$ of

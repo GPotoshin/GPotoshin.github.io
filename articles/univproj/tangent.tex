@@ -1,0 +1,237 @@
+Similarly to projective spaces $\mathbb{R}P^n$ one can generalise this notion to
+smaller subspaces than hyperplanes. The set of $m$ dimensional subspaces of a
+vector space $\mathbb{R}^n$ is called grassmannian and noted by $G(m,n)$. It
+has a topology identified from a topology of orthogonal projection on
+$m$-dimensional subspaces.
+
+\subsection{Approximate Tangent}
+
+\textbf{Definition:} \textit{Let $\alpha$ be a fixed angle, let $x\in\mathbb R^n$
+be a point and let $V$ be a $n$-dimensional plane in $\mathbb R^{n+m}$. The \textbf{
+cone of angle $\alpha$ around $V$ centered at $x$} is defined by setting
+\[\mathcal C(x,V,\alpha)=\{x'\in\mathbb R^{n+m}\;|\; |x′−x|\sin(\alpha)\geq d(x−x′, V)\}\]
+}
+
+\vspace{2ex}
+\textbf{Definition:} \textit{Let $V\in G(n+m, n)$ be a $d$-dimensional plane.
+If $E$ is a Borel set and $x\in E$ a point, then $V$ is a \textbf{strong tangent plane}
+to $E$ at $x$ if and only if for every $\alpha >0$ there exists a positive
+radius $r_0 >0$ such that
+\[E∩B(x, r_0)\subseteq C(x, V, \alpha)\]
+}
+
+\vspace{2ex}
+\textbf{Definition:} \textit{Let $V\in G(n+m, n)$ be a $d$-dimensional plane.
+If $E$ is a Borel set and $x\in E$ a point, then $V$ is an \textbf{approximate tangent
+plane} to $E$ at $x$ if and only if for every $\alpha>0$ it turns out that
+\[\mathcal H^d((E∩B(x,r))\setminus\mathcal C(x, V, \alpha)) = o(r^d)\]
+and
+\[\mathcal H^d((E∩B(x, r))∩\mathcal C(x, V, α))\sim \omega_dr^d\]
+}
+
+\vspace{2ex}
+Finally, one can define a tangent space using weak-* convergence. Spaces
+satisfying this definition are generally also called approximate, but to reduce
+confusion, here I will call them \textbf{limit spaces}.
+
+\vspace{1ex}
+\textbf{Definition:} \textit{Let $\psi_{x,r}:\mathbb R^{n+m}\rightarrow \mathbb
+R^{n+m}=x'\mapsto \frac{x'-x}{r}$ be the dilation map. And let $E_{x,r}$ be the
+image of $E$ under $\psi_{x,r}$. An $n$-dimensional plane $V$ is a
+\textbf{limit plane} to the set $E$ at point $x$ if and only if
+\[\mathcal H^n\,\llcorner\hspace{-1mm}E_{x,r}\rightharpoonup\mathcal H^n\,\llcorner\hspace{-1mm}V\]}
+
+\vspace{2ex}
+\textbf{Proposition:} \textit{A limit plane is an approximate tangent plane.}
+
+\vspace{1ex}
+\textbf{Proof:} Let $V$ be a limit plane of $E$ at $x$. Let $\mu:= \mathcal{H}^n
+\,\llcorner V$ and $\mu_r:=\mathcal{H}^n\,\llcorner E_{x,r}$. Since $\mu$ and
+$\mu_r$ are Radon measures and $B(0,1)$ is relatively compact and its boundary
+is $\mu$-negligible, then $\mu_r(B(0,1)) \rightarrow_{r\rightarrow 0}
+\mu(B(0,1)) = \omega_n$. Furthermore, we have
+\[\mu_{x,r}(B(0,1)) = \mathcal{H}^n(\psi_{x,r}[E\cap B(x, r)]) = \frac{1}{r^n}\mathcal{H}^n(E\cap B(x, r))\]
+and thus
+\[\mathcal{H}^n(E\cap B(x, r)) \sim \omega_n r^n\]
+If, in the preceding constructions, we replace $B(0,1)$ by $B(0,1)\cap\mathcal{C}
+(0,V,\alpha)$, we find
+\[\mathcal{H}^n(E\cap B(x, r)\cap\mathcal{C}(x,V,\alpha)) \sim \omega_n r^n\]
+And if we take the difference of these two equalities by dividing them by $r^n$,
+we find that
+\[\frac{\mathcal{H}^n(E\cap B(x, r)) - \mathcal{H}^n(E\cap B(x, r)\cap\mathcal{C}(x,V,\alpha))}{r^n} = \frac{\mathcal{H}^n(E\cap B(x, r)\setminus\mathcal{C}(x,V,\alpha))}{r^n} \sim 0\]
+And therefore the plane is approximate.
+
+\vspace{2ex}
+Actually we can completly eleminate sets and talk about tangent spaces to
+measures.
+
+\vspace{1ex}
+\textbf{Definition:} We are saying that $\mu$ has a tangent $T\in G(n,m)$ at $x$ if
+for measures $\mu_{r,x}(A):=r^{-m}\mu(x+rA)$ we find a constant $k\in(0,+\infty)$
+such that $\mu_{r,x}\rightharpoonup \mathcal H^m|_T$ as $r\rightarrow 0^+$.
+
+\subsection{Tangent Bundle}
+\textbf{Proposition:} \textit{Let $\Sigma, \Sigma′\subseteq R^{n+m}$ be
+$n$-dimensional surfaces of class $C^1$. Then tangent planes are equal at 
+$\mathcal H^n$-almost every point in the intersection $x∈\Sigma\cap\Sigma′$.}
+
+\vspace{1ex}
+To prove it, we take a point $x\in\Sigma\cap\Sigma'$ such that $T_x\Sigma\neq T_x
+\Sigma'$. Then, locally at x surfaces are represented by submersions $F,G:\mathbb
+R^{m+n}\rightarrow\mathbb R^m$ i.e, $\Sigma\cap A=F^{-1}(0)\cap A$ and
+$\Sigma'\cap B=G^{-1}(0)\cap B$, where $A$ and $B$ are open neighborhoods of $x$.
+
+\vspace{1ex}
+Let's introduce a new function $(F, G):\mathbb R^{m+n}\rightarrow\mathbb R^{2m}
+=x\mapsto (F(x),G(x))$. The differential of $(F,G)$ is a matrix of 2 blocks, one
+above the other. They are placed vertically because, actually, the pair $(F,G)$ is
+a column and we have $D(F,G)=(DF,DG)^t$. Then $A\cap B\cap\Sigma\cap\Sigma'=(F,G)
+^{-1}(0)$ and we have a representation of an intersection. Remark
+that $(F, G)$ is not necessarily a submersion. Let's take in the differential of $(F
+,G)$ indices $(i_n)_{n\in\llbracket1,M\rrbracket}$ of a maximally linear
+independent set of rows. Its cardinal is at least $n$ because the rows in the
+differential of $F$ are independent, and it is strictly bigger, because otherwise
+the tangent spaces at $x$ would coincide.
+\[D\left(\begin{array}{cc} F\\ G\end{array}\right) =
+    \left(\begin{array}{cc} \vdots \\DF_i\\ \vdots\\ DG_k\\ \vdots\end{array}\right)\]
+where $F_i=\pi_i\circ F$ and $G_k=\pi_k\circ G$ are coordinate functions. Then,
+if we retain only those rows in $(F,G)$ we will have a submersion H
+\[H=\left(\left(\begin{array}{cc} F\\ G\end{array}\right)_j\right)_{j\in(i_n)}\]
+Thus, we have $H:\mathbb R^{n+m}\rightarrow\mathbb R^{M}$, where $m<M<n+m$ is the
+rank of $H$ at $x$. Hence, we obtain $n+m-M<n$ dimensional surface $H^{-1}(0)\cap
+A\cap B=\Sigma''$ and $\Sigma\cap\Sigma'\cap A\cap B\subset\Sigma''$, because
+$(F,G)(z)=0\Rightarrow H(z)=0$. Thus $\Sigma\cap\Sigma'\cap A\cap B$ has null
+$\mathcal H^n$ measure.
+
+\vspace{1ex}
+Finally, we have showen that the target set $S=\{x\in\Sigma\cap\Sigma'\;|\;T_x\Sigma
+\neq T_x\Sigma'\}$ around each point has an open ball where its measure is null.
+Since from every open cover we can extract a countable subcover (because our
+space is separable), we have proven that the entire set is $\mathcal H^n$-null.
+
+\vspace{2ex}
+\textbf{Lemma:} \textit{Let $f,g\in\mathcal C^1(\mathbb R^n, \mathbb R)$, then $\nabla f
+=\nabla g$ $\mathcal L^n$-a.e. on $\{f=g\}$.}
+
+\vspace{1ex}
+For dimensions $n>1$ it's sufficient to see that points where gradients are not
+equal form a 1 dimensional surface and its Lebesgue's measure is 0. 
+
+For a 1 dimensional case we set $h=f-g\in\mathcal C^1$. Then we consider a
+closed set $S=\{h=0\}$. Let $x\in S$ be such that $\nabla h(x)\neq 0$, then
+by mean value theorem we find a neighborhood of x that contains only one such
+$x$ ($\nabla h(x)=0$). Thus the set of such $x$ is countable and its measure is
+0.
+
+\vspace{2ex}
+\textbf{Definition:} \textit{Let $E$ be a Borel $n$-rectifiable set. A map $T$
+from $E$ to the Grassmannian manifold $G(n, d)$ that sends $x$ to $T(x)$ is a
+\textbf{weak tangent bundle} for the set E if and only if for every $\Sigma$ $d$-dimensional
+surface of class $\mathcal C^1$ it turns out that $T_x\Sigma = T(x)$ for $\mathcal
+H^d$-almost every $x\in\Sigma\cap E$.}
+
+
+\section{Countably n-rectifiable sets}
+\textit{Let $M\subseteq X$ be a subset of a metric space. Then $M$ is called
+\textbf{$n$-rectifiable} if
+\[
+    M\subseteq M_0\cup\bigcup f_i[\mathbb{R}^n]
+\]
+where $\mathcal{H}^n(M_0)=0$ and $f_i$ are Lipschitz functions.
+}
+
+\vspace{2ex}
+\textbf{Remarque:} \textit{Hausdorff dimension of $d$-rectifiable set is less or
+equal to $d$}
+
+\vspace{1ex}
+This is true due to the fact that Lipschitz maps does not increase the dimension.
+
+\vspace{2ex}
+\textbf{Criteria of Rectifiability:} \textit{Let $X=\mathbb R^{n+m}$, and let $M
+\subseteq X$ be a Borel set.}
+
+\textit{The following assertions are equivalent:
+\begin{enumerate}
+    \item The set $M$ is $n$-rectifiable
+    \item There exist open sets $A_i$, $M_0$ $\mathcal H^n$-null set and
+        differentiable functions $f_i: A_i\rightarrow X$ such that
+        \[M\subseteq M_0\cup\bigcup f_i[A_i]\]
+    \item There exist open sets $A_i$, $M_0$ $\mathcal H^n$-null set and
+        diffeomorphisms $f_i: A_i\rightarrow X$ such that
+        \[M\subseteq M_0\cup\bigcup f_i[A_i]\]
+    \item There exist $n$-dimensional surfaces $\Sigma_i\subseteq X$ and $M_0$
+        $\mathcal H^n$-null set such that
+        \[M\subseteq M_0\cup\bigcup \Sigma_i\]
+\end{enumerate}
+}
+
+\vspace{2ex}
+\textbf{Proposition:} \textit{A $d$-rectifiable Borel set $E\subseteq\mathbb R^n$
+admits a unique up to $\mathcal H^d$-null sets a weak tangent bundle.}
+
+\vspace{1ex}
+\textbf{Proof:} We have $E\subseteq M_0\cup\bigcup\Sigma_i$, hence we can define
+a bundle as following. For $x\in M_0$ we can take what ever we want, for $x\in
+\Sigma_1$ we take $T_x\Sigma_1$ and for $x\in \Sigma_s\setminus\bigcup_{i=1}^{s
+-1}\Sigma_i$ we take $T_x\Sigma_s$. This is a necessary condition as planes
+should be a.e. equal to the planes tangent to those surfaces. The condition for
+a weak tangent bundle is satisfied due to the previous preposition.
+
+\vspace{2ex}
+\textbf{Theorem:} \textit{If $E$ is a Borel, $n$-rectifiable, $\mathcal{H}^n$-
+locally finite set, then the weak tangent bundle $T(x)$ is the limit plane to
+$E$ at $x$ for $\mathcal{H}^d$-almost every $x\in E$.}
+
+\vspace{1ex}
+\textbf{Proof:}
+We will show that $T_x\Sigma_i$ is a \textbf{limit plane} to $E$ at $x$ for
+$\mathcal H^n$-almost every $x\in E\cap\Sigma_i$. Associated with this plane,
+we consider four measures: $\mu_{x,r}:=\mathcal H^n\,\llcorner E_{x,r}$,
+$\nu_{x,r}:=\mathcal H^n\,\llcorner\Sigma_{i,x,r}$, $\eta_{x,r}:=\mathcal H^n\,
+\llcorner (\Sigma_i\setminus E)_{x,r}$ and $\sigma_{x,r}:=\mathcal H^n\,
+\llcorner (E\setminus\Sigma_i)_{x,r}$. We then observe that $\mu_{x,r}=\nu_{x,r}
+-\eta_{x,r}+\sigma_{x,r}$.
+
+\vspace{1ex}
+At $x$, the surface $\Sigma_i$ is locally represented by an immersion $\phi: T_x\Sigma_i \cap U \rightarrow \Sigma_i \cap V$. We can assume that $D\phi(0)=\text{Id}$ and that $B(0,1)\subseteq U,V$. Let $f\in\mathcal C_c$, without loss of generality, we can assume that $\text{spt}(f)\subseteq B(0,1)$. Thus, $\psi_{x,r}\circ \phi(h)=(h+o(h))/r$. If we only take $h<r$, we find that $\phi_{x,r}=\psi_{x,r}\circ \phi|_{B(0,r)}\circ \psi_{0,1/r}:B(0,1) \rightarrow \Sigma_{i,x,r}$ is given by $h\mapsto (rh+|rh|\epsilon(rh))/r=h+|h|\epsilon(rh)$.
+Moreover, the differential $D\phi_{x,r}$ converges to the identity:
+\[D\phi_{x,r}=rD\phi|_{B(0,r)}1/r=D\phi|_{B(0,r)}\rightarrow \text{Id}\]
+Consequently, the integral converges:
+\[\int fd\nu_{x,r}=\int_{\Sigma_i\cap B(x,r)}f(s)d\mathcal H^n(s)=\int_{B(0,1)}f(\phi_{x,r}(s)) J\phi_{x,r}(s)ds\rightarrow_{r\rightarrow 0}\int_{T_x\Sigma_i}f(s)ds\]
+Thus, we have the weak convergence of measures:
+\[\nu_{x,r}\rightharpoonup\mathcal H^n\,\llcorner T_x\Sigma_i\]
+
+\vspace{1ex}
+Next, we observe that $\lambda_r\rightharpoonup 0\Leftrightarrow \lambda_r(B_R)\rightarrow 0$ for all radii $R$.
+
+\vspace{1ex}
+For the measures $\eta_{x,r}$ and $\sigma_{x,r}$, it suffices to consider the case $B(0,1)$, because we are blowing up figures anyway. For $\eta_{x,r}$, we have:
+\[\eta_{x,r}(B(0, 1))=\mathcal H^n(B(0, 1)\cap(\Sigma_{i,x,r}\setminus E_{x,r}))=
+\frac{1}{r^n}\mathcal H^n(B(x,r)\cap(\Sigma_i\setminus E))\rightarrow 0\]
+This holds for almost all $x$, by the first property of the upper Hausdorff measure density, because $x \notin \Sigma_i \setminus E$.
+
+\vspace{1ex}
+Finally, for $\sigma_{x,r}$, we observe that:
+\[\mu_{x,r}(B(0,1))=\nu_{x,r}(B(0,1))-\eta_{x,r}(B(0,1))+\sigma_{x,r}(B(0,1))\]
+By passing to the limit, we obtain:
+\[\lim_{r\to 0}\mu_{x,r}(B(0,1))=\omega_n-0+\lim_{r\to 0}\sigma_{x,r}(B(0,1))\]
+And since, by the second density property, $\limsup_{r\to 0}\mu_{x,r}(B(0,1)) \le \omega_n$ almost everywhere, we find that $\lim_{r\to 0}\sigma_{x,r}(B(0,1))=0$.
+
+Thus, we have the weak convergence:
+\[\mu_{x,r}=\nu_{x,r}-\eta_{x,r}+\sigma_{x,r}\rightharpoonup\mathcal H^n\,\llcorner T(x)\]
+for almost all $x$.
+
+\vspace{1ex}
+\textbf{Remark:} In this proof, one must be a bit more careful with the domains of the functions, but this is normally just a technical matter.
+
+\vspace{2ex}
+\textbf{Proposition:} \textit{Let $M\subseteq X$ be a Borel set with finite
+$n$-Hausdorff measure. Then $M=M_r\cup M_u$, where $M_r$ is rectifiable
+and $M_u$ is unrectifiable.}
+
+\vspace{2ex}
+\textbf{Theorem:} \textit{Let $E\subseteq\mathbb R^{n+m}$ be a Borel set. If $E$
+is a $d$-rectifiable $\mathcal H^d$-locally finite set, then the weak tangent
+bundle $T(x)$ is the approximate tangent plane to $E$ at $x$ for $\mathcal H^d$-almost
+every $x\in E$.}

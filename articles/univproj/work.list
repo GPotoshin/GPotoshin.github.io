@@ -13,9 +13,7 @@ Convergence:
 
 ----- WORK LIST -----
 * Rectifiable set criteria proof
-
 * Area formulas
-
 * Add to prerequisits where they are used
 
 Insert what you've done for ENS to english version:
@@ -33,7 +31,6 @@ Analysis results section:
 Differentiation of Randon measure:
 * I think I might have an error in a proof there
 
-* Move the section about derivatives and other stuff to the beginning
 * Move radon nicodim to the acknowledge properties
 
 ----- IDEAS -----

@@ -9,17 +9,77 @@ convergence criteria that $V_i\rightarrow V$ if and only if
 for every continuous function $f:\mathbb{R}^n\times G(m,n)\rightarrow R$ with a
 compact support.}
 
+\vspace{1ex}
 \textbf{Remarque:} Varifolds let us separate notion of a tangent plane from
 geometric properties (actually in computer graphics a similar idea is used for
 normal maps), they let us concider possible many planes in the same point with
 different masses and also to change the mass of gemetric figure.
 
 \vspace{2ex}
-\textbf{Definition:} To an $n$-rectifiable set $E$ we can naturally assosiate
-a varifold $V_E$ by intruducing a following functional
-\[\langle V_E\,|\, f\rangle:=\int_Ef(x,T(E,x))d\mathcal H^m,\quad f\in\mathcal C_c(\mathbb R^n, G(m,n))\]
+Thus if we have a surface $M$, we can concider varifolds of kind $\mathcal H^n
+\llcorner M\otimes T$, where $T$ is a radon measure on the Grassmanian. Or if
+we want to be even more precise, we can have a tangent function $T$ that gives
+a tangent to a given point and a mass function $\theta$ and then we consider a
+varifold of type $f\rightarrow \int f(x,T(x))\theta(x)d\mathcal H^n$. And we
+are free to choose tagents.
+
+\vspace{2ex}
+Some times a choice for a tangent space can be done naturally and then, for
+example, to an $n$-rectifiable set $E$ we can naturally assosiate
+a varifold $v(E,\theta)$ by intruducing a following functional
+\[\langle V_E\,|\, f\rangle:=\int_Ef(x,T(E,x))\theta(x)d\mathcal H^m,\quad f\in\mathcal C_c(\mathbb R^n, G(m,n))\]
+if $\theta=1$ we note such varifold as $v(E)$, if $\theta\in\mathbb{Z}$,
+we say that varifold is \emph{integral}.
+
+\vspace{2ex}
+\textbf{Definition:} \textit{We say that a varifold $V$ has a tangent space $T$
+with multiplicity $\theta\in(0,\infty)$ by using a similar idea as for limit
+planes, that's said if}
+\[V_{x,r}\rightharpoonup \theta v(T)\]
+\textit{Where $V_{x,r}$ is a varifold passed through a dilation mapping at $x$
+with renoramisation coeffitient, i.e.}
+\[V_{x,r}(A):=r^{-n}V(\{(ry+x,S)\;|\;(y,S)\in A\})\]
 
 \vspace{2ex}
 \textbf{Definition:} By analogy to the variation of submanifolds, one can define
 first variation of varifolds as a following functional
 \[\delta V:X\in\mathcal C^1_c(\mathbb R^n,\mathbb R^n)\rightarrow\int_{\mathbb R^n\times G_{d,n}}\text{div}_SXdV(x,s)\]
+
+\vspace{2ex}
+If it happens that first variation is continious, which is true for rectifiable
+varifolds. We can decompose first variation by Ritzs representation theorem and
+Radon Nykodim theory in 2 parts respectively to mass measure as
+
+\[\delta V = -\mathbf Hd\|V\|+\delta V^s\]
+
+Where $\delta V^s$ is a singular part of decomposition which is just a restriction
+of the first variation on the set where Radon-Nykodi  derivative explods. This
+part corresponds to the integration on the border for manifolds. $\mathbb H$
+here is a generalized mean curbuture and in the case when varifold is actually
+a rectifiable set is precisely its mean curbuture because of uniqueness of
+decomposition.
+
+\subsection{Examples:}
+Lets consider a segment $S=[a,b]$ of of horisontal line in $\mathbb R^2$, and lets construct a
+varifold of $S$ which tangent plane is orthogonal to $S$ at every point, then
+\[\delta V( X) = \int_S\text{div}_{S^\bot}Xd\mathcal H^1 = \int_S(\partial_2 X)\cdot e_2d\mathcal H^1=
+\int_S(\partial_2 X)d\mathcal H^1\cdot e_2=\partial_2\int_S X^2d\mathcal H^1\]
+And we get perpendicular direction on the boundary.
+
+\vspace{2ex}
+Lets consider a an arc of raduis 1 and center $(0,0)$ starting at $(1,0)$
+and ending at $(-1,0)$. with a mass $\theta$ and call it $A$ as a varifold, then
+\[\text{div}_AX=\partial_{\mathbf e_\alpha}(X^\alpha\mathbf e_\alpha+X^r\mathbf e_r)\cdot e_r
+=\partial_{\mathbf e_\alpha}X^\alpha+X^r\]
+Then the result for a first variation is
+\begin{align*}
+\delta A(X)&=\int_A(\partial_{\mathbf e_\alpha}X^\alpha+X^r)\theta d\mathcal H^1
+=\int_A\partial_{\mathbf e_\alpha}X^\alpha\theta d\mathcal H^1+\int_A X^rd\mathcal H^1
+=[X^\alpha\theta]_0^\pi-\int_AX^\alpha\partial_{\mathbf e_\alpha}\theta d\mathcal H^1+\int_A X^rd\mathcal H^1\\
+&=[X^\alpha\theta]_0^\pi-\int_AX\cdot(\partial_{\mathbf e_\alpha}\theta\mathbf e_\alpha-\theta\mathbf e_r)d\mathcal H^1
+\end{align*}
+Thus a singular therm is $[X^\alpha\theta]_0^\pi$ which corresponds to integration
+on the boundry with a correction for a new mass $\theta$. Then the curbeture vector
+is $\mathbf H=\partial_{\mathbf e_\alpha}\theta\mathbf e_\alpha-\theta\mathbf e_r$,
+which diviates from a standart one by scaling in orthogonal direction by mass
+$\theta$ and by a gradient of $\theta$ in tangent direction.
