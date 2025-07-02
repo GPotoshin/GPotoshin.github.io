@@ -21,10 +21,9 @@ following derivatives $\mathcal H^n(M)'(0)$ and $\mathcal H^n(M)''(0)$.
 If we recall the area formula then we can compute variations as a function of
 $\phi$
 \[\mathcal H^n(M(t))=\int_{M(0)}(\text{J}\psi_t)d\mathcal H^n\]
-[Introduce earlier this formula]
 Thus we construct a map
 \[D_x\psi_t:T_x\Sigma\rightarrow\mathbb R^{n+m}=\text{id}+tD_xV+\frac{t^2}{2}D_xA+o(t^2)\]
-[does $D_xA$ even exist in this context?] Lets chose an orthogonal basis $\tau$
+Lets chose an orthogonal basis $\tau$
 for $T_xM$ and an orthogonal basis $e$ for $\mathbb R^{n+m}$. Then in those
 basis we can write matrix of $D_x\psi_t$.
 \[[D_x\psi_t]_i^l=\tau_i^l+tD_xV^l(\tau_i)+\frac{t^2}{2}D_xA^l(\tau_i)+o(t^2)\]
@@ -38,15 +37,15 @@ To calculate $\text{J}\psi_t$ we need to know $(D_x\psi_t)^*\circ(D_x\psi_t)$
 \end{align*}
 
 This can be abstracted as $I+tS+t^2T$ and we want to calculate a development
-of determinant of it. We have a Jacobi formula $\det(M(t))'=\det(M(t))\text{tr}
-(M(t)^{-1}M'(t))$ and it's derivative
-\[\det(M(t))''=\det(M(t))'\text{tr}(M(t)^{-1}M'(t))+\det(M(t))\text{tr}(-M(t)^
-{-1}M'(t)M(t)^{-1}M'(t)+M(t)^{-1}M''(t))\]
-and is we replace $M(t)=I+tS+t^2T$, then $\det(I+tS+t^2T)'=\det(I+tS+t^2T)\text{tr}
+of determinant of it. We have a Jacobi formula $\det(N(t))'=\det(N(t))\text{tr}
+(N(t)^{-1}N'(t))$ and it's derivative
+\[\det(N(t))''=\det(N(t))'\text{tr}(N(t)^{-1}N'(t))+\det(N(t))\text{tr}(-N(t)^
+{-1}N'(t)N(t)^{-1}N'(t)+N(t)^{-1}N''(t))\]
+and is we replace $N(t)=I+tS+t^2T$, then $\det(I+tS+t^2T)'=\det(I+tS+t^2T)\text{tr}
 ((I+tS+t^2T)^{-1}(S+2tT))$ and at zero we have a following equality
-$\det(M(t))'|_{t=0}=\text{tr}(S)$ and for a second derivative we have
-\[\det(M(t))''|_{t=0}=\text{tr}(S)^2-\text{tr}(S^2)+2\text{tr}(T)\]
-Thus we can write a limited development
+$\det(N(t))'|_{t=0}=\text{tr}(S)$ and for a second derivative we have
+\[\det(N(t))''|_{t=0}=\text{tr}(S)^2-\text{tr}(S^2)+2\text{tr}(T)\]
+Thus we can write a Taylor Polynomial
 \[\det(I+tS+t^2T)=1+t\text{tr}(S)+\frac{t^2}{2}(2\text{tr}(T)-\text{tr}(S^2)+\text{tr}(S)^2)+o(t^2)\]
 In our case we are calculating $\det((D_x\psi_t)^*\circ(D_x\psi_t))=(\text{J}(\psi|_t)(x))^2$
 \[
@@ -59,8 +58,15 @@ In our case we are calculating $\det((D_x\psi_t)^*\circ(D_x\psi_t))=(\text{J}(\p
     \text{tr}(S^2)=(\tau_i\cdot D_xV(\tau_j)+\tau_j\cdot D_xV(\tau_i))(\tau_i\cdot D_xV(\tau_j)+\tau_j\cdot D_xV(\tau_i))
     =2(\tau_i\cdot D_xV(\tau_j)(\tau_j\cdot D_xV(\tau_i))
 \]
-And thus we can express the variations
-\[\det(M(t))''|_{t=0}=2\text{div}_\Sigma V(x)\]
-\[\det(M(t))''=4(\text{div}_\Sigma V(x))^2+2(\text{div}_\Sigma A+\sum_i|DV(\tau_i)|^2)-2(\tau_i\cdot D_xV(\tau_j)(\tau_j\cdot D_xV(\tau_i))\]
-Thus
-\[\frac{d}{dt}\mathcal H^n(M)=\int_M(0)\text{div}_{M(0)}Vd\mathcal H^n\]
+And for Taylor Polynomail of a root we have
+\[\sqrt{1+x}=1+\frac{1}{2}x-\frac{1}{8}x^2+o(x^2)\]
+And composed Taylor Polynomail will be
+\[\sqrt{1+(at+bt^2)}=1+\frac{1}{2}at+\frac{t^2}{2}(b-\frac{1}{4}a^2)+o(t^2)\]
+In our case the value for $a$ is
+\[a=2\text{div}_\Sigma V(x)\]
+And thus we can express the first variation
+\[\det(M(t))'|_{t=0}=\text{div}_\Sigma V(x)\]
+For $b$ the expression is a little longer
+\[b=2(\text{div}_\Sigma V(x))^2+(\text{div}_\Sigma A+\sum_i|DV(\tau_i)|^2)-(\tau_i\cdot D_xV(\tau_j)(\tau_j\cdot D_xV(\tau_i))\]
+And we have an expression for the second variation
+\[\det(M(t))''|_{t=0}=(\text{div}_\Sigma V(x))^2+(\text{div}_\Sigma A+\sum_i|DV(\tau_i)|^2)-(\tau_i\cdot D_xV(\tau_j)(\tau_j\cdot D_xV(\tau_i))\]

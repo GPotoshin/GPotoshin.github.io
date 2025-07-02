@@ -1,20 +1,29 @@
 \textbf{Convention:} To any product we associate morphisms denoted by $\pi_i$,
-where $i$ is an index of product component we are projecting to or is the component
-itself. For example for $A\times B$ we have $\pi_A:A\times B\rightarrow A$, for
+where $i$ is an index of the product component we are projecting to, or is the
+component itself. For example, for $A\times B$ we have $\pi_A:A\times B\rightarrow A$, for
 $A^n$ we have $\pi_i:A^n\rightarrow A$ with $i\in\llbracket1,n\rrbracket$, for $\prod_{i\in I} A_i$
 we have $\pi_{i_0}:\prod_{i\in I} A_i\rightarrow A_{i_0}$ for $i_0\in I$.
 Similarly we introduce a notion $i$ for morphisms associated to coproducts.
+A projection on the tangent space is associated to $T_xM\times (T_xM)^\bot$.
 
 \vspace{2ex}
-\textbf{Convention:} Let $\{w_i\}_i$ be a family of some kind of objects, then
-we write a row of those objects by $(w_i)$ and column by $(w^i)$. We use matrix
-multiplication notion to shotify equations even between possible not scalars, for
-example a basis change formula from basis $(w_i)$ to a basis $(u_i)$ with a matrix
-$P$ is denoted by $(u_i)=(w_i)P$. If we have two function $f,g$ defined on $X$
-and we have $a,b\in X$ then we may write
-\[\left(\begin{array}{c}f\\g\end{array}\right)(a\;\;b)=\left(\begin{array}{cc}f(a)&f(b)\\g(a)&g(b)\end{array}\right)\]
+\textbf{Convention:} Let $\{w_i\}_i$ be a family of some kind of objects.We
+write a row of those objects as $(w_i)$ and column as $(w^i)$. We will use
+matrix multiplication notion to shoten equations, even when dealing with things
+that might not be scalars. For example, a basis change formula from basis
+$(w_i)$ to a basis $(u_i)$ with a matrix $P$ is denoted by $(u_i)=(w_i)P$. If
+we have two function $f,g$ defined on $X$ and we have $a,b\in X$ then we may write
+\[\left(\begin{array}{c}f\\g\end{array}\right)(a\;\;b)=\left(\begin{array}{cc}f(a)&f(b)\\g(a)&g(b)\end{array}\right)\quad\quad f\left(\begin{array}{c}a\\b\end{array}\right)=\left(\begin{array}{c}f(a)\\f(b)\end{array}\right)\]
+Often this way of writing equations compactifies not only notions but also proofs,
+as you will see in Section 7, by using subtitutions. Although, I switch later
+in that section to Einstein's convention, because it eases permutations of
+sums and regrouping of coordinates.
 
 \subsection{Measure theory}
+Geometric Measure Theory is based upon Radon measure theory, where the notion of
+outer measure is obligatory. We consider that any set can be measured.
+
+\vspace{1ex}
 \textbf{Definition:} \textit{An \textbf{outer measure} on $X$ is a set function on $X$ with
 values in $[0,\infty]$ with
 \begin{itemize}
@@ -63,9 +72,16 @@ measure on $\mathbb{R}^n$, then
           =\sup\{\mu(K)\,|\,K\subseteq E,\,K\textnormal{ is compact}\}
 \]}
 
+\vspace{2ex}
+Those are only top-level results. While this theory incorporates many more
+profound statements, I've avoided them here to maintian the holistic picture I aim 
+to present and not to have just another copy of an already existing book. This
+necessarily means sucreficing some depth, as I have not included few necessery 
+proofs and results.
+
 \subsection{Analysis}
 Geometric measure theory relies on several profound and not-trivial results
-established within metric spaces or even in $\mathbb{R}^n$. This foundational
+established within metric spaces or $\mathbb{R}^n$. This foundational
 properties, which I adapted with minor modifications or gave direct
 generalisations, are primarly sourced from "Measure theory and fine properties
 of functions".
@@ -122,6 +138,18 @@ whether there is continuity and can we take a limit and get this result also
 for 3.
 
 \vspace{2ex}
+
+There are also more substential covering results, crucial for extension 
+theorems, measure differentiation and characterisation of rectifiable sets.
+Their proofs usually occupies a dozen of pages and are deeply analytic, primarily
+inovolving the extensive rewrite of inequalities and introduction of different
+constants. I initially inteded toto revise them for greater clearity, but after
+several failed attempts, when I had to modify constants and propogate the change
+back over multiple pages, I decided it was best to simply reference them here.
+Full proofs are available in \cite{evans_gariepy} and in \cite{giovanni_alberti}.
+
+
+\vspace{2ex}
 \textbf{Besicovitch’s Covering Theorem:} \textit{There exists a constant $N_n$, depending
 only on the dimension $n$ with the following property:}
 
@@ -133,9 +161,6 @@ and $A$ is the set of centers of balls in $\mathcal F$, then there $N_n$
 countable collections $\mathcal{G}_1,\ldots,\mathcal{G}_{N_n}$ of disjoint
 balls in $\mathcal{F}$ such that
 \[A\subseteq\bigcup_{i=1}^{N_n}\bigcup_{B\in\mathcal{G_i}}B\]}
-
-\vspace{1ex}
-\textbf{Proof:} take a look at \cite{evans_gariepy}.
 
 \vspace{2ex}
 \textbf{Definition:} \textit{A cover of $A$ by a family $B$ is called \textbf{fine}
@@ -153,9 +178,6 @@ exists a countable collection $\mathcal G$ of disjoint balls in $\mathcal F$ suc
 and
 \[\mu\left((A\cap U)\setminus\bigcup_{B\in\mathcal G}B\right)=0.\]}
 
-\vspace{1ex}
-\textbf{Proof:}
-
 \vspace{2ex}
 \textbf{Whitney's extension theorem:}\textit{
 Let $C\subseteq \mathbb{R}^n$ be a closed set and $f:C\rightarrow\mathbb R$,
@@ -165,26 +187,12 @@ $d:C\rightarrow\mathbb{R}^{n*}$ be continuous functions. We shall use notions}
     &\rho_k(\delta)=\sup\{|R(x,y)|\, |\, 0<|x-y|\leq\delta, x, y\in K\}
 \end{align*}
 \textit{if we suppose that for every compact $K\subseteq C$}
-\begin{equation}
+\[
 \rho_K(\delta)\rightarrow 0\text{ as }\delta\rightarrow 0
-\end{equation}
+\]
 
 \textit{Then there exists a fuction $\overline f\in\mathcal{C}^1(\mathbb{R}^n,\mathbb{R})$
 and $D\overline f|_C=d$.}
-
-\vspace{1ex}
-\textbf{Remark:}
-I seek to give a more explicit version of the proof given in the book "Measure
-theory and fine properties of functions". In books that looked at about
-geometric measure theory this proof usually is not stated and pointed to the
-book of Federer wheres at least in version of that book the theorem is proved
-in much more general context and the theorem statement differs from the one we
-want.
-
-\vspace{1ex}
-\textbf{Proof:} You can find one in this book \cite{evans_gariepy}, it's quite
-complecated and I do not fill empowered to invate on it and it is not a purpose
-of this paper.
 
 \vspace{2ex}
 \textbf{Definition:} \textit{For a function $f:X\rightarrow Y$ between metric spaces we can
@@ -198,7 +206,7 @@ function $\overline f:X\mapsto\mathbb{R}$ such that $\textnormal{Lip}(f)=\textno
 (\overline f)$ and $\overline f|_A=f$.}
 
 \vspace{1ex}
-This is a proof from "Simons Lectures on geometric measure theory". Let's set
+Let's set
 $L=\text{Lip}(f)$. Then we define
 \[\overline f(x) = \text{inf}_{y\in A}(f(y)+Ld(x,y)\]
 By the definition, for all $x\in A$, $\overline f(x)\leq f(x)$ as in particular
@@ -225,12 +233,10 @@ function $\overline f:X\mapsto\mathbb{R^n}$ such that $\overline f|_A=f$}
 Let's set $\overline f = (\overline f_i)_i$ extension by coordinate functions. 
 
 \vspace{1ex}
-\textbf{Remark:} I was thinking about extending the theorem to the case where
-function take vector values, but I can only prove it for the maximum norm.
+\textbf{Remark:} I concidered extending the theorem to vector-valued
+functions, but I could only prove it for the maximum norm.
 
 \subsection{Differentiation of Radon measure and Radon-Nikodym Theorem}
-\textbf{Remark:} That section is an adopted version of paragraph 1.6 from the
-book "Measure theory and fine properties of functions" for vector measures.
 
 \vspace{2ex}
 \textbf{Definition:} \textit{Let $\mu$ and $\nu$ be Radon measures on $\mathbb{R}^n$.
@@ -265,42 +271,9 @@ $\mathbb{R}^n$. Then we define a derivatives as
 }
 
 \vspace{1ex}
-\textbf{Upper and lower derivatives lemmas:} \textit{For Radon measures and
-$\alpha\in\mathbb{R}_{>0}$ we have
-\begin{itemize}
-    \item $A\subseteq\{x\in\mathbb{R}^n\,|\,\underline D_\mu\nu(x)\leq\alpha\}$ implies $\nu(A)\leq\alpha\mu(A)$.
-    \item $A\subseteq\{x\in\mathbb{R}^n\,|\,\overline D_\mu\nu(x)\geq\alpha\}$ implies $\nu(A)\geq\alpha\mu(A)$.
-\end{itemize}
-}
-
-\vspace{1ex}
-\textbf{Proof:}
-We may assume that measures are finite, otherwise we can always take
-restriction to compact sets. For $\epsilon>0$ and open $U\supseteq A$, where
-$A$ satisfies the first hypothesis. We set
-\[\mathcal{F}=\{B\;|\;B=B(a, r), a\in A, B\subseteq U, \nu(B)\leq(\alpha+\epsilon)\mu(B)\}\]
-This family has the following properties. We have infinitely many balls in it
-around each point with diminishing radius, because we have lower limit $\leq a$
-there. Then $\inf\{r\;|\;B(a,r)\in\mathcal F\}=0$ for each $a\in A$ and hence
-\emph{Filling Theorem} provides us with a countable collection $\mathcal G$ of
-disjoint balls in $\mathcal F$ such that
-\[\nu\left(A-\bigcup_{B\in\mathcal G}B\right)=0\]
-Then
-\[\nu(A)\leq\sum_{B\in\mathcal G}\nu(B)\leq(\alpha+\epsilon)\sum_{B\in G}\mu(B)
-\leq(\alpha+\epsilon)\mu(U)\]
-This esteem is valid for each open set $U$ and thus as we have a radon measure,
-we have $\nu(A)\leq(a+\epsilon)\mu(A)$, which proves the first bullet.
-
-\vspace{1ex}
-To prove the second bullet we do a similar routine. We pose similar $U$ and
-$\epsilon$. We slightly change $\mathcal F$
-\[\mathcal{F}=\{B\;|\;B=B(a, r), a\in A, B\subseteq U, \nu(B)\geq(\alpha-\epsilon)\mu(B)\}\]
-and we find $\mathcal G$ for $\mu$ instead of $\nu$ such that
-\[\mu\left(A-\bigcup_{B\in\mathcal G}B\right)=0\]
-Then
-\[\mu(A)\leq\sum_{B\in\mathcal G}\mu(B)\leq1/(\alpha-\epsilon)\sum_{B\in G}\nu(B)
-\leq1/(\alpha-\epsilon)\nu(U)\]
-and we get the second bullet.
+While vector-valued measures are defined later, it suffices to know that they
+are set functions with values in vector spaces that satisfy a particular version
+of sigma-additivity.
 
 \vspace{2ex}
 \textbf{Differentiating measures theorem:} \textit{Let $\mu$ and $\nu$ be Radon
@@ -312,8 +285,8 @@ measures on $\mathbb{R}^n$. Then
 }
 
 \vspace{2ex}
-\textbf{Remark:} This is a brilliant version with a proof of Radon Nikodym
-Theorem by von Neumann, that will suffice our need for representing vector measures.
+\textbf{Remark:} This is a brilliant version of the proof of Radon Nikodym
+Theorem by von Neumann, that will suffice for representing vector measures.
 
 \vspace{1ex}
 \textbf{Radon-Nikodym Theorem:} \textit{Let $\mu$ and $\nu$ be finite measures
@@ -359,7 +332,7 @@ Finally for all $A\in\mathcal F$ we have
 \textbf{Corollary:} If $\mu >> \nu$, then $\nu(A)=\int_A f\,d\mu$
 
 \vspace{1ex}
-It's evident as $\mu(B)=0\Rightarrow\nu(B)=0$ then. 
+It's evident since $\mu(B)=0\Rightarrow\nu(B)=0$ then. 
 
 \vspace{2ex}
 \textbf{Remark:} If $\mu$ and $\nu$ are Radon measures, then $f=D_\mu\nu$.
@@ -373,9 +346,7 @@ And we can define the integration with respect to such measure as
 \]
 
 \vspace{2ex}
-In the context of geometric measure theory we are interested in the vector
-space $E=\mathcal{C}^0_c(X, \mathbb{R}^m)$ with the supremum norm.
-Then its dual space is $E^*=\{L:E\rightarrow\mathbb{R}\,|\,L\text{ is linear
-and continious}\}$ is a vector space of bound linear functionals. Then on the $E^*$ from 
-now and on we will consider the weak-$*$ topology.
-
+Beyond representating of measure (or continuous linear forms), we can view this
+process from another angle. If we associate to a linear continious
+form to a shape, then function $f$ describes certain geometric propertise of
+that shape. We will explore one such example in the last section.

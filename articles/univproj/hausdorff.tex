@@ -80,35 +80,35 @@ on page 48.
 
 \vspace{1ex}
 \begin{enumerate}
-    \item The core of this proof is to use regularity of $\mu:=\mathcal H^d\,
-        \llcorner E$ and Vitali's lemma. Let $E_t:=\{x\in E^c\,|\,\Theta^*_d(E,x)>t\}$
-        and we prove that it's $\mathcal H^d$-null for $t>0$. From the
-        definition of $E_t$ we know that $E$ is highly concentrated around of
-        points of $E_t$. Thus in some sense we can replace a study of $E_t$ with
-        study of covers. Let $A\supseteq E_t$ be an open neighborhood of $E_t$.
-        Then we take $\mathcal F:=\{\overline{B(x,r)}\subset A\,|\,x\in E_m\;\&
-        \;\mathcal H^d(\overline{B(x,r)}\cap E)>t\omega_dr^d\}$. In this family
-        we can leave only balls of diameter $<1$. Then for \textbf{Vitali's
+    \item The core of this proof relies on the regularity of $\mu:=\mathcal H^d\,
+        \llcorner E$ and Vitali's Covering Lemma. We define $E_t:=\{x\in E^c\,|\,\Theta^*_d(E,x)>t\}$
+        and aim to prove that it is $\mathcal H^d$-null for $t>0$. From the
+        definition of $E_t$ we know that $E$ is highly concentrated around the
+        points of $E_t$. This effectively allows us to reduce the study of $E_t$ to
+        the study of appropriate covers. Let $A\supseteq E_t$ be an open neighborhood of $E_t$.
+        We then consider the family of closed balls $\mathcal F:=\{\overline{B(x,r)}\subset A\,|\,x\in E_m\;\&
+        \;\mathcal H^d(\overline{B(x,r)}\cap E)>t\omega_dr^d\}$. Within this family,
+        we can consider balls of diameter $<1$. Then for \textbf{Vitali's
         Covering Lemma} we can choose a dilation coefficient $k\in(3,+\infty)$
         and we fix ball dilatation procedure with coefficient $k$ by $B\mapsto
-        \widehat B$. Lemma gives us a disjoint subfamily $\mathcal G$ such that
-        after $\widehat\cdot$ it covers $E_t$. And we have a following
+        \widehat B$. Lemma provides a disjoint subfamily $\mathcal G$ such that
+        the delated by $\widehat\cdot$ balls cover $E_t$. We then have the following
         inequality
         \begin{align*}
             \mu(A)\geq\sum_{B\in\mathcal G}\mu(B)\geq t\omega_d\sum_{B\in
             \mathcal G}r(B)^d=\frac{t}{k^d}\omega_d\sum_{B\in\mathcal G}r(
             \widehat B)^d\geq\frac{t}{k^d}\mathcal H^d_1(E_n)
         \end{align*}
-        And as we can chose $\mu(A)$ arbitrary small, $\mathcal H^d_1(E_t)=0$ and thus
-        $\mathcal H^d(E_t)=0$.
-    \item No proofs for now
-    \item No profs for now
-    \item If we follow a similar construction as in the proof of the first
+        Since $\mu(A)$ can be chosen arbitrary small, it follows that $\mathcal
+        H^d_1(E_t)=0$ and consequently $\mathcal H^d(E_t)=0$.
+    \item \cite{giovanni_alberti}
+    \item \cite{giovanni_alberti}
+    \item If we follow a similar construction to the proof of the first
         proposition for a set $E_t:=\{x\in E\,|\,\Theta^*_d(E,x)>t\}$, then
-        at the end we'll get
+        we arrive at
         \[\mathcal H^d(E_m)\geq\frac{t}{k^d}\mathcal H^d(E_m)\]
         and if $t>k^d$ we get $\mathcal H^d(E_m)=0$, and as it is true for all
-        $k>3$, we have $\Theta^*_d(E,x)\leq3^d$. Remarque that usually there
+        $k>3$, we have $\Theta^*_d(E,x)\leq3^d$. It's worth noticing that usually there
         are no generalisation in Vitali's lemma and one usually proves for 5
         instead of 3.
 \end{enumerate}
