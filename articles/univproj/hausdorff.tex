@@ -48,8 +48,7 @@ on it.}
 $\mathcal H^s$-finite set is a Radon measure.}
 
 \vspace{1ex}
-\textbf{Remark:} Proofs to those proposition can be found in the book "Geometric
-measure theory" be Francesco Maggi \cite{maggi}.
+\textbf{Remark:} Proofs to those proposition can be found in the book \cite{maggi}.
 
 \vspace{2ex}
 \textbf{Definition:} \textit{Let $E$ be a Borel subset of a metric space $X$.
@@ -132,7 +131,7 @@ Moreover $\mathcal H^s(E)=\infty$ for every $s<\dim(E)$ and $\mathcal H^S(E)\in
 \[ \mathcal{H}^s(f[E])\leq\text{Lip}(f)^s\mathcal{H}^s(E) \]
 for every $s>0$ and $E\subseteq\mathbb{R}^n$ and $\text{dim}(E)<\text{dim}(f[E])$.}
 
-\subsection{Dimension of cantor sets}
+\subsection{Dimension of Cantor sets}
 Here we compute the dimension of generalized set. Let $n\in\mathbb{N}$ and
 $m\in\mathbb{N}^*$ so that $2m<n$. Then we can define $C_k$ ($k\in\mathbb{N}$)
 define recursively by agreeing that $C_0=\{[0,1]\}$ and we obtain $C_{k+1}$ from $C_k$
@@ -186,3 +185,10 @@ previous paragraph. Then $S=\bigcap C_{m/(2m+1)}$ is a set of dimension $1$. As
 for every $0\leq s<1$ there is such $m$, that $\text{log}_{n/m}(2)=\text{log}_{
 (2m+1)/m}(2)>s$, as $\text{log}_{(2m+1)/m}(2)\rightarrow 1$. And thus $\mathcal
 {H}^s(S)>\mathcal{H}^s(C_{m/(2m+1)})=\infty$.
+
+\subsection{Integration}
+Let $f:U\subseteq\mathbb R^n\rightarrow\mathbb R^k$ be an injective $\mathcal C^1$ mapping. Then
+its jacobian can be written as
+\[J(f)=\sqrt{\det(df^T\circ df)}\]
+and we have the following integration formula:
+\[\int_{\text{im}(f)}gd\mathcal H^n=\int_U g(f(x))J(f)dx\]

@@ -1,6 +1,6 @@
-In this section, we re-examine $\mathcal C^1$ $n$-dimentional submanifold $M$
-of $\mathbb R^{n+m}$ to observe several properties of standart constructions.
-This will then motivate the definition for analogus constructions for measures.
+In this section, we re-examine $\mathcal C^1$ $n$-dimensional submanifold $M$
+of $\mathbb R^{n+m}$ to observe several properties of standard constructions.
+This will then motivate the definition for analogous constructions for measures.
 
 \vspace{2ex}
 We can define a gradient $\nabla$ through its representation
@@ -10,41 +10,44 @@ Then we define a gradient $\nabla^M$ associated with $M$ by
 and if we have an orthogonal basis $(\mathbf w_i)$ of $T_xM$
 \[\nabla^M f(x) = (\mathbf w_1,\ldots,\mathbf w_n)\left(\begin{array}{c}D_xf(\mathbf w_1)\\ \vdots\\D_xf(\mathbf w_1)\end{array}\right)=(\mathbf w_i)(D_xf(\mathbf w^i))\]
 for an orthogonal basis $(\mathbf w_i)$ of $TM$. If we take that for a definitions, then
-using matrix notation, it's also easy to show that this notion is independed of the chosen basis,
-which is already evident from coordinateless defintion. If we have another
+using matrix notation, it's also easy to show that this notion is independent of the chosen basis,
+which is already evident from coordinate-free definition. If we have another
 orthogonal basis $(\mathbf w_i)=(\mathbf u_i)P$, where $P$ is orthogonal, 
 then $(\mathbf w^i)=P^t(\mathbf u^i)$ and thus $(\mathbf w_i)(Df(\mathbf w^i))
 =(\mathbf u_i)P(DfP^t(\mathbf u^i))=(\mathbf u_i)PP^tDf(\mathbf u^i)=(u_i)Df(u^i)$
 
 \vspace{2ex}
 If for two vectors $a,b$ by $ab$ we right their scalar product, then we can
-introduce diveregence of $X:M\rightarrow\mathbb R^{n+m}$ on $M$ by chosing
+introduce divergence of $X:M\rightarrow\mathbb R^{n+m}$ on $M$ by choosing
 a basis $(\mathbf w_1,\ldots,\mathbf w_n)$ of $T_xM$ and setting
 \[\text{div}_MX(x)=(\mathbf w_i)(\nabla^MX^i(x))\]
-where $X=(X^i)_{i\in\llbracket1,n+m\rrbracket}$ are coordinats in orthogonal
+where $X=(X^i)_{i\in\llbracket1,n+m\rrbracket}$ are coordinates in orthogonal
 extension of $(w_i)$. We will need a following theorem
 
 \vspace{2ex}
-\textbf{Theorem:} \textit{Let $M\subset \mathbb R^{n+m}$ be a $n$-dimentional
+\textbf{Theorem:} \textit{Let $M\subset \mathbb R^{n+m}$ be a $n$-dimensional
 $\mathcal C^1$ bounded submanifold-with-boundary. Then we have a following result}
 \[\int_M \text{div}_MXd\mathcal H^n=\int_{\partial M}X\nu d\mathcal H^{n-1}\;\textit{for every}\;X\in\mathcal C^1(M,TM)\]
-\textit{where $\nu$ is an orthogonal unitary vector to the boundry pointing outwards.}
+\textit{where $\nu$ is an orthogonal unitary vector to the boundary pointing outwards.}
+
+This theorem, proposed in \cite{simon}, is crucial for further development
+of geometric measure theory notions.
 
 \vspace{2ex}
 We will now present a proof for the $\mathcal C^2$ case, as this regularity allows
 us to utilize coordinates and integrate by parts. For this section, we assume that $X(x)\in
 T_xM$. Let us the consider an orthonormal basis $(\mathbf w_i)$ of $T_xM$
 which is extended by vectors $(\mathbf w_i')$ to an orthonormal basis of
-$\mathbb R^{m+n}$. Futhermore, consider curvelinear coordinates $(c^i):M\cap
+$\mathbb R^{m+n}$. Furthermore, consider curvilinear coordinates $(c^i):M\cap
 U\rightarrow \mathbb{R}^n\cap V$ ($\mathcal C^2$-diffeomorphism), to which we can
-associate a standart basis 
+associate a standard basis 
 \[\mathbf{c}_i=\mathbf{w}_j\frac{\partial w^j}{\partial c^i}+\mathbf{w'}_j\frac{\partial w'^j}{\partial c^i}\]
 \begin{center}
 \includegraphics[scale=0.2]{maps.png}
 \end{center}
 which consists of tangents to the coordinate curves. Thus, $(\mathbf c_i)$ form a
-basis, whose vectors vary with position and are associated with coordianets. In coordinate-free
-language this basis is an image of standart basis $\mathbf e_i$ of $\mathbb R^n$
+basis, whose vectors vary with position and are associated with coordinates. In coordinate-free
+language this basis is an image of standard basis $\mathbf e_i$ of $\mathbb R^n$
 by $(D_x(c^i))^{-1}$. By $(w^i)$
 here, we denote the standard coordinates associated with basis $(\mathbf w_i)$. In the
 following discussion all expressions are evaluated at a point x; moving to a
@@ -128,8 +131,8 @@ Since $M$ is compact we can find a finite open cover $U_i$ of
 $M$ such that at every $U_i$ we find a local coordinate system. We can associated
 a $\mathcal C^\infty$ partition of unit $(\psi_i)$ on $M$ associated to $U_i$ such
 that $\psi_i\in\mathcal C^\infty_c(U_i)$ and $\sum\psi_i=1_M$. We shall write
-$O_i=U_i\cap M$. And by liniarity of equation we want to prove, we can prove it
-jsut for $\psi_iX$, or without loss of generality we will write just $X$. Let
+$O_i=U_i\cap M$. And by linearity of equation we want to prove, we can prove it
+just for $\psi_iX$, or without loss of generality we will write just $X$. Let
 coordinates take values in $V_i$
 
 \vspace{1ex}
@@ -148,7 +151,7 @@ And as we can chose such coordinates, that $X^n(c',0)=\nu\cdot X(c',0)$ we have
 
 \vspace{2ex}
 \textbf{Definition:} \textit{Let $\mathbf{v}_i$ be an orthonormal basis of $T_yM$ which
-is $C^1$ funciton of $y$. Then we can define \textbf{the second fundamental form}
+is $C^1$ function of $y$. Then we can define \textbf{the second fundamental form}
 $B_y:T_yM\times T_yM\rightarrow (T_yM)^\perp$ by setting $B_y(t,n):=-(n\cdot D_y
 (\mathbf v_i)(t))\mathbf v_i$
 }
@@ -165,14 +168,14 @@ if we compute coordinate change we get
 
 \vspace{2ex}
 Let $\gamma:I\rightarrow M$ be a $\mathcal C^2$ curve. It's tangent is $t=\gamma'$
-and its curveture is $\kappa=\gamma''$ and we suppose $|t|=1$. Now lets
-differentiat a following expression
+and its curvature is $\kappa=\gamma''$ and we suppose $|t|=1$. Now lets
+differentiate a following expression
 \[0=\frac{d}{ds}(t\cdot\mathbf v_i)=\frac{d}{ds}t\cdot\mathbf v_i+t\cdot\frac{d}{ds}\mathbf v_i=\kappa\cdot\mathbf v_i+t\cdot D(v_i)(t)\]
 Thus we get coordinates for normal curvature
 $\kappa_N = -(t\cdot D(\mathbf v_i)(t))\mathbf v_i=B(t,t)$
 
 \vspace{2ex}
-Simillarly if $\phi:U\subset\mathbb R^2\rightarrow M$, then
+Similarly, if $\phi:U\subset\mathbb R^2\rightarrow M$, then
 \[0=\frac{\partial}{\partial x_2}(\frac{\partial}{\partial x_1}\phi\cdot\mathbb{v}_i)=
 \frac{\partial^2}{\partial x_2\partial x_1}\phi\cdot\mathbf{v}_i)+\frac{\partial}{\partial x_1}\phi\cdot\frac{\partial}{\partial x_2}\mathbf{v}_i(\phi(x_1,x_2))=
 \frac{\partial^2}{\partial x_2\partial x_1}\phi\cdot\mathbf{v}_i)+\frac{\partial}{\partial x_1}\phi\cdot D\mathbf{v}_i(\frac{\partial\phi}{\partial x_2})
@@ -188,10 +191,10 @@ of $M$ at $y$ to be trace $B_y$; thus}
 
 \vspace{2ex}
 If we rewrite this definition and recall the definition of divergence, we obtain
-\[\mathbf H_y=-(t_j\cdot D_{\mathbf t_j}(\mathbf v_i)(\mathbf v_i))\mathbf v_i=\text{div}_M(\mathbf v_i)\mathbf v_i\]
-Let $X$ be a vector field, then $X^\bot=(\mathbf v_i\cdot x)\mathbf v_i$ and if we take divergence on $M$, we get
-\[\text{div}_M X^\bot=(\mathbf v_i\cdot x)\text{div}_M \mathbf v_i\]
+\[\mathbf H_y=-(t_j\cdot D_{\mathbf t_j}(\mathbf v_i)(\mathbf v_i))\mathbf v_i=-\text{div}_M(\mathbf v_i)\mathbf v_i\]
+Let $X$ be a vector field, then $X^\bot=(\mathbf v_i\cdot X)\mathbf v_i$ and if we take divergence on $M$, we get
+\[\text{div}_M X^\bot=(\mathbf v_i\cdot X)\text{div}_M \mathbf v_i\]
 because other components are in orthogonal space. Thus we conclude
-\[\text{div}_M X\bot=\mathbf H\cdot X\]
+\[\text{div}_M X^\bot=-\mathbf H\cdot X\]
 and recalling the integration theorem, we get
 \[\int_M \text{div}_MXd\mathcal H^n=\int_{\partial M}\nu\cdot Xd\mathcal H^{n-1}-\int_M \mathbf H\cdot Xd\mathcal H^n\]

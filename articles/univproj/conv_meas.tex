@@ -29,7 +29,7 @@ $\mathcal C_c$.
 
 \subsection{Topologies on spaces $E$ and $E^*$}
 For topological spaces $Y_i$ and a set of functions $f_i:X\rightarrow Y_i$, we can
-define the smallest, coarsest topology on $X$ that makes those functions continuous.
+define the smallest, coarsest topology on $X$ that makes these functions continuous.
 By definition such topology is $\tau(\{f_i\})=\bigcap\{\tau\,|\,
 \tau$ is a topology on $X$ and $f_i$ are continuous$\}$. As an
 example, the product topology is exactly $\tau(\{\pi_i\})$, where $\pi_i$ are
@@ -176,7 +176,7 @@ Let $X$ be a topological space and $V$ a Banach space, then $\mu:\mathcal{B}(X)
 for any disjoint countable family $\{E_n\}$ of Borel sets. From that definition
 we have $\mu(A)+\mu(\varnothing)=\mu(A\cup\varnothing)=\mu(A)$ and thus 
 $\mu(\varnothing)=0$. This is a quite a strong property as the convergence of
-the sum does not depend on the order, which in finite dimenetions is equivalent
+the sum does not depend on the order, which in finite dimensions is equivalent
 to the absolute convergence of that series.
 
 \vspace{1ex} Let $\mu$ be a vector valued measure. Then the \emph{total
@@ -208,7 +208,7 @@ positive measure.
 Let's verify that total variation is bounded.
 That is a tricker question and we
 shall follow the proof from "...". The measure can be partitioned into projection measures
-$\mu=(\mu_i)_{i=1}^n$. As all the norms are equivalent we can concider $|\cdot|
+$\mu=(\mu_i)_{i=1}^n$. As all the norms are equivalent we can consider $|\cdot|
 = \|\cdot\|_1$. Then as we have the following inequality:
 \[\sup\{\sum_i|\mu(X_i)|\,|\,X_i\text{ is a borel partition of }X\} \leq \sum_j\sup\{\sum_i|\mu_j(X_i)|\,|\,X_i\text{ is a borel partition of }X\}\]
 It is sufficient to prove that for real valued measures its total variation is bound.
@@ -220,10 +220,10 @@ we have $|\mu(\bigcup P)|>|\mu(X)|+1$ or $|\mu(\bigcup N)|>|\mu(X)|+1$, thus we
 have a set $E$ such that $|\mu(E)|>|\mu(X)|+1$. Then we have $|\mu(E^c)|=|\mu(X)
 -\mu(E)|\geq |\mu(E)|-|\mu(X)|>1$. Then by additivity of $|\mu|$ we have
 $|\mu|(E)=\infty$ or $|\mu|(E^c)=\infty$; supposing the latter we pose $E_1=E$
-(or $=F$) we always have $\mu(E_1)>1$ and if we continue the same procidure for
+(or $=F$) we always have $\mu(E_1)>1$ and if we continue the same procedure for
 $X=E^c$ we construct by the choice axiom the following sequence of disjoint sets
 $(E_i)_i$ and $|\mu|(E_i)>1$ and thus $\sum\mu(E_i)$ does not converge and we
-have a contracdiction to the definition of vector valued measure. Thus $\mu$
+have a contradiction to the definition of vector valued measure. Thus $\mu$
 is bound.
 
 \vspace{1ex}
@@ -269,17 +269,17 @@ The map
 is an isometry}
 
 \vspace{1ex}
-\textbf{Proof:} The injectivity of $\Lambda$ is quit obvious. For sujectivity
+\textbf{Proof:} The injectivity of $\Lambda$ is quit obvious. For surjectivity
 we make an inverse construction, for a given functional $L$ we take its total
 variation defined by
 \[|L|(A)=\sup\{\langle L\,|\,\phi\rangle\,|\,\phi\in\mathcal C_c(A,\mathbb R^n), |\phi|<1\}\]
 for open set $A$. And for other sets we set
 \[|L|(E)=\inf\{|L|(A)\,|\,E\subseteq A\}\]
-Thus $|L|$ is localy finite, because it's continuous and thus bounded. Whats
-more the second property yeilds us the regularity of the total variation as we
+Thus $|L|$ is locally finite, because it's continuous and thus bounded. Whats
+more the second property yields us the regularity of the total variation as we
 can take a countable intersection of $\{A_n\}$ of open sets such that $|L|(A_n)
-\rightarrow |L|(E)$, thus the total vatiation is a radon measure. Then the
-proof of existance of function $f$ such that $L$ is equal to integration with
+\rightarrow |L|(E)$, thus the total variation is a radon measure. Then the
+proof of existence of function $f$ such that $L$ is equal to integration with
 respect to $f|L|$ and $|f|=1$ $|L|$-a.e. can be found on pages 34-41
 \cite{maggi}. Let's check that it's an isometry. Let measure $\mu$ be
 represented by a functional $L$. Then 
@@ -299,7 +299,7 @@ In the other direction it obviously follows form the fact the $C^0_c$ is dense
 in $L^1$.
 
 \vspace{2ex}
-\textbf{Corollary:} \textit{Continuous positive funcitonals are represented by
+\textbf{Corollary:} \textit{Continuous positive functionals are represented by
 Radon measures}
 
 \vspace{1ex}

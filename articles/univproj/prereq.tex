@@ -1,21 +1,21 @@
-\textbf{Convention:} To any product we associate morphisms denoted by $\pi_i$,
+\textbf{Convention:} To any product, we associate morphisms denoted by $\pi_i$,
 where $i$ is an index of the product component we are projecting to, or is the
 component itself. For example, for $A\times B$ we have $\pi_A:A\times B\rightarrow A$, for
 $A^n$ we have $\pi_i:A^n\rightarrow A$ with $i\in\llbracket1,n\rrbracket$, for $\prod_{i\in I} A_i$
 we have $\pi_{i_0}:\prod_{i\in I} A_i\rightarrow A_{i_0}$ for $i_0\in I$.
-Similarly we introduce a notion $i$ for morphisms associated to coproducts.
-A projection on the tangent space is associated to $T_xM\times (T_xM)^\bot$.
+Similarly, we introduce a notion $i$ for morphisms associated to coproducts.
+A projection on the tangent space is always associated to $T_xM\times (T_xM)^\bot$.
 
 \vspace{2ex}
 \textbf{Convention:} Let $\{w_i\}_i$ be a family of some kind of objects.We
 write a row of those objects as $(w_i)$ and column as $(w^i)$. We will use
-matrix multiplication notion to shoten equations, even when dealing with things
+matrix multiplication notion to shorten equations, even when dealing with things
 that might not be scalars. For example, a basis change formula from basis
 $(w_i)$ to a basis $(u_i)$ with a matrix $P$ is denoted by $(u_i)=(w_i)P$. If
 we have two function $f,g$ defined on $X$ and we have $a,b\in X$ then we may write
 \[\left(\begin{array}{c}f\\g\end{array}\right)(a\;\;b)=\left(\begin{array}{cc}f(a)&f(b)\\g(a)&g(b)\end{array}\right)\quad\quad f\left(\begin{array}{c}a\\b\end{array}\right)=\left(\begin{array}{c}f(a)\\f(b)\end{array}\right)\]
 Often this way of writing equations compactifies not only notions but also proofs,
-as you will see in Section 7, by using subtitutions. Although, I switch later
+as you will see in Section 7, by using substitutions. Although, I switch later
 in that section to Einstein's convention, because it eases permutations of
 sums and regrouping of coordinates.
 
@@ -74,16 +74,16 @@ measure on $\mathbb{R}^n$, then
 
 \vspace{2ex}
 Those are only top-level results. While this theory incorporates many more
-profound statements, I've avoided them here to maintian the holistic picture I aim 
+profound statements, I've avoided them here to maintain the holistic picture I aim 
 to present and not to have just another copy of an already existing book. This
-necessarily means sucreficing some depth, as I have not included few necessery 
+necessarily means sacrificing some depth, as I have not included few necessary 
 proofs and results.
 
 \subsection{Analysis}
 Geometric measure theory relies on several profound and not-trivial results
 established within metric spaces or $\mathbb{R}^n$. This foundational
 properties, which I adapted with minor modifications or gave direct
-generalisations, are primarly sourced from "Measure theory and fine properties
+generalisations, are primarily sourced from "Measure theory and fine properties
 of functions".
 
 \vspace{2ex}
@@ -93,7 +93,7 @@ avoid confusion with set power and Minkowski product.
 
 \vspace{1ex}
 \textbf{Vitali's covering lemma:} \textit{
-Let $\mathcal{F}$ be any collection of nondegenearted closed balls in a metric
+Let $\mathcal{F}$ be any collection of non-degenerated closed balls in a metric
 space $X$ with
 \[ \sup\{\text{diam}\,B\,|\, B\in\mathcal{F}\}<\infty \]
 Then for every $\epsilon>1$ there exists a countable family $\mathcal{G}$ of
@@ -139,12 +139,12 @@ for 3.
 
 \vspace{2ex}
 
-There are also more substential covering results, crucial for extension 
+There are also more substantial covering results, crucial for extension 
 theorems, measure differentiation and characterisation of rectifiable sets.
 Their proofs usually occupies a dozen of pages and are deeply analytic, primarily
-inovolving the extensive rewrite of inequalities and introduction of different
-constants. I initially inteded toto revise them for greater clearity, but after
-several failed attempts, when I had to modify constants and propogate the change
+involving the extensive rewrite of inequalities and introduction of different
+constants. I initially intended to revise them for greater clarity, but after
+several failed attempts, when I had to modify constants and propagate the change
 back over multiple pages, I decided it was best to simply reference them here.
 Full proofs are available in \cite{evans_gariepy} and in \cite{giovanni_alberti}.
 
@@ -191,7 +191,7 @@ $d:C\rightarrow\mathbb{R}^{n*}$ be continuous functions. We shall use notions}
 \rho_K(\delta)\rightarrow 0\text{ as }\delta\rightarrow 0
 \]
 
-\textit{Then there exists a fuction $\overline f\in\mathcal{C}^1(\mathbb{R}^n,\mathbb{R})$
+\textit{Then there exists a function $\overline f\in\mathcal{C}^1(\mathbb{R}^n,\mathbb{R})$
 and $D\overline f|_C=d$.}
 
 \vspace{2ex}
@@ -233,7 +233,7 @@ function $\overline f:X\mapsto\mathbb{R^n}$ such that $\overline f|_A=f$}
 Let's set $\overline f = (\overline f_i)_i$ extension by coordinate functions. 
 
 \vspace{1ex}
-\textbf{Remark:} I concidered extending the theorem to vector-valued
+\textbf{Remark:} I considered extending the theorem to vector-valued
 functions, but I could only prove it for the maximum norm.
 
 \subsection{Differentiation of Radon measure and Radon-Nikodym Theorem}
@@ -285,7 +285,7 @@ measures on $\mathbb{R}^n$. Then
 }
 
 \vspace{2ex}
-\textbf{Remark:} This is a brilliant version of the proof of Radon Nikodym
+\textbf{Remark:} This is a brilliant version of the proof of Radon-Nikodym
 Theorem by von Neumann, that will suffice for representing vector measures.
 
 \vspace{1ex}
@@ -346,7 +346,7 @@ And we can define the integration with respect to such measure as
 \]
 
 \vspace{2ex}
-Beyond representating of measure (or continuous linear forms), we can view this
-process from another angle. If we associate to a linear continious
-form to a shape, then function $f$ describes certain geometric propertise of
+Beyond representation of measure (or continuous linear forms), we can view this
+process from another angle. If we associate to a linear continuous
+form to a shape, then function $f$ describes certain geometric properties of
 that shape. We will explore one such example in the last section.
